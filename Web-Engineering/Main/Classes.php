@@ -18,20 +18,20 @@ class Dozent {
 
 }
 
-class rights {
-    public $idrights;
+class Right {
+    public $idright;
     public $admin;
     public $user;
 
     function __construct ($daten=null){
         if (is_array ($daten));
-        $this-> idrights= $daten ['idrights'];
+        $this-> idright= $daten ['idright'];
         $this-> admin= $daten ['admin'];
         $this-> user= $daten ['user'];
     }
 }
 
-class lecture {
+class Lecture {
     public $idlecture;
     public $name;
     public $degreecourse;
@@ -47,25 +47,26 @@ class lecture {
     }
 }
 
-class voting {
+class Voting {
     public $idvoting;
     public $name;
-    public $date;
 
     function __construct($daten=null) {
         if (is_array ($daten)) {
             $this-> idvoting= $daten ['idvoting'];
             $this-> name= $daten ['name'];
-            $this-> date= $daten ['date'];
         }
     }
 }
 
-class question {
+class Question {
     public $idquestion;
-    public $description;
+    public $text;
     
     function __construct($daten=null){
-        if (is_array($daten));
+        if (is_array($daten)){
+            $this-> idquestion= $daten ['idquestion'];
+            $this-> text= $daten ['text'];
+        }
     }
 }
