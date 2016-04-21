@@ -1,6 +1,6 @@
 <?php
 require_once ("Manager.php");
-require_once ("include/Classes.php");
+require_once ("Classes.php");
 
 class VotingManager extends Manager
 {
@@ -20,7 +20,7 @@ class VotingManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('SELECT * from Voting');
+            $sql= $this->pdo-> prepare ('SELECT * FROM Voting');
             $sql->execute();
             $sql->setFetchMode (PDO::FETCH_CLASS, 'Voting');
             return $sql-> FetchAll();
@@ -35,7 +35,7 @@ class VotingManager extends Manager
     public function findById ($idvoting)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * from Voting WHERE idvoting = :idvoting');
+            $sql= $this->pdo-> prepare ('SELECT * FROM Voting WHERE idvoting = :idvoting');
             $sql-> bindParam (':idvoting', $idvoting);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');

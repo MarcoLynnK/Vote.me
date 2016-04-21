@@ -1,6 +1,6 @@
 <?php
 require_once ("Manager.php");
-require_once ("include/Classes.php");
+require_once ("Classes.php");
 
 class RightManager extends Manager
 {

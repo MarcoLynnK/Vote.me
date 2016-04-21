@@ -1,6 +1,6 @@
 <?php
 require_once ("Manager.php");
-require_once ("include/Classes.php");
+require_once ("Classes.php");
 
 class DozentManager extends Manager
 {
@@ -19,7 +19,7 @@ class DozentManager extends Manager
     public function findByLogin ($login, $passwort) {
 
         try {
-            $sql= $this->pdo->prepare('SELECT * from Dozent where login= :login');
+            $sql= $this->pdo->prepare('SELECT * FROM Dozent WHERE login= :login');
             $sql->bindParam(':login', $login);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Dozent');

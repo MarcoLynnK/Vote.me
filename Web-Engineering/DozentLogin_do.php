@@ -1,5 +1,5 @@
 <?php
-require_once("DozentManager.php");
+require_once("Main/DozentManager.php");
 require_once("Main/Classes.php");
 
 $login = htmlspecialchars($_POST["login"], ENT_QUOTES, "UTF-8");
@@ -11,7 +11,8 @@ if (!empty($login) && !empty($password)) {
     if ($dozent==null) {
         header('Location: login.php');
         die();
-    } else {
+    } 
+    else {
         session_start();
         $_SESSION ['user'] = $dozent;
         $_SESSION ['login'] = "1";
@@ -19,6 +20,6 @@ if (!empty($login) && !empty($password)) {
         die();
     }
 }
-else {
+else{
     echo "Error: Bitte füllen sie alle Felder aus!<br/>";
-}
+    }

@@ -21,7 +21,7 @@ class OptionManager extends Manager
             $sql= $this->pdo-> prepare ('SELECT * from Option WHERE idoption = :idoption');
             $sql-> bindParam (':idoption', $idoption);
             $sql-> execute ();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Option');
             $option= $sql-> fetch();
         }
         catch (PDOException $e)
@@ -36,10 +36,10 @@ class OptionManager extends Manager
     {
         try {
             $sql = $this->pdo->prepare('INSERT INTO Option (idoption, text) VALUES (:idoption, :text');
-            $sql->bindParam(':idvoting', $option->idoption);
-            $sql->bindParam(':name', $option->text);
+            $sql->bindParam(':idoption', $option->idoption);
+            $sql->bindParam(':text', $option->text);
             $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Option');
             $option = $sql->fetch();
         }
         catch (PDOException $e)
@@ -54,7 +54,7 @@ class OptionManager extends Manager
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Option SET text = :text WHERE id = :id');
-            $sql->bindParam (':vorname',$option->text);
+            $sql->bindParam (':text',$option->text);
             $sql->execute ();
         }
         catch (PDOException $e)

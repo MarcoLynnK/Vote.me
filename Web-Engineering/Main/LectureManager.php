@@ -1,6 +1,6 @@
 <?php
 require_once ("Manager.php");
-require_once ("include/Classes.php");
+require_once ("Classes.php");
 
 class LectureManager extends Manager
 {
@@ -20,7 +20,7 @@ class LectureManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('SELECT * from Lecture');
+            $sql= $this->pdo-> prepare ('SELECT * FROM Lecture');
             $sql->execute();
             $sql->setFetchMode (PDO::FETCH_CLASS, 'Lecture');
             return $sql-> FetchAll();
@@ -35,7 +35,7 @@ class LectureManager extends Manager
     public function findById ($idlecture)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * from Lecture WHERE idlec = :idlec');
+            $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE idlec = :idlec');
             $sql-> bindParam (':idlecture', $idlecture);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
