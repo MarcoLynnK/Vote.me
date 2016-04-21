@@ -8,11 +8,11 @@ class Dozent {
 
     function __construct($daten=null ){
         if (is_array($daten)){
-            $this-> login = $daten ['login'];
-            $this-> firstname = $daten ['firstname'];
-            $this-> lastname = $daten ['lastname'];
-            $this-> faculty = $daten ['faculty'];
-            $this-> hash = $daten ['hash'];
+            $this-> login= $daten ['login'];
+            $this-> firstname= $daten ['firstname'];
+            $this-> lastname= $daten ['lastname'];
+            $this-> faculty= $daten ['faculty'];
+            $this-> hash= $daten ['hash'];
         }
     }
 
