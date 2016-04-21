@@ -36,7 +36,7 @@ class Dozent extends Manager
         }
         return null;
     }
-echo 'Hello again!';
+
     public function create (Dozent $dozent) {
         try {
             $sql= $this->pdo->prepare ('INSERT INTO User (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
