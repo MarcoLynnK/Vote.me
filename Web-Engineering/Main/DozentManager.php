@@ -39,7 +39,7 @@ class DozentManager extends Manager
 
     public function create (Dozent $dozent) {
         try {
-            $sql= $this->pdo->prepare ('INSERT INTO User (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
+            $sql= $this->pdo->prepare ('INSERT INTO Dozent (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
             $sql->bindParam (':login', $dozent->login);
             $sql->bindParam (':vorname',$dozent->vorname);
             $sql->bindParam (':nachname'.$dozent->nachname);
@@ -53,26 +53,28 @@ class DozentManager extends Manager
             die();
         }
         return $dozent;
-
     }
+    
     public function update (Dozent $dozent) {
         try
         {
-            $sql= $this->pdo->prepare ('UPDATE user SET vorname = :vorname,nachname = :nachname,hash = :hash WHERE login = :login');
+            $sql= $this->pdo->prepare ('UPDATE Dozent SET vorname = :vorname,nachname = :nachname,hash = :hash WHERE login = :login');
             $sql->bindParam (':vorname',$dozent->vorname);
             $sql->bindParam (':nachname',$dozent->nachname);
             $sql->bindParam (':hash', $dozent->hash);
             $sql->execute ();
         }
-        catch (PDOException $e) {
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
         return $dozent;
     }
+    
     public function delete (Dozent $dozent) {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM user WHERE login= :login');
+            $sql = $this->pdo->prepare('DELETE FROM Dozent WHERE login= :login');
             $sql->bindParam(':login', $dozent->login);
             $sql->execute();
             }

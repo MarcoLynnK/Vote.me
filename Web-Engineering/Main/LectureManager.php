@@ -89,7 +89,7 @@ class LectureManager extends Manager
     public function delete (Lecture $lecture) 
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM user WHERE idlecture= :idlecture');
+            $sql = $this->pdo->prepare('DELETE FROM Lecture WHERE idlecture= :idlecture');
             $sql->bindParam(':idlecture', $lecture->idlecture);
             $sql->execute();
         }

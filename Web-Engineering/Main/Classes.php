@@ -6,7 +6,8 @@ class Dozent {
     public $faculty;
     public $hash;
 
-    function __construct($daten=null ){
+    function __construct($daten=null )
+    {
         if (is_array($daten)){
             $this-> login= $daten ['login'];
             $this-> firstname= $daten ['firstname'];
@@ -23,7 +24,8 @@ class Right {
     public $admin;
     public $user;
 
-    function __construct ($daten=null){
+    function __construct ($daten=null)
+    {
         if (is_array ($daten));
         $this-> idright= $daten ['idright'];
         $this-> admin= $daten ['admin'];
@@ -37,8 +39,9 @@ class Lecture {
     public $degreecourse;
     public $faculty;
 
-    function __construct($daten=null) {
-        if (is_array ($daten)){
+    function __construct($daten=null)
+    {
+        if (is_array ($daten)) {
             $this-> idlecture= $daten ['idlecture'];
             $this-> name= $daten ['name'];
             $this-> degreecourse= $daten ['degreecourse'];
@@ -50,22 +53,26 @@ class Lecture {
 class Voting {
     public $idvoting;
     public $name;
+    public $qustion;
 
-    function __construct($daten=null) {
+    function __construct($daten=null) 
+    {
         if (is_array ($daten)) {
             $this-> idvoting= $daten ['idvoting'];
             $this-> name= $daten ['name'];
+            $this-> question= $daten ['question'];
         }
     }
 }
 
-class Question {
-    public $idquestion;
+class Option {
+    public $idoption;
     public $text;
     
-    function __construct($daten=null){
+    function __construct($daten=null)
+    {
         if (is_array($daten)){
-            $this-> idquestion= $daten ['idquestion'];
+            $this-> idoption= $daten ['idoption'];
             $this-> text= $daten ['text'];
         }
     }

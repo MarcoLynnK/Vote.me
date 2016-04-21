@@ -22,11 +22,11 @@
         <form class="form-signin" role="form" action="UserLogin_do.php" method="post">>
             <h1 class="form-signin-heading">Bitte loggen sie sich ein!</h1>
 
-            <label for="inputEmail" class="sr-only">Benutzername:</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Benutzername" required autofocus>
+            <label for="login" class="sr-only">Benutzername:</label>
+            <input type="text" id="login" class="form-control" placeholder="Benutzername" required autofocus>
 
-            <label for="inputPassword" class="sr-only">Kennwort:</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Kennwort" required>
+            <label for="password" class="sr-only">Kennwort:</label>
+            <input type="text" id="password" class="form-control" placeholder="Kennwort" required>
             <div class="checkbox">
                 <label><input type="checkbox" value="remember-me"> Anmeldung speichern </label>
             </div>
