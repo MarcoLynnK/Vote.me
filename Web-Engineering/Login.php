@@ -17,7 +17,9 @@
             </ul>
         </div>
     </div>
-    <div class="container">
+</nav>
+
+<div class="container">
         <form class="form-signin" role="form" action="DozentLogin_do.php" method="post">>
             <h1 class="form-signin-heading">Bitte loggen sie sich ein!</h1>
 
@@ -33,6 +35,5 @@
         </form>
 
     </div>
-</nav>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once ("include/Userdata.php");
+require_once ("../include/UserData.php");
 class Manager //Klasse Manager erstellen-für generellen Zugriff auf die DB durch den Manager via eingelesener UserData
 {
     protected $pdo;//zugriff auf pdo der Klasse Manager
