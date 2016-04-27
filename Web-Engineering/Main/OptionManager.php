@@ -69,7 +69,7 @@ class OptionManager extends Manager
     {
         try {
             $sql = $this->pdo->prepare('DELETE FROM Option WHERE idoption= :idoption');
-            $sql->bindParam(':idvoting', $option->idoption);
+            $sql->bindParam(':idoption', $option->idoption);
             $sql->execute();
         }
         catch (PDOException $e)

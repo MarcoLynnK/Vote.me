@@ -52,14 +52,14 @@ class Lecture {
 
 class Voting {
     public $idvoting;
-    public $name;
+    public $namevot;
     public $qustion;
 
     function __construct($daten=null) 
     {
         if (is_array ($daten)) {
             $this-> idvoting= $daten ['idvoting'];
-            $this-> name= $daten ['name'];
+            $this-> namevot= $daten ['namevot'];
             $this-> question= $daten ['question'];
         }
     }
