@@ -22,14 +22,14 @@
 }
 #Login {
     position: relative;
-    max-width: 400px;
+    width: 300px;
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     -o-transform: translate(0,-50%);
     transform: translate(0,-50%);
     padding-bottom: 32px;
     margin-right: auto;
-    margin-left: 50%;
+    margin-left: auto;
     margin-top: 30%;
     margin-bottom: -200px;
 }
