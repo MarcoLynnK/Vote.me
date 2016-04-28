@@ -100,10 +100,8 @@
     font-size: 15px;
 }
 
-.form-inline{
+.form-inline .form-control {
+    display: inline-block;
     width: 100%;
-}
-
-.form-group{
-    width:100%;
+    vertical-align: middle;
 }
