@@ -1,5 +1,5 @@
 <?php
-require_once("Main/DozentManager.php");
+require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
 
 $login = htmlspecialchars($_POST["login"], ENT_QUOTES, "UTF-8");

@@ -9,7 +9,7 @@
 
 <h1> Neuen Benutzer anlegen:</h1>
 
-<form action="DozentCreate_do.php" method="post">
+<form action="UserCreate_do.php" method="post">
     Benutzername:<br>
     <input type="text" name="login" id="login" placeholder="Benutzername"><br><br>
     Vorname:<br>

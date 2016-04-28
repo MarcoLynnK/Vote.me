@@ -2,7 +2,7 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
-class DozentManager extends Manager
+class UserManager extends Manager
 {
     protected $pdo;
 
@@ -19,14 +19,14 @@ class DozentManager extends Manager
     public function findByLogin ($login, $passwort) {
 
         try {
-            $sql= $this->pdo->prepare('SELECT * FROM Dozent WHERE login= :login');
+            $sql= $this->pdo->prepare('SELECT * FROM User WHERE login= :login');
             $sql->bindParam(':login', $login);
             $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Dozent');
-            $dozent = $sql->fetch();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'User');
+            $user = $sql->fetch();
 
-            if (password_verify($passwort, $dozent->hash)) {
-                return $dozent;
+            if (password_verify($passwort, $user->hash)) {
+                return $user;
             } else {
                 return null;
             }
@@ -37,31 +37,32 @@ class DozentManager extends Manager
         return null;
     }
 
-    public function create (Dozent $dozent) {
+    public function create (User $user) {
         try {
             $sql= $this->pdo->prepare ('INSERT INTO Dozent (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
-            $sql->bindParam (':login', $dozent->login);
-            $sql->bindParam (':vorname',$dozent->vorname);
-            $sql->bindParam (':nachname'.$dozent->nachname);
-            $sql->bindParam (':hash', $dozent->hash);
+            $sql->bindParam (':login', $user->login);
+            $sql->bindParam (':vorname',$user->vorname);
+            $sql->bindParam (':nachname'.$user->nachname);
+            $sql->bindParam (':hash', $user->hash);
             $sql->execute ();
-            $sql->setFetchMode (PDO::FETCH_CLASS,'Dozent');
-            $dozent= $sql->fetch();
+            $sql->setFetchMode (PDO::FETCH_CLASS,'User');
+            $user= $sql->fetch();
         }
         catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
-        return $dozent;
+        return $user;
     }
     
-    public function update (Dozent $dozent) {
+    public function update (User $user) {
         try
         {
-            $sql= $this->pdo->prepare ('UPDATE Dozent SET vorname = :vorname,nachname = :nachname,hash = :hash WHERE login = :login');
-            $sql->bindParam (':vorname',$dozent->vorname);
-            $sql->bindParam (':nachname',$dozent->nachname);
-            $sql->bindParam (':hash', $dozent->hash);
+            $sql= $this->pdo->prepare ('UPDATE Dozent SET vorname = :vorname,nachname = :nachname,hash = :hash, rights= :rights WHERE login = :login');
+            $sql->bindParam (':vorname',$user->vorname);
+            $sql->bindParam (':nachname',$user->nachname);
+            $sql->bindParam (':hash', $user->hash);
+            $sql->bindParam (':rights', $user->rights);
             $sql->execute ();
         }
         catch (PDOException $e) 
@@ -69,18 +70,18 @@ class DozentManager extends Manager
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
-        return $dozent;
+        return $user;
     }
     
-    public function delete (Dozent $dozent) {
+    public function delete (User $user) {
         try {
             $sql = $this->pdo->prepare('DELETE FROM Dozent WHERE login= :login');
-            $sql->bindParam(':login', $dozent->login);
+            $sql->bindParam(':login', $user->login);
             $sql->execute();
             }
         catch (PDOException $e) {
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
-            return $dozent;
+            return $user;
             }
         return null;
     }

@@ -1,9 +1,10 @@
 <?php
-class Dozent {
+class User {
     public $login;
     public $firstname;
     public $lastname;
     public $faculty;
+    public $rights;
     public $hash;
 
     function __construct($daten=null )
@@ -13,28 +14,28 @@ class Dozent {
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
             $this-> faculty= $daten ['faculty'];
+            $this-> rights= $daten ['rights'];
             $this-> hash= $daten ['hash'];
         }
     }
 
 }
 
-class Right {
-    public $idright;
+class Rights {
+    public $norights;
     public $admin;
     public $user;
 
     function __construct ($daten=null)
     {
         if (is_array ($daten));
-        $this-> idright= $daten ['idright'];
+        $this-> idrights= $daten ['idrights'];
         $this-> admin= $daten ['admin'];
         $this-> user= $daten ['user'];
     }
 }
 
 class Lecture {
-    public $idlecture;
     public $name;
     public $degreecourse;
     public $faculty;
@@ -42,7 +43,6 @@ class Lecture {
     function __construct($daten=null)
     {
         if (is_array ($daten)) {
-            $this-> idlecture= $daten ['idlecture'];
             $this-> name= $daten ['name'];
             $this-> degreecourse= $daten ['degreecourse'];
             $this-> faculty= $daten ['faculty'];
@@ -51,15 +51,13 @@ class Lecture {
 }
 
 class Voting {
-    public $idvoting;
-    public $namevot;
+    public $namevoting;
     public $qustion;
 
     function __construct($daten=null) 
     {
         if (is_array ($daten)) {
-            $this-> idvoting= $daten ['idvoting'];
-            $this-> namevot= $daten ['namevot'];
+            $this-> namevoing= $daten ['namevoting'];
             $this-> question= $daten ['question'];
         }
     }
