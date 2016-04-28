@@ -9,7 +9,7 @@
 
 #logo{
     transform: translate(-4%, 10%);
-    width: 250px;
+    width: 240px;
 
 }
 
@@ -43,7 +43,7 @@
 
 .inputForm{
     font-family: arial, sans-serif;
-    width: 234px;
+    width: 240px;
     height: 30px;
     vertical-align: middle;
     font-size: 15px;
