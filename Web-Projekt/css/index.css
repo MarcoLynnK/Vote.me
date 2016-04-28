@@ -29,7 +29,9 @@
     -webkit-overflow-scrolling: touch;
 }
 
-
+.login{
+    top:50%;
+}
 #Login {
     position: relative;
     width: 240px;
