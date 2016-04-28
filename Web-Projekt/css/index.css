@@ -28,6 +28,10 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.col-md-offset-4{
+    top: 50%;
+}
 #Login {
     position: relative;
     width: 240px;
