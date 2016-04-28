@@ -30,7 +30,7 @@
 }
 #Login {
     position: relative;
-    width: 300px;
+    width: 242px;
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     -o-transform: translate(0,-50%);
@@ -39,7 +39,6 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 30%;
-    margin-bottom: -200px;
 }
 
 .inputForm{
