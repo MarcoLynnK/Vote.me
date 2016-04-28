@@ -30,7 +30,8 @@
 }
 
 .login{
-    top:50%;
+    margin-right: auto;
+    margin-left: auto;
 }
 #Login {
     position: relative;
