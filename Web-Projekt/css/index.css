@@ -47,6 +47,8 @@
     height: 30px;
     vertical-align: middle;
     font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .submit {
