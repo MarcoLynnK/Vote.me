@@ -9,7 +9,13 @@
 
 #logo{
     transform: translate(-4%, 10%);
-    width: 250px;;
+    width: 250px;
+
+}
+
+.inbox{
+    margin-left: auto;
+    margin-right: auto;
 }
 #container1{
     position: absolute;
