@@ -30,7 +30,7 @@
 }
 #Login {
     position: relative;
-    width: 242px;
+    width: 250px;
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     -o-transform: translate(0,-50%);
@@ -43,7 +43,7 @@
 
 .inputForm{
     font-family: arial, sans-serif;
-    width: 240px;
+    width: 250px;
     height: 30px;
     vertical-align: middle;
     font-size: 15px;
