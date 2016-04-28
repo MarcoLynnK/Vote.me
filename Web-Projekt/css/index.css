@@ -29,10 +29,6 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.login{
-    margin-right: auto;
-    margin-left: auto;
-}
 #Login {
     position: relative;
     width: 240px;
