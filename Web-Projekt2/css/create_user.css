@@ -126,6 +126,10 @@ body {
     background-color: #36a1e8;
 }
 
+#logo{
+    transform: translate(-7%, 10%);
+}
+
 .inputForm{
     font-family: Helvetica, sans-serif;
     width: 234px;
