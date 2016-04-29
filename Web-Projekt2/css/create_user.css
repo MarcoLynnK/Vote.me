@@ -129,7 +129,7 @@ body {
 .inputForm{
     font-family: arial, sans-serif;
     width: 234px;
-    height: 50px;
+    height: 40px;
     vertical-align: middle;
     font-size: 15px;
 }
@@ -137,7 +137,7 @@ body {
 .inputForm2{
     font-family: arial, sans-serif;
     width: 112px;
-    height: 50px;
+    height: 40px;
     vertical-align: middle;
     font-size: 15px;
 }
@@ -145,7 +145,7 @@ body {
 .inputForm3{
     font-family: arial, sans-serif;
     width: 112px;
-    height: 50px;
+    height: 40px;
     vertical-align: middle;
     font-size: 15px;
     margin-left: 6px;
