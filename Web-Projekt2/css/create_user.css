@@ -127,13 +127,7 @@ body {
 }
 
 
-#Login {
-    position: relative;
-    top: 52%;
-    left: 50%;
 
-    transform: translate(-50%, -50%);
-}
 
 .inputForm{
     font-family: arial, sans-serif;
