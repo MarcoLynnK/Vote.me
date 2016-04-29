@@ -3,10 +3,11 @@
 //Klasse User
 class User 
 {
+    public $ID_User;
     public $login;
     public $firstname;
     public $lastname;
-    public $faculty;
+    public $email;
     public $rights;
     public $hash;
 
@@ -14,10 +15,11 @@ class User
     {
         if (is_array($daten))
         {
+            $this-> ID_User= $daten ['ID_User'];
             $this-> login= $daten ['login'];
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
-            $this-> faculty= $daten ['faculty'];
+            $this-> email= $daten ['email'];
             $this-> rights= $daten ['rights'];
             $this-> hash= $daten ['hash'];
         }
