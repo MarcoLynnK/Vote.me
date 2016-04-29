@@ -83,7 +83,7 @@ body {
     text-decoration: none;
     display: block;
     font-family: Arial, sans-serif;
-    font-size: 12x;
+    font-size: 12px;
 }
 
 /* Change color of dropdown links on hover */
@@ -126,9 +126,6 @@ body {
     background-color: #277ab0;
 }
 
-
-
-
 .inputForm{
     font-family: arial, sans-serif;
     width: 234px;
@@ -170,6 +167,6 @@ body {
     font-family: Arial, sans-serif;
     font-size: 28px;
     color: #808080;
-    position: fixed;
+    position: relative;
     left: 19%;
 }
