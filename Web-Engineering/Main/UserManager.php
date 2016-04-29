@@ -2,6 +2,8 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
+//CRUD Applikation User
+
 class UserManager extends Manager
 {
     protected $pdo;
@@ -16,6 +18,7 @@ class UserManager extends Manager
         parent::__destruct(); //
     }
 
+    //User auslesen aus DB
     public function findByLogin ($login, $passwort) {
 
         try {
@@ -37,6 +40,7 @@ class UserManager extends Manager
         return null;
     }
 
+    // User anlegen
     public function create (User $user) {
         try {
             $sql= $this->pdo->prepare ('INSERT INTO Dozent (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
@@ -54,7 +58,8 @@ class UserManager extends Manager
         }
         return $user;
     }
-    
+
+    //User aktualisieren
     public function update (User $user) {
         try
         {
@@ -73,6 +78,7 @@ class UserManager extends Manager
         return $user;
     }
     
+    //User Löschen
     public function delete (User $user) {
         try {
             $sql = $this->pdo->prepare('DELETE FROM Dozent WHERE login= :login');

@@ -2,6 +2,8 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
+// Read-Out von Rechten für den User nach der ID
+
 class RightManager extends Manager
 {
     protected $pdo;
@@ -16,46 +18,31 @@ class RightManager extends Manager
         parent::__destruct();
     }
 
-    public function findById ($)
+    // Rechte ausgeben
+    public function findById ($ID_Rights)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * from Option WHERE idoption = :idoption');
-            $sql-> bindParam (':idoption', $idoption);
+            $sql= $this->pdo-> prepare ('SELECT * from Rights WHERE ID_Rights = :ID_Rights');
+            $sql-> bindParam (':ID_Rights', $ID_Rights);
             $sql-> execute ();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Option');
-            $option= $sql-> fetch();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Rights');
+            $rights= $sql-> fetch();
         }
         catch (PDOException $e)
         {
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
-        if (!$option) $option=null;
-        return $option;
+        if (!$rights) $rights=null;
+        return $rights;
     }
-    public function create (Option $option)
-    {
-        try {
-            $sql = $this->pdo->prepare('INSERT INTO Option (idoption, text) VALUES (:idoption, :text');
-            $sql->bindParam(':idoption', $option->idoption);
-            $sql->bindParam(':text', $option->text);
-            $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Option');
-            $option = $sql->fetch();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
-            die();
-        }
-        return $option;
-    }
-
-    public function update (Option $option) {
+ /*
+    //Rechte Aktualisieren
+    public function update (Rights $rights) {
         try
         {
-            $sql= $this->pdo->prepare ('UPDATE Option SET text = :text WHERE id = :id');
-            $sql->bindParam (':text',$option->text);
+            $sql= $this->pdo->prepare ('UPDATE Rights SET description_Rights = :description_Rights WHERE ID_Rights = :ID_Rights');
+            $sql->bindParam (':description_Rights',$rights->description_Rights);
             $sql->execute ();
         }
         catch (PDOException $e)
@@ -63,14 +50,15 @@ class RightManager extends Manager
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
-        return $option;
+        return $rights;
     }
 
-    public function delete (Option $option)
+    //rechte löschen
+    public function delete (Rights $rights)
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM Option WHERE idoption= :idoption');
-            $sql->bindParam(':idoption', $option->idoption);
+            $sql = $this->pdo->prepare('DELETE FROM Rights WHERE ID_Rights= :ID_Rights');
+            $sql->bindParam(':ID_Rights', $rights->ID_Rights);
             $sql->execute();
         }
         catch (PDOException $e)
@@ -79,5 +67,5 @@ class RightManager extends Manager
             die();
         }
         return null;
-    }
+    }*/
 }

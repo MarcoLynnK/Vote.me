@@ -21,8 +21,8 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($faculty
         "hash" => password_hash($password, PASSWORD_DEFAULT)
         ];
 
-    $dozent = new Dozent($userdata);
-    $dozentManager = new DozentManager();
+    $dozent = new User($userdata);
+    $dozentManager = new UserManager();
     $dozentManager->create($dozent);
     header('Location: index.php');
 }
