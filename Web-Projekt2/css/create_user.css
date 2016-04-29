@@ -126,7 +126,7 @@ body {
     background-color: #36a1e8;
 }
 
-#logo{
+.logo{
     transform: translate(-7%, 10%);
 }
 
