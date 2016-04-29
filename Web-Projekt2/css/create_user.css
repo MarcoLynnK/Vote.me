@@ -120,7 +120,7 @@
 
 
 #Login {
-    position: fixed;
+    position: relative;
     top: 52%;
     left: 50%;
 
