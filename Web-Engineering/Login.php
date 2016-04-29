@@ -20,7 +20,7 @@
 </nav>
 
 <div class="container">
-        <form class="form-signin" role="form" action="UserLogin_do.php" method="post">>
+        <form class="form-signin" role="form" action="Login_do.php" method="post">>
             <h1 class="form-signin-heading">Bitte loggen sie sich ein!</h1>
 
             <label for="login" class="sr-only">Benutzername:</label>
