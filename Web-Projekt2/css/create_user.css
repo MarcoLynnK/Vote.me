@@ -186,3 +186,21 @@ body {
     text-decoration: none;
     left: 18%;
 }
+
+.forgot{
+    position: fixed;
+    left: 27%;
+
+    font-family: Arial, sans-serif;
+    color: #7f7f7f;
+    font-size: 13px;
+    text-decoration: none;
+
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.forgot:hover{
+    text-decoration-line: underline;
+    color: #444444;
+}
