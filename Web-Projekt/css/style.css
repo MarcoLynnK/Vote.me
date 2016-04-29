@@ -17,7 +17,7 @@ body {
 .container {
     margin: 80px auto;
     width: 640px;
-    top:50%;
+    margin-top: 50%;
 }
 
 .login {
