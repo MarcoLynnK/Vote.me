@@ -28,9 +28,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.sr-only{
+.inputForm{
     font-family: arial, sans-serif;
-    width: 2340px;
+    width: 234px;
     height: 30px;
     vertical-align: middle;
     font-size: 15px;
