@@ -129,25 +129,25 @@ body {
 .inputForm{
     font-family: Helvetica, sans-serif;
     width: 234px;
-    height: 35px;
+    height: 38px;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .inputForm2{
     font-family: Helvetica, sans-serif;
     width: 112px;
-    height: 35px;
+    height: 38px;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .inputForm3{
     font-family: Helvetica, sans-serif;
     width: 112px;
-    height: 35px;
+    height: 38px;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 6px;
 }
 
@@ -156,12 +156,12 @@ body {
     border: solid 0px #277ab0;
     color: white;
     width: 234px;
-    height: 35px;
+    height: 38px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
