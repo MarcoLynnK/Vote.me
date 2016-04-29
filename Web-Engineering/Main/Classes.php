@@ -7,7 +7,7 @@ class User
     public $login;
     public $firstname;
     public $lastname;
-    public $faculty;
+    public $email;
     public $rights;
     public $hash;
 
@@ -19,7 +19,7 @@ class User
             $this-> login= $daten ['login'];
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
-            $this-> faculty= $daten ['faculty'];
+            $this-> email= $daten ['email'];
             $this-> rights= $daten ['rights'];
             $this-> hash= $daten ['hash'];
         }
