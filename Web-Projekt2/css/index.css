@@ -28,10 +28,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.form-group{
+.sr-only{
     font-family: arial, sans-serif;
     width: 234px;
-    height: 50px;
+    height: 30px;
     vertical-align: middle;
     font-size: 15px;
 }
