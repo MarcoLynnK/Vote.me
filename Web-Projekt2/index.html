@@ -6,29 +6,26 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    <link type="text/css" rel="stylesheet" href="css/index2.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Log in</title>
+    <title>Sign up</title>
 
 </head>
 
 <body>
 
-    <img src="pic/bg.jpg" id="bg" alt="">
 
-    <div id="Login">
+<div id="Login">
 
-        <img src="pic/logo.png" id="logo"></br></br>
+    <form class="input-container" action="" method="post">
+        <img src="pic/logo.png" class="logo"></br></br>
+        <input class="inputForm" name="UserID" type="text" placeholder="User ID" ></br></br>
+        <input class="inputForm" name="Password" type="password" placeholder="Password"></br></br>
+        <button class="submit" name="Submit">LOG IN</button></br></br>
+        <a class="forgot" href="">Forgot password?</a>
+    </form>
+</div>
 
-        <form action="" method="post">
-
-            <input class="inputForm" name="UserID" type="text" placeholder="User ID" ></br></br>
-            <input class="inputForm" name="Password" type="password" placeholder="Password"></br></br>
-            <button class="submit" name="Submit">LOG IN</button></br></br>
-            <a class="forgot" href="">Forgot password?</a>
-
-        </form>
-    </div>
 
 
 </body>
