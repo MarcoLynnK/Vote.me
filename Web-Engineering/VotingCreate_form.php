@@ -10,9 +10,9 @@
 
 <form action="VotingCreate_do.php" method="post">
     Votingthema:<br>
-    <input type="text" name="namevot" id="namevot" placeholder="Votingthema"><br><br>
+    <input type="text" name="name_Voting" id="name_Voting" placeholder="Votingthema"><br><br>
     Frage:<br>
-    <input type="text" name="question" id="question" placeholder="Frage"><br><br>
+    <input type="text" name="question_Voting" id="question_Voting" placeholder="Frage"><br><br>
     <input type='submit' value="anlegen">
 </form>
 

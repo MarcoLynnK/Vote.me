@@ -35,6 +35,5 @@
         </form>
 
     </div>
-Hello World, weil is halt so...become more complex!!!
 </body>
 </html>

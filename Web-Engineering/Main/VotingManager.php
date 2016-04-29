@@ -2,6 +2,9 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
+
+// CRUD Applikation für Voting
+
 class VotingManager extends Manager
 {
     protected $pdo;
@@ -16,6 +19,7 @@ class VotingManager extends Manager
         parent::__destruct();
     }
 
+    // Auslesen aller Datensätze aus Voting
     public function findAll ()
     {
         try
@@ -32,11 +36,12 @@ class VotingManager extends Manager
         }
     }
 
-    public function findById ($idvoting)
+    //Auslesen aller Datensätze mit der übergebenen ID
+    public function findById ($ID_Voting)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Voting WHERE idvoting = :idvoting');
-            $sql-> bindParam (':idvoting', $idvoting);
+            $sql= $this->pdo-> prepare ('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting');
+            $sql-> bindParam (':ID_Voting', $ID_Voting);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting= $sql-> fetch();
@@ -50,12 +55,13 @@ class VotingManager extends Manager
         return $voting;
     }
 
+    // Erstellen eines neuen Votings (Datensatz) in der DB
     public function create (Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (name, question) VALUES (, :name, :question');
-            $sql->bindParam(':name', $voting->namevot);
-            $sql->bindParam(':question', $voting->question);
+            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (, :name_Voting, :question_Voting');
+            $sql->bindParam(':name_Voting', $voting->name_Voting);
+            $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
@@ -68,11 +74,12 @@ class VotingManager extends Manager
         return $voting;
     }
 
+    //Löschen des Votings mit der übergebenen ID aus der DB
     public function delete (Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM Voting WHERE idvoting= :idvoting');
-            $sql->bindParam(':idvoting', $voting->idvoting);
+            $sql = $this->pdo->prepare('DELETE FROM Voting WHERE ID_Voting= :ID_Voting');
+            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
         }
         catch (PDOException $e)

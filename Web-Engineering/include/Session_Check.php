@@ -7,6 +7,7 @@ if ($_SESSION ["login"]<>"1") {
     session_destroy();
     header('Location: login.php');
 } else {
-    $user = $_SESSION ["user"]; 
+    $user = $_SESSION ["user"];
+    $user = $SESSION ["rights"];
 }
 ?>

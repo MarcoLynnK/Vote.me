@@ -2,6 +2,8 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
+//CRUD Applikation Vorlesungen
+
 class LectureManager extends Manager
 {
     protected $pdo;
@@ -16,6 +18,7 @@ class LectureManager extends Manager
         parent::__destruct(); 
     }
 
+    // alle Vorlesungen ausgeben
     public function findAll ()
     {
         try
@@ -32,11 +35,12 @@ class LectureManager extends Manager
         }
     }
 
-    public function findById ($idlecture)
+    //Alle Vorlesungen mit der bestimmten ID ausgeben
+    public function findById ($ID_Lecture)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE idlec = :idlec');
-            $sql-> bindParam (':idlecture', $idlecture);
+            $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE ID_Lecture = :ID_Lecture');
+            $sql-> bindParam (':ID_lecture', $ID_Lecture);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             $lecture= $sql-> fetch();
@@ -50,14 +54,14 @@ class LectureManager extends Manager
         return $lecture;
     }
 
+    //Vorlesung in der DB anlegen
     public function create (Lecture $lecture)
     {
 
         try {
-            $stmt = $this->pdo->prepare('INSERT INTO Lecture (name, degreecourse, faculty) VALUES (:name , :degreecourse, :faculty)');
-            $stmt->bindParam(':name', $lecture->name);
+            $stmt = $this->pdo->prepare('INSERT INTO Lecture (name_Lecture, degreecourse, faculty) VALUES (:name_Lecture , :degreecourse, :faculty)');
+            $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
             $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->bindParam(':faculty', $lecture->faculty);
             $stmt->execute();
             }
         catch (PDOException $e)
@@ -68,14 +72,14 @@ class LectureManager extends Manager
         return $lecture;
     }
 
+    //Vorlesung in der DB aktualisieren
     public function update (Lecture $lecture)
     {
         try {
-            $stmt = $this->pdo->prepare('UPDATE Lecture SET name = :name, degreecourse = :degreecourse, faculty= :faculty WHERE id = :id');
-            $stmt->bindParam(':idlecture', $lecture->idlecture);
-            $stmt->bindParam(':name', $lecture->name);
+            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse, faculty= :faculty WHERE ID_Lecture = :ID_Lecture');
+            $stmt->bindParam(':ID_Lecture', $lecture->ID_Lecture);
+            $stmt->bindParam(':name', $lecture->name_Lecture);
             $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->bindParam(':faculty', $lecture->faculty);
             $stmt->execute();
             }
         catch (PDOException $e)
@@ -86,11 +90,12 @@ class LectureManager extends Manager
         return $lecture;
     }
 
+    //Vorlesung in der DB Löschen
     public function delete (Lecture $lecture) 
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM Lecture WHERE idlecture= :idlecture');
-            $sql->bindParam(':idlecture', $lecture->idlecture);
+            $sql = $this->pdo->prepare('DELETE FROM Lecture WHERE ID_Lecture= :ID_Lecture');
+            $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
             $sql->execute();
         }
         catch (PDOException $e)
