@@ -16,7 +16,7 @@
     <a id="text">Neue Möglichkeit anlegen:</a></br></br>
 
     <input type="text" name="description_Chance" id="description_Chance" class="inputForm" placeholder="Beschreibung"><br><br>
-    <input type='submit' value="anlegen">
+    <input class="submit" type='submit' value="anlegen">
 </form>
 </div>
 
