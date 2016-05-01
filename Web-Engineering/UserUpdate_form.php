@@ -29,7 +29,7 @@ $user = $UserManager->findById($ID_User);
         Email: <br>
         <input type='text' name='email' value='<?php echo ($user->email) ?>'><br><br>
         Passwort:
-        <input type='text' name='' value='<?php echo ($user->password) ?>'><br><br>
+        <input type='text' name='password' value='<?php echo ($user->password) ?>'><br><br>
         <input type='submit' value='aktualisieren'>
 </form>
 
