@@ -13,8 +13,9 @@
 <div id="Login">
 
 <form action="ChanceCreate_do.php" method="post">
-    Möglichkeit:<br>
     <a id="text">Neue Möglichkeit anlegen:</a></br></br>
+
+    Möglichkeit:<br>
     <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
     <input type='submit' value="anlegen">
 </form>
