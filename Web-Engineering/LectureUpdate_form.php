@@ -18,7 +18,7 @@ $lecture = $LectureManager->findById($ID_Lecture);
 
 <body>
 
-<img src="pic/bg.jpg" id="bg" alt="">
+
 
 <div id="navbar">
 

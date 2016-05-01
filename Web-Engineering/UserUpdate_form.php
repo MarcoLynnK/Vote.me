@@ -19,7 +19,7 @@ $user = $UserManager->findById($ID_User);
 </head>
 <title>User Update</title>
 <body>
-<img src="pic/bg.jpg" id="bg" alt="">
+
 
 <div id="navbar">
 

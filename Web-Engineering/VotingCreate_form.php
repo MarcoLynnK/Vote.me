@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<img src="pic/bg.jpg" id="bg" alt="">
+
 
 <div id="navbar">
 
