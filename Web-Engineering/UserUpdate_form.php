@@ -21,7 +21,7 @@ $user = $UserManager->findById($ID_User);
         User ID: <br>
         <input type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
         Benutzername: <br>
-        <input type='text' name='' value='<?php echo ($user->login) ?>'><br><br>
+        <input type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
         Vorname: <br>
         <input type='text' name='firstname' value='<?php echo ($user->firstname) ?>'><br><br>
         Nachname: <br>
