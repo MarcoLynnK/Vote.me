@@ -22,6 +22,7 @@
 
             <script>
                 var chart = document.getElementById(canvas).getContext("2d");
+                var Result = new Chart(chart).Bar(data);
                 var data = {
                     labels: {"15min", "20min", "30min", "für IMMER"} //x-axis
                     datasets[
@@ -36,11 +37,7 @@
                 ]
                 };
 
-                var myDoughnutChart = new Chart(chart, {
-                    type: 'doughnut',
-                    data: data,
-                    options: options
-                });
+                var Result = new Chart(chart).Bar(data);
 
             </script>
     </form>
