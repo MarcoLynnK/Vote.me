@@ -19,6 +19,7 @@ $voting = $VotingManager->findById($ID_Voting);
 
 </head>
 <body>
+<img src="pic/bg.jpg" id="bg" alt="">
 
 <div id="navbar">
 

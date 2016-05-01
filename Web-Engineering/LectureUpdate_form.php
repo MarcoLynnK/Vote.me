@@ -18,6 +18,8 @@ $lecture = $LectureManager->findById($ID_Lecture);
 
 <body>
 
+<img src="pic/bg.jpg" id="bg" alt="">
+
 <div id="navbar">
 
     <img src="pic/logo2.svg" id="logo">
