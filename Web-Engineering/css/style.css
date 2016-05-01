@@ -25,7 +25,7 @@ body {
 }
 
 #logo{
-    position: fixed;
+    position: relative;
     left: 15px;
     top: 5px;
     width: 32%;
