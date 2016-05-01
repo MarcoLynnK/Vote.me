@@ -12,7 +12,7 @@ body {
 body{
     background-image: url("img/bg.jpg");
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
 }
 
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
