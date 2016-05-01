@@ -20,7 +20,7 @@
             <canvas id="mycanvas" width="400" height="400"></canvas>
 
             <script>
-                var chart = document.getElementById(mycanvas).getContext("2d");
+                var chrt = document.getElementById(mycanvas).getContext("2d");
                 var Result = new Chart(chart).Bar(data);
                 var data = {
                     labels: ["15min", "20min", "30min", "100min", "3Tage", "NIEMAAALS", "für IMMER"],
@@ -36,7 +36,7 @@
                 ]
                 };
 
-                var Result = new Chart(chart).Bar(data);
+                var myFirstChart = new Chart(chrt).Bar(data);
 
             </script>
 
