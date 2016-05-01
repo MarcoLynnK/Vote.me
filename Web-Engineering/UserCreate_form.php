@@ -47,7 +47,7 @@
         <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Last name"></br></br>
         <input class="inputForm" id="email" name="email" type="email" placeholder="HdM E-Mail" ></br></br>
         <input class="inputForm" id="password" name="password" type="password" placeholder="Password"></br></br>
-        <button class="submit" name="Submit">SIGN UP</button></br></br>
+        <button class="submit" name="submit">SIGN UP</button></br></br>
     </form>
 </div>
 
