@@ -42,10 +42,10 @@
     <form class="input-container" action="" method="post">
         <a class="NewUser">NEW USER</a></br></br>
 
-        <input class="inputForm" name="E-Mail" type="email" placeholder="HdM E-Mail" ></br></br>
-        <input class="inputForm2" name="FirstName" type="text" placeholder="First name">
-        <input class="inputForm3" name="LastName" type="text" placeholder="Last name"></br></br>
-        <input class="inputForm" name="Password" type="password" placeholder="Password"></br></br>
+        <input class="inputForm" id="email" name="E-Mail" type="email" placeholder="HdM E-Mail" ></br></br>
+        <input class="inputForm2" id="firstname" name="FirstName" type="text" placeholder="First name">
+        <input class="inputForm3" id="lastname" name="LastName" type="text" placeholder="Last name"></br></br>
+        <input class="inputForm" id="password" name="Password" type="password" placeholder="Password"></br></br>
         <button class="submit" name="Submit">SIGN UP</button></br></br>
     </form>
 </div>
