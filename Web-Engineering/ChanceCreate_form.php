@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <?php
     require_once ('include/header.php')
@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<div id="Login"
 <a id="text">Neue Möglichkeit anlegen:</a></br></br>
 
 <form action="ChanceCreate_do.php" method="post">
@@ -17,5 +18,6 @@
     <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
     <input type='submit' value="anlegen">
 </form>
+</div>
 
 </body>
