@@ -10,7 +10,7 @@ body {
 
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
 #bg{
-    position: inherit;
+    position: absolute;
     top: 0;
     left: 0;
 
