@@ -59,7 +59,7 @@ class VotingManager extends Manager
     public function create (Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (, :name_Voting, :question_Voting');
+            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (:name_Voting, :question_Voting)');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();
@@ -73,7 +73,27 @@ class VotingManager extends Manager
         }
         return $voting;
     }
-
+    
+    //update Voting
+    public function update (Voting $voting)
+    {
+        try {
+            $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting  WHERE :ID_Voting= ID_Voting');
+            $sql->bindParam (':name_Voting', $voting->name_Voting);
+            $sql->bindParam (':question_Voting', $voting->question_Voting);
+            $sql->execute();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            $voting = $sql->fetch();
+        }
+        catch (PDOException $e)
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+        return $voting;
+        
+    }
+    
     //Löschen des Votings mit der übergebenen ID aus der DB
     public function delete (Voting $voting)
     {

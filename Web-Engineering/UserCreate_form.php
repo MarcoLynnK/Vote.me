@@ -16,8 +16,8 @@
     <input type="text" name="firstname" id="firstname" placeholder="Vorname"><br><br>
     Nachname:<br>
     <input type="text" name="lastname" id="lastname" placeholder="Nachname"><br><br>
-    Fakultät:<br>
-    <input type="text" name="faculty" id="faculty" placeholder="Fakultät"><br><br>
+    Email:<br>
+    <input type="email" name="email" id="email" placeholder="Email"><br><br>
     Passwort:<br>
     <input type="password" name="password" id="password" placeholder="Passwort"><br><br>
     <input type='submit' value="registrieren">

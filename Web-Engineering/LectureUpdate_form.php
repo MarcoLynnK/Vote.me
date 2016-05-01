@@ -3,7 +3,7 @@ require_once ("Main/LectureManager.php");
 require_once ("Main/Classes.php");
 
 $ID_Lecture = (int)htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
-$ChanceManager = new LectureManager();
+$LectureManager = new LectureManager();
 $lecture = $LectureManager->findById($ID_Lecture);
 
 ?>
