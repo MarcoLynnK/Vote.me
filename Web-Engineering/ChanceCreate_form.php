@@ -6,11 +6,11 @@
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
 </head>
 <body>
 
-<h1> Neue Möglichkeit anlegen:</h1>
+<h1 id="text"> Neue Möglichkeit anlegen:</h1>
 
 <form action="ChanceCreate_do.php" method="post">
     Möglichkeit:<br>
