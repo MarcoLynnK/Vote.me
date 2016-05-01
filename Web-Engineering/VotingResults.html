@@ -17,28 +17,29 @@
 
 <div id="Container">
 
-            <canvas id="mycanvas" width="400" height="400"></canvas>
-
-            <script>
-                var chrt = document.getElementById(mycanvas).getContext("2d");
-                var Result = new Chart(chart).Bar(data);
-                var data = {
-                    labels: ["15min", "20min", "30min", "100min", "3Tage", "NIEMAAALS", "für IMMER"],
-                    datasets: [
-                        {
-                            label: "Pause",
-                            fillcolor: "rgba{220,220,220,0.8}",
-                            strokeColor: "rgba{220,220,220,0.8}",
-                            highlightFill: "rgba{220,220,220,0.75}",
-                            highlightStroke: "rgba{220,220,220,1}",
-                            data: [65, 59, 80, 81, 56, 55, 40]
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3]
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
                         }
-                ]
-                };
-
-                var myFirstChart = new Chart(chrt).Bar(data);
-
-            </script>
+                    }]
+                }
+            }
+        });
+    </script>
 
 </div>
 
