@@ -40,7 +40,7 @@
 <div id="Container">
 
     <form class="input-container" action="" method="post">
-        <a id="text">NEW USER</a></br></br>
+        <a class="NewUser">NEW USER</a></br></br>
 
         <input class="inputForm" name="E-Mail" type="email" placeholder="HdM E-Mail" ></br></br>
         <input class="inputForm2" name="FirstName" type="text" placeholder="First name">

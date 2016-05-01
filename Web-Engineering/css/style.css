@@ -181,16 +181,6 @@ body {
     color: white;
 }
 
-#text{
-    font-family: Helvetica, sans-serif;
-    font-size: 28px;
-    color: #505050;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    left: 0%;
-}
 
 .forgot{
     position: relative;
@@ -208,4 +198,26 @@ body {
 .forgot:hover{
     text-decoration-line: underline;
     color: #444444;
+}
+
+.NewUser{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: 18%;
+}
+
+.NewPos{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: -20%;
 }
