@@ -16,13 +16,12 @@ body {
 }
 
 #navbar{
-    position: relative;
+    position: static;
     top: 0;
     left: 0;
     background-color: #2d2d2d;
     min-width: 100%;
     min-height: 50px;
-    margin-bottom: 100px;
 }
 
 #logo{
