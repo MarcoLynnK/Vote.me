@@ -21,7 +21,7 @@
 <div id="Container">
 
     <form class="form-signin" role="form" action="Login_do.php" method="post">
-            <canvas class="canvas" width="400" height="400"></canvas>
+            <canvas id="mycanvas" width="400" height="400"></canvas>
 
             <script>
                 var chart = document.getElementById(canvas).getContext("2d");
