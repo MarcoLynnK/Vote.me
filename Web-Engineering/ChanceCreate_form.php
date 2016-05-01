@@ -10,12 +10,31 @@
 </head>
 <body>
 
+<div id="navbar">
+
+    <img src="pic/logo2.svg" id="logo">
+
+    <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+        <div class="dropdown-content">
+            <a href="#">VOTINGS</a>
+            <a href="#">SETTINGS</a>
+        </div>
+    </div>
+
+    <a href="log-out.html" style="text-decoration: none;">
+        <button class="log-out" name="LogOut">LOG OUT</button>
+    </a>
+
+</div>
+
+
 <div id="Container">
 
 <form class="input-container" action="ChanceCreate_do.php" method="post">
     <a class="NewPos">Neue Möglichkeit anlegen:</a></br></br></br>
 
-    <input type="text" name="description_Chance" id="description_Chance" class="inputForm" placeholder="Beschreibung"><br><br>
+    <input class="inputForm" type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
     <input class="submit" type='submit' value="anlegen">
 </form>
 </div>
