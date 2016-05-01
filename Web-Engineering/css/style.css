@@ -11,12 +11,10 @@ body {
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
 body{
     background-image: url("img/bg.jpg");
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
 
-    min-width: 100%;
-    min-height: 100%;
 }
 
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
