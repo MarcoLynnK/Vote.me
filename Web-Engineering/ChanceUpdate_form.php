@@ -10,17 +10,40 @@ $chance = $ChanceManager->findById($ID_Chance);
 
 <!DOCTYPE html>
 <html>
+<head>
 <?php include("include/header.php"); ?>
 
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
 <body>
 
-<h1>Eintrag # <?php echo ($chance->ID_Chance) ?></h1>
+<div id="navbar">
+
+    <img src="pic/logo2.svg" id="logo">
+
+    <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+        <div class="dropdown-content">
+            <a href="#">VOTINGS</a>
+            <a href="#">SETTINGS</a>
+        </div>
+    </div>
+
+    <a href="log-out.html" style="text-decoration: none;">
+        <button class="log-out" name="LogOut">LOG OUT</button>
+    </a>
+
+</div>
+
+<a>Eintrag # <?php echo ($chance->ID_Chance) ?></a>
 
     <form action='ChanceUpdate_do.php' method='post'>
-        <input type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />
+        <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />
         Beschreibung der Auswahlmöglichkeit:<br>
-        <input type='text' name='description_Chance' value='<?php echo ($chance->description_Chance) ?>' /> <br>
-        <input type='submit' value='aktualisieren' />
+        <input class="inputForm" type='text' name='description_Chance' value='<?php echo ($chance->description_Chance) ?>' /> <br>
+        <input class="submit" type='submit' value='aktualisieren' />
     </form>
 
 
