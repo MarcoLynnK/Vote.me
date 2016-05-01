@@ -10,12 +10,29 @@
 </head>
 <body>
 
-<h1> Neues Voting anlegen:</h1>
+<div id="navbar">
+
+    <img src="pic/logo2.svg" id="logo">
+
+    <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+        <div class="dropdown-content">
+            <a href="#">VOTINGS</a>
+            <a href="#">SETTINGS</a>
+        </div>
+    </div>
+
+    <a href="log-out.html" style="text-decoration: none;">
+        <button class="log-out" name="LogOut">LOG OUT</button>
+    </a>
+
+</div>
+
+<a> Neues Voting anlegen:</a>
 
 <form action="VotingCreate_do.php" method="post">
-    Votingthema:<br>
+    
     <input class="inputForm" type="text" name="name_Voting" id="name_Voting" placeholder="Votingthema"><br><br>
-    Frage:<br>
     <input class="inputForm" type="text" name="question_Voting" id="question_Voting" placeholder="Frage"><br><br>
     <input class="submit" type='submit' value="anlegen">
 </form>
