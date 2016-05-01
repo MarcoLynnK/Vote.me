@@ -42,9 +42,10 @@
     <form class="input-container" action="UserCreate_do.php" method="post">
         <a class="NewUser">NEW USER</a></br></br>
 
-        <input class="inputForm" id="email" name="E-Mail" type="email" placeholder="HdM E-Mail" ></br></br>
+        <input class="inputForm" id="user_id" name="ID_User" type="text" placeholder="User ID" ></br></br>
         <input class="inputForm2" id="firstname" name="FirstName" type="text" placeholder="First name">
         <input class="inputForm3" id="lastname" name="LastName" type="text" placeholder="Last name"></br></br>
+        <input class="inputForm" id="email" name="E-Mail" type="email" placeholder="HdM E-Mail" ></br></br>
         <input class="inputForm" id="password" name="Password" type="password" placeholder="Password"></br></br>
         <button class="submit" name="Submit">SIGN UP</button></br></br>
     </form>
