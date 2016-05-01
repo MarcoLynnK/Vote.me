@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1 id="text"> Neue Möglichkeit anlegen:</h1>
+<a id="text">Neue Möglichkeit anlegen:</a></br></br>
 
 <form action="ChanceCreate_do.php" method="post">
     Möglichkeit:<br>
