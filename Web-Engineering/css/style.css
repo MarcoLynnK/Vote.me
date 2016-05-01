@@ -141,6 +141,7 @@ body {
     height: 38px;
     vertical-align: middle;
     font-size: 16px;
+    margin-left: 5%;
 }
 
 .inputForm2{
@@ -174,6 +175,7 @@ body {
 
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    margin-left: 5%;
 }
 
 .submit:hover {
