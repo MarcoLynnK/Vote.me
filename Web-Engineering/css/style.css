@@ -132,7 +132,7 @@ body {
 }
 
 .logo{
-    transform: translate(-2%, 10%);
+    transform: translate(-7%, 10%);
 }
 
 .inputForm{
@@ -141,7 +141,6 @@ body {
     height: 38px;
     vertical-align: middle;
     font-size: 16px;
-    margin-left: 5%;
 }
 
 .inputForm2{
@@ -175,7 +174,6 @@ body {
 
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    margin-left: 5%;
 }
 
 .submit:hover {
@@ -196,7 +194,7 @@ body {
 
 .forgot{
     position: relative;
-    left: 30%;
+    left: 25%;
 
     font-family: Arial, sans-serif;
     color: #7f7f7f;
