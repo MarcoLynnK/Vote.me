@@ -31,7 +31,7 @@ body {
 /*Positionierung des Logos (weiss)  in der Navigationsleiste */
 #logo{
     position: relative;
-    left: 30px;
+    left: 15px;
     top: 5px;
     width: 32%;
     max-width: 150px;
@@ -132,7 +132,7 @@ body {
 }
 
 .logo{
-    transform: translate(-7%, 10%);
+    transform: translate(-10%, 10%);
 }
 
 .inputForm{
