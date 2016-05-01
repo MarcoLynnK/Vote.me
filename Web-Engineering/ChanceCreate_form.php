@@ -13,7 +13,7 @@
 <div id="Container">
 
 <form action="ChanceCreate_do.php" method="post">
-    <a class="NewPos">Neue Möglichkeit anlegen:</a></br></br>
+    <a class="NewPos">Neue Möglichkeit anlegen:</a></br></br></br>
 
     <input type="text" name="description_Chance" id="description_Chance" class="inputForm" placeholder="Beschreibung"><br><br>
     <input class="submit" type='submit' value="anlegen">
