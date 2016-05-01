@@ -9,7 +9,7 @@ body {
 }
 
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
-#bg{
+body{
     background-image: url("img/bg.jpg");
     position: fixed;
     top: 0;
