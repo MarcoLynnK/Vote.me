@@ -5,9 +5,12 @@
     require_once ('include/header.php')
     ?>
 
-    <script src="js/chart.js"></script>
+
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="js/chart.js"></script>
+
 <title>Sign up</title>
 
 </head>
@@ -18,7 +21,7 @@
 <div id="Container">
 
     <form class="form-signin" role="form" action="Login_do.php" method="post">
-            <canvas class="canvas"></canvas>
+            <canvas class="canvas" width="400" height="400"></canvas>
 
             <script>
                 var chart = document.getElementById(canvas).getContext("2d");
