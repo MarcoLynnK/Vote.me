@@ -21,7 +21,7 @@
 <body>
 <div id="navbar">
 
-    <img src="pic/logo2.svg" id="logo">
+    <img src="pic/logo.svg" id="logo">
 
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
