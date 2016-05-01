@@ -31,7 +31,7 @@ body {
 /*Positionierung des Logos (weiss)  in der Navigationsleiste */
 #logo{
     position: relative;
-    left: 15px;
+    left: 30px;
     top: 5px;
     width: 32%;
     max-width: 150px;
