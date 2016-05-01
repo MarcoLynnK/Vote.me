@@ -10,7 +10,7 @@ body {
 
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
 #bg{
-    background-image: url("https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/pic/bg.jpg");
+    background-image: url("img/bg.jpg");
     position: fixed;
     top: 0;
     left: 0;
