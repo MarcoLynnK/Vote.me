@@ -37,7 +37,7 @@
 
 </div>
 
-<div id="Login">
+<div id="Container">
 
     <form class="input-container" action="" method="post">
         <a id="text">NEW USER</a></br></br>

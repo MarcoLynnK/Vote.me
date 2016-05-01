@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div id="Login">
+<div id="Container">
 
 <form action="ChanceCreate_do.php" method="post">
     <a id="text">Neue Möglichkeit anlegen:</a></br></br>
