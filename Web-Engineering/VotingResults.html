@@ -44,6 +44,11 @@
 
         var ctx = $("#canvas").get("0").getContext("2d");
         var mychart = new Chart(ctx).Pie(data);
+        var myPieChart = new Chart(ctx,{
+            type: 'pie',
+            data: data,
+            options: options
+        });
     </script>
 
 </div>
