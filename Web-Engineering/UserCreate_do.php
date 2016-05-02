@@ -1,4 +1,4 @@
-<?php include("include/session_check.php"); ?>
+<?php// include("include/session_check.php"); ?>
 
 <?php
 

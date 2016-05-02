@@ -22,7 +22,7 @@
 
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
-$lectureManager = new LectureManager();
+$lectureManager = new LectureManager($lecture);
 $list = $lectureManager->findAll();
 foreach ($list as $lecture) {
     echo "<tr>";

@@ -3,7 +3,7 @@ require_once ("Main/VotingManager.php");
 require_once ("Main/Classes.php");
 
 $ID_Voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
-$VotingManager = new VotingManager();
+$VotingManager = new VotingManager($voting);
 $voting = $VotingManager->findById($ID_Voting);
 
 ?>

@@ -3,7 +3,7 @@ require_once ("Main/UserManager.php");
 require_once ("Main/Classes.php");
 
 $ID_User = (int)htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
-$UserManager = new UserManager();
+$UserManager = new UserManager($user);
 $user = $UserManager->findById($ID_User);
 
 ?>
