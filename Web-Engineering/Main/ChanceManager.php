@@ -3,7 +3,6 @@ require_once ("Manager.php");
 require_once ("Classes.php");
 
 //CRUD Applikation Möglichkeiten/Optionen für das Voting (Antworten)
-
 class ChanceManager extends Manager
 {
     protected $pdo;
@@ -18,6 +17,22 @@ class ChanceManager extends Manager
         parent::__destruct();
     }
 
+    public function findAll ()
+    {
+        try
+        {
+            $sql= $this->pdo-> prepare ('SELECT * FROM Chance');
+            $sql->execute();
+            $sql->setFetchMode (PDO::FETCH_CLASS, 'Chance');
+            return $sql-> FetchAll();
+        }
+        catch (PDOException $e)
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            die();
+        }
+    }
+    
     //Auslesen der Möglichkeit nach der ID aus der DB
     public function findById ($ID_Chance)
     {
@@ -56,7 +71,8 @@ class ChanceManager extends Manager
     }
 
     //Möglichkeit aktualisieren/ändern
-    public function update (Chance $chance) {
+    public function update (Chance $chance) 
+    {
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Chance SET description_Chance = :description_Chance WHERE ID_Chance = :ID_Chance');

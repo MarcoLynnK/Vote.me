@@ -59,7 +59,7 @@ class LectureManager extends Manager
     {
 
         try {
-            $stmt = $this->pdo->prepare('INSERT INTO Lecture (name_Lecture, degreecourse, faculty) VALUES (:name_Lecture , :degreecourse, :faculty)');
+            $stmt = $this->pdo->prepare('INSERT INTO Lecture (name_Lecture, degreecourse) VALUES (:name_Lecture , :degreecourse)');
             $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
             $stmt->bindParam(':degreecourse', $lecture->degreecourse);
             $stmt->execute();
