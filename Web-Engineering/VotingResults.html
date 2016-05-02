@@ -20,34 +20,30 @@
 
     <canvas id="canvas" width="400" height="400"></canvas>
     <script>
-        var data = {
-            labels: [
-                "Red",
-                "Green",
-                "Yellow"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ]
-                }]
-        };
+        var data = [
+            {
+                value: 300,
+                color: "#F7464A",
+                highlight: "#FFFAA",
+                label: "Red"
+            },
+            {
+                value: 50,
+                color: "#468FBD",
+                highlight: "#5AD3D1",
+                label: "Green"
+            },
+            {
+                value: 100,
+                color: "#FD845C",
+                highlight: "#FFC870",
+                label: "Yellow"
+            }
+        ]
 
         var ctx = $("#canvas").get("0").getContext("2d");
-        var myPieChart = new Chart(ctx,{
-            type: 'pie',
-            data: data,
-            options: options
-        });
+        var mychart = new Chart(ctx).Pie(data);
+
     </script>
 
 </div>
