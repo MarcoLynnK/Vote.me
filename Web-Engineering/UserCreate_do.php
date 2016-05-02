@@ -22,7 +22,7 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($faculty
         ];
 
     $user = new User($userdata);
-    $userManager = new UserManager();
+    $userManager = new UserManager($user);
     $userManager->create($user);
     header('Location: Lecture_index.php');
 }

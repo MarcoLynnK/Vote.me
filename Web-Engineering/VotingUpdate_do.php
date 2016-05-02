@@ -7,7 +7,7 @@ $question_Voting = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8")
 
     if (!empty ($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
     {
-        $votingManager = new VotingManager();
+        $votingManager = new VotingManager($voting);
         $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
         $voting->name_Voting= $name_Voting;
         $voting->question_Voting= $question_Voting;
