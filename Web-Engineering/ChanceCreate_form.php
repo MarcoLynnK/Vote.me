@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-require_once("Main/LectureManager.php");
+require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
 
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
@@ -31,7 +31,7 @@ if (!empty($ID_Voting) && !empty($name_Voting))
     Möglichkeit:<br>
     <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
     Zu Voting zuweisen:
-    <?php echo '<option value="$voting->name_Voting"></option>'?>
+    <?php echo '<option value="$voting->ID_Voting.$voting->name_Voting"></option>'?>
     <input type='submit' value='anlegen'>
 </form>
 
