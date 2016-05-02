@@ -18,31 +18,33 @@
 
 <div id="Container">
 
-    <canvas id="canvas" width="400" height="400"></canvas>
+    <canvas id="skills" width="300" height="300"></canvas>
     <script>
-        var data = [
+        var context = document.getElementById('skills').getContext('2d');
+        var skillsChart = new Chart(context).Pie(data);
+
+        var pieData = [
             {
-                value: 300,
-                color: "#F7464A",
-                highlight: "#FFFAA",
-                label: "Red"
+                value: 25,
+                label: 'Java',
+                color: '#811BD6'
             },
             {
-                value: 50,
-                color: "#468FBD",
-                highlight: "#5AD3D1",
-                label: "Green"
+                value: 10,
+                label: 'Scala',
+                color: '#9CBABA'
             },
             {
-                value: 100,
-                color: "#FD845C",
-                highlight: "#FFC870",
-                label: "Yellow"
+                value: 30,
+                label: 'PHP',
+                color: '#D18177'
+            },
+            {
+                value : 35,
+                label: 'HTML',
+                color: '#6AE128'
             }
         ];
-
-        var ctx = $("#canvas").get("0").getContext("2d");
-        var mychart = new Chart(ctx).Pie(data);
 
     </script>
 
