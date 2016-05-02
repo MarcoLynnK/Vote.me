@@ -6,9 +6,9 @@ $description_Chance= htmlspecialchars($_POST["description_Chance"], ENT_QUOTES, 
 
 if (!empty($description_Chance))
 {
-    $chanceManager = new ChanceManager();
+    $chanceManager = new ChanceManager($chance);
     $chance= $chanceManager->create ($chance);
-    if ($lecture==null) {
+    if ($chance==null) {
         header('Location: login.php');
         die();
     }

@@ -1,43 +1,38 @@
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <?php
     require_once ('include/header.php')
     ?>
-
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 </head>
 <body>
+<?php
+require_once("Main/LectureManager.php");
+require_once("Main/Classes.php");
 
+$ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
+$name_Voting = htmlspecialchars($_GET["name_Voting"], ENT_QUOTES, "UTF-8");
 
-<div id="navbar">
+if (!empty($ID_Voting) && !empty($name_Voting))
+{
+        $votingManager = new VotingManager($voting);
+        $voting = $votingManager->findAll();//holt sich das Voting aus der Datenbank durch Suche nach der ID
+        if ($voting==null)
+        {
+        header('Location: login.php');
+        die();
+        }
+    return $voting;
+}
+?>
 
-    <img src="pic/logo2.svg" id="logo">
+<h1> Neue Möglichkeit anlegen:</h1>
 
-    <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-        <div class="dropdown-content">
-            <a href="#">VOTINGS</a>
-            <a href="#">SETTINGS</a>
-        </div>
-    </div>
-
-    <a href="log-out.html" style="text-decoration: none;">
-        <button class="log-out" name="LogOut">LOG OUT</button>
-    </a>
-
-</div>
-
-
-<div id="Container">
-
-<form class="input-container" action="ChanceCreate_do.php" method="post">
-    <a class="NewPos">Neue Möglichkeit anlegen:</a></br></br></br>
-
-    <input class="inputForm" type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
-    <input class="submit" type='submit' value="anlegen">
+<form action="ChanceCreate_do.php" method="post">
+    Möglichkeit:<br>
+    <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
+    Zu Voting zuweisen:
+    <?php echo '<option value="$voting->name_Voting"></option>'?>
+    <input type='submit' value='anlegen'>
 </form>
-</div>
 
 </body>
