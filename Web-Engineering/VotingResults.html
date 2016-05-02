@@ -2,54 +2,66 @@
 <html>
 <head>
 
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-        <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 
 </head>
 
 <body>
-<div class="container">
+    <div id="navbar">
 
+        <img src="pic/logo2.svg" id="logo">
 
+            <div class="dropdown">
+                <button class="dropbtn">MENU</button>
+                <div class="dropdown-content">
+                    <a href="#">VOTINGS</a>
+                    <a href="#">SETTINGS</a>
+                </div>
+            </div>
 
+            <a href="log-out.html" style="text-decoration: none;">
+                <button class="log-out" name="LogOut">LOG OUT</button>
+            </a>
 
-    <canvas id="canvas" height="450" width="610"></canvas>
+    </div>
 
-</div>
-<script>
+    <div class="container">
 
-    var DoughnutChart = [
-        {
-            value: 60,
-            color:"#fcc79e"
-        },
-        {
-            value : 30,
-            color : "#beefd2"
-        },
-        {
-            value : 50,
-            color : "#ffddfb"
-        },
-        {
-            value : 120,
-            color : "#cdecff"
-        },
-        {
-            value : 90,
-            color : "#fff5bc"
-        }
+    <canvas id="canvas" height="200%"></canvas>
 
-    ];
+    </div>
+        <script>
 
-    var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
+            var DoughnutChart = [
+                {
+                    value: 60,
+                    color:"#fcc79e"
+                },
+                {
+                    value : 30,
+                    color : "#beefd2"
+                },
+                {
+                    value : 50,
+                    color : "#ffddfb"
+                },
+                {
+                    value : 120,
+                    color : "#cdecff"
+                },
+                {
+                    value : 90,
+                    color : "#fff5bc"
+                }
 
-</script>
+            ];
 
+            var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
 
+        </script>
 
 </body>
 </html>
