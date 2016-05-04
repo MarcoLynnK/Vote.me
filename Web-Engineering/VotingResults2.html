@@ -28,50 +28,41 @@
 
 <body>
 
-    <div class="Doughnut" style="width: 100%; height: 100%;">
-        <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
-    </div>
-    <div id="js-legend" class="chart-legend"></div>
+<div>
+    <canvas id="chartDiv" height="400" width="600"></canvas>
+    <div id="legendDiv"></div>
+</div>
 
-        <script>
-
-            var data = [
-                {
-                    value: 61,
-                    color: "#09355C",
-                    label: "Label 1"
-                }, {
-                    value: 11,
-                    color: "#CBCBCB",
-                    label: "Label 2"
-                }, {
-                    value: 28,
-                    color: "#B61B12",
-                    label: "Label 3"
-                }];
-
-            var options = {
-                segmentShowStroke: false,
-                animateRotate: true,
-                animateScale: false,
-                percentageInnerCutout: 50,
-                tooltipTemplate: "<%= value %>%"
-                show
+<script>
+    var data = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "The Flash's Speed",
+                fillColor: "rgba(220,220,220,0.2)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [65, 59, 80, 81, 56, 55, 40]
+            },
+            {
+                label: "Superman's Speed",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [28, 48, 40, 19, 86, 27, 90]
             }
+        ]
+    };
 
-            var ctx = document.getElementById("myChart").getContext("2d");
-
-            var myChart = new Chart(ctx).Doughnut(data, options);
-
-            // Note - tooltipTemplate is for the string that shows in the tooltip
-
-            // legendTemplate is if you want to generate an HTML legend for the chart and use somewhere else on the page
-
-            // e.g:
-
-            document.getElementById('js-legend').innerHTML = myChart.generateLegend();
-
-        </script>
+    var myLineChart = new Chart(document.getElementById("chartDiv").getContext("2d")).Line(data);
+    document.getElementById("legendDiv").innerHTML = myLineChart.generateLegend();
+</script>
 
 </body>
 </html>
