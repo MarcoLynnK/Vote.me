@@ -64,7 +64,9 @@
                 animateRotate: true,
                 animateScale: false,
                 percentageInnerCutout: 50,
-                tooltipTemplate: "<%= value %>%"
+                tooltipTemplate: "<%= value %>%",
+                legend: labels.generateLabels,
+                labels: showLabelBackdrop
             }
 
             var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
