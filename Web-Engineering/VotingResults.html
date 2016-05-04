@@ -36,9 +36,10 @@
         <script>
 
             var DoughnutChart = [
+
                 {
                     value: 60,
-                    label: "10 min",
+                    labels: "10 min",
                     color:"#fcc79e"
                 },
                 {
@@ -58,8 +59,11 @@
                 },
             ];
 
+
             var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
             var skillsChart = new Chart(context).Doughnut(DoughnutChart);
+
+
 
         </script>
 
