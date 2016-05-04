@@ -33,9 +33,9 @@ body{
 #logo{
     position: relative;
     left: 15px;
-    top: 8px;
+    top: 5px;
     width: 32%;
-    max-width: 120px;
+    max-width: 150px;
 }
 
 .dropbtn{
