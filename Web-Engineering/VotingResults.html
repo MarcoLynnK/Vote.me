@@ -59,11 +59,17 @@
                 },
             ];
 
+            var options = {
+                segmentShowStroke: false,
+                animateRotate: true,
+                animateScale: false,
+                percentageInnerCutout: 50,
+                tooltipTemplate: "<%= value %>%"
+            }
 
             var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
-            var skillsChart = new Chart(context).Doughnut(DoughnutChart);
+            var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
 
-            alert(DoughnutChart);
         </script>
 
 </body>
