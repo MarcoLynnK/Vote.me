@@ -1,5 +1,6 @@
 <?php
 require_once("../Main/Classes.php");
+require_once("RightsCheck.php");
 
 session_start();
 if ($_SESSION ["login"]<>"1") {

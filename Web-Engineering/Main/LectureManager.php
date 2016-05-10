@@ -8,7 +8,7 @@ class LectureManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con)
+    public function __construct($con=null)
     {
         parent::__construct($con);
     }
@@ -36,7 +36,7 @@ class LectureManager extends Manager
     }
 
     //Alle Vorlesungen mit der bestimmten ID ausgeben
-    public function findById ($ID_Lecture)
+    public function findById (Lecture $ID_Lecture)
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE ID_Lecture = :ID_Lecture');
