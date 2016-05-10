@@ -36,30 +36,35 @@
         <script>
 
             var DoughnutChart = [
+
                 {
                     value: 60,
-                    label: "10 min",
+                    label1: "10 min",
                     color:"#fcc79e"
                 },
                 {
                     value : 30,
-                    label: "30 min",
+                    label2: "30 min",
                     color : "#beefd2"
                 },
                 {
                     value : 50,
-                    label: "60 min",
+                    label3: "60 min",
                     color : "#ffddfb"
                 },
                 {
-                    value : 120,
-                    label: "NIEEMAAALS!",
+                    value : 70,
+                    label4: "NIEEMAAALS!",
                     color : "#cdecff"
                 },
             ];
 
+            var options = {
+                showlegend: true,
+            }
+
             var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
-            var skillsChart = new Chart(context).Doughnut(DoughnutChart);
+            var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
 
         </script>
 
