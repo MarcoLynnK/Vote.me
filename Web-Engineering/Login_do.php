@@ -7,7 +7,7 @@ $password = htmlspecialchars($_POST["password"], ENT_QUOTES, "UTF-8");
 
 if (!empty($login) && !empty($password)) 
 {
-    $userManager= new UserManager($user);
+    $userManager= new UserManager();
     $user = $userManager->findByLogin($login, $password);//holt sich den User aus der Datenbank durch Suche nach dem Login
     if ($user==null)
     {
