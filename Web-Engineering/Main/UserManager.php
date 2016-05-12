@@ -19,7 +19,7 @@ class UserManager extends Manager
     }
 
     //User auslesen aus DB
-    public function findByLogin ($login, $passwort) {
+    public function findByLogin ($login, $password) {
 
         try {
             $sql= $this->pdo->prepare('SELECT * FROM User WHERE login= :login');
@@ -28,7 +28,7 @@ class UserManager extends Manager
             $sql->setFetchMode(PDO::FETCH_CLASS, 'User');
             $user = $sql->fetch();
 
-            if (password_verify($passwort, $user->hash)) {
+            if (password_verify($password, $user->hash)) {
                 return $user;
             } else {
                 return null;
@@ -45,8 +45,8 @@ class UserManager extends Manager
         try {
             $sql= $this->pdo->prepare ('INSERT INTO Dozent (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
             $sql->bindParam (':login', $user->login);
-            $sql->bindParam (':vorname',$user->vorname);
-            $sql->bindParam (':nachname'.$user->nachname);
+            $sql->bindParam (':vorname',$user->firstname);
+            $sql->bindParam (':nachname'.$user->lastname);
             $sql->bindParam (':hash', $user->hash);
             $sql->execute ();
             $sql->setFetchMode (PDO::FETCH_CLASS,'User');
@@ -64,8 +64,8 @@ class UserManager extends Manager
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Dozent SET vorname = :vorname,nachname = :nachname,hash = :hash, rights= :rights WHERE login = :login');
-            $sql->bindParam (':vorname',$user->vorname);
-            $sql->bindParam (':nachname',$user->nachname);
+            $sql->bindParam (':vorname',$user->firstname);
+            $sql->bindParam (':nachname',$user->lastname);
             $sql->bindParam (':hash', $user->hash);
             $sql->bindParam (':rights', $user->rights);
             $sql->execute ();

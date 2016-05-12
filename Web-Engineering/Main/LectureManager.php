@@ -40,7 +40,7 @@ class LectureManager extends Manager
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE ID_Lecture = :ID_Lecture');
-            $sql-> bindParam (':ID_lecture', $ID_Lecture);
+            $sql-> bindParam (':ID_Lecture', $ID_Lecture);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             $lecture= $sql-> fetch();
