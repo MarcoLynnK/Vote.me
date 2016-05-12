@@ -12,7 +12,7 @@ $voting = $VotingManager->findById($ID_Voting);
 <html>
 <head>
 
-<?php include("include/header.php"); ?>
+<?php include("include/Head.php"); ?>
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">

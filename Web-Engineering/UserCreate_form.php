@@ -3,7 +3,7 @@
 <head>
 
     <?php
-    require_once ('include/header.php')
+    require_once('include/Head.php')
     ?>
 
     <!-- Latest compiled and minified CSS -->

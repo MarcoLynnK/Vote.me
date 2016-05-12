@@ -1,7 +1,7 @@
 <html>
 <head>
     <?php
-    require_once ('include/header.php')
+    require_once('include/Head.php')
     ?>
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
