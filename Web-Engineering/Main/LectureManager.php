@@ -19,6 +19,7 @@ class LectureManager extends Manager
     }
 
     // alle Vorlesungen ausgeben
+
     public function findAll ()
     {
         try
@@ -36,6 +37,7 @@ class LectureManager extends Manager
     }
 
     //Alle Vorlesungen mit der bestimmten ID ausgeben
+
     public function findById (Lecture $ID_Lecture)
     {
         try {
@@ -55,6 +57,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB anlegen
+
     public function create (Lecture $lecture)
     {
 
@@ -73,6 +76,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB aktualisieren
+
     public function update (Lecture $lecture)
     {
         try {
@@ -91,6 +95,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB Löschen
+    
     public function delete (Lecture $lecture) 
     {
         try {
