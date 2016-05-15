@@ -234,6 +234,11 @@ body{
     margin-right: 5px;
 }
 
+
+.werte{
+    margin-top: 50px;
+}
+
 .wert1{
     display: block;
     float: left;
