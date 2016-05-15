@@ -252,6 +252,7 @@ body{
 }
 
 .wert2{
+    margin-top: 10px;
     display: block;
     float: left;
     width: 1em;
@@ -264,6 +265,7 @@ body{
 }
 
 .wert3{
+    margin-top: 10px;
     display: block;
     float: left;
     width: 1em;
