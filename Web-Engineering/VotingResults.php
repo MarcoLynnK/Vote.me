@@ -52,11 +52,6 @@
                     label3: "60 min",
                     color : "#ffddfb"
                 },
-                {
-                    value : 70,
-                    label4: "NIEEMAAALS!",
-                    color : "#cdecff"
-                },
             ];
 
             var options = {
@@ -70,17 +65,14 @@
 
     <div class="werte">
 
-        <div class="wert1">
+        <div class="wert1"></div>
+        <div class=""><?php echo "" ?></div>
 
-        </div>
+        <div class="wert2"></div>
+        <div class=""><?php echo "" ?></div>
 
-        <div class="wert2">
-
-        </div>
-
-        <div class="wert3">
-
-        </div>
+        <div class="wert3"></div>
+        <div class=""><?php echo "" ?></div>
 
     </div>
 
