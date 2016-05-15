@@ -8,7 +8,7 @@ class LectureManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con)
+    public function __construct($con=null)
     {
         parent::__construct($con);
     }
@@ -19,6 +19,7 @@ class LectureManager extends Manager
     }
 
     // alle Vorlesungen ausgeben
+
     public function findAll ()
     {
         try
@@ -36,11 +37,12 @@ class LectureManager extends Manager
     }
 
     //Alle Vorlesungen mit der bestimmten ID ausgeben
-    public function findById ($ID_Lecture)
+
+    public function findById (Lecture $ID_Lecture)
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE ID_Lecture = :ID_Lecture');
-            $sql-> bindParam (':ID_lecture', $ID_Lecture);
+            $sql-> bindParam (':ID_Lecture', $ID_Lecture);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             $lecture= $sql-> fetch();
@@ -55,6 +57,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB anlegen
+
     public function create (Lecture $lecture)
     {
 
@@ -73,6 +76,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB aktualisieren
+
     public function update (Lecture $lecture)
     {
         try {
@@ -91,6 +95,7 @@ class LectureManager extends Manager
     }
 
     //Vorlesung in der DB Löschen
+    
     public function delete (Lecture $lecture) 
     {
         try {

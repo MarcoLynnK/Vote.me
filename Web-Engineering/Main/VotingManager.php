@@ -9,7 +9,7 @@ class VotingManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con)
+    public function __construct($con=null)
     {
         parent::__construct($con);
     }

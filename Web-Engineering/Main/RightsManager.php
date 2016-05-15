@@ -4,11 +4,11 @@ require_once ("Classes.php");
 
 // Read-Out von Rechten für den User nach der ID
 
-class RightManager extends Manager
+class RightsManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con)
+    public function __construct($con=null)
     {
         parent::__construct($con);
     }
