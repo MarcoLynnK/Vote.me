@@ -65,7 +65,7 @@
 
     <div class="werte">
 
-        <div class="wert1"></div>
+        <div class="wert1"></div><div class="wert2"></div>
         <div class=""><?php echo "" ?></div>
 
         <div class="wert2"></div>
