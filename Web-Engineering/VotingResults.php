@@ -40,17 +40,17 @@
                 {
                     value: 60,
                     label1: "10 min",
-                    color:"#fcc79e"
+                    color:"#ffaf72"
                 },
                 {
                     value : 30,
                     label2: "30 min",
-                    color : "#beefd2"
+                    color : "#91efbb"
                 },
                 {
                     value : 50,
                     label3: "60 min",
-                    color : "#ffddfb"
+                    color : "#f8baff"
                 },
             ];
 

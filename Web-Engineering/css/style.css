@@ -242,8 +242,8 @@ body{
     border: 2px solid;
     border-radius: 5px;
     margin-right: 0.5em;
-    color: #fcc79e;
-    background-color: #fcc79e;
+    color: #ffaf72;
+    background-color: #ffaf72;
 }
 
 .wert2{
@@ -254,8 +254,8 @@ body{
     border: 2px solid;
     border-radius: 5px;
     margin-right: 0.5em;
-    color: #beefd2;
-    background-color: #beefd2;
+    color: #91efbb;
+    background-color: #91efbb;
 }
 
 .wert3{
@@ -266,6 +266,6 @@ body{
     border: 2px solid;
     border-radius: 5px;
     margin-right: 0.5em;
-    color: #ffddfb;
-    background-color: #ffddfb;
+    color: #f8baff;
+    background-color: #f8baff;
 }
