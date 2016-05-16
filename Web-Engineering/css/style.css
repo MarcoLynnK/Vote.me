@@ -209,6 +209,14 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
+    left: 18%;
+}
+
+.CrtVtg{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    text-decoration: none;
 }
 
 .NewPos{

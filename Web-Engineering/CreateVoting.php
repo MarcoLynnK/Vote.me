@@ -41,7 +41,7 @@
 <div id="Container">
 
     <form class="input-container" action="UserCreate_do.php" method="post">
-        <a class="NewUser">CREATE VOTING</a></br></br>
+        <a class="CrtVtg">CREATE VOTING</a></br></br>
 
         <input class="inputForm" name="question" type="text" placeholder="Question?" ></br></br>
         <input class="inputForm" name="answer3" type="email" placeholder="Answer 1" ></br></br>
