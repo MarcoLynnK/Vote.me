@@ -44,8 +44,8 @@
         <a class="NewUser">CREATE VOTING</a></br></br>
 
         <input class="inputForm" name="question" type="text" placeholder="Question?" ></br></br>
-        <input class="inputForm2" name="answer1" type="text" placeholder="Answer 1">
-        <input class="inputForm3" name="answer2" type="text" placeholder="Answer 2"></br></br>
+        <input class="inputForm" name="answer3" type="email" placeholder="Answer 1" ></br></br>
+        <input class="inputForm" name="answer3" type="email" placeholder="Answer 2" ></br></br>
         <input class="inputForm" name="answer3" type="email" placeholder="Answer 3" ></br></br>
         <button class="submit" name="submit">SIGN UP</button></br></br>
     </form>
