@@ -14,11 +14,11 @@ $name_Voting = htmlspecialchars($_GET["name_Voting"], ENT_QUOTES, "UTF-8");
 
 if (!empty($ID_Voting) && !empty($name_Voting))
 {
-        $votingManager = new VotingManager($voting);
+        $votingManager = new VotingManager();
         $voting = $votingManager->findAll();//holt sich das Voting aus der Datenbank durch Suche nach der ID
         if ($voting==null)
         {
-        header('Location: login.php');
+        header('Location: Chance_Index.php');
         die();
         }
     return $voting;

@@ -38,7 +38,7 @@ $chance = $ChanceManager->findById($ID_Chance);
 
 </div>
 
-<a>Eintrag # <?php echo ($chance->ID_Chance) ?></a>
+<a>Votingoption # <?php echo ($chance->ID_Chance) ?></a>
 
     <form action='ChanceUpdate_do.php' method='post'>
         <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />

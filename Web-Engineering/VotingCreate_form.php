@@ -1,37 +1,39 @@
 <html>
 <head>
-    <?php
-    require_once('include/Head.php')
-    ?>
+    <?php require_once ("include/Head.php")?>
+
 </head>
 <body>
 <?php
-require_once("Main/LectureManager.php");
+/*
+require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
 
-$ID_Lecture= htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
-$name_Lecture = htmlspecialchars($_GET["name_Lecture"], ENT_QUOTES, "UTF-8");
+$ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
+$name_Voting= htmlspecialchars($_GET["name_Voting"], ENT_QUOTES, "UTF-8");
+$question_Voting= htmlspecialchars($_GET["question_Voting"], ENT_QUOTES, "UTF-8");
 
-if (!empty($ID_Lecture) && !empty($name_Lecture))
+if (!empty($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
 {
-    $lectureManager = new LectureManager($lecture);
-    $lecture = $lectureManager->findAll();//holt sich das Voting aus der Datenbank durch Suche nach der ID
-    if ($lecture==null)
+    $votingManager = new VotingManager();
+    $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
+    if ($voting==null)
     {
-        header('Location: login.php');
+        header('Location: Chance_Index.php');
         die();
     }
-    return $lecture;
+    return $voting;
 }
+*/
 ?>
 
-<h1> Neue Möglichkeit anlegen:</h1>
+<h1> Neues Voting anlegen:</h1>
 
 <form action="VotingCreate_do.php" method="post">
-    Möglichkeit:<br>
-    <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
-    Zu Voting zuweisen:
-    <?php echo '<option value="$lecture->ID_Lecture.$lecture->name_Lecture"></option>'?>
+    Votingthema:<br>
+    <input type="text" name="name_Voting" id="name_Voting" placeholder="Votingthema"><br><br>
+    Frage:
+    <input type="text" name="question_Voting" id="question_Voting" placeholder="Frage"><br><br>
     <input type='submit' value='anlegen'>
 </form>
 
