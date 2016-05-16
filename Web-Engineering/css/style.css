@@ -212,6 +212,21 @@ body{
     left: 18%;
 }
 
+.CrtVtg{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: 1%;
+}
+
+.NewUser.CrtVgt:hover{
+    text-decoration: none;
+}
+
 .NewPos{
     font-family: Helvetica, sans-serif;
     font-size: 28px;
@@ -232,4 +247,47 @@ body{
     width: 12px;
     height: 12px;
     margin-right: 5px;
+}
+
+
+.werte{
+    margin-top: 50px;
+}
+
+.wert1{
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #ffaf72;
+    background-color: #ffaf72;
+}
+
+.wert2{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #91efbb;
+    background-color: #91efbb;
+}
+
+.wert3{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #f8baff;
+    background-color: #f8baff;
 }

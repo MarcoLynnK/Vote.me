@@ -38,24 +38,16 @@
             var DoughnutChart = [
 
                 {
-                    value: 60,
-                    label1: "10 min",
-                    color:"#fcc79e"
+                    value: <?php echo " "; ?>,
+                    color:"#ffaf72"
                 },
                 {
-                    value : 30,
-                    label2: "30 min",
-                    color : "#beefd2"
+                    value : <?php echo " "; ?>,
+                    color : "#91efbb"
                 },
                 {
-                    value : 50,
-                    label3: "60 min",
-                    color : "#ffddfb"
-                },
-                {
-                    value : 70,
-                    label4: "NIEEMAAALS!",
-                    color : "#cdecff"
+                    value : <?php echo " "; ?>,
+                    color : "#f8baff"
                 },
             ];
 
@@ -67,6 +59,19 @@
             var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
 
         </script>
+
+    <div class="werte">
+
+        <div class="wert1"></div>
+        <div class=""><?php echo " " ?></div>
+
+        <div class="wert2"></div>
+        <div class=""><?php echo " " ?></div>
+
+        <div class="wert3"></div>
+        <div class=""><?php echo " " ?></div>
+
+    </div>
 
 </body>
 </html>
