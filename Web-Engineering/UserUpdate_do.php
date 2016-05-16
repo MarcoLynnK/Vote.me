@@ -14,7 +14,7 @@ $password= htmlspecialchars($_POST["password"],ENT_QUOTES,"UTF-8");
 //nach erfüllter Bedingung aktualisieren der Werte durch die neu eingegebenen durch den UserManager (update)
 if (!empty ($ID_User) && !empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) && !empty($password))
 {
-    $userManager = new UserManager($user);
+    $userManager = new UserManager();
     $user = $userManager->findById($ID_User);//holt sich die Möglichkeit aus der Datenbank durch Suche nach der ID
     $user->login = $login;
     $user->firstname= $firstname;

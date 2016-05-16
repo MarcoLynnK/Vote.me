@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<?php require_once "include/Head.php"?>
+
+<body>
+
+<div class="container">
+
+    <h1>Vorlesung</h1>
+    <table  class="table table-hover">
+        <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Studiengang</th>
+        <th></th>
+        </thead>
+        <tbody>
+
+<?php
+
+require_once("Main/Classes.php");
+require_once("Main/UserManager.php");
+$userManager = new LectureManager();
+$list = $userManager->findAll();
+foreach ($list as $user) {
+    echo "<tr>";
+    echo "<td>$user->ID_User</td>";
+    echo "<td>$user->firstname</td>";
+    echo "<td>$user->lastname</td>";
+    echo "<td>$user->email</td>";
+    echo "<td>$user->rights</td>";
+    echo "<td>$user->password</td>";
+    echo "<td>
+              <a href='UserRead.php?notiz_id=$user->ID_User' class='btn btn-success btn-xs'>zeige</a>&nbsp;
+              <a href='UserUpdate_form.php?notiz_id=$user->ID_User' class='btn btn-info btn-xs'>editiere</a>&nbsp;
+              <a href='UserDelete_do.php?notiz_id=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a>
+          </td>";
+    echo "<td></td>";
+    echo "</tr>";
+}
+?>

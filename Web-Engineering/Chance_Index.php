@@ -4,8 +4,6 @@
 
 <body>
 
-<?php include("include/navbar_loggedin.php"); ?>
-
 <div class="container">
 
     <h1>Vorlesung</h1>
@@ -21,7 +19,7 @@
 
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
-$chanceManager = new ChanceManager($chance);
+$chanceManager = new ChanceManager();
 $list = $chanceManager->findAll();
 foreach ($list as $chance) {
     echo "<tr>";
