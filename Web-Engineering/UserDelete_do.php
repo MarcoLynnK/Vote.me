@@ -11,4 +11,4 @@ $userManager = new UserManager();
 $user = $userManager->findByLogin($login, $password);
 $userManager->delete($user);
 
-header('Location: index.php');
+header('Location: User_Index.php');

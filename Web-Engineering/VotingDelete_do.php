@@ -10,4 +10,4 @@ $votingManager = new VotingManager();
 $voting = $votingManager->findById($ID_Voting);
 $votingManager->delete($voting);
 
-header('Location: index.php');
+header('Location: Voting_Index.php');

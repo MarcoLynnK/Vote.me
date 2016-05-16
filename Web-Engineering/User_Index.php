@@ -23,6 +23,7 @@
 
 require_once("Main/Classes.php");
 require_once("Main/UserManager.php");
+
 $userManager = new UserManager();
 $list = $userManager->findAll();
 foreach ($list as $user) {

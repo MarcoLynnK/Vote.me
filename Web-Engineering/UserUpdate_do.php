@@ -15,14 +15,14 @@ $password= htmlspecialchars($_POST["password"],ENT_QUOTES,"UTF-8");
 if (!empty ($ID_User) && !empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) && !empty($password))
 {
     $userManager = new UserManager();
-    $user = $userManager->findById($ID_User);//holt sich die Möglichkeit aus der Datenbank durch Suche nach der ID
+    $user = $userManager->findById($ID_User);//holt sich den User aus der Datenbank durch Suche nach der ID
     $user->login = $login;
     $user->firstname= $firstname;
     $user->lastname= $lastname;
     $user->email= $email;
     $user->password= $password;
     $userManager-> update ($user);
-    header ('Location: index.php');
+    header ('Location: User_Index.php');
 
     if ($user==null)
     {

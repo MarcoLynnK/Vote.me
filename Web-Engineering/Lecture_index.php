@@ -20,6 +20,7 @@
 
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
+
 $lectureManager = new LectureManager();
 $list = $lectureManager->findAll();
 foreach ($list as $lecture) {

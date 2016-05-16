@@ -3,7 +3,7 @@ require_once ("Main/UserManager.php");
 require_once ("Main/Classes.php");
 
 $ID_User = (int)htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
-$UserManager = new UserManager($user);
+$UserManager = new UserManager();
 $user = $UserManager->findById($ID_User);
 
 ?>
@@ -39,7 +39,7 @@ $user = $UserManager->findById($ID_User);
 
 </div>
 
-<a>Eintrag # <?php echo ($user->ID_User) ?></a>
+<a>User # <?php echo ($user->ID_User) ?> </a>
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
         Bitte aktualisieren Sie Ihre Angaben!<br>

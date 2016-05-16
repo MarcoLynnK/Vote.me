@@ -10,4 +10,4 @@ $chanceManager = new ChanceManager();
 $chance = $chanceManager->findById($ID_Chance);
 $chanceManager->delete($chance);
 
-header('Location: index.php');
+header('Location: Chance_Index.php');

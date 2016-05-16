@@ -2,7 +2,7 @@
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
-$ID_Lecture= htmlspecialchars($_POST ["ID_Lecture"], ENT_QUOTES, "UTF-8");
+$ID_Lecture= (int)htmlspecialchars($_POST ["ID_Lecture"], ENT_QUOTES, "UTF-8");
 $name_Lecture= htmlspecialchars($_POST["name_Lecture"], ENT_QUOTES, "UTF-8");
 $degreecourse = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8");
 
@@ -13,7 +13,7 @@ $degreecourse = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8");
         $lecture->name_lecture= $name_Lecture;
         $lecture->degreecourse= $degreecourse;
         $lectureManager-> update ($lecture);
-        header ('Location: index.php');
+        header ('Location: Lecture_Index.php');
 
         if ($lecture==null) 
         {

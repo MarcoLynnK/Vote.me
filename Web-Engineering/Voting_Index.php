@@ -20,6 +20,7 @@
 
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
+
 $votingManager = new VotingManager();
 $list = $votingManager->findAll();
 foreach ($list as $voting) {
