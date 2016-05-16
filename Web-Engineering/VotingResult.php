@@ -38,18 +38,15 @@
             var DoughnutChart = [
 
                 {
-                    value: 60,
-                    label1: "10 min",
+                    value: <?php echo "$_POST['']" ?>,
                     color:"#ffaf72"
                 },
                 {
-                    value : 30,
-                    label2: "30 min",
+                    value : <?php echo "$_POST['']" ?>,
                     color : "#91efbb"
                 },
                 {
-                    value : 50,
-                    label3: "60 min",
+                    value : <?php echo "$_POST['']" ?>,
                     color : "#f8baff"
                 },
             ];
@@ -66,13 +63,13 @@
     <div class="werte">
 
         <div class="wert1"></div>
-        <div class=""><?php echo "" ?></div>
+        <div class=""><?php echo "$_POST['']" ?></div>
 
         <div class="wert2"></div>
-        <div class=""><?php echo "" ?></div>
+        <div class=""><?php echo "$_POST['']" ?></div>
 
         <div class="wert3"></div>
-        <div class=""><?php echo "" ?></div>
+        <div class=""><?php echo "$_POST['']" ?></div>
 
     </div>
 

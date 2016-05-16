@@ -44,9 +44,9 @@
         <a class="CrtVtg">CREATE VOTING</a></br></br>
 
         <input class="inputForm" name="question" type="text" placeholder="Question?" rows="2"></br></br>
-        <input class="inputForm" name="answer3" type="email" placeholder="Answer 1" ></br></br>
-        <input class="inputForm" name="answer3" type="email" placeholder="Answer 2" ></br></br>
-        <input class="inputForm" name="answer3" type="email" placeholder="Answer 3" ></br></br>
+        <input class="inputForm" name="Option1" type="text" placeholder="Option 1" ></br></br>
+        <input class="inputForm" name="Option2" type="text" placeholder="Option 2" ></br></br>
+        <input class="inputForm" name="Option3" type="text" placeholder="Option 3" ></br></br>
         <button class="submit" name="submit">SIGN UP</button></br></br>
     </form>
 </div>
