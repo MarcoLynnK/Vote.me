@@ -217,7 +217,11 @@ body{
     font-size: 28px;
     color: #505050;
     text-decoration: none;
-    text-overflow: clip;
+    left: 10%;
+}
+
+.NewUser.CrtVgt:hover{
+    text-decoration: none;
 }
 
 .NewPos{
