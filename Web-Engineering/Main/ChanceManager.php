@@ -1,5 +1,5 @@
 <?php
-require_once ("Manager.php");
+include ("Manager.php");
 require_once ("Classes.php");
 
 //CRUD Applikation Möglichkeiten/Optionen für das Voting (Antworten)
