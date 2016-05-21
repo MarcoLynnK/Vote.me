@@ -307,3 +307,8 @@ body{
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+
+.votebtn:hover {
+    background-color: #36a1e8;
+    color: white;
+}
