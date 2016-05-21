@@ -28,9 +28,9 @@
 
 <div>
 
-    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
-    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
-    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
+    <button class="votebtn" name="Submit"><?php echo " " ?></button></br></br>
+    <button class="votebtn" name="Submit"><?php echo " " ?></button></br></br>
+    <button class="votebtn" name="Submit"><?php echo " " ?></button></br></br>
 
 </div>
 
