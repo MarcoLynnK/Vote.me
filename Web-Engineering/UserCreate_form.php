@@ -2,9 +2,7 @@
 <html>
 <head>
 
-    <?php
-    require_once('include/Head.php')
-    ?>
+    <?php require_once ("include/Head.php")?>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -41,14 +39,18 @@
 <div id="Container">
 
     <form class="input-container" action="UserCreate_do.php" method="post">
-        <a class="NewUser">NEW USER</a></br></br>
-
-        <input class="inputForm" id="login" name="login" type="text" placeholder="User ID" ></br></br>
-        <input class="inputForm2" id="firstname" name="firstname" type="text" placeholder="First name">
-        <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Last name"></br></br>
-        <input class="inputForm" id="email" name="email" type="email" placeholder="HdM E-Mail" ></br></br>
-        <input class="inputForm" id="password" name="password" type="password" placeholder="Password"></br></br>
-        <button class="submit" name="submit">SIGN UP</button></br></br>
+        <a class="NewUser">Neuer Benutzer</a></br></br>
+        Benutzername: <br>
+        <input class="inputForm" id="login" name="login" type="text" placeholder="Benutzername" ></br></br>
+        Vorname: <br>
+        <input class="inputForm2" id="firstname" name="firstname" type="text" placeholder="Vorname">
+        Nachname:<br>
+        <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Nachname"></br></br>
+        E-Mail: <br>
+        <input class="inputForm" id="email" name="email" type="email" placeholder="E-Mail" ></br></br>
+        Passwort: <br>
+        <input class="inputForm" id="password" name="password" type="password" placeholder="Passwort"></br></br>
+        <button class="submit" name="submit">REGISTRIEREN!</button></br></br>
     </form>
 </div>
 

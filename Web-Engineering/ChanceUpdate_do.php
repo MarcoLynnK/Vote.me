@@ -7,11 +7,11 @@ $description_Chance= htmlspecialchars($_POST["description_Chance"], ENT_QUOTES, 
 
     if (!empty ($ID_Chance) && !empty($description_Chance))
     {
-        $chanceManager = new ChanceManager($chance);
+        $chanceManager = new ChanceManager();
         $chance = $chanceManager->findById($ID_Chance);//holt sich die Möglichkeit aus der Datenbank durch Suche nach der ID
         $chance->description_Chance= $description_Chance;
         $chanceManager-> update ($chance);
-        header ('Location: Lecture_index.php');
+        header ('Location: Chance_Index.php');
 
         if ($chance==null)
         {

@@ -4,7 +4,7 @@ $_SESSION = array();
 session_destroy();
 ?>
 
-<?php include("include/Head.php"); ?>
+<?php include("include/Head.php")?>
 
 <body>
 

@@ -37,7 +37,8 @@ class RightsManager extends Manager
         return $rights;
     }
  /*
-    //Rechte Aktualisieren
+    //Rechte Aktualisieren (nur Admin)
+ 
     public function update (Rights $rights) {
         try
         {
@@ -67,5 +68,6 @@ class RightsManager extends Manager
             die();
         }
         return null;
-    }*/
+    }
+ */
 }

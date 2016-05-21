@@ -2,12 +2,12 @@
 require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
 
-$votingthema= htmlspecialchars($_POST["name_Voting"], ENT_QUOTES, "UTF-8");
-$question = htmlspecialchars($_POST["question_Voting"], ENT_QUOTES, "UTF-8");
+$name_Voting= htmlspecialchars($_POST["name_Voting"], ENT_QUOTES, "UTF-8");
+$question_Voting = htmlspecialchars($_POST["question_Voting"], ENT_QUOTES, "UTF-8");
 
-if (!empty($votingthema) && !empty($question))
+if (!empty($name_Voting) && !empty($question_Voting))
 {
-    $votingManager = new VotingManager($voting);
+    $votingManager = new VotingManager();
     $voting = $votingManager->create ($voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
     if ($voting==null) {
         header('Location: login.php');

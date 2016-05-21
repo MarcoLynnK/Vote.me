@@ -93,3 +93,21 @@ class Chance
         }
     }
 }
+
+//Klasse Ergebnis
+class Result
+{
+    public $ID_Result;
+    public $description_Result;
+    public $date_Result;
+
+    function __construct($daten=null)
+    {
+        if (is_array($daten))
+        {
+            $this->ID_Result = $daten ['ID_Result'];
+            $this->description_Result ['description_Result'];
+            $this->date_Result ['date_Result'];
+        }
+    }
+}

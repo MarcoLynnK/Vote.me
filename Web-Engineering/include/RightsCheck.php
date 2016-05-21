@@ -3,9 +3,10 @@
 require_once("../Main/RightsManager.php");
 require_once("../Main/Classes.php");
 
+$ID_Rights= htmlspecialchars($_GET["ID_Rights"], ENT_QUOTES, "UTF-8");
 
 $rightsManager = new RightsManager();
-$rights = $rightsManager->findById($rights);
+$rights = $rightsManager->findById($ID_Rights);
 
     if ($rights==null)
     {

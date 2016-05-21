@@ -17,42 +17,67 @@ class UserManager extends Manager
     {
         parent::__destruct(); //
     }
-
+    
     //User auslesen aus DB
     public function findByLogin ($login, $password) {
 
-        try {
+        try 
+        {
             $sql= $this->pdo->prepare('SELECT * FROM User WHERE login= :login');
             $sql->bindParam(':login', $login);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'User');
             $user = $sql->fetch();
 
-            if (password_verify($password, $user->hash)) {
+            if (password_verify($password, $user->hash)) 
+            {
                 return $user;
-            } else {
+            } 
+            else 
+            {
                 return null;
             }
-        } catch (PDOException $e){
+        } 
+        catch (PDOException $e) 
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+    }
+
+    // Auslesen aller Datensätze aus Table "User"
+    public function findAll ()
+    {
+        try
+        {
+            $sql= $this->pdo-> prepare ('SELECT * FROM User');
+            $sql->execute();
+            $sql->setFetchMode (PDO::FETCH_CLASS, 'User');
+            return $sql-> FetchAll();
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
-        return null;
     }
 
     // User anlegen
-    public function create (User $user) {
-        try {
-            $sql= $this->pdo->prepare ('INSERT INTO Dozent (login, vorname, nachname, hash) VALUES (:login, :vorname , :nachname, :hash)');
+    public function create (User $user) 
+    {
+        try 
+        {
+            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, hash) VALUES (:login, :firstname , :lastname, :hash)');
             $sql->bindParam (':login', $user->login);
-            $sql->bindParam (':vorname',$user->firstname);
-            $sql->bindParam (':nachname'.$user->lastname);
+            $sql->bindParam (':firstname',$user->firstname);
+            $sql->bindParam (':lastname'.$user->lastname);
             $sql->bindParam (':hash', $user->hash);
             $sql->execute ();
             $sql->setFetchMode (PDO::FETCH_CLASS,'User');
             $user= $sql->fetch();
         }
-        catch (PDOException $e) {
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
@@ -60,10 +85,11 @@ class UserManager extends Manager
     }
 
     //User aktualisieren
-    public function update (User $user) {
+    public function update (User $user) 
+    {
         try
         {
-            $sql= $this->pdo->prepare ('UPDATE Dozent SET vorname = :vorname,nachname = :nachname,hash = :hash, rights= :rights WHERE login = :login');
+            $sql= $this->pdo->prepare ('UPDATE User SET firstname = :firstname, lastname = :lastname, hash = :hash, rights= :rights WHERE login = :login');
             $sql->bindParam (':vorname',$user->firstname);
             $sql->bindParam (':nachname',$user->lastname);
             $sql->bindParam (':hash', $user->hash);
@@ -79,16 +105,19 @@ class UserManager extends Manager
     }
     
     //User Löschen
-    public function delete (User $user) {
-        try {
-            $sql = $this->pdo->prepare('DELETE FROM Dozent WHERE login= :login');
+    public function delete (User $user) 
+    {
+        try 
+        {
+            $sql = $this->pdo->prepare('DELETE FROM User WHERE login= :login');
             $sql->bindParam(':login', $user->login);
             $sql->execute();
-            }
-        catch (PDOException $e) {
+        }
+        catch (PDOException $e) 
+        {
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
             return $user;
-            }
+        }
         return null;
     }
 }
