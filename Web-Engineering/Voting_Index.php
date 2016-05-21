@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+</head>
 <?php require_once ("include/Head.php")?>
+</head>
 
 <body>
 
@@ -37,3 +39,7 @@ foreach ($list as $voting) {
     echo "</tr>";
 }
 ?>
+        
+</body>
+</html>
+        
