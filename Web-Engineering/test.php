@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
@@ -26,7 +26,13 @@
 </div>
 
 
+<div>
 
+    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
+    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
+    <button class="submit" name="Submit"><?php echo " " ?></button></br></br>
+
+</div>
 
 </body>
 </html>
