@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once ("VotingCreate_form.php")?>
+    
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 </head>
