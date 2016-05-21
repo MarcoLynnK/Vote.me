@@ -38,15 +38,15 @@
             var DoughnutChart = [
 
                 {
-                    value: <?php echo " "; ?>,
+                    value: 100,
                     color:"#ffaf72"
                 },
                 {
-                    value : <?php echo " "; ?>,
+                    value : 40,
                     color : "#91efbb"
                 },
                 {
-                    value : <?php echo " "; ?>,
+                    value : 70,
                     color : "#f8baff"
                 },
             ];
