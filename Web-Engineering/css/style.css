@@ -292,24 +292,3 @@ body{
     background-color: #f8baff;
 }
 
-.votebtn{
-    background-color: #2d2d2d;
-    border: solid 0px #36a1e8;
-    color: white;
-    width: 234px;
-    height: 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-    border-radius: 0px;
-
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.votebtn:hover {
-    background-color: #36a1e8;
-    color: white;
-}
