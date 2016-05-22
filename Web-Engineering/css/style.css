@@ -139,26 +139,29 @@ body{
 .inputForm{
     font-family: Helvetica, sans-serif;
     width: 234px;
-    height: 38px;
+    height: 36px;
     vertical-align: middle;
     font-size: 16px;
+    border-radius: 0px;
 }
 
 .inputForm2{
     font-family: Helvetica, sans-serif;
-    width: 112px;
-    height: 38px;
+    width: 111px;
+    height: 36px;
     vertical-align: middle;
     font-size: 16px;
+    border-radius: 0px;
 }
 
 .inputForm3{
     font-family: Helvetica, sans-serif;
-    width: 112px;
-    height: 38px;
+    width: 111px;
+    height: 36px;
     vertical-align: middle;
     font-size: 16px;
     margin-left: 6px;
+    border-radius: 0px;
 }
 
 .submit {
@@ -166,12 +169,13 @@ body{
     border: solid 0px #36a1e8;
     color: white;
     width: 240px;
-    height: 40px;
+    height: 41px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
+    border-radius: 0px;
 
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
