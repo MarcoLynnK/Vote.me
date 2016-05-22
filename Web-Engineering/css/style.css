@@ -143,6 +143,7 @@ body{
     vertical-align: middle;
     font-size: 16px;
     border-radius: 0px;
+    border: 0px;
 }
 
 .inputForm2{
@@ -152,6 +153,7 @@ body{
     vertical-align: middle;
     font-size: 16px;
     border-radius: 0px;
+    border: 0px;
 }
 
 .inputForm3{
@@ -162,6 +164,7 @@ body{
     font-size: 16px;
     margin-left: 6px;
     border-radius: 0px;
+    border: 0px;
 }
 
 .submit {
