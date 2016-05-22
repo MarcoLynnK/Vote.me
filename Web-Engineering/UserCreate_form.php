@@ -35,15 +35,10 @@
 
     <form class="input-container" action="UserCreate_do.php" method="post">
         <a class="NewUser">Neuer Benutzer</a></br></br>
-        Benutzername: <br>
         <input class="inputForm" id="login" name="login" type="text" placeholder="Benutzername" ></br></br>
-        Vorname: <br>
         <input class="inputForm2" id="firstname" name="firstname" type="text" placeholder="Vorname">
-        Nachname:<br>
         <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Nachname"></br></br>
-        E-Mail: <br>
         <input class="inputForm" id="email" name="email" type="email" placeholder="E-Mail" ></br></br>
-        Passwort: <br>
         <input class="inputForm" id="password" name="password" type="password" placeholder="Passwort"></br></br>
         <button class="submit" name="submit">REGISTRIEREN!</button></br></br>
     </form>
