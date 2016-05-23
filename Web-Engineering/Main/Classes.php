@@ -83,11 +83,11 @@ class Voting
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
-            $this-> Chance1=$daten ['Chance1'];
-            $this-> Chance2=$daten ['Chance2'];
-            $this-> Chance3=$daten ['Chance3'];
-            $this-> Chance4=$daten ['Chance4'];
-            $this-> date_Vote=$daten ['date_Vote'];
+            $this-> Chance1= $daten ['Chance1'];
+            $this-> Chance2= $daten ['Chance2'];
+            $this-> Chance3= $daten ['Chance3'];
+            $this-> Chance4= $daten ['Chance4'];
+            $this-> date_Vote= $daten ['date_Vote'];
             $this-> countChance1= $daten ['countChance1'];
             $this-> countChance2= $daten ['countChance2'];
             $this-> countChance3= $daten ['countChance3'];
