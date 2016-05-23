@@ -66,6 +66,10 @@ class Voting
     public $ID_Voting;
     public $name_Voting;
     public $question_Voting;
+    public $Chance1;
+    public $Chance2;
+    public $Chance3;
+    public $Chance4;
 
     function __construct($daten=null) 
     {
@@ -74,25 +78,14 @@ class Voting
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
+            $this-> Chance1=$daten ['Chance1'];
+            $this-> Chance2=$daten ['CHance2'];
+            $this-> Chance3=$daten ['Chance3'];
+            $this-> Chance4=$daten ['Chance4'];
         }
     }
 }
 
-//Klasse Möglichkeiten/Optionen
-class Chance 
-{
-    public $ID_Chance;
-    public $description_Chance;
-    
-    function __construct($daten=null)
-    {
-        if (is_array($daten))
-        {
-            $this-> ID_Chance= $daten ['ID_Chance'];
-            $this-> description_Chance= $daten ['description_Chance'];
-        }
-    }
-}
 
 //Klasse Ergebnis
 class Result
