@@ -79,7 +79,7 @@ class Voting
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
             $this-> Chance1=$daten ['Chance1'];
-            $this-> Chance2=$daten ['CHance2'];
+            $this-> Chance2=$daten ['Chance2'];
             $this-> Chance3=$daten ['Chance3'];
             $this-> Chance4=$daten ['Chance4'];
         }
