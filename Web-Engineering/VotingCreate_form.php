@@ -42,7 +42,7 @@
         <input class="inputForm" name="Chance1" type="text" placeholder="Option 1" ></br></br>
         <input class="inputForm" name="Chance2" type="text" placeholder="Option 2" ></br></br>
         <input class="inputForm" name="Chance3" type="text" placeholder="Option 3" ></br></br>
-        <input class="inputForm" name="Chance4" type="text" placeholder="Option 3" ></br></br>
+        <input class="inputForm" name="Chance4" type="text" placeholder="Option 4" ></br></br>
         <button class="submit" name="submit">SIGN UP</button></br></br>
     </form>
 </div>

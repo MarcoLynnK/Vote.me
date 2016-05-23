@@ -12,3 +12,4 @@ if ($_SESSION ["login"]<>"1") {
     $user = $_SESSION ["rights"];
 }
 ?>
+

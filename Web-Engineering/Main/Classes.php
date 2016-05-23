@@ -70,6 +70,11 @@ class Voting
     public $Chance2;
     public $Chance3;
     public $Chance4;
+    public $date_Vote;
+    public $countChance1;
+    public $countChance2;
+    public $countChance3;
+    public $countChance4;
 
     function __construct($daten=null) 
     {
@@ -82,25 +87,12 @@ class Voting
             $this-> Chance2=$daten ['Chance2'];
             $this-> Chance3=$daten ['Chance3'];
             $this-> Chance4=$daten ['Chance4'];
-        }
-    }
-}
-
-
-//Klasse Ergebnis
-class Result
-{
-    public $ID_Result;
-    public $description_Result;
-    public $date_Result;
-
-    function __construct($daten=null)
-    {
-        if (is_array($daten))
-        {
-            $this->ID_Result = $daten ['ID_Result'];
-            $this->description_Result ['description_Result'];
-            $this->date_Result ['date_Result'];
+            $this-> date_Vote=$daten ['date_Vote'];
+            $this-> countChance1= $daten ['countChance1'];
+            $this-> countChance2= $daten ['countChance2'];
+            $this-> countChance3= $daten ['countChance3'];
+            $this-> countChance4= $daten ['countChance4'];
+            
         }
     }
 }
