@@ -2,8 +2,8 @@
 
 <?php
 
-require_once("Main/UserManager.php");
-require_once("Main/Classes.php");
+require_once("./Main/UserManager.php");
+require_once("./Main/Classes.php");
 
 $login = htmlspecialchars($_POST["login"], ENT_QUOTES, "UTF-8");//htmlspecialchars filtert aus der eingabe die Sonderzeichen bzw. spezielle begriffe raus (Name= DROP ’user’)
 $firstname = htmlspecialchars($_POST["firstname"], ENT_QUOTES, "UTF-8");
@@ -25,7 +25,7 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) 
     $user = new User($userdata);
     $userManager = new UserManager($user);
     $userManager->create($user);
-    header('Location: Lecture_index.php');
+    header('Location: User_index.php');
 }
 else 
 {
