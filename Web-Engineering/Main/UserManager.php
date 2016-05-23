@@ -1,6 +1,6 @@
 <?php
-require_once ("./Manager.php");
-require_once ("./Classes.php");
+require_once ("Manager.php");
+require_once ("Classes.php");
 
 //CRUD Applikation User
 
