@@ -62,6 +62,10 @@ class VotingManager extends Manager
             $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (:name_Voting, :question_Voting)');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
+            $sql->bindParam(':Chance1', $voting->Chance1);
+            $sql->bindParam(':Chance2', $voting->Chance2);
+            $sql->bindParam(':Chance3', $voting->Chance3);
+            $sql->bindParam(':Chance4', $voting->Chance4);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
@@ -81,6 +85,10 @@ class VotingManager extends Manager
             $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting  WHERE :ID_Voting= ID_Voting');
             $sql->bindParam (':name_Voting', $voting->name_Voting);
             $sql->bindParam (':question_Voting', $voting->question_Voting);
+            $sql->bindParam(':Chance1', $voting->Chance1);
+            $sql->bindParam(':Chance2', $voting->Chance2);
+            $sql->bindParam(':Chance3', $voting->Chance3);
+            $sql->bindParam(':Chance4', $voting->Chance4);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
@@ -98,7 +106,7 @@ class VotingManager extends Manager
     public function delete (Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM Voting WHERE ID_Voting= :ID_Voting');
+            $sql = $this->pdo->prepare('DELETE * FROM Voting WHERE ID_Voting= :ID_Voting');
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
         }
@@ -108,5 +116,26 @@ class VotingManager extends Manager
             die();
         }
         return null;
+    }
+
+    // Übergabe der Angewählten Möglichkeiten aus dem Voting
+    public function countResult ($result)
+    {
+        try{
+            $sql = $this->pdo->prepare ('UPDATE Voting SET countChance1= :countChance1, countChance2= :countChance2, countChance3= :countChance3, countChance4= :countChance4 WHERE :ID_Voting= ID_Voting');
+            $sql-> bindParam (':countChance1',$result->countChance1);
+            $sql-> bindParam (':countChance2',$result->countChance2);
+            $sql-> bindParam (':countChance3',$result->countChance3);
+            $sql-> bindParam (':countChance4',$result->countChance4);
+            $sql->execute();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+        }
+        catch (PDOException $e)
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+        return $result;
+
     }
 }
