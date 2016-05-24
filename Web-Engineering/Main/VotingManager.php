@@ -119,7 +119,7 @@ class VotingManager extends Manager
     }
 
     // Übergabe der Angewählten Möglichkeiten aus dem Voting
-    public function countResult ($result)
+    public function createResult (Voting $result)
     {
         try{
             $sql = $this->pdo->prepare ('UPDATE Voting SET countChance1= :countChance1, countChance2= :countChance2, countChance3= :countChance3, countChance4= :countChance4 WHERE :ID_Voting= ID_Voting');
