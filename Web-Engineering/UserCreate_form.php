@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
     
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +10,7 @@
 
 <body>
 
+<!--Navigation-->
 <div id="navbar">
 
     <img src="pic/logo2.svg" id="logo">
@@ -31,6 +29,7 @@
 
 </div>
 
+<!--Eingabefelder für neuen User-->
 <div id="Container">
 
     <form class="input-container" action="UserCreate_do.php" method="post">
@@ -39,12 +38,11 @@
         <input class="inputForm2" id="firstname" name="firstname" type="text" placeholder="Vorname">
         <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Nachname"></br></br>
         <input class="inputForm" id="email" name="email" type="email" placeholder="E-Mail" ></br></br>
+        <input class="inputForm" id="rights" name="rights" type="text" placeholder="Userrecht" ></br></br>
         <input class="inputForm" id="password" name="password" type="password" placeholder="Passwort"></br></br>
-        <button class="submit" name="submit">REGISTRIEREN</button></br></br>
+        <button class="submit" name="submit">Registrieren</button></br></br>
     </form>
 </div>
-
-
 
 </body>
 

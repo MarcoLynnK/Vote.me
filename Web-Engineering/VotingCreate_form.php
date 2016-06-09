@@ -34,13 +34,15 @@
 
 <div id="Container">
 
-    <form class="input-container" action="UserCreate_do.php" method="post">
+    <form class="input-container" action="VotingCreate_do.php" method="post">
         <a class="CrtVtg">CREATE VOTING</a></br></br>
 
-        <input class="inputForm" name="question" type="text" placeholder="Frage?" rows="2"></br></br>
-        <input class="inputForm" name="Option1" type="text" placeholder="Option 1" ></br></br>
-        <input class="inputForm" name="Option2" type="text" placeholder="Option 2" ></br></br>
-        <input class="inputForm" name="Option3" type="text" placeholder="Option 3" ></br></br>
+        <input class="inputForm" name="name_Voting" type="text" placeholder="Votingname" rows="2"></br></br>
+        <input class="inputForm" name="question_Voting" type="text" placeholder="Frage?" rows="2"></br></br>
+        <input class="inputForm" name="Chance1" type="text" placeholder="Option 1" ></br></br>
+        <input class="inputForm" name="Chance2" type="text" placeholder="Option 2" ></br></br>
+        <input class="inputForm" name="Chance3" type="text" placeholder="Option 3" ></br></br>
+        <input class="inputForm" name="Chance4" type="text" placeholder="Option 4" ></br></br>
         <button class="submit" name="submit">SIGN UP</button></br></br>
     </form>
 </div>
