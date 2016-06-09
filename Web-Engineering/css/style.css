@@ -334,6 +334,6 @@ body{
     }
 
     .doughnut{
-        top: 1000px;
+        margin-top: 1000px;
     }
 }
