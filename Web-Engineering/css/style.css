@@ -1,12 +1,5 @@
 /* Der body inhalt wird sowohl vertikal als auch horizontal zentriert */
-html, body { height: 100%; }
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
+
 
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
 body{
