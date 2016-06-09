@@ -19,6 +19,18 @@ body{
     background-size: cover;
 }
 
+html, head { height: 100%; }
+head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
 #navbar{
     position: fixed;
@@ -318,4 +330,15 @@ body{
 .votebtn:hover {
     background-color: #36a1e8;
     color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    body{
+
+    }
+
+    head{
+
+    }
 }
