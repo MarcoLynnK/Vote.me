@@ -27,5 +27,5 @@ class Manager //Klasse Manager erstellen-für generellen Zugriff auf die DB durc
     {
         $this->pdo = null;
     }
-
+//blabla
 }
