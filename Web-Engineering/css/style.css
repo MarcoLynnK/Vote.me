@@ -10,14 +10,17 @@ body {
 
 /* Hintergrund ist fest und an die Größe des Browsers maximiert */
 body{
-    background-image: url("img/bg.jpg");
+    /* background-image: url("img/bg.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+
+
 
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
 #navbar{
@@ -318,4 +321,17 @@ body{
 .votebtn:hover {
     background-color: #36a1e8;
     color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    html, body { height: 100%; }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        margin-top: 100px;
+    }
 }
