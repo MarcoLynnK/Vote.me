@@ -50,7 +50,7 @@ class UserManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('SELECT * FROM User');
+            $sql= $this->pdo->prepare ('SELECT * FROM User');
             $sql->execute();
             $sql->setFetchMode (PDO::FETCH_CLASS, 'User');
             return $sql-> FetchAll();
@@ -67,10 +67,12 @@ class UserManager extends Manager
     {
         try 
         {
-            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, hash) VALUES (:login, :firstname , :lastname, :hash)');
+            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, email, rights, hash) VALUES (:login, :firstname , :lastname, :email, :rights, :hash)');
             $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
             $sql->bindParam (':lastname'.$user->lastname);
+            $sql->bindParam (':email'.$user->email);
+            $sql->bindParam (':rights'.$user->rights);
             $sql->bindParam (':hash', $user->hash);
             $sql->execute ();
             $sql->setFetchMode (PDO::FETCH_CLASS,'User');
@@ -89,9 +91,10 @@ class UserManager extends Manager
     {
         try
         {
-            $sql= $this->pdo->prepare ('UPDATE User SET firstname = :firstname, lastname = :lastname, hash = :hash, rights= :rights WHERE login = :login');
+            $sql= $this->pdo-> prepare ('UPDATE User SET firstname = :firstname, lastname = :lastname, hash = :hash, rights= :rights, email= :email WHERE login = :login');
             $sql->bindParam (':vorname',$user->firstname);
             $sql->bindParam (':nachname',$user->lastname);
+            $sql->bindParam (':email',$user->email);
             $sql->bindParam (':hash', $user->hash);
             $sql->bindParam (':rights', $user->rights);
             $sql->execute ();
@@ -109,7 +112,7 @@ class UserManager extends Manager
     {
         try 
         {
-            $sql = $this->pdo->prepare('DELETE FROM User WHERE login= :login');
+            $sql = $this->pdo-> prepare('DELETE FROM User WHERE login= :login');
             $sql->bindParam(':login', $user->login);
             $sql->execute();
         }

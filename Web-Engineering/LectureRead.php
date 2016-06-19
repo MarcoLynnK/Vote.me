@@ -15,37 +15,35 @@ $lecture = $lectureManager->findById($ID_Lecture);
 
 <body>
 
-    <h1><?php echo $lecture->name_lecture ?></h1>
-        <?php echo $notiz->text ?><br><br>
-        <?php echo ($notiz->name." / ".date("d.m.Y", strtotime($notiz->datum))); ?>
+<?php
+    echo "<h2>Vorlesung $ID_Lecture:</h2>";
 
-    <h2>Verbundene Leser:</h2>
-        <?php
-            $notizLeserManager = new NotizLeserManager();
-            $liste = $notizLeserManager->findAllLeserByNotiz($notiz);
-            if (count($liste) > 0) { ?>
-                <table class="table table-hover">
-                    <thead>
-                    <th>id</th>
-                    <th>Vorname</th>
-                    <th>Nachname</th>
-                    <th>Aktion</th>
-                    <th></th>
-                    </thead>
-                    <tbody>
-                    <?php
-                    foreach ($liste as $leser) {
-                        echo "<tr>";
-                        echo "<td>$leser->id</td>";
-                        echo "<td>$leser->vorname</td>";
-                        echo "<td>$leser->nachname</td>";
-                        echo "<td><a href='LeserUnconnect_do.php?notiz_id=$notiz->id&leser_id=$leser->id' class='btn btn-info btn-danger btn-xs' >Verbindung lösen</a>";
-                        echo "<td></td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                    </tbody>
-                </table>
-                <br>
+            $lectureManager = new LectureManager();
+            $lecture = $lectureManager->findById($lecture);
+            if (count($lecture) > 0)
+            {
 
-                <?php
+                echo "<table class='table table-hover'>";
+                    echo "<thead>";
+                        echo "<th>Vorlesung</th>";
+                        echo "<th>Name</th>";
+                        echo "<th>Studiengang</th>";
+                        echo "<th>Aktion</th>";
+                        echo "<th></th>";
+                    echo "</thead>";
+
+                foreach ($lecture as $vorlesung)
+                {
+                    echo "<tr>";
+                    echo "<td>$vorlesung->name_Lecture</td>";
+                    echo "<td>$vorlesung->degreecourse</td>";
+                    echo "<td><a href='LectureUpdate_form.php?notiz_id=$lecture->id&leser_id=$lecture->id' class='btn btn-info btn-danger btn-xs' >bearbeiten</a>";
+                    echo "<td><a href='LectureDelete_do.php?notiz_id=$lecture->id&leser_id=$lecture->id' class='btn btn-info btn-danger btn-xs' >löschen</a>";
+                    echo "<td></td>";
+                    echo "</tr>";
+                }
+            echo "</table>";
+        }
+            ?>
+
+</html>

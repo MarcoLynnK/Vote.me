@@ -20,7 +20,7 @@ if (!empty($login) && !empty($password))
         $_SESSION ['user'] = $user;
         $_SESSION ['login'] = "1";
         $_SESSION ['rights'] = $user ['rights'];
-        //header('Location: index.php');//direkte weiterleitung auf index php durch 'Location:
+        //header('Location: index_user.php');//direkte weiterleitung auf index php durch 'Location:
         die();
     }
 

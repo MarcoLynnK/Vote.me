@@ -4,11 +4,11 @@ class Manager //Klasse Manager erstellen-für generellen Zugriff auf die DB durc
 {
     protected $pdo;//zugriff auf pdo der Klasse Manager
 
-    public function __construct ($con = null)//constructor erstellen für neuen Verbindungsweg, falls Bedingung erfüllt (Parameter = 0)
+    public function __construct ($con=null)//constructor erstellen für neuen Verbindungsweg, falls Bedingung erfüllt (Parameter = 0)
     {
         try {
             $this->pdo = $con;//erstellen einer Verbindung mit der DB durch PDO
-                if ($this->pdo === null)
+                if ($this->pdo===null)
                 {
                     $this->pdo = new PDO (
                         UserData::$dsn,//zugriff auf Zugangsdaten durch UserData (statische Atribute/Klasse)
@@ -25,7 +25,7 @@ class Manager //Klasse Manager erstellen-für generellen Zugriff auf die DB durc
 
     public function __destruct()//Destruktor der pdo (auflösen/lösen der Connection zwischen der DB)
     {
-        $this->pdo = null;
+        $this->pdo=null;
     }
-//blabla
+
 }

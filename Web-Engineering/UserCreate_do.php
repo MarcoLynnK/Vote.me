@@ -12,7 +12,7 @@ $email = htmlspecialchars($_POST["email"], ENT_QUOTES, "UTF-8");
 $rights = (int) htmlspecialchars($_POST["rights"], ENT_QUOTES, "UTF-8");
 $password = htmlspecialchars($_POST["password"], ENT_QUOTES, "UTF-8");
 
-if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) && !empty($password))
+if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) && !empty($rights) && !empty($password))
 {
     $userdata =
         [
@@ -25,9 +25,9 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) 
         ];
 
     $user = new User($userdata);
-    $userManager = new UserManager($user);
+    $userManager = new UserManager();
     $userManager->create($user);
-    header('Location: User_index.php');
+    header('Location: User_Index.php');
 }
 else 
 {

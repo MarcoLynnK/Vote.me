@@ -3,7 +3,6 @@
 //Klasse User
 class User 
 {
-    public $ID_User;
     public $login;
     public $firstname;
     public $lastname;
@@ -15,7 +14,6 @@ class User
     {
         if (is_array($daten))
         {
-            $this-> ID_User= $daten ['ID_User'];
             $this-> login= $daten ['login'];
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
