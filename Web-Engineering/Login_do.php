@@ -17,9 +17,9 @@ if (!empty($login) && !empty($password))
     else
     {
         session_start();
-        $_SESSION ['user'] = $login;
+        $_SESSION ['user'] = $user->firstname." ".$user->lastname;;
         $_SESSION ['login'] = "1";
-        $_SESSION ['rights'] = $user ['ID_Rights'];
+        $_SESSION ['rights'] = $user->rights;
         header('Location: index.php');//direkte weiterleitung auf index php durch 'Location:
         die();
     }
