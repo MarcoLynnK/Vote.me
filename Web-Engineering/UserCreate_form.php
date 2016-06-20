@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?require_once ("include/Session_Check.php")?>
 <html>
 <head>
     
@@ -40,7 +41,7 @@
         <input class="inputForm" id="email" name="email" type="email" placeholder="E-Mail" ></br></br>
         <input class="inputForm" id="rights" name="rights" type="text" placeholder="Userrecht" ></br></br>
         <input class="inputForm" id="password" name="password" type="password" placeholder="Passwort"></br></br>
-        <button class="submit" name="submit">Registrieren</button></br></br>
+        <button class="submit" name="submit">ANLEGEN</button></br></br>
     </form>
 </div>
 

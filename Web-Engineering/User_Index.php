@@ -35,7 +35,7 @@ foreach ($list as $user) {
     echo "<td>$user->firstname</td>";
     echo "<td>$user->lastname</td>";
     echo "<td>$user->email</td>";
-    echo "<td>$user->rights</td>";
+    echo "<td>$user->ID_Righs</td>";
     echo "<td>$user->password</td>";
     echo "<td>
               <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'>zeige</a>&nbsp;
