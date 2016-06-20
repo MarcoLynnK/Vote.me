@@ -14,8 +14,10 @@ include ("include/Session_Check.php");
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
-            <a href="Voting_Index.php">VOTINGS</a>
-            <a href="#">SETTINGS</a>
+            <a href="Voting_Index.php">VOTING LIST</a>
+            <a href="#">CREATE VOTING</a>
+            <a href="#">USER LIST</a>
+            <a href="#">CREATE USER</a>
         </div>
     </div>
 

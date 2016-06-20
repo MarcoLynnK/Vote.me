@@ -19,6 +19,8 @@
                 <div class="dropdown-content">
                     <a href="#">VOTING LIST</a>
                     <a href="#">CREATE VOTING</a>
+                    <a href="#">USER LIST</a>
+                    <a href="#">CREATE USER</a>
                 </div>
             </div>
 
