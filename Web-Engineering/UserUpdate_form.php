@@ -28,8 +28,10 @@ $user = $UserManager->findById($ID_User);
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
-            <a href="#">VOTINGS</a>
-            <a href="#">SETTINGS</a>
+            <a href="#">VOTING LIST</a>
+            <a href="#">CREATE VOTING</a>
+            <a href="#">USER LIST</a>
+            <a href="#">CREATE USER</a>
         </div>
     </div>
 
