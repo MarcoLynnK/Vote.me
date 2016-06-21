@@ -344,8 +344,6 @@ body{
 @media screen and (max-width: 600px) {
     html, body { height: 100%; }
     body {
-
-        display: block;
         margin: 0.625em 0em 0.625em 0em;}
     #menu{
         display: block;
