@@ -356,7 +356,7 @@ body{
         display: block;
     }
 
-    .dropdown{
+    .dropbtn{
         display: none;
     }
     .log-out{
