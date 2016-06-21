@@ -353,7 +353,7 @@ body{
         display: inline-block;
 
         position: fixed;
-        right: 0px;
+        right: 5px;
         top: 5px;
     }
     .dropdown{
