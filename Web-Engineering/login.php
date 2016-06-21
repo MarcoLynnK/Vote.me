@@ -15,7 +15,7 @@
 <div id="Container">
 
     <form class="form-signin" role="form" action="Login_do.php" method="post">
-        <img src="pic/logo.svg" class="logo"></br></br>
+        <img src="img/logo.svg" class="logo"></br></br>
 
         <input for="login" class="inputForm" name="UserID" type="text" placeholder="Username" ></br></br>
 

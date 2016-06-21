@@ -12,7 +12,7 @@
 <body>
     <div id="navbar">
 
-        <img src="pic/logo2.svg" id="logo">
+        <img src="img/logo2.svg" id="logo">
 
             <div class="dropdown">
                 <button class="dropbtn">MENU</button>
