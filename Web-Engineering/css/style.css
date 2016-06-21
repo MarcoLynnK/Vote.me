@@ -352,12 +352,12 @@ body{
         right: 7px;
         top: 5px;
     }
+
     .dropdown{
         display: none;
     }
     .log-out{
         display: none;
     }
-
 }
 

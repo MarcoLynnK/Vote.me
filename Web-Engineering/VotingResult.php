@@ -10,9 +10,17 @@
 
     <div id="navbar">
 
-        <img src="img/logo2.svg" id="logo">
 
-        <div class="menu"><img src="img/sw_menu.png" id="menu"></div>
+            <img src="img/logo2.svg" id="logo">
+
+
+        <div class="menu">
+            <button class="menu-btn"><img src="img/sw_menu.png" id="menu"></button>
+            <div class="dropdown-content">
+                <a href="#">VOTING LIST</a>
+                <a href="#">CREATE VOTING</a>
+            </div>
+        </div>
 
 
         <div class="dropdown">
