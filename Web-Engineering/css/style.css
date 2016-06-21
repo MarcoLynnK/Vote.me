@@ -340,7 +340,7 @@ body{
 /* Mobile */
 
 @media screen and (max-width: 600px) {
-    #menu{
+    .menu{
         display: block;
         width: 40px;
         height: 40px;
