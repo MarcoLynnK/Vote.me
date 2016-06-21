@@ -350,6 +350,15 @@ body{
     }
     #menu{
         display: block;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+
+        position: fixed;
+        right: 0px;
+        top: 0px;
     }
     .dropdown{
         display: none;
