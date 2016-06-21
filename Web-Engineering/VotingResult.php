@@ -15,7 +15,7 @@
 
 
         <div class="menu">
-            <img src="img/sw_menu.png" id="menu-btn">
+            <button class="menu-button"><img src="img/sw_menu.png" id="menu-icon"></button>
             <div class="dropdown-content">
                 <a href="#">VOTING LIST</a>
                 <a href="#">CREATE VOTING</a>
