@@ -15,6 +15,9 @@
 
     <img src="img/logo2.svg" id="logo">
 
+    <div class="menu"><img src="img/sw_menu.png" id="menu"></div>
+
+
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
