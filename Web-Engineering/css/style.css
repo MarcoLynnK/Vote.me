@@ -343,7 +343,6 @@ body{
 
 @media screen and (max-width: 600px) {
 
-    }
     #menu{
         display: block;
         width: 40px;
@@ -353,7 +352,7 @@ body{
         display: inline-block;
 
         position: fixed;
-        right: 5px;
+        right: 7px;
         top: 5px;
     }
     .dropdown{
