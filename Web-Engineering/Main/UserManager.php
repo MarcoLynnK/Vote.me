@@ -17,6 +17,24 @@ class UserManager extends Manager
     {
         parent::__destruct(); //
     }
+
+    public function findById (User $ID_User)
+    {
+        try {
+            $sql= $this->pdo-> prepare ('SELECT * FROM User WHERE ID_User= :ID_User');
+            $sql-> bindParam (':ID_User', $ID_User);
+            $sql-> execute ();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'User');
+            $user= $sql-> fetch();
+        }
+        catch (PDOException $e)
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            die();
+        }
+        if (!$user) $user=null;
+        return $user;
+    }
     
     //User auslesen aus DB
     public function findByLogin ($login, $password) {
@@ -63,7 +81,7 @@ class UserManager extends Manager
     }
 
     // User anlegen
-    public function create (User $user) 
+    public function create (User $user)
     {
         try 
         {
@@ -73,7 +91,7 @@ class UserManager extends Manager
             $sql->bindParam (':lastname'.$user->lastname);
             $sql->bindParam (':email'.$user->email);
             $sql->bindParam (':rights'.$user->rights);
-            $sql->bindParam (':hash', $user->hash);
+            $sql->bindParam (':password', $user->hash);
             $sql->execute ();
             $sql->setFetchMode (PDO::FETCH_CLASS,'User');
             $user= $sql->fetch();

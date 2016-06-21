@@ -26,6 +26,7 @@ include ("include/Session_Check.php");
     </a>
 
 </div>
+<h1>sie sind admin:</h1>
 <a href="User_Index.php">User</a>
 <a href="Lecture_Index.php">Vorlesungen</a><br><br>
 <a href="Voting_Index.php">Votings</a><br><br>

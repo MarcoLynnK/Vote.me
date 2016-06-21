@@ -24,6 +24,7 @@
     </a>
 
 </div>
+<h1>sie sind normaler User</h1>
 <a href="Lecture_Index.php">Vorlesungen</a><br><br>
 <a href="Voting_Index.php">Votings</a><br><br>
 </body>
