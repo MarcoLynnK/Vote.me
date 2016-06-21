@@ -28,7 +28,7 @@
         </a>
 
     </div>
-    
+
 
 </head>
 
@@ -37,7 +37,7 @@
 
     <div class="container">
 
-    <canvas id="canvas" height="450" width="610"></canvas>
+    <canvas id="canvas" height="450" width="610">
 
     </div>
         <script>
@@ -65,7 +65,7 @@
             var myDoughnutChart = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(DoughnutChart);
             var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
 
-        </script>
+        </script></canvas>
 
     <div class="werte">
 
