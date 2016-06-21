@@ -20,8 +20,6 @@ body{
 }
 
 
-
-
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
 #navbar{
     position: fixed;
@@ -359,6 +357,10 @@ body{
     }
     .log-out{
         display: none;
+    }
+    #canvas{
+        height: 400px;
+        width: 570px;
     }
 }
 
