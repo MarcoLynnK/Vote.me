@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Sign up</title>
 
+
+    <!--Navigation-->
+    <div id="navbar">
+
+        <img src="img/logo2.svg" id="logo">
+
+        <div class="menu"><img src="img/sw_menu.png" id="menu"></div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <div class="dropdown-content">
+                <a href="#">VOTING LIST</a>
+                <a href="#">CREATE VOTING</a>
+                <a href="#">USER LIST</a>
+                <a href="#">CREATE USER</a>
+            </div>
+        </div>
+
+        <a href="log-out.html" style="text-decoration: none;">
+            <button class="log-out" name="LogOut">LOG OUT</button>
+        </a>
+
+    </div>
+    
+
 </head>
 
 <body>
-
-<!--Navigation-->
-<div id="navbar">
-
-    <img src="img/logo2.svg" id="logo">
-
-    <div class="menu"><img src="img/sw_menu.png" id="menu"></div>
-
-
-    <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-        <div class="dropdown-content">
-            <a href="#">VOTING LIST</a>
-            <a href="#">CREATE VOTING</a>
-            <a href="#">USER LIST</a>
-            <a href="#">CREATE USER</a>
-        </div>
-    </div>
-
-    <a href="log-out.html" style="text-decoration: none;">
-        <button class="log-out" name="LogOut">LOG OUT</button>
-    </a>
-
-</div>
 
 <!--Eingabefelder für neuen User-->
 <div id="Container">

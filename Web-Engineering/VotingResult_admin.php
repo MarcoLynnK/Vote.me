@@ -7,9 +7,8 @@
 
     <script type="text/javascript" src="js/Chart.min.js"></script>
 
-</head>
 
-<body>
+    <!--Navigation-->
     <div id="navbar">
 
         <img src="img/logo2.svg" id="logo">
@@ -18,20 +17,25 @@
 
 
         <div class="dropdown">
-                <button class="dropbtn">MENU</button>
-                <div class="dropdown-content">
-                    <a href="#">VOTING LIST</a>
-                    <a href="#">CREATE VOTING</a>
-                    <a href="#">USER LIST</a>
-                    <a href="#">CREATE USER</a>
-                </div>
+            <button class="dropbtn">MENU</button>
+            <div class="dropdown-content">
+                <a href="#">VOTING LIST</a>
+                <a href="#">CREATE VOTING</a>
+                <a href="#">USER LIST</a>
+                <a href="#">CREATE USER</a>
             </div>
+        </div>
 
-            <a href="log-out.html" style="text-decoration: none;">
-                <button class="log-out" name="LogOut">LOG OUT</button>
-            </a>
+        <a href="log-out.html" style="text-decoration: none;">
+            <button class="log-out" name="LogOut">LOG OUT</button>
+        </a>
 
     </div>
+
+</head>
+
+<body>
+
 
     <div class="container">
 
