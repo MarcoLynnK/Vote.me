@@ -354,5 +354,8 @@ body{
     .dropdown{
         display: none;
     }
+    .log-out{
+        display: none;
+    }
 }
 
