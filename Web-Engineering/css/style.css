@@ -303,6 +303,9 @@ body{
     background-color: #f8baff;
 }
 
+
+/* Voting-Buttons */
+
 .votebtn{
     background-color: #2d2d2d;
     border: solid 0px #36a1e8;
@@ -324,6 +327,8 @@ body{
     background-color: #36a1e8;
     color: white;
 }
+
+/* Checkbox für den Admin-User*/
 
 .CheckBox{
 
