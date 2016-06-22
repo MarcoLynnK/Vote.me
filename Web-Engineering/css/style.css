@@ -355,7 +355,7 @@ body{
 /* Mobile */
 
 @media screen and (max-width: 600px) {
-    #menu-icon{
+    .menu-icon{
         display: block;
         width: 40px;
         height: 40px;
