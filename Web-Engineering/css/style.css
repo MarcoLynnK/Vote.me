@@ -147,7 +147,7 @@ body{
     height: 36px;
     vertical-align: middle;
     font-size: 16px;
-    border-radius: 0px;
+
 
 }
 
@@ -157,7 +157,7 @@ body{
     height: 36px;
     vertical-align: middle;
     font-size: 16px;
-    border-radius: 0px;
+
 }
 
 .inputForm3{
@@ -167,7 +167,7 @@ body{
     vertical-align: middle;
     font-size: 16px;
     margin-left: 6px;
-    border-radius: 0px;
+
 
 }
 
@@ -331,7 +331,7 @@ body{
 /* Checkbox für den Admin-User*/
 
 .CheckBox{
-
+    border-radius: 0px;
     width: 100px;
     height: 100px;
 }
@@ -361,6 +361,35 @@ body{
     }
     .log-out{
         display: none;
+    }
+
+    .inputForm{
+        font-family: Helvetica, sans-serif;
+        width: 234px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        border-radius: 0px;
+
+    }
+
+    .inputForm2{
+        font-family: Helvetica, sans-serif;
+        width: 109px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        border-radius: 0px;
+    }
+
+    .inputForm3{
+        font-family: Helvetica, sans-serif;
+        width: 109px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        margin-left: 6px;
+        border-radius: 0px;
     }
 }
 
