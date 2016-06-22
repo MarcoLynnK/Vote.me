@@ -1,163 +1,92 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+<!-- jQuery immer zu erst laden, 
+weil fast alle JavaScript-Bibliotheken auf jQuery basieren -->
+<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <script type="text/javascript" src="js/Chart.min.js"></script>
-
-
-    <div id="navbar">
-
-
-            <img src="img/logo2.svg" id="logo">
-
-
-        <div class="menu">
-            <input type="image" class="menu-icon" src="img/sw_menu.png">
-            <div class="dropdown-content">
-                <a href="#">VOTING LIST</a>
-                <a href="#">CREATE VOTING</a>
-                <a href="#">LOG OUT</a>
-            </div>
-        </div>
-
-
-        <div class="dropdown">
-            <button class="dropbtn">MENU</button>
-            <div class="dropdown-content">
-                <a href="#">VOTING LIST</a>
-                <a href="#">CREATE VOTING</a>
-            </div>
-        </div>
-
-        <a href="log-out.html" style="text-decoration: none;">
-            <button class="log-out" name="LogOut">LOG OUT</button>
-        </a>
-
-    </div>
-
-
+<script>
+// Die Funktion f�gt einen Click-Event der Klasse menu-icon hinzu
+// dieser wird dann immer abgespult, wenn auf einen bereich mit der klasse geklickt wird
+// anschlie�end kann man �ber $('........') die klasse bzw. die id ansprechen und bestimmte
+// Sachen machen, z.B. .css oder .removeClass, .addClass, .width, .innerHTML....
+	$(function($) {
+		$('.menu-icon').click(function() {
+			// toggleClass macht das gleiche wie "addClass" und "removeClass", nur automatisch
+			// wenn dropdown-content als weitere klasse "expand" hat, wird sie entfernt
+			// wenn nicht, wird sie hinzugef�gt
+			$('.dropdown-content').toggleClass('showDropdown')
+		})
+	})
+</script>
 </head>
 
 <body>
+	<div id="navbar">
+		<img src="img/logo2.svg" id="logo">
 
+		<div class="menu">
+			<input type="image" class="menu-icon" src="img/sw_menu.png">
+			<div class="dropdown-content">
+				<a href="#">VOTING LIST</a> <a href="#">CREATE VOTING</a>
+			</div>
+		</div>
 
-    <div class="container">
+		<div class="dropdown">
+			<button class="dropbtn">MENU</button>
+			<div class="dropdown-content">
+				<a href="#">VOTING LIST</a> <a href="#">CREATE VOTING</a>
+			</div>
+		</div>
 
-        <div id="canvas-holder" style="width:75%">
-            <canvas id="chart-area" />
-        </div>
-        <button id="randomizeData">Randomize Data</button>
-        <button id="addDataset">Add Dataset</button>
-        <button id="removeDataset">Remove Dataset</button>
-        <button id="addData">Add Data</button>
-        <button id="removeData">Remove Data</button>
-        <script>
-            var randomScalingFactor = function() {
-                return Math.round(Math.random() * 100);
-            };
-            var randomColorFactor = function() {
-                return Math.round(Math.random() * 255);
-            };
-            var randomColor = function(opacity) {
-                return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-            };
-            var config = {
-                type: 'doughnut',
-                data: {
-                    datasets: [{
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                        ],
-                        backgroundColor: [
-                            "#F7464A",
-                            "#46BFBD",
-                            "#FDB45C",
-                            "#949FB1",
-                            "#4D5360",
-                        ],
-                        label: 'Dataset 1'
-                    }, {
-                        hidden: true,
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                        ],
-                        backgroundColor: [
-                            "#F7464A",
-                            "#46BFBD",
-                            "#FDB45C",
-                            "#949FB1",
-                            "#4D5360",
-                        ],
-                        label: 'Dataset 2'
-                    }, {
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                        ],
-                        backgroundColor: [
-                            "#F7464A",
-                            "#46BFBD",
-                            "#FDB45C",
-                            "#949FB1",
-                            "#4D5360",
-                        ],
-                        label: 'Dataset 3'
-                    }],
-                    labels: [
-                        "Red",
-                        "Green",
-                        "Yellow",
-                        "Grey",
-                        "Dark Grey"
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Chart.js Doughnut Chart'
-                    },
-                    animation: {
-                        animateScale: true,
-                        animateRotate: true
-                    }
-                }
-            };
-            window.onload = function() {
-                var ctx = document.getElementById("chart-area").getContext("2d");
-                window.myDoughnut = new Chart(ctx, config);
-            };
-        </script>
+		<a href="log-out.html" style="text-decoration: none;">
+			<button class="log-out" name="LogOut">LOG OUT</button>
+		</a>
 
-    <div class="werte">
+	</div>
+	<div class="container">
 
-        <div class="wert1"></div>
-        <div class=""><?php echo " " ?></div>
+		<canvas id="canvas" height="450" width="610"></canvas>
 
-        <div class="wert2"></div>
-        <div class=""><?php echo " " ?></div>
+	</div>
+	<script>
+		var DoughnutChart = [ {
+			value : 100,
+			color : "#ffaf72"
+		}, {
+			value : 40,
+			color : "#91efbb"
+		}, {
+			value : 70,
+			color : "#f8baff"
+		}, ];
 
-        <div class="wert3"></div>
-        <div class=""><?php echo " " ?></div>
+		var options = {
+			showlegend : true,
+		}
 
-    </div>
+		var myDoughnutChart = new Chart(document.getElementById("canvas")
+				.getContext("2d")).Doughnut(DoughnutChart);
+		var context = $('.canvas');
+		var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
+	</script>
 
+	<div class="werte">
+
+		<div class="wert1"></div>
+		<div class=""></div>
+
+		<div class="wert2"></div>
+		<div class=""></div>
+
+		<div class="wert3"></div>
+		<div class=""></div>
+	</div>
 </body>
 </html>
