@@ -392,6 +392,15 @@ body{
         font-size: 15px;
     }
 
+
+    /* Wechselt die Farben des Drobdowncontents*/
+    .menu-dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* Zeigt den Dropdownmenu in Hover */
+    .menu:hover .menu-dropdown-content {
+        display: block;
+    }
+
     .showDropdown {
         display: block !important;
     }
