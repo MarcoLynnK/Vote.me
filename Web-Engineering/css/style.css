@@ -370,26 +370,6 @@ body{
 
 
 
-    /* Links im Dropdown */
-    .menudown-content a {
-        color: black;
-        padding: 18px 16px;
-        text-decoration: none;
-        display: block;
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-    }
-
-    /* Wechselt die Farben des Drobdowncontents*/
-    .menudown-content a:hover {background-color: #f1f1f1}
-
-    /* Zeigt den Dropdownmenu in Hover */
-    .menu-icon:hover .dropdown-content {
-        display: block;
-    }
-
-
-
     .menu{
         display: block;
     }
