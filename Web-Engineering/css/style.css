@@ -254,11 +254,13 @@ body{
 
 .Admin{
     font-family: Helvetica, sans-serif;
-    font-size: 16pt;
+    font-size: 14pt;
     color: #505050;
     position: relative;
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: auto;
+    margin-top: -5px;
+    margin-bottom: -5px;
     text-decoration: none;
 }
 
