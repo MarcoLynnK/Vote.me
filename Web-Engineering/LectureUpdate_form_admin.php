@@ -31,7 +31,7 @@ $lecture = $LectureManager->findById($ID_Lecture);
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
             <a href="#">VOTING LIST</a>
-            <a href="#">CREATE VOTING</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form_admin.php">CREATE VOTING</a>
             <a href="#">USER LIST</a>
             <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/UserCreate_form.php">CREATE USER</a>
         </div>
