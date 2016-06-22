@@ -368,6 +368,29 @@ body{
         top: 5px;
     }
 
+    /* Dropdownmenü */
+    .menu-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        position: fixed;
+        right: 0px;
+        top: 50px;
+
+    }
+
+    /* Links im Dropdown */
+    .menu-dropdown-content a {
+        color: black;
+        padding: 18px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
 
     .showDropdown {
         display: block !important;
