@@ -369,6 +369,11 @@ body{
     }
 
 
+    .showDropdown {
+        display: block !important;
+    }
+
+
 
     .menu{
         display: block;
