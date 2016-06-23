@@ -43,6 +43,10 @@ body{
     display: none;
 }
 
+#canvas2{
+    display: none;
+}
+
 .dropbtn{
     background-color: #2d2d2d;
     border: solid 0px #36a1e8;
@@ -426,9 +430,15 @@ body{
     }
 
 
+
     #canvas{
+        display: none;
+    }
+
+    #canvas2{
         width: 100%;
         height: auto;
+        display: block;
     }
 
 
