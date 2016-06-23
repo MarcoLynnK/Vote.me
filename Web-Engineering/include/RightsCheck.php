@@ -6,27 +6,16 @@ require_once("../Main/Classes.php");
 $ID_Rights= htmlspecialchars($_GET["ID_Rights"], ENT_QUOTES, "UTF-8");
 
 $rightsManager = new RightsManager();
-$rights = $rightsManager->findById($ID_Rights);
-
-    if ($rights==null)
-    {
-        header('Location: login.php');
-        die();
-    }
-    
-    else
-    {
-        echo "Error: Bitte füllen sie alle Felder aus!<br/>";
-    }
+$ID_Rights = $rightsManager->findById($ID_Rights);
 
 switch ($rights):
     case (1):
         session_start();
-        $_SESSION ['rights'] = 1;
+        $_SESSION ['ID_Rights'] = 1;
         break;
     case (2):
         session_start();
-        $_SESSION ['rights'] = 2;
+        $_SESSION ['ID_Rights'] = 2;
         break;
     default:
         echo "Sie haben keine Zugriffsrechte";

@@ -10,7 +10,8 @@ $degreecourse = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8");
     {
         $lectureManager = new LectureManager();
         $lecture = $lectureManager->findById($ID_Lecture);//holt sich das Voting aus der Datenbank durch Suche nach der ID
-        $lecture->name_lecture= $name_Lecture;
+        $lecture->ID_Lecture= $ID_Lecture;
+        $lecture->name_Lecture= $name_Lecture;
         $lecture->degreecourse= $degreecourse;
         $lectureManager-> update ($lecture);
         header ('Location: Lecture_Index.php');

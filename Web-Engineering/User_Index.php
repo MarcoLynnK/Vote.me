@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php require_once ("include/Head.php")?>
+<head>
+    <?php
+    require_once ("include/Head.php");
+    ?>
+</head>
 
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,10 +27,8 @@
         <tbody>
 
 <?php
-
 require_once("Main/Classes.php");
 require_once("Main/UserManager.php");
-
 $userManager = new UserManager();
 $list = $userManager->findAll();
 foreach ($list as $user) {
@@ -40,7 +42,7 @@ foreach ($list as $user) {
     echo "<td>
               <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'>zeige</a>&nbsp;
               <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'>editiere</a>&nbsp;
-              <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a>
+              <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a><!--hier noch UserDelete_form einbinden-->
           </td>";
     echo "<td></td>";
     echo "</tr>";

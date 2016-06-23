@@ -15,10 +15,11 @@ class UserManager extends Manager
 
     public function __destruct()//Destruktor der pdo (auflösen/lösen der Connection zwischen der DB)
     {
-        parent::__destruct(); //
+        parent::__destruct();
     }
 
-    public function findById (User $ID_User)
+    //Auslesen des Users durch die ID--> nur Admin
+    public function findById ($ID_User)
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM User WHERE ID_User= :ID_User');
@@ -36,7 +37,7 @@ class UserManager extends Manager
         return $user;
     }
     
-    //User auslesen aus DB
+    //User auslesen aus DB--> für login Admin/user
     public function findByLogin ($login, $password) {
 
         try 
@@ -63,7 +64,7 @@ class UserManager extends Manager
         }
     }
 
-    // Auslesen aller Datensätze aus Table "User"
+    // Auslesen aller Datensätze aus Table "User"--> für User_Index, nur Admin
     public function findAll ()
     {
         try
@@ -80,17 +81,17 @@ class UserManager extends Manager
         }
     }
 
-    // User anlegen
+    // User anlegen--> nur Admin
     public function create (User $user)
     {
         try 
         {
-            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, email, rights, hash) VALUES (:login, :firstname , :lastname, :email, :rights, :hash)');
+            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, email, ID_Rights, password) VALUES (:login, :firstname , :lastname, :email, :ID_Rights, :password)');
             $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
-            $sql->bindParam (':lastname'.$user->lastname);
-            $sql->bindParam (':email'.$user->email);
-            $sql->bindParam (':rights'.$user->rights);
+            $sql->bindParam (':lastname',$user->lastname);
+            $sql->bindParam (':email',$user->email);
+            $sql->bindParam (':ID_Rights',$user->ID_Rights);
             $sql->bindParam (':password', $user->hash);
             $sql->execute ();
             $sql->setFetchMode (PDO::FETCH_CLASS,'User');
@@ -104,17 +105,19 @@ class UserManager extends Manager
         return $user;
     }
 
-    //User aktualisieren
+    //User aktualisieren--> nur Admin
     public function update (User $user) 
     {
         try
         {
-            $sql= $this->pdo-> prepare ('UPDATE User SET firstname = :firstname, lastname = :lastname, hash = :hash, rights= :rights, email= :email WHERE login = :login');
-            $sql->bindParam (':vorname',$user->firstname);
-            $sql->bindParam (':nachname',$user->lastname);
+            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, password = :password, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
+            $sql->bindParam (':ID_User', $user->ID_User);
+            $sql->bindParam (':login', $user->login);
+            $sql->bindParam (':firstname',$user->firstname);
+            $sql->bindParam (':lastname',$user->lastname);
             $sql->bindParam (':email',$user->email);
-            $sql->bindParam (':hash', $user->hash);
-            $sql->bindParam (':rights', $user->rights);
+            $sql->bindParam (':password', $user->hash);
+            $sql->bindParam (':ID_Rights', $user->ID_Rights);
             $sql->execute ();
         }
         catch (PDOException $e) 
@@ -125,13 +128,13 @@ class UserManager extends Manager
         return $user;
     }
     
-    //User Löschen
+    //User Löschen--> nur Admin
     public function delete (User $user) 
     {
         try 
         {
-            $sql = $this->pdo-> prepare('DELETE FROM User WHERE login= :login');
-            $sql->bindParam(':login', $user->login);
+            $sql = $this->pdo-> prepare('DELETE FROM User WHERE ID_User= :ID_User');
+            $sql->bindParam(':ID_User', $user->ID_User);
             $sql->execute();
         }
         catch (PDOException $e) 

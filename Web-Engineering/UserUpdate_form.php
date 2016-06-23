@@ -2,7 +2,7 @@
 require_once ("Main/UserManager.php");
 require_once ("Main/Classes.php");
 
-$ID_User = (int)htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
+$ID_User = htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
 $UserManager = new UserManager();
 $user = $UserManager->findById($ID_User);
 
@@ -41,7 +41,7 @@ $user = $UserManager->findById($ID_User);
 
 </div>
 
-<a>User # <?php echo ($user->ID_User) ?> </a>
+<h2>User # <?php echo ($user->ID_User) ?> </h2>
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
         Bitte aktualisieren Sie Ihre Angaben!<br>
@@ -55,6 +55,8 @@ $user = $UserManager->findById($ID_User);
         <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
         Email: <br>
         <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
+        Recht:
+        <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
         Passwort:
         <input class="inputForm" type='text' name='password' value='<?php echo ($user->password) ?>'><br><br>
         <input class="submit" type='submit' value='aktualisieren'>

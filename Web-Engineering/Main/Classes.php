@@ -3,22 +3,24 @@
 //Klasse User
 class User 
 {
+    public $ID_User;
     public $login;
     public $firstname;
     public $lastname;
     public $email;
-    public $rights;
+    public $ID_Rights;
     public $hash;
 
     function __construct($daten=null )
     {
         if (is_array($daten))
         {
+            $this-> ID_User= $daten ['ID_User'];
             $this-> login= $daten ['login'];
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
             $this-> email= $daten ['email'];
-            $this-> rights= $daten ['rights'];
+            $this-> ID_Rights= $daten ['ID_Rights'];
             $this-> hash= $daten ['hash'];
         }
     }
