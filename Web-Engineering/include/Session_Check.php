@@ -12,7 +12,7 @@ session_start();
     else 
     {
         $user = $_SESSION ["user"];
-        $user = $_SESSION ["rights"];
+        $user = $_SESSION ["ID_Rights"];
     }
 ?>
 

@@ -7,7 +7,7 @@ class User
     public $firstname;
     public $lastname;
     public $email;
-    public $rights;
+    public $ID_Rights;
     public $hash;
 
     function __construct($daten=null )
@@ -18,7 +18,7 @@ class User
             $this-> firstname= $daten ['firstname'];
             $this-> lastname= $daten ['lastname'];
             $this-> email= $daten ['email'];
-            $this-> rights= $daten ['rights'];
+            $this-> ID_Rights= $daten ['ID_Rights'];
             $this-> hash= $daten ['hash'];
         }
     }

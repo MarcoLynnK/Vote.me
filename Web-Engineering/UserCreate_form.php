@@ -45,9 +45,9 @@
         <input class="inputForm2" id="firstname" name="firstname" type="text" placeholder="Vorname">
         <input class="inputForm3" id="lastname" name="lastname" type="text" placeholder="Nachname"></br></br>
         <input class="inputForm" id="email" name="email" type="email" placeholder="E-Mail" ></br></br>
-        <input class="inputForm" id="rights" name="rights" type="text" placeholder="Userrecht" ></br></br>
+        <input class="inputForm" id="ID_Rights" name="ID_Rights" type="text" placeholder="Userrecht" ></br></br>
         <input class="inputForm" id="password" name="password" type="password" placeholder="Passwort"></br></br>
-        <div class="admincheck"><input class="CheckBox" id="rights" name="rights" type="checkbox"><a class="Admin">Administrator</a></div></br></br>
+        <!--<div class="admincheck"><input class="CheckBox" id="rights" name="rights" type="checkbox"><a class="Admin">Administrator</a></div></br></br>-->
         <button class="submit" name="submit">CREATE USER</button></br></br>
     </form>
 </div>

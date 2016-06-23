@@ -36,25 +36,9 @@ class RightsManager extends Manager
         if (!$rights) $rights=null;
         return $rights;
     }
- /*
-    //Rechte Aktualisieren (nur Admin)
- 
-    public function update (Rights $rights) {
-        try
-        {
-            $sql= $this->pdo->prepare ('UPDATE Rights SET description_Rights = :description_Rights WHERE ID_Rights = :ID_Rights');
-            $sql->bindParam (':description_Rights',$rights->description_Rights);
-            $sql->execute ();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
-            die();
-        }
-        return $rights;
-    }
 
-    //rechte löschen
+
+   /* //rechte löschen
     public function delete (Rights $rights)
     {
         try {
