@@ -1,12 +1,4 @@
-<html>
-<head>
-    <?php include("include/Head.php")?>
-
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
-    <!--Navigation-->
+<!--Navigation-->
     <div id="navbar">
 
         <img src="img/logo2.svg" id="logo">
@@ -29,15 +21,3 @@
         </a>
 
     </div>
-    
-
-</head>
-<body>
-
-<form action="LectureCreate_do.php" method="post">
-    <input class="inputForm" type="text" name="name_Lecture" id="name_Lecture" placeholder="Vorlesung"><br><br>
-    <input class="inputForm" type="text" name="degreecourse" id="degreecourse" placeholder="Studiengang"><br><br>
-    <input class="submit" type='submit' value="Vorlesung anlegen">
-</form>
-
-</body>
