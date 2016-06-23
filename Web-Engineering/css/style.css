@@ -281,6 +281,9 @@ body{
     width: 610px;
 }
 
+
+/* Chart Legende */
+
 .chart-legend li span{
     display: inline-block;
     width: 12px;
@@ -423,7 +426,10 @@ body{
     }
 
 
-
+    #canvas{
+        width: 100%;
+        height: auto;
+    }
 
 
     .inputForm{
