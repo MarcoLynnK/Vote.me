@@ -276,6 +276,11 @@ body{
     top:50%;
 }
 
+#canvas{
+    height:450px;
+    width:610px;
+}
+
 .chart-legend li span{
     display: inline-block;
     width: 12px;
