@@ -65,7 +65,7 @@
 
 <script>
 
-	// Doughnut chart data
+	// Doughnut Chart Daten
 	var doughnutData = [
 		{
 			value: 20,
@@ -84,12 +84,12 @@
 			color : "#FFEA88"
 		}
 	];
-	// Doughnut chart optionen
+	// Doughnut Chart Optionen
 	var doughnutOptions = {
 		segmentShowStroke : false,
 		animateScale : true
 	}
-	// get Doughnut Chart canvas
+	// get Doughnut Chart Canvas
 	var countries= document.getElementById("countries").getContext("2d");
 	//  Draw Doughnut chart
 	new Chart(countries).Doughnut(doughnutData, doughnutOptions);
