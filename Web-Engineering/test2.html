@@ -60,25 +60,12 @@
 
 
 
-<!-- pie chart canvas element -->
+<!-- Doughnut chart canvas element -->
 <canvas id="countries" width="400" height="400"></canvas>
 
 <script>
-	// line chart data
-	var buyerData = {
-		labels : ["January","February","March","April","May","June"],
-		datasets : [
-			{
-				fillColor : "rgba(172,194,132,0.4)",
-				strokeColor : "#ACC26D",
-				pointColor : "#fff",
-				pointStrokeColor : "#9DB86D",
-				data : [203,156,99,251,305,247]
-			}
-		]
-	}
 
-	// pie chart data
+	// Doughnut chart data
 	var doughnutData = [
 		{
 			value: 20,
@@ -97,14 +84,14 @@
 			color : "#FFEA88"
 		}
 	];
-	// pie chart options
+	// Doughnut chart optionen
 	var doughnutOptions = {
 		segmentShowStroke : false,
 		animateScale : true
 	}
-	// get pie chart canvas
+	// get Doughnut Chart canvas
 	var countries= document.getElementById("countries").getContext("2d");
-	// draw pie chart
+	//  Draw Doughnut chart
 	new Chart(countries).Doughnut(doughnutData, doughnutOptions);
 
 	</script>
