@@ -90,9 +90,9 @@
 		animateScale : true
 	}
 	// get Doughnut Chart Canvas
-	var countries= document.getElementById("countries").getContext("2d");
+	var canvas= document.getElementById("canvas").getContext("2d");
 	//  Draw Doughnut chart
-	new Chart(countries).Doughnut(doughnutData, doughnutOptions);
+	new Chart(canvas).Doughnut(doughnutData, doughnutOptions);
 
 	</script>
 
