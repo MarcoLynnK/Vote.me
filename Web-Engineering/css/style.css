@@ -43,8 +43,9 @@ body{
     display: none;
 }
 
-#canvas2{
-    display: none;
+#canvas{
+    width: 600px;
+    height: 600px;
 }
 
 .dropbtn{
@@ -445,13 +446,8 @@ body{
 
 
     #canvas{
-        display: none;
-    }
-
-    #canvas2{
-        width: 100%;
-        height: auto;
-        display: block;
+        width: 200px;
+        height: 200px;
     }
 
 
