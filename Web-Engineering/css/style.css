@@ -406,7 +406,6 @@ body{
     }
 
 
-
     .menu{
         display: block;
     }
@@ -417,6 +416,13 @@ body{
     .log-out{
         display: none;
     }
+
+
+    #canvas{
+        width: 100%;
+        height: auto;
+    }
+
 
     .inputForm{
         font-family: Helvetica, sans-serif;
