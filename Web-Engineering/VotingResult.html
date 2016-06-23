@@ -55,6 +55,8 @@
 		</a>
 
 	</div>
+
+
 	<div class="container">
 
 		<canvas id="canvas" height="450px" width="610px"></canvas>
@@ -93,5 +95,47 @@
 		<div class="wert3"></div>
 		<div class=""></div>
 	</div>
+
+
+
+	<div class="container-responsive">
+
+		<canvas id="canvas2" height="450px" width="610px"></canvas>
+
+	</div>
+	<script>
+		var DoughnutChart = [ {
+			value : 100,
+			color : "#ffaf72"
+		}, {
+			value : 40,
+			color : "#91efbb"
+		}, {
+			value : 70,
+			color : "#f8baff"
+		}, ];
+
+		var options = {
+			showlegend : true,
+		}
+
+		var myDoughnutChart = new Chart(document.getElementById("canvas2")
+				.getContext("2d")).Doughnut(DoughnutChart);
+		var context = $('.canvas2');
+		var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
+	</script>
+
+	<div class="werte">
+
+		<div class="wert1"></div>
+		<div class=""></div>
+
+		<div class="wert2"></div>
+		<div class=""></div>
+
+		<div class="wert3"></div>
+		<div class=""></div>
+	</div>
+
 </body>
 </html>
