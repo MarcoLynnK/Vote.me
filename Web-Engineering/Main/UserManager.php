@@ -19,7 +19,7 @@ class UserManager extends Manager
     }
 
     //Auslesen des Users durch die ID--> nur Admin
-    public function findById (User $ID_User)
+    public function findById ($ID_User)
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM User WHERE ID_User= :ID_User');
@@ -110,7 +110,9 @@ class UserManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('UPDATE User SET firstname = :firstname, lastname = :lastname, password = :password, ID_Rights= :ID_Rights, email= :email WHERE login = :login');
+            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, password = :password, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
+            $sql->bindParam (':ID_User', $user->ID_User);
+            $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
             $sql->bindParam (':lastname',$user->lastname);
             $sql->bindParam (':email',$user->email);
@@ -131,8 +133,8 @@ class UserManager extends Manager
     {
         try 
         {
-            $sql = $this->pdo-> prepare('DELETE FROM User WHERE login= :login');
-            $sql->bindParam(':login', $user->login);
+            $sql = $this->pdo-> prepare('DELETE FROM User WHERE ID_User= :ID_User');
+            $sql->bindParam(':ID_User', $user->ID_User);
             $sql->execute();
         }
         catch (PDOException $e) 

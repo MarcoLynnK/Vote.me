@@ -6,6 +6,7 @@
 </head>
 <body>
 <?php
+
 require "include/Session_Check.php";
 
 $rights= $_SESSION ["rights"];
@@ -22,6 +23,7 @@ switch ($rights):
         echo "Sie haben keine Zugriffsrechte";
         header('Location: ../login.php');
 endswitch;
+
 ?>
 </body>
 </html>

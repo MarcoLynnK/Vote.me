@@ -8,17 +8,6 @@ $ID_Rights= htmlspecialchars($_GET["ID_Rights"], ENT_QUOTES, "UTF-8");
 $rightsManager = new RightsManager();
 $ID_Rights = $rightsManager->findById($ID_Rights);
 
-    if ($rights==null)
-    {
-        header('Location: login.php');
-        die();
-    }
-    
-    else
-    {
-        echo "Error: Bitte füllen sie alle Felder aus!<br/>";
-    }
-
 switch ($rights):
     case (1):
         session_start();
