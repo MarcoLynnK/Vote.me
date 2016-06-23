@@ -91,6 +91,27 @@
 		<canvas id="canvas2"></canvas>
 
 	</div>
+	<script>
+		var DoughnutChart = [ {
+			value : 100,
+			color : "#ffaf72"
+		}, {
+			value : 40,
+			color : "#91efbb"
+		}, {
+			value : 70,
+			color : "#f8baff"
+		}, ];
+
+		var options = {
+			showlegend : true,
+		}
+
+		var myDoughnutChart = new Chart(document.getElementById("canvas2")
+				.getContext("2d")).Doughnut(DoughnutChart);
+		var context = $('.canvas2');
+		var skillsChart = new Chart(context).Doughnut(DoughnutChart, options);
+	</script>
 
 
 
