@@ -96,3 +96,36 @@ class Voting
         }
     }
 }
+//Klasse Möglichkeiten/Optionen
+class Chance
+{
+    public $ID_Chance;
+    public $description_Chance;
+
+     function __construct($daten=null)
+     {
+        if (is_array($daten))
+        {
+            $this-> ID_Chance= $daten ['ID_Chance'];
+            $this-> description_Chance= $daten ['description_Chance'];
+        }
+     }
+ }
+
+  //Klasse Ergebnis
+  class Result
+  {
+      public $ID_Result;
+      public $description_Result;
+      public $date_Result;
+
+      function __construct($daten=null)
+      {
+          if (is_array($daten))
+          {
+              $this->ID_Result = $daten ['ID_Result'];
+              $this->description_Result ['description_Result'];
+              $this->date_Result ['date_Result'];
+          }
+      }
+  }
