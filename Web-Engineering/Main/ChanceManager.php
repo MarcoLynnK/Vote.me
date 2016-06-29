@@ -5,9 +5,9 @@ require_once ("Classes.php");
 class ChanceManager extends Manager
 {
     protected $pdo;
-    public function __construct($con)
+    public function __construct($con=null)
     {
-        parent::__construct($con);
+        parent::__construct($con=null);
     }
     public function __destruct()
     {
