@@ -2,8 +2,8 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
-
-class VotingLectureManager extends Manager
+//Manager zum Auslesen der Antwortmöglichkeiten für das Voting aus der DB
+class VotingChanceManager extends Manager
 {
     protected $pdo;
 
@@ -18,25 +18,29 @@ class VotingLectureManager extends Manager
     }
 
 
-    public function findAllVotingByLecture(Lecture $lecture)
+    public function findAllChancesByVoting(Voting $voting)
     {
-        try {
-            $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Lecture = $lecture->ID_Lecture;');
-            $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
+        try
+        {
+            $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting;');
+            $sql->bindParam(':ID_Chance', $voting->ID_Voting);
             $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Chances');
             return $sql->fetchAll();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
     }
 
-    public function findAllLectureByVoting(Voting $voting)
+    public function findAllVotingByChances(Chance $chance)
     {
-        try {
-            $sql = $this->pdo->prepare('SELECT * FROM Lecture WHERE ID_Voting= $voting->ID_Voting');
-            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
+        try
+        {
+            $sql = $this->pdo->prepare('SELECT * FROM Lecture WHERE ID_Chance= :ID_Chance');
+            $sql->bindParam(':ID_Chance', $chance->ID_Chance);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             return $sql->fetchAll;

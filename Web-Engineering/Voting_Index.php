@@ -25,7 +25,7 @@
 <?php
 
 require_once("Main/Classes.php");
-require_once("Main/LectureManager.php");
+require_once("Main/VotingManager.php");
 
 $votingManager = new VotingManager();
 $list = $votingManager->findAll();
