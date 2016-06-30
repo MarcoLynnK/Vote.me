@@ -358,6 +358,11 @@ body{
 }
 
 
+.container{
+    font-family: Helvetica, sans-serif;
+    font-size: 24pt;
+}
+
 
 .chart-responsive{
     display: none;
