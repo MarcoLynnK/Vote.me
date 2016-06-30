@@ -4,8 +4,6 @@ $_SESSION = array();
 session_destroy();
 ?>
 
-<?php include("include/Head.php")?>
-
 <body>
     <img src="img/logo.svg" class="logo"></br></br>
     <div class="container">
