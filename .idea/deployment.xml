@@ -5,7 +5,7 @@
       <paths name="mars.marco">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/mk235/public_html" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/mk235/public_html" local="$PROJECT_DIR$" web="/Web-Engineering/" />
           </mappings>
         </serverdata>
       </paths>
