@@ -61,7 +61,7 @@
 
 
 <!-- Doughnut chart canvas element -->
-<canvas id="countries" width="100" height="100"></canvas>
+<canvas id="chart" width="400" height="400"></canvas>
 
 <script>
 
@@ -90,11 +90,49 @@
 		animateScale : true
 	}
 	// get Doughnut Chart Canvas
-	var countries= document.getElementById("countries").getContext("2d");
+	var chart= document.getElementById("chart").getContext("2d");
 	//  Draw Doughnut chart
-	new Chart(countries).Doughnut(doughnutData, doughnutOptions);
+	new Chart(chart).Doughnut(doughnutData, doughnutOptions);
 
-	</script>
+</script>
+
+
+
+<!-- Responsive -->
+<canvas id="chart2" width="400" height="400"></canvas>
+
+<script>
+
+	// Doughnut Chart Daten
+	var doughnutData = [
+		{
+			value: 20,
+			color:"#ffaf72"
+		},
+		{
+			value : 40,
+			color : "#91efbb"
+		},
+		{
+			value : 10,
+			color : "#e4a3ff"
+		},
+		{
+			value : 30,
+			color : "#8ea7ff"
+		}
+	];
+	// Doughnut Chart Optionen
+	var doughnutOptions = {
+		segmentShowStroke : false,
+		animateScale : true
+	}
+	// get Doughnut Chart Canvas
+	var chart2= document.getElementById("chart2").getContext("2d");
+	//  Draw Doughnut chart
+	new Chart(chart2).Doughnut(doughnutData, doughnutOptions);
+
+</script>
 
 
 
