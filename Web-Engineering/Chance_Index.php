@@ -15,7 +15,7 @@
         <tbody>
             <?php
             require_once("Main/Classes.php");
-            require_once("Main/LectureManager.php");
+            require_once("Main/ChanceManager.php");
                 $chanceManager = new ChanceManager();
                 $list = $chanceManager->findAll();
                     foreach ($list as $chance)

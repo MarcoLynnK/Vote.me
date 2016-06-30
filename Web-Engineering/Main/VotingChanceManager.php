@@ -7,7 +7,7 @@ class VotingChanceManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con)
+    public function __construct($con=null)
     {
         parent::__construct($con);
     }
@@ -22,8 +22,8 @@ class VotingChanceManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting;');
-            $sql->bindParam(':ID_Chance', $voting->ID_Voting);
+            $sql = $this->pdo->prepare('SELECT * FROM Chance WHERE ID_Voting = :ID_Voting;');
+            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chances');
             return $sql->fetchAll();
@@ -33,6 +33,7 @@ class VotingChanceManager extends Manager
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
+        
     }
 
     public function findAllVotingByChances(Chance $chance)

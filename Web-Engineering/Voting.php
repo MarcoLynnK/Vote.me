@@ -1,14 +1,14 @@
 <?php
+require_once ("Main/VotingManager.php");
+require_once ("Main/VotingChanceManager.php");
+require_once ("Main/Classes.php");
+
 $ID_Voting= htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting=$votingManager-> findById($ID_Voting);
 
 $votingchanceManager= new VotingChanceManager();
 $chance=$votingchanceManager->findAllChancesByVoting($voting);
-
-
-require_once ("Main/UserManager.php");
-require_once ("Main/Classes.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,26 +44,24 @@ require_once ("Main/Classes.php");
 
 </div>
 
-<h2>Voting # <?php echo ($voting->ID_Voting) ?> </h2>
+<h2>Voting # <?php echo ($voting->name_Voting) ?> </h2>
+<p>Frage: <?php echo ($voting->question_Voting)?></p>
 
-<form class="input-container" action='UserUpdate_do.php' method='post'>
-    Bitte aktualisieren Sie Ihre Angaben!<br>
-    User ID: <br>
-    <input class="inputForm" type='text' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' disabled><br><br>
-    Benutzername: <br>
-    <input class="inputForm" type='text' name='login' value='<?php echo ($voting->name_Voting) ?>'><br><br>
-    Vorname: <br>
-    <input class="inputForm2" type='text' name='firstname' value='<?php echo ($voting->question_Voting) ?>'><br><br>
-    Nachname: <br>
-    <input class="inputForm3" type='text' name='lastname' value='<?php echo ($voting->lastname) ?>'><br><br>
-    Email: <br>
-    <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
-    Recht:
-    <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
-    Passwort:
-    <input class="inputForm" type='text' name='password' value='<?php echo ($user->password) ?>'><br><br>
-    <input class="submit" type='submit' value='aktualisieren'>
-</form>
+<?php
+echo '<form class="input-container" action="Result_do.php" method="post">';
+        foreach ($chance as $eintrag)
+        {
+            $i=1;
+            if (!empty ($eintrag))
+            {
+                $i = $i + 1;
+                echo "<p>Möglichkeit $i:</p>";
+                echo "<input type='checkbox' name='antwort' value='" . $eintrag->description_Chance . "'/></br>";
+            }
+        }
+        echo '<input type="hidden" value="' . $ID_Voting . '" name="votingid">';
+        echo '<input type="hidden" value="' . $ID_Chance . '" name="frageid">';
+echo "</form>"?>
 
 </body>
 </html>
