@@ -377,6 +377,13 @@ body{
 }
 
 
+
+#chart2{
+    display: none;
+}
+
+
+
 /* Mobile */
 
 @media screen and (max-width: 600px) {
@@ -430,11 +437,12 @@ body{
         display: block !important;
     }
 
-
+    /* "Hamburgermenü" wird wieder eingeblendet */
     .menu{
         display: block;
     }
 
+    /* Dropdownmenü und Logout-button werden ausgeblendet */
     .dropbtn{
         display: none;
     }
@@ -442,6 +450,16 @@ body{
         display: none;
     }
 
+
+    /* Chart(groß) wird ausgeblendet */
+    #chart{
+        display: none;
+    }
+
+    /* Chart(klein) wird eingeblendet */
+    #chart2{
+        display: block;
+    }
 
 
 
