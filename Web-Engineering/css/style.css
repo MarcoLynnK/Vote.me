@@ -378,7 +378,7 @@ body{
 
 
 
-#chart2{
+.chart-responsive{
     display: none;
 }
 
@@ -452,12 +452,12 @@ body{
 
 
     /* Chart(groß) wird ausgeblendet */
-    #chart{
+    .chart{
         display: none;
     }
 
     /* Chart(klein) wird eingeblendet */
-    #chart2{
+    .chart-responsive{
         display: block;
     }
 
