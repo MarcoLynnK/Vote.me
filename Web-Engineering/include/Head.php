@@ -30,7 +30,7 @@
     <div class="menu">
         <input type="image" class="menu-icon" src="img/sw_menu.png">
         <div class="menu-dropdown-content">
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php">VOTING LIST</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php ">VOTING LIST</a>
             <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">CREATE VOTING</a>
             <a href="#">LOG OUT</a>
         </div>
