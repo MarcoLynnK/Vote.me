@@ -274,27 +274,8 @@ body{
     margin-bottom: -20px;
 }
 
-/* Doughnut */
-
-.doughnut{
-    top:50%;
-}
-
-#canvas{
-    height: 450px;
-    width: 610px;
-}
-
 
 /* Chart Legende */
-
-.chart-legend li span{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-}
-
 
 .werte{
     margin-top: 50px;
@@ -425,7 +406,7 @@ body{
     }
 
 
-    /* Wechselt die Farben des Drobdowncontents*/
+    /* Wechselt die Farben des Drobdowncontents */
     .menu-dropdown-content a:hover {background-color: #f1f1f1}
 
     /* Zeigt den Dropdownmenu in Hover */
@@ -460,6 +441,7 @@ body{
     .chart-responsive{
         display: block;
         margin-top: 50px;
+        margin-bottom: 100px;
     }
 
 
