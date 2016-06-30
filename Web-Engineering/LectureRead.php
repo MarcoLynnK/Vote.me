@@ -11,7 +11,7 @@ $lecture = $lectureManager->findById($ID_Lecture);
 <!DOCTYPE html>
 <html>
 
-<?php include("include/Head.php"); ?>
+<?php include("include/HeadUser.php"); ?>
 
 <body>
 
