@@ -30,8 +30,10 @@
     <div class="menu">
         <input type="image" class="menu-icon" src="img/sw_menu.png">
         <div class="menu-dropdown-content">
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php">VOTING LIST</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php ">VOTING LIST</a>
             <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">CREATE VOTING</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">USER LIST</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">CREATE USER</a>
             <a href="#">LOG OUT</a>
         </div>
     </div>
@@ -41,10 +43,12 @@
         <div class="dropdown-content">
             <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php">VOTING LIST</a>
             <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">CREATE VOTING</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">USER LIST</a>
+            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">CREATE USER</a>
         </div>
     </div>
 
-    <a href="log-out.html" style="text-decoration: none;">
+    <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/LogOut_do.php" style="text-decoration: none;">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 

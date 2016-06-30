@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php
-    require_once ("include/Head.php");
+    require_once("include/HeadUser.php");
     ?>
 </head>
 

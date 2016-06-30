@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 </head>
-<?php require_once ("include/Head.php")?>
+<?php require_once("include/HeadUser.php") ?>
 
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php require_once ("include/Head.php")?>
+<?php require_once("include/HeadUser.php") ?>
 
 <body>
 

@@ -4,7 +4,7 @@ include ("include/Session_Check.php");
 ?>
 !DOCTYPE html>
 <html>
-<?php include ("include/Head.php")?>
+<?php include("include/HeadUser.php") ?>
 <body>
 <!--Navigation-->
 <div id="navbar">

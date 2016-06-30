@@ -274,27 +274,8 @@ body{
     margin-bottom: -20px;
 }
 
-/* Doughnut */
-
-.doughnut{
-    top:50%;
-}
-
-#canvas{
-    height: 450px;
-    width: 610px;
-}
-
 
 /* Chart Legende */
-
-.chart-legend li span{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-}
-
 
 .werte{
     margin-top: 50px;
@@ -377,9 +358,21 @@ body{
 }
 
 
+.container{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+
+.chart-responsive{
+    display: none;
+}
+
+
+
 /* Mobile */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .menu-icon{
         display: block;
         width: 40px;
@@ -418,7 +411,7 @@ body{
     }
 
 
-    /* Wechselt die Farben des Drobdowncontents*/
+    /* Wechselt die Farben des Drobdowncontents */
     .menu-dropdown-content a:hover {background-color: #f1f1f1}
 
     /* Zeigt den Dropdownmenu in Hover */
@@ -430,11 +423,12 @@ body{
         display: block !important;
     }
 
-
+    /* "Hamburgermenü" wird wieder eingeblendet */
     .menu{
         display: block;
     }
 
+    /* Dropdownmenü und Logout-button werden ausgeblendet */
     .dropbtn{
         display: none;
     }
@@ -442,6 +436,17 @@ body{
         display: none;
     }
 
+
+    /* Chart(groß) wird ausgeblendet */
+    .chart{
+        display: none;
+    }
+
+    /* Chart(klein) wird eingeblendet */
+    .chart-responsive{
+        display: block;
+        margin-top: 50px;
+    }
 
 
 
