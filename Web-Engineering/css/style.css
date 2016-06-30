@@ -459,6 +459,7 @@ body{
     /* Chart(klein) wird eingeblendet */
     .chart-responsive{
         display: block;
+        top: 200px;
     }
 
 
