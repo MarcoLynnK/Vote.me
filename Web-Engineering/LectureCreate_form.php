@@ -29,9 +29,9 @@
 
 
 <form action="LectureCreate_do.php" method="post">
-    <input class="inputForm" type="text" name="name_Lecture" id="name_Lecture" placeholder="Vorlesung"><br><br>
-    <input class="inputForm" type="text" name="degreecourse" id="degreecourse" placeholder="Studiengang"><br><br>
-    <input class="submit" type='submit' value="Vorlesung anlegen">
+    <input class="inputForm" type="text" name="name_Lecture" placeholder="Vorlesung"><br><br>
+    <input class="inputForm" type="text" name="degreecourse" placeholder="Studiengang"><br><br>
+    <input class="submit" type='submit' value="CREATE LECTURE">
 </form>
 
 </body>

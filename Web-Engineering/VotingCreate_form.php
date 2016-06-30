@@ -30,28 +30,33 @@
 </head>
 <body>
 <?php
-/*
- Übergabe der Lecture ID als Option, wie bei ChanceCreate
-*/
+require_once("Main/LectureManager.php");
+require_once("Main/Classes.php");
+
+$ID_Lecture= htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
+
+if (!empty($ID_Lecture) && !empty($name_Lecture) && !empty($degreecourse))
+{
+$lectureManager = new LectureManager();
+$lecture = $LectureManager->findById($ID_Lecture);//holt sich das Voting aus der Datenbank durch Suche nach der ID
+if ($lecture==null)
+{
+header('Location: Chance_Index.php');
+die();
+}
+return $lecture;
+}
 ?>
-
-
-
 <div id="Container">
 
     <form class="input-container" action="VotingCreate_do.php" method="post">
-
         <input class="inputForm" name="name_Voting" type="text" placeholder="Votingname" rows="2"></br></br>
         <input class="inputForm" name="question_Voting" type="text" placeholder="Frage?" rows="2"></br></br>
-        <input class="inputForm" name="Chance1" type="text" placeholder="Option 1" ></br></br>
-        <input class="inputForm" name="Chance2" type="text" placeholder="Option 2" ></br></br>
-        <input class="inputForm" name="Chance3" type="text" placeholder="Option 3" ></br></br>
-        <input class="inputForm" name="Chance4" type="text" placeholder="Option 4" ></br></br>
+        <?php echo "<option value='$lecture->ID_Lecture'></option>"?>
         <button class="submit" name="submit">CREATE VOTING</button></br></br>
     </form>
+    
 </div>
-
-
 
 </body>
 

@@ -6,6 +6,11 @@ $description_Chance= htmlspecialchars($_POST["description_Chance"], ENT_QUOTES, 
 
 if (!empty($description_Chance))
 {
+    $chancedata =
+        [
+            "description_Chance" => $description_Chance,
+        ];
+    $chance= new Chance()
     $chanceManager = new ChanceManager();
     $chance = $chanceManager->create($chance);
     if ($chance == null)

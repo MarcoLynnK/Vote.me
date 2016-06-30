@@ -48,6 +48,7 @@ class Lecture
     public $ID_Lecture;
     public $name_Lecture;
     public $degreecourse;
+    public $ID_User;
 
     function __construct($daten=null)
     {
@@ -66,15 +67,8 @@ class Voting
     public $ID_Voting;
     public $name_Voting;
     public $question_Voting;
-    /*public $Chance1;
-    public $Chance2;
-    public $Chance3;
-    public $Chance4;
-    public $date_Vote;
-    public $countChance1;
-    public $countChance2;
-    public $countChance3;
-    public $countChance4;*/
+    public $ID_Lecture;
+    public $ID_User;
 
     function __construct($daten=null) 
     {
@@ -83,16 +77,8 @@ class Voting
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
-            /*$this-> Chance1= $daten ['Chance1'];
-            $this-> Chance2= $daten ['Chance2'];
-            $this-> Chance3= $daten ['Chance3'];
-            $this-> Chance4= $daten ['Chance4'];
-            $this-> date_Vote= $daten ['date_Vote'];
-            $this-> countChance1= $daten ['countChance1'];
-            $this-> countChance2= $daten ['countChance2'];
-            $this-> countChance3= $daten ['countChance3'];
-            $this-> countChance4= $daten ['countChance4'];*/
-            
+            $this-> ID_Lecture= $daten ['ID_Lecture'];
+            $this-> ID_User= $daten ['ID_User'];
         }
     }
 }
@@ -102,6 +88,7 @@ class Chance
     public $ID_Chance;
     public $description_Chance;
     public $ID_Voting;
+    public $ID_User;
 
      function __construct($daten=null)
      {
@@ -110,6 +97,7 @@ class Chance
             $this-> ID_Chance= $daten ['ID_Chance'];
             $this-> description_Chance= $daten ['description_Chance'];
             $this-> ID_Voting= $daten ['ID_Voting'];
+            $this-> ID_User= $daten ['ID_User'];
         }
      }
  }

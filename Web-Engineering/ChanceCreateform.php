@@ -31,7 +31,7 @@ if (!empty($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
     Möglichkeit:<br>
     <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
     Zu Voting zuweisen:
-    <option value='<?php echo ($voting->ID_Voting.$voting->name_Voting.$voting->question_Voting) ?>'></option>?>
+    <?php echo "<option value='$voting->ID_Voting'></option>"?>
     <input type='submit' value='anlegen'>
     </form>
 </body>

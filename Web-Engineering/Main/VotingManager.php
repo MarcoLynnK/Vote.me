@@ -9,7 +9,7 @@ class VotingManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con=null)
+    public function __construct($con = null)
     {
         parent::__construct($con);
     }
@@ -20,122 +20,83 @@ class VotingManager extends Manager
     }
 
     // Auslesen aller Datensätze aus Voting
-    public function findAll ()
+    public function findAll()
     {
-        try
-        {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Voting');
+        try {
+            $sql = $this->pdo->prepare('SELECT * FROM Voting');
             $sql->execute();
-            $sql->setFetchMode (PDO::FETCH_CLASS, 'Voting');
-            return $sql-> FetchAll();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            return $sql->FetchAll();
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
     }
 
     //Auslesen aller Datensätze mit der übergebenen ID
-    public function findById ($ID_Voting)
+    public function findById($ID_Voting)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting');
-            $sql-> bindParam (':ID_Voting', $ID_Voting);
-            $sql-> execute ();
+            $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting');
+            $sql->bindParam(':ID_Voting', $ID_Voting);
+            $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
-            $voting= $sql-> fetch();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            $voting = $sql->fetch();
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        if (!$voting) $voting=null;
+        if (!$voting) $voting = null;
         return $voting;
     }
 
     // Erstellen eines neuen Votings (Datensatz) in der DB
-    public function create (Voting $voting)
+    public function create(Voting $voting)
     {
         try {
             $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting, Chance1, Chance2, Chance3, Chance4) VALUES (:name_Voting, :question_Voting, :Chance1, :Chance2, :Chance3, :Chance4)');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
-            $sql->bindParam(':Chance1', $voting->Chance1);
-            $sql->bindParam(':Chance2', $voting->Chance2);
-            $sql->bindParam(':Chance3', $voting->Chance3);
-            $sql->bindParam(':Chance4', $voting->Chance4);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
         return $voting;
     }
-    
+
     //update Voting
-    public function update (Voting $voting)
+    public function update(Voting $voting)
     {
         try {
             $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting, Chance1= :Chance1, Chance2= :Chance2, Chance3= :Chance3, Chance4= :Chance4,  WHERE :ID_Voting= ID_Voting');
-            $sql->bindParam (':name_Voting', $voting->name_Voting);
-            $sql->bindParam (':question_Voting', $voting->question_Voting);
-            $sql->bindParam(':Chance1', $voting->Chance1);
-            $sql->bindParam(':Chance2', $voting->Chance2);
-            $sql->bindParam(':Chance3', $voting->Chance3);
-            $sql->bindParam(':Chance4', $voting->Chance4);
+            $sql->bindParam(':name_Voting', $voting->name_Voting);
+            $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
         return $voting;
-        
+
     }
-    
+
     //Löschen des Votings mit der übergebenen ID aus der DB
-    public function delete (Voting $voting)
+    public function delete(Voting $voting)
     {
         try {
             $sql = $this->pdo->prepare('DELETE * FROM Voting WHERE ID_Voting= :ID_Voting');
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
         return null;
     }
 
-    // Übergabe der Angewählten Möglichkeiten aus dem Voting
-    public function createResult (Voting $result)
-    {
-        try{
-            $sql = $this->pdo->prepare ('UPDATE Voting SET countChance1= :countChance1, countChance2= :countChance2, countChance3= :countChance3, countChance4= :countChance4 WHERE :ID_Voting= ID_Voting');
-            $sql-> bindParam (':countChance1',$result->countChance1);
-            $sql-> bindParam (':countChance2',$result->countChance2);
-            $sql-> bindParam (':countChance3',$result->countChance3);
-            $sql-> bindParam (':countChance4',$result->countChance4);
-            $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
-            die();
-        }
-        return $result;
-
-    }
 }
