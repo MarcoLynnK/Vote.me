@@ -8,7 +8,7 @@ class ReslutManager extends Manager
 {
     protected $pdo;
 
-    public function __construct($con=null)
+    public function __construct($con = null)
     {
         parent::__construct($con);
     }
@@ -20,92 +20,83 @@ class ReslutManager extends Manager
 
     // alle Ergebnisse ausgeben
 
-    public function findAll ()
+    public function findAll()
     {
-        try
-        {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Result');
+        try {
+            $sql = $this->pdo->prepare('SELECT * FROM Result');
             $sql->execute();
-            $sql->setFetchMode (PDO::FETCH_CLASS, 'Result');
-            return $sql-> FetchAll();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Result');
+            return $sql->FetchAll();
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
     }
 
-    //Alle Ergebnisse mit der bestimmten ID ausgeben
+    //Alle Ergebnisse mit der bestimmten Datum aus DB auslesen
 
-    public function findById (Result $ID_Result)
+    public function findBydate(Result $date_Result)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * FROM Result WHERE ID_Result = :ID_Result');
-            $sql-> bindParam (':ID_Result', $ID_Result);
-            $sql-> execute ();
+            $sql = $this->pdo->prepare('SELECT * FROM Result WHERE date_Result = :date_Result');
+            $sql->bindParam(':date_Result', $date_Result);
+            $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Result');
-            $result= $sql-> fetch();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            $result = $sql->fetch();
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        if (!$result) $result=null;
+        if (!$result) $result = null;
         return $result;
     }
 
-    //Ergebnis erstellen in der DB anlegen
-    public function create (Result $result)
+    //Ergebnis erstellen in der DB anlegen (abstimmen pro Student)
+
+    public function create(Result $result)
     {
 
         try {
-            $stmt = $this->pdo->prepare('SELECT count * FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
+            $stmt = $this->pdo->prepare('INSERT INTO Result (date_Result, ID_Session, ID_Chance, ID_Voting) VALUES (:date_Result, :ID_Session, :ID_Chance, :ID_Voting)');
+            $stmt->bindParam(':date_Result', $result->date_Result);
+            $stmt->bindParam(':ID_Session', $result->ID_Session);
             $stmt->bindParam(':ID_Chance', $result->ID_Chance);
             $stmt->bindParam(':ID_Voting', $result->ID_Voting);
             $stmt->execute();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
         return $result;
     }
 
-    //Vorlesung in der DB aktualisieren
+    //Ergebnis aus der DB auslesen mit Voting ID
 
-    public function update (Lecture $lecture)
+    public function resultdo (Result $result)
     {
         try {
-            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse, faculty= :faculty WHERE ID_Lecture = :ID_Lecture');
-            $stmt->bindParam(':ID_Lecture', $lecture->ID_Lecture);
-            $stmt->bindParam(':name', $lecture->name_Lecture);
-            $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->execute();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            $sql = $this->pdo->prepare('SELECT COUNT * FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
+            $sql->bindParam(':ID_Voting', $result->ID_Voting);
+            $sql->bindParam(':ID_Chance', $result->ID_Chance);
+            $sql->execute();
+        } catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        return $lecture;
+        return $result;
     }
 
-    //Vorlesung in der DB Löschen
+    //Ergebnis aus DB löschen
 
-    public function delete (Lecture $lecture)
+    public function delete(Result $result)
     {
         try {
-            $sql = $this->pdo->prepare('DELETE FROM Lecture WHERE ID_Lecture= :ID_Lecture');
-            $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
+            $sql = $this->pdo->prepare('DELETE FROM User WHERE ID_Result= :ID_Result');
+            $sql->bindParam(':ID_Result', $result->ID_Result);
             $sql->execute();
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
-            die();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            return $result;
         }
         return null;
     }
