@@ -3,7 +3,7 @@ $ID_Voting= htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting=$votingManager-> findById($ID_Voting);
 
-$votingchanceManager= new VotingChanceManager()
+$votingchanceManager= new VotingChanceManager();
 $chance=$votingchanceManager->findAllChancesByVoting($voting);
 
 
@@ -44,18 +44,18 @@ require_once ("Main/Classes.php");
 
 </div>
 
-<h2>Voting # <?php echo ($voting->ID_) ?> </h2>
+<h2>Voting # <?php echo ($voting->ID_Voting) ?> </h2>
 
 <form class="input-container" action='UserUpdate_do.php' method='post'>
     Bitte aktualisieren Sie Ihre Angaben!<br>
     User ID: <br>
-    <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
+    <input class="inputForm" type='text' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' disabled><br><br>
     Benutzername: <br>
-    <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
+    <input class="inputForm" type='text' name='login' value='<?php echo ($voting->name_Voting) ?>'><br><br>
     Vorname: <br>
-    <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'><br><br>
+    <input class="inputForm2" type='text' name='firstname' value='<?php echo ($voting->question_Voting) ?>'><br><br>
     Nachname: <br>
-    <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
+    <input class="inputForm3" type='text' name='lastname' value='<?php echo ($voting->lastname) ?>'><br><br>
     Email: <br>
     <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
     Recht:
