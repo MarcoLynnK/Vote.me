@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <a href="log-out.html" style="text-decoration: none;">
+    <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/LogOut_do.php" style="text-decoration: none;">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 

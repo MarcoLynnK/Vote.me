@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="4987426d-bf50-4a30-88e3-9686557d8a67">
+  <component name="PublishConfigData" serverName="mars.marco" uploadOnCheckin="4987426d-bf50-4a30-88e3-9686557d8a67">
     <serverData>
       <paths name="mars.marco">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/mk235/public_html" local="$PROJECT_DIR$" web="/Web-Engineering/" />
+            <mapping deploy="/home/mk235/public_html" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
