@@ -21,17 +21,18 @@ class VotingChanceManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare('SELECT * FROM Chance WHERE ID_Voting = :ID_Voting;');
+            $sql = $this->pdo->prepare('SELECT * FROM Chance WHERE ID_Voting = :ID_Voting');
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
-            $sql->fetchAll();
+            return $sql->fetchAll();
         }
         catch (PDOException $e)
         {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
+        
 
     }
 

@@ -9,7 +9,7 @@ session_start();
 session_id();
 //hier noch session fertig schreiben
 
-$ID_Voting= htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
+$ID_Voting= (int)htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting=$votingManager-> findById($ID_Voting);
 
@@ -44,7 +44,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
         </div>
     </div>
 
-    <a href="log-out.html" style="text-decoration: none;">
+    <a href="logOut.html" style="text-decoration: none;">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 
@@ -55,7 +55,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 
 <?php
 echo '<form class="input-container" action="Result_do.php" method="post">';
-        foreach ($chance as $eintrag)
+        foreach ($chance as $möglichkeiten)
         {
             $i=1;
             if (!empty ($eintrag))
@@ -65,8 +65,8 @@ echo '<form class="input-container" action="Result_do.php" method="post">';
                 echo "<input type='checkbox' name='antwort' value='" . $eintrag->description_Chance . "'/></br>";
             }
         }
-        echo '<input type="hidden" value="' . $ID_Voting . '" name="votingid">';
-        echo '<input type="hidden" value="' . $ID_Chance . '" name="frageid">';
+        echo '<input type="hidden" value="' . $ID_Voting . '" name="ID_Voting">';
+        echo '<input type="hidden" value="' . $ID_Chance . '" name="ID_Chance">';
 echo "</form>"?>
 
 </body>
