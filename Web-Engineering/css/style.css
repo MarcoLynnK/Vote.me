@@ -372,6 +372,11 @@ body{
     font-size: 14px;
 }
 
+th{
+    color: #2d2d2d;
+    font-color: #ffffff;
+}
+
 .tableText{
     font-family: Helvetica, sans-serif;
     font-size: 24px;
