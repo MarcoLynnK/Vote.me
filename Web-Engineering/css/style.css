@@ -425,6 +425,9 @@ th, td {
     font-size: 28px;
 }
 
+.bold{
+    font-style: oblique;
+}
 
 
 /* Mobile */
