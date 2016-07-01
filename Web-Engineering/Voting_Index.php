@@ -16,9 +16,9 @@
     <table  class="table-hover">
         <thead>
         <th>ID</th>
-        <th>Thema</th>
-        <th>Frage</th>
-        <th>Einstellungen</th>
+        <th>Theme</th>
+        <th>Question</th>
+        <th>Settings</th>
         </thead>
         <tbody>
 
@@ -39,10 +39,17 @@ foreach ($list as $voting) {
               <a href='VotingUpdate_form.php?ID_Voting=$voting->ID_Voting' class='btn btn-info btn-xs'> <input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
               <a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting' class='btn btn-info btn-danger btn-xs'> <input type='image' class='editicons' src='img/trash.svg'></a>
           </td>";
-
     echo "</tr>";
 }
 ?>
+
+       </tbody>
+    </table>
+</div></br></br>
+
+
+<button class="submit" name="submit">CREATE USER</button>
+
 
 </body>
 </html>
