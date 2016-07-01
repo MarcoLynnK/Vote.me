@@ -415,6 +415,19 @@ th, td {
     display: none;
 }
 
+.text2{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.topic{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.bold{
+    font-style: oblique;
+}
 
 
 /* Mobile */
