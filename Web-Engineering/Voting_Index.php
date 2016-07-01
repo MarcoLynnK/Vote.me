@@ -47,8 +47,9 @@ foreach ($list as $voting) {
     </table>
 </div></br></br>
 
+<form class="input-container" action="UserCreate_do.php" method="post">
 <button class="submit" name="submit">CREATE USER</button></br></br>
-
+</form>
 
 </body>
 </html>
