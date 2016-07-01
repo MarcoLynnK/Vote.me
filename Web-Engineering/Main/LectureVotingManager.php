@@ -3,7 +3,7 @@ require_once ("Manager.php");
 require_once ("Classes.php");
 
 
-class VotingLectureManager extends Manager
+class LectureVotingManager extends Manager
 {
     protected $pdo;
 
