@@ -43,6 +43,13 @@ foreach ($list as $voting) {
 }
 ?>
 
+       </tbody>
+    </table>
+</div></br></br>
+
+<button class="submit" name="submit">CREATE USER</button></br></br>
+
+
 </body>
 </html>
         
