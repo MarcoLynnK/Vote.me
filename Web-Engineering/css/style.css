@@ -404,6 +404,13 @@ th, td {
 }
 
 
+.text{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
 .chart-responsive{
     display: none;
 }
