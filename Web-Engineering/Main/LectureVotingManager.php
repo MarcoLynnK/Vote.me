@@ -16,17 +16,19 @@ class LectureVotingManager extends Manager
     {
         parent::__destruct();
     }
-
-
+    
     public function findAllVotingByLecture(Lecture $lecture)
     {
-        try {
+        try 
+        {
             $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Lecture = :ID_Lecture;');
             $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             return $sql->fetchAll();
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -34,13 +36,16 @@ class LectureVotingManager extends Manager
 
     public function findAllLectureByVoting(Voting $voting)
     {
-        try {
+        try 
+        {
             $sql = $this->pdo->prepare('SELECT * FROM Lecture WHERE ID_Voting= :ID_Voting');
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             return $sql->fetchAll;
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }

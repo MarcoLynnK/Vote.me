@@ -32,8 +32,6 @@ class VotingChanceManager extends Manager
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        
-
     }
 
     public function findAllVotingByChances(Chance $chance)
@@ -45,7 +43,9 @@ class VotingChanceManager extends Manager
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
             return $sql->fetchAll();
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
