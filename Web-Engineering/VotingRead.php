@@ -26,7 +26,7 @@ $chance= $votingchanceManager->findAllChancesByVoting($voting);
 <body>
 
 <?php
-
+//blbla
 print_r($lecture);
 echo "<h1 class='topic'><a class='bold'>Vorlesung:</a> $lecture->name_Lecture</h1>";
 echo "<h3 class='text2'><a class='bold'>Topic:</a> $voting->name_Voting</h3>";
