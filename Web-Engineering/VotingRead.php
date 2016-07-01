@@ -36,7 +36,7 @@ if (count($chance)>0)
         $i=$i+1;
     }
 }
-//blabla
+
 ?>
 </body>
 </html>
