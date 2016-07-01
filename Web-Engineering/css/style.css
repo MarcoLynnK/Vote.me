@@ -381,7 +381,7 @@ th{
 tr:nth-child(even) {background-color: #f2f2f2}
 
 .edittable{
-    width: 150px;
+    width: 100px;
 }
 
 .tableText{
