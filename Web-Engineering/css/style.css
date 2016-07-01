@@ -382,8 +382,8 @@ tr:nth-child(even) {background-color: #f2f2f2}
 
 .edittable{
     width: 100px;
-    left: 50%;
-    right: 50%;
+    margin-right: 50%;
+    margin-left: 50%;
 }
 
 .tableText{
