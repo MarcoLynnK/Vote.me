@@ -12,7 +12,7 @@
 
 <div class="table-container">
 
-    <h1 class="NewUser">Voting</h1>
+    <h1 class="tableText">Voting</h1>
     <table  class="table-hover">
         <thead>
         <th>ID</th>

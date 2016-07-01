@@ -372,6 +372,12 @@ body{
     font-size: 14px;
 }
 
+.tableText{
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
 
 .container{
     font-family: Helvetica, sans-serif;
