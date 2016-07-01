@@ -15,10 +15,13 @@ $chance= $votingchanceManager->findAllChancesByVoting($voting);
 <!DOCTYPE html>
 <html>
 
+
 <?php include("include/HeadUser.php"); ?>
+
 
 <body>
 
+<div class="text">
 <?php
 print_r($chance);
 
@@ -36,5 +39,7 @@ if (count($chance))
     }
 }
 ?>
+</div>
+
 </body>
 </html>
