@@ -364,6 +364,12 @@ body{
     height: 25px;
 }
 
+/* Tabellen */
+
+.table-container{
+    max-width: 600px;
+}
+
 
 .container{
     font-family: Helvetica, sans-serif;

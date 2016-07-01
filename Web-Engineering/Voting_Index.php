@@ -10,7 +10,7 @@
 
 <body>
 
-<div class="container">
+<div class="table-container">
 
     <h1>Voting</h1>
     <table  class="table table-hover">
