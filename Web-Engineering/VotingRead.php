@@ -25,7 +25,7 @@ $chance= $votingchanceManager->findAllChancesByVoting($voting);
 <?php
 print_r($chance);
 
-echo "<h1>Voting: $voting->ID_Voting</h1>";
+echo "<h1 class=''>Voting: $voting->ID_Voting</h1>";
 echo "<h3>Topic: $voting->name_Voting</h3>";
 echo "<h3>Question: $voting->question_Voting</h3>";
 
