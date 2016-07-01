@@ -489,7 +489,12 @@ th, td {
         margin-top: 50px;
     }
 
-
+    .table-container{
+        margin-top: 50px;
+    }
+    .edittable{
+        max-width: 70px;
+    }
 
 
     .inputForm{
