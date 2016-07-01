@@ -1,8 +1,8 @@
 <?php
-    include ("include/RightsCheck.php");
-    include ("include/Session_Check.php");
+    /*include ("include/RightsCheck.php");
+    include ("include/Session_Check.php");*/
 ?>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <?php include("include/HeadUser.php") ?>
 <body>
@@ -27,5 +27,6 @@
 <h1>Sie sind Dozent:</h1>
 <a href="Lecture_Index.php">Vorlesungen</a><br><br>
 <a href="Voting_Index.php">Votings</a><br><br>
+<a href="Chance_Index.php">Antworten</a>
 </body>
 </html>

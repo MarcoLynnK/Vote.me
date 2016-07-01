@@ -3,6 +3,12 @@ require_once ("Main/VotingManager.php");
 require_once ("Main/VotingChanceManager.php");
 require_once ("Main/Classes.php");
 
+$result= new Result();
+
+session_start();
+session_id();
+//hier noch session fertig schreiben
+
 $ID_Voting= htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting=$votingManager-> findById($ID_Voting);

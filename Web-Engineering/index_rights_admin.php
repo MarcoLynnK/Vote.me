@@ -26,10 +26,11 @@ include ("include/Session_Check.php");
     </a>
 
 </div>
-<h1>Sie sind admin:</h1>
-<a href="User_Index.php">User</a>
+<h1>Sie sind Admin:</h1>
+<a href="User_Index.php">User</a><br><br>
 <a href="Lecture_Index.php">Vorlesungen</a><br><br>
 <a href="Voting_Index.php">Votings</a><br><br>
+<a href="Chance_Index.php">Chance</a>
 
 </body>
 </html>

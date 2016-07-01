@@ -3,7 +3,7 @@
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
-$ID_Lecture = (int)htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
+$ID_Lecture = htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
 $lectureManager = new LectureManager();
 $lecture = $lectureManager->findById($ID_Lecture);
 ?>
@@ -37,8 +37,9 @@ $lecture = $lectureManager->findById($ID_Lecture);
                     echo "<tr>";
                     echo "<td>$vorlesung->name_Lecture</td>";
                     echo "<td>$vorlesung->degreecourse</td>";
-                    echo "<td><a href='LectureUpdate_form.php?notiz_id=$lecture->id&leser_id=$lecture->id' class='btn btn-info btn-danger btn-xs' >bearbeiten</a>";
-                    echo "<td><a href='LectureDelete_do.php?notiz_id=$lecture->id&leser_id=$lecture->id' class='btn btn-info btn-danger btn-xs' >löschen</a>";
+                    echo "<td><a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'>bearbeiten</a>";
+                    echo "<td><a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'>löschen</a>";
+                    echo "<td><a href='VotingCreate_form.php?ID_lecture=$lecture->ID_Lecture'>Voting erstellen</a>";
                     echo "<td></td>";
                     echo "</tr>";
                 }

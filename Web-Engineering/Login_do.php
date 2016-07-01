@@ -11,8 +11,7 @@ if (!empty($login) && !empty($password))
     $user = $userManager->findByLogin($login, $password);//holt sich den User aus der Datenbank durch Suche nach dem Login und Passwort (verifizierung im Usermanager)
     if ($user==null)
     {
-        echo ("steckst in der if schleife fest");
-        /*header('Location: login.php');*/
+        header('Location: login.php');
         die();
     }
     else
@@ -24,7 +23,6 @@ if (!empty($login) && !empty($password))
         header('Location: index.php');//direkte weiterleitung auf index.php durch 'Location:
         die();
     }
-    
 } 
 else {
         echo "Error: Bitte alle Felder ausfüllen!<br/>";

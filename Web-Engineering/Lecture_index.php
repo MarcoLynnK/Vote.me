@@ -29,9 +29,9 @@ foreach ($list as $lecture) {
     echo "<td>$lecture->name_Lecture</td>";
     echo "<td>$lecture->degreecourse</td>";
     echo "<td>
-              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture' class='btn btn-success btn-xs'>zeige</a>&nbsp;
-              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture' class='btn btn-info btn-xs'>editiere</a>&nbsp;
-              <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a>
+              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'>zeige</a>
+              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'>editiere</a>
+              <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'>l&ouml;sche</a>
           </td>";
     echo "<td></td>";
     echo "</tr>";

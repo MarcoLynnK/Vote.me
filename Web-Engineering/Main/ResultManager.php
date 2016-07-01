@@ -4,7 +4,7 @@ require_once ("Classes.php");
 
 //CRUD Applikation Vorlesungen
 
-class ReslutManager extends Manager
+class ResultManager extends Manager
 {
     protected $pdo;
 
