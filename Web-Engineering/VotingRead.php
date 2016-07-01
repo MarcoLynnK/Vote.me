@@ -2,18 +2,18 @@
 
 require_once("Main/VotingManager.php");
 require_once("Main/VotingChanceManager.php");
-require_once("Main/LectureVotingManager.php");
+require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
 $ID_Voting= (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting= $votingManager->findById($ID_Voting);
 
-$lecturevotingManager= new LectureVotingManager();
-$lecture= $lecturevotingManager->findAllLectureByVoting($voting);
-
 $votingchanceManager= new VotingChanceManager();
 $chance= $votingchanceManager->findAllChancesByVoting($voting);
+
+$lectureManager= new LectureManager();
+$lecture= $lectureManager->findById($voting->ID_Lecture);
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ $chance= $votingchanceManager->findAllChancesByVoting($voting);
 
 <?php
 //blbla
-print_r($lecture);
+print_r($voting);
 echo "<h1 class='topic'><a class='bold'>Vorlesung:</a> $lecture->name_Lecture</h1>";
 echo "<h3 class='text2'><a class='bold'>Topic:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Question:</a> $voting->question_Voting</h3>";
