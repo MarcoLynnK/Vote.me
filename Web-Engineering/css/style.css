@@ -383,6 +383,8 @@ tr:nth-child(even) {background-color: #f2f2f2}
 th, td {
     border-top: none;
     border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
 }
 
 .edittable{
