@@ -18,7 +18,7 @@
         <th>ID</th>
         <th>Thema</th>
         <th>Frage</th>
-        <th></th>
+        <th>Einstellungen</th>
         </thead>
         <tbody>
 
