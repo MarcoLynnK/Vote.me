@@ -16,9 +16,9 @@
     <table  class="table-hover">
         <thead>
         <th>ID</th>
-        <th>Thema</th>
-        <th>Frage</th>
-        <th>Einstellungen</th>
+        <th>Theme</th>
+        <th>Question</th>
+        <th>Settings</th>
         </thead>
         <tbody>
 
