@@ -5,7 +5,7 @@ require_once("Main/VotingChanceManager.php");
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
-$ID_Voting= (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
+$ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
 $voting= $votingManager->findById($ID_Voting);
 
@@ -13,7 +13,7 @@ $votingchanceManager= new VotingChanceManager();
 $chance= $votingchanceManager->findAllChancesByVoting($voting);
 
 $lectureManager= new LectureManager();
-$lecture= $lectureManager->findById($voting->ID_Lecture);
+$lecture= $lectureManager->findById($voting);
 ?>
 
 <!DOCTYPE html>

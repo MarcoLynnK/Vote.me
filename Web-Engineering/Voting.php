@@ -6,7 +6,7 @@ require_once ("Main/Classes.php");
 $result= new Result();
 
 session_start();
-session_id();
+session_id($ID_Session);
 //hier noch session fertig schreiben
 
 $ID_Voting= (int)htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
@@ -49,7 +49,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
     </a>
 
 </div>
-
+<h2>Sie sind Votingteilnehmer: <?php echo "($_SESSION ['ID_Session']"?></h2>
 <h2>Voting # <?php echo ($voting->name_Voting) ?> </h2>
 <p>Frage: <?php echo ($voting->question_Voting)?></p>
 
@@ -58,15 +58,17 @@ echo '<form class="input-container" action="Result_do.php" method="post">';
         foreach ($chance as $möglichkeiten)
         {
             $i=1;
-            if (!empty ($eintrag))
+            if (!empty ($möglichkeiten))
             {
                 $i = $i + 1;
                 echo "<p>Möglichkeit $i:</p>";
-                echo "<input type='checkbox' name='antwort' value='" . $eintrag->description_Chance . "'/></br>";
+                echo "<input type='checkbox' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>'$möglichkeiten->description_Chance'</br>";
             }
         }
-        echo '<input type="hidden" value="' . $ID_Voting . '" name="ID_Voting">';
-        echo '<input type="hidden" value="' . $ID_Chance . '" name="ID_Chance">';
+        echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
+        echo '<input type="hidden" value="' . $chance->ID_Chance . '" name="ID_Chance">';
+        echo '<input type="hidden" value="' . $_SESSION ['ID_Session'] . '" name="ID_Session';
+echo '<input type="submit" class="submit" value="VOTE">';
 echo "</form>"?>
 
 </body>
