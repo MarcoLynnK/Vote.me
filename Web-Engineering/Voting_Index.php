@@ -13,7 +13,7 @@
 <div class="table-container">
 
     <h1>Voting</h1>
-    <table  class="table table-hover">
+    <table  class="table-hover">
         <thead>
         <th>ID</th>
         <th>Thema</th>
