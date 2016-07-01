@@ -44,7 +44,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
         </div>
     </div>
 
-    <a href="log-out.html" style="text-decoration: none;">
+    <a href="log-out.html">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 
