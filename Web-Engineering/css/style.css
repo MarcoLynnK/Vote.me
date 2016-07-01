@@ -388,7 +388,7 @@ th, td {
 }
 
 .edittable{
-    width: 70px;
+    width: 10%;
 }
 
 .tableText{
@@ -490,9 +490,6 @@ th, td {
 
     .table-container{
         margin-top: 50px;
-    }
-    .edittable{
-        max-width: 50px;
     }
 
 
