@@ -358,6 +358,13 @@ body{
 }
 
 
+/* Edit Icons */
+
+.editicons{
+    height: 25px;
+}
+
+
 .container{
     font-family: Helvetica, sans-serif;
     font-size: 12px;
