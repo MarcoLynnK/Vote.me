@@ -378,6 +378,7 @@ th{
     color: white;
 }
 
+tr:nth-child(even) {background-color: #f2f2f2}
 
 .tableText{
     font-family: Helvetica, sans-serif;
