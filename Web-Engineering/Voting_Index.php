@@ -43,7 +43,7 @@ foreach ($list as $voting) {
     echo "</tr>";
 }
 ?>
-        
+
 </body>
 </html>
         
