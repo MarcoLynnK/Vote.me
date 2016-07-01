@@ -408,6 +408,7 @@ th, td {
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     padding: 10px;
+    color: #2d2d2d;
 }
 
 
@@ -417,7 +418,7 @@ th, td {
 
 .text2{
     font-family: Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .topic{
@@ -425,10 +426,9 @@ th, td {
     font-size: 28px;
 }
 
-.bold{
-    font-family: Helvetica, sans-serif;
+.text3{
+    color: #505050;
     font-size: 16px;
-    font-weight: bolder;
 }
 
 
