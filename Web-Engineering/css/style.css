@@ -362,6 +362,8 @@ body{
 
 .editicons{
     height: 25px;
+    margin-right: 50%;
+    margin-left: 50%;
 }
 
 /* Tabellen */
@@ -382,8 +384,6 @@ tr:nth-child(even) {background-color: #f2f2f2}
 
 .edittable{
     width: 100px;
-    margin-right: 50%;
-    margin-left: 50%;
 }
 
 .tableText{
