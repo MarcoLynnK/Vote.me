@@ -23,16 +23,16 @@ $chance= $votingchanceManager->findAllChancesByVoting($voting);
 
 
 <?php
-echo "<h1 class='tableText'>Voting: $voting->ID_Voting</h1>";
-echo "<h3 class='text'>Topic: $voting->name_Voting</h3>";
-echo "<h3 class='text'>Question: $voting->question_Voting</h3>";
+echo "<h1 class='topic'>Voting: $voting->ID_Voting</h1>";
+echo "<h3 class='text2'>Topic: $voting->name_Voting</h3>";
+echo "<h3 class='text2'>Question: $voting->question_Voting</h3>";
 
 if (count($chance)>0)
 {
     $i=1;
     foreach ($chance as $möglichkeiten)
     {
-        echo "<h3>Antwort $i: $möglichkeiten->description_Chance</h3>";
+        echo "<h3 class='text2'>Antwort $i: $möglichkeiten->description_Chance</h3>";
         $i=$i+1;
     }
 }
