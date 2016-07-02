@@ -26,7 +26,7 @@ $voting = $VotingManager->findById($ID_Voting);
     <input class="inputForm" type='text' name='name_Voting' value='<?php echo ($voting->name_Voting) ?>' placeholder="Thema" /><br>
     <a class="text">Frage:</a></br>
     <input class="inputForm" type='text' name='question_Voting' value='<?php echo ($voting->question_Voting) ?>' placeholder="Frage" /><br>
-    <input class="submit" type='submit' value='aktualisieren' />
+    <input class="submit" type='submit' value='UPDATE' />
 </form>
 
 </body>
