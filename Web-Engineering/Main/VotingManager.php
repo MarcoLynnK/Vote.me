@@ -54,9 +54,10 @@ class VotingManager extends Manager
     public function create(Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (:name_Voting, :question_Voting)');
+            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting, Status) VALUES (:name_Voting, :question_Voting. :Status)');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
+            $sql->bindParam(':Status', $voting->Status);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();

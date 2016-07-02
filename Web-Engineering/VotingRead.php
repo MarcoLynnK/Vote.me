@@ -12,9 +12,8 @@ $voting= $votingManager->findById($ID_Voting);
 $votingchanceManager= new VotingChanceManager();
 $chance= $votingchanceManager->findAllChancesByVoting($voting);
 
-/*$voting->ID_Lecture= $ID_Lecture;
 $lectureManager= new LectureManager();
-$lecture= $lectureManager->findById($ID_Lecture);*/
+$lecture= $lectureManager->findById($voting->ID_Lecture);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +27,7 @@ $lecture= $lectureManager->findById($ID_Lecture);*/
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php include("include/HeadUser.php"); ?>
+<?php include("include/NavbarUser.php"); ?>
 
 
 <body>
@@ -36,6 +35,7 @@ $lecture= $lectureManager->findById($ID_Lecture);*/
 <?php
 
 echo "<h1 class='topic'><a class='bold'>Voting Nr.</a> $voting->ID_Voting</h1>";
+echo "<h3 class='text2'><a class='bold'>Vorlesung:</a> $lecture->name_Lecture</h3>";
 echo "<h3 class='text2'><a class='bold'>Topic:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Question:</a> $voting->question_Voting</h3>";
 
@@ -48,6 +48,9 @@ if (count($chance)>0)
         $i=$i+1;
     }
 }
+echo "<h3 class='text2'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</h3>";
+echo "<h3 class='text2'><a href='Voting_Index.php'</a>BACK</h3>";
 ?>
+
 </body>
 </html>

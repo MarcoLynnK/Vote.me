@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
-<?php require_once("include/HeadUser.php") ?>
+<?php
+require_once("Main/Classes.php");
+require_once("Main/ChanceManager.php");
+?>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
 <body>
+
+<?php require_once("include/NavbarUser.php");?>
 
 <div class="container">
     <h1>Votingoptionen</h1>
@@ -14,8 +26,6 @@
         </thead>
         <tbody>
             <?php
-            require_once("Main/Classes.php");
-            require_once("Main/ChanceManager.php");
                 $chanceManager = new ChanceManager();
                 $list = $chanceManager->findAll();
                     foreach ($list as $chance)
@@ -33,3 +43,8 @@
                     }
             ?>
         </tbody>
+    </table>
+</div>
+<button class="submit" name="submit">CREATE CHANCE</button><!--Link zu ChanceCreateform einbinden-->
+
+</body>

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <?php include("include/HeadUser.php") ?>
+    <?php include("include/NavbarUser.php") ?>
     </head>
 <body>
 <?php
@@ -28,10 +28,8 @@ if (!empty($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
 <h1> Neue Möglichkeit anlegen:</h1>
 
 <form action="ChanceCreate_do.php" method="post">
-    Möglichkeit:<br>
+    New Chance:<br>
     <input type="text" name="description_Chance" id="description_Chance" placeholder="Beschreibung"><br><br>
-    Zu Voting zuweisen:
-    <?php echo "<option value='$voting->ID_Voting'></option>"?>
     <input type='submit' value='anlegen'>
     </form>
 </body>

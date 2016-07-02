@@ -20,7 +20,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("include/HeadUser.php"); ?>
+    <?php include("include/NavbarUser.php"); ?>
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -54,7 +54,7 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 <p>Question: <?php echo ($voting->question_Voting)?></p>
 
 <?php
-echo '<form class="input-container" action="Result_do.php" method="post">';
+echo '<form class="input-container" action="VotingResult_do.php" method="post">';
         foreach ($chance as $möglichkeiten)
         {
             $i=1;

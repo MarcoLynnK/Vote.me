@@ -28,7 +28,7 @@ $lecture= $lectureManager->findById($ID_Lecture);*/
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php include("include/HeadUser.php"); ?>
+<?php include("include/NavbarUser.php"); ?>
 
 
 <body>

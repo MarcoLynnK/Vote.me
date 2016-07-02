@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<?php require_once("include/HeadUser.php") ?>
+<?php require_once("include/NavbarUser.php") ?>
 <div class="table-container" style="overflow-x:auto;">
 
     <h1 class="tableText">Voting</h1>
@@ -48,8 +48,7 @@ foreach ($list as $voting) {
     </table>
 </div></br></br>
 
-<a href="VotingCreate_form.php">Create new Voting</a>
-<button class="submit" name="submit">CREATE USER</button>
+<button class="submit" name="submit">CREATE VOTING</button><!--hier noch den Link zu VotingCreate_form einbinden  "<a href="VotingCreate_form.php"></a>-->
 
 
 </body>

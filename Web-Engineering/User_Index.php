@@ -11,7 +11,7 @@
 
 <body>
 
-<?php include("include/HeadUser.php"); ?>
+<?php include("include/NavbarUser.php"); ?>
 
 <div class="container">
 

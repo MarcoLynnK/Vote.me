@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<?php require_once("include/HeadUser.php") ?>
+	<?php require_once("include/NavbarUser.php") ?>
 
 </head>
 

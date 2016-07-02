@@ -12,7 +12,7 @@ $voting = $VotingManager->findById($ID_Voting);
 <html>
 <head>
 
-<?php include("include/HeadUser.php"); ?>
+<?php include("include/NavbarUser.php"); ?>
 
 </head>
 <body>

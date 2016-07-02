@@ -11,7 +11,7 @@ $user = $userManager->findById($ID_User);
 <!DOCTYPE html>
 <html>
 
-<?php include("include/HeadUser.php"); ?>
+<?php include("include/NavbarUser.php"); ?>
 
 <body>
 

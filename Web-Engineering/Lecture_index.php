@@ -13,7 +13,7 @@
 
 <body>
 
-<?php require_once("include/HeadUser.php") ?>
+<?php require_once("include/NavbarUser.php") ?>
 
     <div class="container">
 

@@ -67,6 +67,7 @@ class Voting
     public $ID_Voting;
     public $name_Voting;
     public $question_Voting;
+    public $Status;
     public $ID_Lecture;
     public $ID_User;
 
@@ -77,6 +78,7 @@ class Voting
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
+            $this-> Status= $daten ['Status'];
             $this-> ID_Lecture= $daten ['ID_Lecture'];
             $this-> ID_User= $daten ['ID_User'];
         }
