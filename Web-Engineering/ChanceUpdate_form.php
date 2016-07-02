@@ -4,6 +4,7 @@ require_once ("Main/Classes.php");
 $ID_Chance = (int)htmlspecialchars($_GET["ID_Chance"], ENT_QUOTES, "UTF-8");
 $ChanceManager = new ChanceManager();
 $chance = $ChanceManager->findById($ID_Chance);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ $chance = $ChanceManager->findById($ID_Chance);
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 </div>
-<a>Votingoption # <?php echo ($chance->ID_Chance) ?></a>
+<a>Chance # <?php echo ($chance->ID_Chance) ?></a>
 
 <form action='ChanceUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />

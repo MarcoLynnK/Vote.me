@@ -52,8 +52,9 @@ class ChanceManager extends Manager
     public function create (Chance $chance)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Chance (description_Chance) VALUES (:description_Chance');
-            $sql->bindParam(':text', $chance->description_Chance);
+            $sql = $this->pdo->prepare('INSERT INTO Chance (description_Chance, ID_Voting) VALUES (:description_Chance, :ID_Voting');
+            $sql->bindParam(':description_Chance', $chance->description_Chance);
+            $sql->bindParam(':ID_Voting', $chance->ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
             $chance = $sql->fetch();
