@@ -20,41 +20,28 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("include/NavbarUser.php"); ?>
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 
 </head>
 <title>User Update</title>
 <body>
 
 
-<div id="navbar">
+<?php require_once("include/HeadUser.php") ?>
 
-    <img src="img/logo2.svg" id="logo">
 
-    <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-        <div class="dropdown-content">
-            <a href="#">VOTING LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form_admin.php">CREATE VOTING</a>
-            <a href="#">USER LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/UserCreate_form.php">CREATE USER</a>
-        </div>
-    </div>
-
-    <a href="logOut.html" style="text-decoration: none;">
-        <button class="log-out" name="LogOut">LOG OUT</button>
-    </a>
-
-</div>
 <h2>Sie sind Votingteilnehmer: <?php echo "($_SESSION ['ID_Session']"?></h2>
-<h2>Topic: <?php echo ($voting->name_Voting) ?> </h2>
-<p>Question: <?php echo ($voting->question_Voting)?></p>
+<h2>Voting # <?php echo ($voting->name_Voting) ?> </h2>
+<p>Frage: <?php echo ($voting->question_Voting)?></p>
 
 <?php
-echo '<form class="input-container" action="VotingResult_do.php" method="post">';
+echo '<form class="input-container" action="Result_do.php" method="post">';
         foreach ($chance as $möglichkeiten)
         {
             $i=1;

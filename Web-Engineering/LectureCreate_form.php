@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/HeadUser.php") ?>
 
 
 
