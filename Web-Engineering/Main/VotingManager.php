@@ -54,7 +54,7 @@ class VotingManager extends Manager
     public function create(Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting, Chance1, Chance2, Chance3, Chance4) VALUES (:name_Voting, :question_Voting, :Chance1, :Chance2, :Chance3, :Chance4)');
+            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting) VALUES (:name_Voting, :question_Voting)');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();
@@ -71,7 +71,7 @@ class VotingManager extends Manager
     public function update(Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting, Chance1= :Chance1, Chance2= :Chance2, Chance3= :Chance3, Chance4= :Chance4,  WHERE :ID_Voting= ID_Voting');
+            $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting WHERE :ID_Voting= ID_Voting');
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();

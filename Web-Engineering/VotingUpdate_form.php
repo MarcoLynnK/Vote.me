@@ -18,9 +18,9 @@ $voting = $VotingManager->findById($ID_Voting);
 <body>
 
 
-<a>Voting # <?php echo ($voting->ID_Voting) ?></a>
+<a>Voting Nr. <?php echo ($voting->ID_Voting) ?></a>
 
-<form action='LectureUpdate_do.php' method='post'>
+<form action='VotingUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' />
     <a class="text">Thema des Votings:</a><br>
     <input class="inputForm" type='text' name='name_Voting' value='<?php echo ($voting->name_Voting) ?>' placeholder="Thema" /><br>
