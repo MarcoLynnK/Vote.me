@@ -12,8 +12,9 @@ $voting= $votingManager->findById($ID_Voting);
 $votingchanceManager= new VotingChanceManager();
 $chance= $votingchanceManager->findAllChancesByVoting($voting);
 
+/*$voting->ID_Lecture= $ID_Lecture;
 $lectureManager= new LectureManager();
-$lecture= $lectureManager->findById($voting);
+$lecture= $lectureManager->findById($ID_Lecture);*/
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +27,8 @@ $lecture= $lectureManager->findById($voting);
 <body>
 
 <?php
-//blbla
-print_r($voting);
-echo "<h1 class='topic'><a class='bold'>Vorlesung:</a> $lecture->name_Lecture</h1>";
+
+echo "<h1 class='topic'><a class='bold'>Vorlesung:</a> $voting->ID_Voting</h1>";
 echo "<h3 class='text2'><a class='bold'>Topic:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Question:</a> $voting->question_Voting</h3>";
 

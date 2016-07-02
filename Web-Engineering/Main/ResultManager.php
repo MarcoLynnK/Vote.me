@@ -22,12 +22,15 @@ class ResultManager extends Manager
 
     public function findAll()
     {
-        try {
+        try
+        {
             $sql = $this->pdo->prepare('SELECT * FROM Result');
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Result');
             return $sql->FetchAll();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -37,13 +40,16 @@ class ResultManager extends Manager
 
     public function findBydate(Result $date_Result)
     {
-        try {
+        try
+        {
             $sql = $this->pdo->prepare('SELECT * FROM Result WHERE date_Result = :date_Result');
             $sql->bindParam(':date_Result', $date_Result);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Result');
             $result = $sql->fetch();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -51,35 +57,58 @@ class ResultManager extends Manager
         return $result;
     }
 
-    //Ergebnis erstellen in der DB anlegen (abstimmen pro Student)
+    //Teilnehmerzahl ermitteln
 
-    public function create(Result $result)
+    public function getAllParticipants (Result $ID_Voting)
     {
-
-        try {
-            $stmt = $this->pdo->prepare('INSERT INTO Result (date_Result, ID_Session, ID_Chance, ID_Voting) VALUES (:date_Result, :ID_Session, :ID_Chance, :ID_Voting)');
-            $stmt->bindParam(':date_Result', $result->date_Result);
-            $stmt->bindParam(':ID_Session', $result->ID_Session);
-            $stmt->bindParam(':ID_Chance', $result->ID_Chance);
-            $stmt->bindParam(':ID_Voting', $result->ID_Voting);
-            $stmt->execute();
-        } catch (PDOException $e) {
+        try
+        {
+            $sql = $this->pdo->prepare ('SELECT COUNT (*) as Participants FROM Result WHERE ID_Votig= :ID_Voting');
+            $sql->bindParam(':ID_Voting', $ID_Voting);
+            $sql->execute();
+            $participants= $sql->fetchAll();
+            return $participants;
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        return $result;
     }
 
-    //Ergebnis aus der DB auslesen mit Voting ID
+    //Ergebnis erstellen in der DB anlegen (abstimmen pro Student)
+
+    public function create(Result $ID_Voting, $ID_Chance, $ID_Session)
+    {
+
+        try
+        {
+            $sql = $this->pdo->prepare('INSERT INTO Result (ID_Session, ID_Chance, ID_Voting) VALUES (:ID_Session, :ID_Chance, :ID_Voting)');
+            $sql->bindParam(':ID_Session',$ID_Session);
+            $sql->bindParam(':ID_Chance', $ID_Chance);
+            $sql->bindParam(':ID_Voting', $ID_Voting);
+            $sql->execute();
+        }
+        catch (PDOException $e)
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+    }
+
+    //Ergebnis aus der DB auslesen mit ID_Voting und ID_Chance
 
     public function resultdo (Result $result)
     {
-        try {
+        try
+        {
             $sql = $this->pdo->prepare('SELECT COUNT * FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
             $sql->bindParam(':ID_Voting', $result->ID_Voting);
             $sql->bindParam(':ID_Chance', $result->ID_Chance);
             $sql->execute();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -90,11 +119,14 @@ class ResultManager extends Manager
 
     public function delete(Result $result)
     {
-        try {
+        try
+        {
             $sql = $this->pdo->prepare('DELETE FROM User WHERE ID_Result= :ID_Result');
             $sql->bindParam(':ID_Result', $result->ID_Result);
             $sql->execute();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
             return $result;
         }
