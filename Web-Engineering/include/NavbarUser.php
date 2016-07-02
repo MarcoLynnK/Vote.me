@@ -14,7 +14,7 @@
 </script>
 
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION User-->
 
 
 <div id="navbar">
