@@ -11,9 +11,9 @@
 
 <body>
 
-<div class="container">
+<div class="table-container">
 
-    <h1>User</h1>
+    <h1 class="tableText">User</h1>
     <table  class="table table-hover">
         <thead>
         <th>ID</th>
@@ -44,7 +44,6 @@ foreach ($list as $user) {
               <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'>editiere</a>&nbsp;
               <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a><!--hier noch UserDelete_form einbinden-->
           </td>";
-    echo "<td></td>";
     echo "</tr>";
 }
 ?>
