@@ -50,8 +50,8 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 
 </div>
 <h2>Sie sind Votingteilnehmer: <?php echo "($_SESSION ['ID_Session']"?></h2>
-<h2>Voting # <?php echo ($voting->name_Voting) ?> </h2>
-<p>Frage: <?php echo ($voting->question_Voting)?></p>
+<h2>Topic: <?php echo ($voting->name_Voting) ?> </h2>
+<p>Question: <?php echo ($voting->question_Voting)?></p>
 
 <?php
 echo '<form class="input-container" action="Result_do.php" method="post">';

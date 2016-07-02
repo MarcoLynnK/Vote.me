@@ -72,6 +72,7 @@ class VotingManager extends Manager
     {
         try {
             $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting WHERE :ID_Voting= ID_Voting');
+            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();

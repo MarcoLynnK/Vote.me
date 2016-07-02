@@ -13,7 +13,7 @@ if (!empty ($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
     $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
     $voting->name_Voting= $name_Voting;
     $voting->question_Voting= $question_Voting;
-    $votingManager-> update ($voting);
+    $votingManager-> update ($voting);//Update der Datensätze in der DB anhand der Voting ID
     header ('Location: Voting_Index.php');
 
     if ($voting==null)
