@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php
-    require_once("include/HeadUser.php");
-    ?>
-</head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
 
 <body>
 
+<?php include("include/HeadUser.php"); ?>
+
 <div class="container">
 
-    <h1>User</h1>
+    <h1 class="tableText">User</h1>
     <table  class="table table-hover">
         <thead>
         <th>ID</th>
@@ -44,7 +46,6 @@ foreach ($list as $user) {
               <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'>editiere</a>&nbsp;
               <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a><!--hier noch UserDelete_form einbinden-->
           </td>";
-    echo "<td></td>";
     echo "</tr>";
 }
 ?>
