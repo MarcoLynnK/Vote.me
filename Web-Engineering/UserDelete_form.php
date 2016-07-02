@@ -19,8 +19,8 @@ $ID_User = htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
 */
 ?>
 
-<h1>Sie sind im Begriff, einen User zu löschen.</h1><br>
-<h2>Wollen sie den User wirklich löschen?</h2>
+<h1 class="topic">Sie sind im Begriff, einen User zu löschen.</h1><br>
+<h2 class="topic">Wollen sie den User wirklich löschen?</h2>
 <br><br>
 <a href="UserDelete_do.php"><button class="submit" name="Yes">Yes</button></a><br><br>
 <a href="User_Index.php"><button class="submit" name="no">No</button></a>
