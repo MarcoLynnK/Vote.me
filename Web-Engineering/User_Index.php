@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="table-container">
+<div class="container">
 
     <h1 class="tableText">User</h1>
     <table  class="table table-hover">
