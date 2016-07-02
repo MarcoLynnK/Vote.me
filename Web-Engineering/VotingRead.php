@@ -28,7 +28,7 @@ $lecture= $lectureManager->findById($ID_Lecture);*/
 
 <?php
 
-echo "<h1 class='topic'><a class='bold'>Vorlesung:</a> $voting->ID_Voting</h1>";
+echo "<h1 class='topic'><a class='bold'>Voting Nr.</a> $voting->ID_Voting</h1>";
 echo "<h3 class='text2'><a class='bold'>Topic:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Question:</a> $voting->question_Voting</h3>";
 
