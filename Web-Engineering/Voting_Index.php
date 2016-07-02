@@ -48,7 +48,7 @@ foreach ($list as $voting) {
     </table>
 </div></br></br>
 
-
+<a href="VotingCreate_form.php">Create new Voting</a>
 <button class="submit" name="submit">CREATE USER</button>
 
 

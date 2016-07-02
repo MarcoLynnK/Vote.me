@@ -6,7 +6,7 @@ require_once("Main/Classes.php");
 
 $ID_Lecture = htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
 $lectureManager = new LectureManager();
-$lecture = $lectureManager->findById($ID_Lecture);
+$lecture= $lectureManager->findById($ID_Lecture);
 
 $lecture->ID_User= $ID_User;
 $userManager= new UserManager();

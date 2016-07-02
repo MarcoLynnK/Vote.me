@@ -38,7 +38,7 @@ class LectureManager extends Manager
 
     //Alle Vorlesungen mit der bestimmten ID ausgeben
 
-    public function findById (Lecture $ID_Lecture)
+    public function findById ($ID_Lecture)
     {
         try {
             $sql= $this->pdo-> prepare ('SELECT * FROM Lecture WHERE ID_Lecture = :ID_Lecture');
