@@ -15,7 +15,7 @@ if (!empty($ID_Lecture) && !empty($name_Lecture) && !empty($degreecourse))
     $lecture->name_Lecture= $name_Lecture;
     $lecture->degreecourse= $degreecourse;
     $lectureManager-> update ($lecture);
-    header ('Location: Lecture_Index.php');
+    header ('Location: Lecture_index.php');
     
     if ($lecture==null) 
     {

@@ -18,7 +18,7 @@ $lecture = $LectureManager->findById($ID_Lecture);
 <body>
 
 
-<a>Vorlesung # <?php echo ($lecture->ID_Lecture) ?></a>
+<a>Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
 
 <form action='LectureUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Lecture' value='<?php echo ($lecture->ID_Lecture) ?>' />

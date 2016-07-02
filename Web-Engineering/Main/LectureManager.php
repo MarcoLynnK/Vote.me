@@ -80,9 +80,9 @@ class LectureManager extends Manager
     public function update (Lecture $lecture)
     {
         try {
-            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse, faculty= :faculty WHERE ID_Lecture = :ID_Lecture');
+            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse WHERE ID_Lecture = :ID_Lecture');
             $stmt->bindParam(':ID_Lecture', $lecture->ID_Lecture);
-            $stmt->bindParam(':name', $lecture->name_Lecture);
+            $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
             $stmt->bindParam(':degreecourse', $lecture->degreecourse);
             $stmt->execute();
             }

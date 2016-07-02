@@ -48,3 +48,5 @@ foreach ($list as $lecture) {
     echo "</tr>";
 }
 ?>
+</body>
+</html>
