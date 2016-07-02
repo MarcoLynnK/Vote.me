@@ -17,41 +17,12 @@ $user = $userManager->findById($ID_User);
 
 <?php
 echo "<h2>Dozent $ID_User:</h2>";
-
-$userManager = new UserManager();
-$user = $userManager->findById($ID_User);
-if (count($user) > 0)
-{
-
-    echo "<table class='table table-hover'>";
-    echo "<thead>";
-    echo "<th>User ID</th>";
-    echo "<th>Benutzername</th>";
-    echo "<th>Vorname</th>";
-    echo "<th>Nachname</th>";
-    echo "<th>E-mail</th>";
-    echo "<th>Recht</th>";
-    echo "<th>Passwort</th>";
-    echo "<th></th>";
-    echo "</thead>";
-
-    foreach ($user as $dozent)
-    {
-        echo "<tr>";
-        echo "<td>$dozent->ID_User</td>";
-        echo "<td>$dozent->login</td>";
-        echo "<td>$dozent->firstname</td>";
-        echo "<td>$dozent->lastname</td>";
-        echo "<td>$dozent->email</td>";
-        echo "<td>$dozent->ID_Rights</td>";
-        echo "<td>$dozent->hash</td>";
-        echo "<td><a href='UserUpdate_form.php?User_ID=$dozent->User_ID' class='btn btn-info btn-danger btn-xs' >bearbeiten</a>";
-        echo "<td><a href='UserDelete_do.php?User_ID=$dozent->User_ID' class='btn btn-info btn-danger btn-xs' >löschen</a>";
-        echo "<td></td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
+echo "<h1 class='topic'><a class='bold'>Username:</a> $user->login</h1>";
+echo "<h3 class='text2'><a class='bold'>Firstname:</a> $user->firstname</h3>";
+echo "<h3 class='text2'><a class='bold'>Lastname:</a> $user->lastname</h3>";
+echo "<h3 class='text2'><a class='bold'>E-mail:</a> $user->email</h3>";
+echo "<h3 class='text2'><a class='bold'>Password:</a> $user->password</h3>";
+echo "<h3 class='text2'><a class='bold'>Rights:</a> $user->ID_Rights</h3>";
 ?>
-
+</body>
 </html>
