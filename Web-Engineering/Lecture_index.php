@@ -34,6 +34,8 @@ require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
 require_once("Main/UserManager.php");
 session_start();
+
+
 //lösung durch Userobjekt in Session
 $user = $_SESSION["user"];
 

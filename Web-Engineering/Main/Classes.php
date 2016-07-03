@@ -71,17 +71,25 @@ class Voting
     public $ID_Lecture;
     public $ID_User;
 
-    function __construct($daten=null) 
+    /**
+     * Voting constructor.
+     * @param null $daten
+     */
+    function __construct($daten = null) 
     {
+        
+        // Konstruktor mit Array
         if (is_array ($daten)) 
         {
+            
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
             $this-> Status= $daten ['Status'];
             $this-> ID_Lecture= $daten ['ID_Lecture'];
             $this-> ID_User= $daten ['ID_User'];
-        }
+            
+        } 
     }
 }
 //Klasse Antwortmöglichkeiten
