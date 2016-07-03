@@ -34,16 +34,16 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <table>
 <?php
 
-echo "<tr><th class='text'>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
-echo "<tr><td class='text'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
-echo "<tr><td class='text'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
+echo "<tr><th class='tableText'>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
+echo "<tr><td class='tableText'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
+echo "<tr><td class='tableText'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
 if (count($chance)>0)
 {
     $i=1;
     foreach ($chance as $möglichkeiten)
     {
-        echo "<tr><td class='text'>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
+        echo "<tr><td class='tableText'>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
         $i=$i+1;
     }
 }
