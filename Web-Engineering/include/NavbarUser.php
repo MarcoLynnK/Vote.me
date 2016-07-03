@@ -18,10 +18,10 @@
 
 
 <div id="navbar">
-    <img src="../img/logo2.svg" id="logo">
+    <img src="img/logo2.svg" id="logo">
 
     <div class="menu">
-        <input type="image" class="menu-icon" src="../img/sw_menu.png">
+        <input type="image" class="menu-icon" src="img/sw_menu.png">
         <div class="menu-dropdown-content">
             <a href="../Voting_Index.php">VOTING LIST</a>
             <a href="../Lecture_index.php">LECTURE LIST</a>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <a href="../LogOut_do.php" style="text-decoration: none;">
+    <a href="../LogOut_do.php">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 
