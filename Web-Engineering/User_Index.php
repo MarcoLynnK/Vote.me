@@ -21,12 +21,12 @@
         <thead>
         <th>ID</th>
         <th>Username</th>
-        <th>Vorname</th>
-        <th>Nachname</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>E-Mail</th>
-        <th>Userrecht</th>
-        <th>Passwort</th>
-        <th></th>
+        <th>User Right</th>
+        <th>Password</th>
+        <th>Tools</th>
         </thead>
         <tbody>
 
