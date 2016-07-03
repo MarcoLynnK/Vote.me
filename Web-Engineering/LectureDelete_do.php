@@ -1,4 +1,4 @@
-<?php include("include/session_check.php"); ?>
+<?php include("include/Session_Check.php"); ?>
 
 <?php
 require_once("Main/Classes.php");

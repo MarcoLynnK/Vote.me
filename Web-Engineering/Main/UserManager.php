@@ -40,24 +40,31 @@ class UserManager extends Manager
     //User auslesen aus DB--> für login Admin/user
     public function findByLogin ($login, $password) {
 
-        try 
-        {
-            $sql= $this->pdo->prepare('SELECT * FROM User WHERE login= :login');
-            $sql->bindParam(':login', $login);
-            $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'User');
-            $user = $sql->fetch();
 
-            if (password_verify($password, $user->hash)) 
+        try
+        {
+            // ID des gesuchten Users durch Login aus der Datenbank holen
+            $sql = $this->pdo->prepare("SELECT ID_User FROM User WHERE login = :login");
+            $sql->setFetchMode(PDO::FETCH_ASSOC);
+            $sql->execute();
+            $daten = $sql->fetch();
+
+            $id = $daten["ID_User"];
+
+            $user = $this->findById($id);
+            
+            echo "<br>";
+
+            if (password_verify($password, $user->hash))
             {
                 return $user;
-            } 
-            else 
+            }
+            else
             {
                 return null;
             }
-        } 
-        catch (PDOException $e) 
+        }
+        catch (Exception $e)
         {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
