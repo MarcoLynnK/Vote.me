@@ -16,7 +16,7 @@ if (!empty($name_Lecture) && !empty($degreecourse))
         [
             "name_Lecture" => $name_Lecture,
             "degreecourse" => $degreecourse,
-            "ID_User" => $user->ID_User
+            "ID_User" => $user->ID_User,
         ];
 
     $lecture= new Lecture($lecturedata);

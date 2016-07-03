@@ -63,11 +63,11 @@ class LectureManager extends Manager
         try
         {
 
-            $stmt = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
-            $stmt->bindParam(":name", $lecture->name_Lecture);
-            $stmt->bindParam(":course", $lecture->degreecourse);
-            $stmt->bindParam(":userid", $lecture->ID_User);
-            $stmt->execute();
+            $sql = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
+            $sql->bindParam(":name", $lecture->name_Lecture);
+            $sql->bindParam(":course", $lecture->degreecourse);
+            $sql->bindParam(":userid", $lecture->ID_User);
+            $sql->execute();
         }
         catch (PDOException $e)
         {
@@ -81,11 +81,11 @@ class LectureManager extends Manager
     public function update (Lecture $lecture)
     {
         try {
-            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse WHERE ID_Lecture = :ID_Lecture');
-            $stmt->bindParam(':ID_Lecture', $lecture->ID_Lecture);
-            $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
-            $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->execute();
+            $sql = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse WHERE ID_Lecture = :ID_Lecture');
+            $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
+            $sql->bindParam(':name_Lecture', $lecture->name_Lecture);
+            $sql->bindParam(':degreecourse', $lecture->degreecourse);
+            $sql->execute();
             }
         catch (PDOException $e)
             {
