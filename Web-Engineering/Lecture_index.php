@@ -50,14 +50,18 @@ foreach ($list as $lecture) {
     echo "<td>$lecture->name_Lecture</td>";
     echo "<td>$lecture->degreecourse</td>";
     echo "<td>
-              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'>zeige</a>
-              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'>editiere</a>
-              <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'>l&ouml;sche</a>
+              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/view.svg'></a>
+              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
+              <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/trash.svg'></a>
           </td>";
-    echo "<td></td>";
     echo "</tr>";
 }
-echo "<h1><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a><h1>"
 ?>
+
+<div >
+<?php
+echo "<button class='submit'><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a></button>"
+?>
+</div>
 </body>
 </html>
