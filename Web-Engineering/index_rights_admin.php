@@ -16,10 +16,10 @@ include ("include/Session_Check.php");*/
 <?php include("include/NavbarUser.php") ?>
 
 <h1>Sie sind Admin:</h1>
-<a href="User_Index.php">User</a><br><br>
-<a href="Lecture_Index.php">Vorlesungen</a><br><br>
-<a href="Voting_Index.php">Votings</a><br><br>
-<a href="Chance_Index.php">Chance</a>
+<button class="submit" href="User_Index.php">User</button><br><br>
+<button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
+<button class="submit" href="Voting_Index.php">Votings</button><br><br>
+<button class="submit" href="Chance_Index.php">Chance</button>
 
 </body>
 </html>
