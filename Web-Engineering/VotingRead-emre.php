@@ -28,29 +28,26 @@ $lecture= $lectureManager->findById($ID_Lecture);*/
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
+<?php include("include/NavbarUser.php"); ?>
+
 
 <body>
 
-<?php include("include/HeadUser.php"); ?>
-
-<table>
 <?php
 
-echo "<tr><td class='tableText'>Vorlesung:</td><td></a> $voting->ID_Voting</a></td></tr>";
-echo "<tr><td class='tableText'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
-echo "<tr><td class='tableText'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
+echo "<tr><td class='text'>Vorlesung:</td><td></a> $voting->ID_Voting</a></td></tr>";
+echo "<tr><td class='text'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
+echo "<tr><td class='text'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
 if (count($chance)>0)
 {
     $i=1;
     foreach ($chance as $möglichkeiten)
     {
-        echo "<tr><td class='tableText'>Antwort</td><tr><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
+        echo "<tr><td class='text'>Antwort</td><tr><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
         $i=$i+1;
     }
 }
 ?>
-</table>
-
 </body>
 </html>
