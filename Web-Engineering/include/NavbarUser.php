@@ -18,26 +18,26 @@
 
 
 <div id="navbar">
-    <img src="img/logo2.svg" id="logo">
+    <img src="../img/logo2.svg" id="logo">
 
     <div class="menu">
-        <input type="image" class="menu-icon" src="img/sw_menu.png">
+        <input type="image" class="menu-icon" src="../img/sw_menu.png">
         <div class="menu-dropdown-content">
-            <a href=".../Web-Engineering/Voting_Index.php">VOTING LIST</a>
-            <a href=".../Web-Engineering/Lecture_index.php">LECTURE LIST</a>
-            <a href=".../Web-Engineering/LogOut_do.php">LOG OUT</a>
+            <a href="../Voting_Index.php">VOTING LIST</a>
+            <a href="../Lecture_index.php">LECTURE LIST</a>
+            <a href="../LogOut_do.php">LOG OUT</a>
         </div>
     </div>
 
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
-            <a href=".../Web-Engineering/Voting_Index.php">VOTING LIST</a>
-            <a href=".../Web-Engineering/Lecture_index.php">LECTURE LIST</a>
+            <a href="../Voting_Index.php">VOTING LIST</a>
+            <a href="../Lecture_index.php">LECTURE LIST</a>
         </div>
     </div>
 
-    <a href=".../Web-Engineering/LogOut_do.php" style="text-decoration: none;">
+    <a href="../LogOut_do.php" style="text-decoration: none;">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 
