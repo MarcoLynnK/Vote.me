@@ -27,16 +27,20 @@ $user= $userManager->findById($lecture->ID_User);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php require_once("include/Navbar.php"); ?>
+
 
 <body>
+<?php require_once("include/Navbar.php"); ?>
 
+
+<div class="table-container">
+    <table>
 <?php
 
-echo "<h1 class='topic'><a class='bold'>Vorlesung Nr. $ID_Lecture</h1>";
-echo "<h3 class='text2'><a class='bold'>Lecture:</a> $lecture->name_Lecture</h3>";
-echo "<h3 class='text2'><a class='bold'>Degreecourse:</a> $lecture->degreecourse</h3>";
-echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->lastname</h3>";
+echo "<tr><th>Lecture Nr. $ID_Lecture</th></tr>";
+echo "<tr><th>Lecture</th><th> $lecture->name_Lecture</th></tr>";
+echo "<tr><th>Degreecourse</th><th> $lecture->degreecourse</th></tr>";
+echo "<tr><th>Created by</th><th> $user->firstname $user->lastname</th></tr>";
 if (count($voting)>0)
 {
 
@@ -47,8 +51,9 @@ if (count($voting)>0)
     foreach ($voting as $vorlesungen)
     {
         echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
-        echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
-        echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
+        echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>";
+        echo "<a href='VotingUpdate_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>";
+        echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/trash.svg'></a>";
         $i++;
     }
 }
@@ -56,5 +61,7 @@ if (count($voting)>0)
 echo "<h3 class='text2'><a href='VotingCreate_form.php?ID_Lecture=$lecture->ID_Lecture'</a>CREATE VOTING</h3>";
 echo "<h3 class='text2'><a href='Lecture_index.php'</a>BACK</h3>";
 ?>
+    </table></br></br>
+</div>
 </body>
 </html>
