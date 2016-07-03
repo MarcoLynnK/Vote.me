@@ -11,12 +11,16 @@ $lecture = $LectureManager->findById($ID_Lecture);
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("include/NavbarUser.php"); ?>
-    
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
 <body>
-
+<?php include("include/NavbarUser.php"); ?>
 
 <a>Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
 
