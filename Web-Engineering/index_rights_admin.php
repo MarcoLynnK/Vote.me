@@ -12,7 +12,7 @@ include ("Main/Session_Check.php");
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <body>
-<?php include("include/NavbarUser.php") ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
 <center><a class="topic">Sie sind Admin:</a></center><br><br>

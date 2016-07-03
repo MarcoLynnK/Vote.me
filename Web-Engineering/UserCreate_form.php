@@ -17,7 +17,7 @@
 
 <body>
 
-<?php require_once("include/NavbarUser.php") ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <!--Eingabefelder für neuen User-->
 <div id="Container">

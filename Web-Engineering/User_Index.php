@@ -12,7 +12,7 @@
 
 <body>
 
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
 

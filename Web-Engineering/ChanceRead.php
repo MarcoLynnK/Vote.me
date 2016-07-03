@@ -24,7 +24,7 @@ $voting= $votingManager->findById($chance->ID_Voting);
 </head>
 
 <body>
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 <?php
 echo "<h1 class='topic'><a class='bold'>Chance Nr.</a>$chance->ID_Chance</h1>";
 echo "<h3 class='text'><a class='bold'>Votingthema:</a> $voting->name_Voting</h3>";

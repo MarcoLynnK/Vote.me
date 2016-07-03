@@ -23,7 +23,7 @@ $user = $userManager->findById($ID_User);
 
 
 <body>
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <?php
 echo "<h2>Dozent $ID_User:</h2>";

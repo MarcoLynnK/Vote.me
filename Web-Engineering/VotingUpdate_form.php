@@ -13,11 +13,9 @@ $voting = $VotingManager->findById($ID_Voting);
 <html>
 <head>
 
-<?php include("include/NavbarUser.php"); ?>
-
 </head>
 <body>
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <a>Voting Nr. <?php echo ($voting->ID_Voting) ?></a>
 

@@ -27,7 +27,7 @@ $user= $userManager->findById($lecture->ID_User);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <body>
 

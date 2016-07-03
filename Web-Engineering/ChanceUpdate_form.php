@@ -19,7 +19,7 @@ $chance = $ChanceManager->findById($ID_Chance);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <body>
-<?php include("include/NavbarUser.php") ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <a>Chance # <?php echo ($chance->ID_Chance) ?></a>
 

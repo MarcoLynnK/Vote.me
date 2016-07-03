@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<?php require_once("include/NavbarUser.php") ?>
+<?php require_once("include/Navbar.php"); ?>
 <div class="table-container">
 
     <h1 class="tableText">Voting</h1>

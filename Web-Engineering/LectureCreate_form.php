@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php include("include/NavbarUser.php");
+<?php require_once("include/Navbar.php");
 
  ?>
 <form action="LectureCreate_do.php" method="post">

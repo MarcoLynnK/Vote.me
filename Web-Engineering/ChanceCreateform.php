@@ -15,7 +15,7 @@ require_once("Main/Classes.php");
 
 <body>
 <?php
-include("include/NavbarUser.php");
+require_once("include/Navbar.php");
 
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 

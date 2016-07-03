@@ -21,7 +21,7 @@ $lecture = $LectureManager->findById($ID_Lecture);
 </head>
 
 <body>
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <a>Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
 

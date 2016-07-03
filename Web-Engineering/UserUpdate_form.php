@@ -21,7 +21,7 @@ $user = $UserManager->findById($ID_User);
 </head>
 <title>User Update</title>
 <body>
-<?php include("include/NavbarUser.php"); ?>
+<?php require_once("include/Navbar.php"); ?>
 
 <div id="navbar">
 

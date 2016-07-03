@@ -15,7 +15,7 @@ require_once("Main/ChanceManager.php");
 </head>
 <body>
 
-<?php require_once("include/NavbarUser.php");?>
+<?php require_once("include/Navbar.php");?>
 
 <div class="container">
     <h1>Votingoptionen</h1>
