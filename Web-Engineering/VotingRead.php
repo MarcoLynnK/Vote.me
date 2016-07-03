@@ -31,26 +31,30 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 
 
 <body>
+
+<div class="table-container" style="overflow-x:auto;">
 <table>
 <?php
 
-echo "<tr><td class='text'>Voting No.</td><td></a> $voting->ID_Voting</a></td></tr>";
-echo "<tr><td class='text'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
-echo "<tr><td class='text'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
+    echo "<tr><th>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
+    echo "<tr><td>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
+    echo "<tr><td>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
-if (count($chance)>0)
-{
-    $i=1;
-    foreach ($chance as $möglichkeiten)
+    if (count($chance)>0)
     {
-        echo "<tr><td class='text'>Antwort</td><tr><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
-        $i=$i+1;
+        $i=1;
+        foreach ($chance as $möglichkeiten)
+        {
+            echo "<tr><td>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr></br></br>";
+            $i=$i+1;
+        }
     }
-}
-echo "<h3 class='text2'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</h3>";
-echo "<h3 class='text2'><a href='Voting_Index.php'</a>BACK</h3>";
 ?>
-
 </table>
+</div>
+<?php
+echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
+echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>"
+?>
 </body>
 </html>
