@@ -27,12 +27,13 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php include("include/NavbarUser.php"); ?>
+
 
 
 <body>
+<?php include("include/NavbarUser.php"); ?>
 
-<div class="table-container" style="overflow-x:auto;">
+<div class="container">
 <table>
 <?php
     echo "<tr><th>Lecture</th><th></a> $lecture->name_Lecture</a></th></tr>";
@@ -57,6 +58,5 @@ echo"<h2><a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</
 echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
 echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>"
 ?>
-<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>
 </body>
 </html>
