@@ -15,7 +15,7 @@ include ("Main/Session_Check.php");
 <?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
-<center><a class="topic">You are Admin</a></center><br><br>
+<a class="topic">You are Admin</a><br><br>
 <a href="User_Index.php"><div class='submit'>User</div></a><br><br>
 <a href="Lecture_Index.php"><div class='submit'>Lecture</div></a><<br><br>
 <a href="Voting_Index.php"><div class='submit'>Votings</div></a><<br><br>
