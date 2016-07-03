@@ -12,7 +12,7 @@
 
 <body>
 <?php require_once("include/NavbarUser.php") ?>
-<div class="table-container" style="overflow-x:auto;">
+<div class="table-container">
 
     <h1 class="tableText">Voting</h1>
     <table>
