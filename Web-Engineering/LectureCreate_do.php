@@ -6,9 +6,7 @@ require_once("Main/Classes.php");
 $name_Lecture= htmlspecialchars($_POST["name_Lecture"], ENT_QUOTES, "UTF-8");
 $degreecourse = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8");
 
-session_start();
 $user = $_SESSION["user"];
-
 
 if (!empty($name_Lecture) && !empty($degreecourse))
 {
@@ -22,13 +20,8 @@ if (!empty($name_Lecture) && !empty($degreecourse))
     $lecture= new Lecture($lecturedata);
     $lectureManager = new LectureManager();
     $lecture = $lectureManager->create($lecture);
-
-    if ($lecture==null)
-    {
-        header('Location: Lecture_Index.php');
-        die();
-    }
     
+    header('Location: Lecture_Index.php');
 }
 else 
 {
