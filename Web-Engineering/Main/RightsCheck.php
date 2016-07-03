@@ -7,7 +7,6 @@ $ID_Rights= htmlspecialchars($_GET["ID_Rights"], ENT_QUOTES, "UTF-8");
 
 // $rightsManager = new RightsManager();
 // $ID_Rights = $rightsManager->findById($ID_Rights);
-// Test
 //Zugriff durch Rightsmanager wäre eine andere Möglichkeit
 
 session_start();
