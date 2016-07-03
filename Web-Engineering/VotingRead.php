@@ -43,7 +43,7 @@ if (count($chance)>0)
     $i=1;
     foreach ($chance as $möglichkeiten)
     {
-        echo "<tr><td class='text'>Antwort</td><tr><td><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
+        echo "<tr><td class='text'>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
         $i=$i+1;
     }
 }
