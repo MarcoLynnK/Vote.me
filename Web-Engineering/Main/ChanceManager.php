@@ -29,6 +29,25 @@ class ChanceManager extends Manager
         }
     }
 
+    //Auslesen aller Datensätze aus Chance mit ID_User
+    public function findAllbyIDUser ($ID_User)
+    {
+        try
+        {
+            $sql= $this->pdo->prepare ('SELECT * FROM Chance WHERE ID_User=:ID_User');
+            $sql->bindParam(':ID_User', $ID_User);
+            $sql->execute ();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
+            $chance = $sql->fetch();
+        }
+        catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+        if (!$chance) $chance = null;
+        return $chance;
+    }
+
     //Auslesen der Möglichkeit nach der ID aus der DB
     public function findById ($ID_Chance)
     {
