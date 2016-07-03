@@ -64,11 +64,9 @@ class LectureManager extends Manager
         {
 
             $stmt = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
-
             $stmt->bindParam(":name", $lecture->name_Lecture);
             $stmt->bindParam(":course", $lecture->degreecourse);
             $stmt->bindParam(":userid", $lecture->ID_User);
-
             $stmt->execute();
         }
         catch (PDOException $e)
