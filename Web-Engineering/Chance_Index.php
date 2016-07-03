@@ -1,3 +1,4 @@
+<?php include ("Main/Session_Check.php");?>
 <!DOCTYPE html>
 <html>
 <?php

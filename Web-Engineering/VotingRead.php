@@ -1,5 +1,5 @@
 <?php
-
+include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/VotingChanceManager.php");
 require_once("Main/LectureManager.php");
@@ -53,6 +53,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 </table>
 </div>
 <?php
+echo"<h2><a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</a></h2>";
 echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
 echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>"
 ?>

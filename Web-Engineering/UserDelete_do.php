@@ -1,6 +1,5 @@
-<?php //include("include/session_check.php"); ?>
-
 <?php
+include ("Main/Session_Check.php");
 require_once("Main/Classes.php");
 require_once("Main/UserManager.php");
 

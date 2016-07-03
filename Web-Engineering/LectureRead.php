@@ -1,5 +1,5 @@
 <?php
-
+include ("Main/Session_Check.php");
 require_once("Main/LectureManager.php");
 require_once("Main/LectureVotingManager.php");
 require_once("Main/UserManager.php");

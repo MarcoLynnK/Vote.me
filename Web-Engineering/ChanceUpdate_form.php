@@ -1,4 +1,5 @@
 <?php
+include ("Main/Session_Check.php");
 require_once ("Main/ChanceManager.php");
 require_once ("Main/Classes.php");
 $ID_Chance = (int)htmlspecialchars($_GET["ID_Chance"], ENT_QUOTES, "UTF-8");

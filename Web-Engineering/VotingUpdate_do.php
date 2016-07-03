@@ -1,4 +1,5 @@
 <?php
+include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
 
@@ -28,3 +29,4 @@ else
     echo "Error: Bitte füllen sie alle Felder aus!<br/>";
 }
 
+?>
