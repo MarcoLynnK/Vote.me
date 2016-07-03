@@ -26,6 +26,7 @@
             <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Lecture_index.php">LECTURE LIST</a>
             <a href="VotingCreate_form.php">USER LIST</a>
+            <a href="Chance_Index.php">LECTURE LIST</a>
             <a href="LogOut_do.php">LOG OUT</a>
         </div>
     </div>
@@ -35,6 +36,7 @@
         <div class="dropdown-content">
             <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Lecture_index.php">LECTURE LIST</a>
+            <a href="Chance_Index.php">LECTURE LIST</a>
             <a href="VotingCreate_form.php">USER LIST</a>
         </div>
     </div>
