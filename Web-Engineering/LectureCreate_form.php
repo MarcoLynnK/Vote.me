@@ -1,4 +1,4 @@
-<?php// include ("Main/Session_Check.php");?>
+<?php include ("Main/Session_Check.php");?>
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
