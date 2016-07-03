@@ -21,6 +21,9 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <head>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
 
@@ -51,8 +54,8 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 </div></br></br>
 <?php
 echo "<button class='submit'><a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</a></button></br></br>";
-echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
-echo "<button class='submit'><a href='Voting_Index.php'</a>BACK</button>"
+echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'>CREATE CHANCE</a></button></br></br>";
+echo "<button class='submit'><a href='Voting_Index.php'>BACK</a></button>"
 ?>
 </body>
 </html>
