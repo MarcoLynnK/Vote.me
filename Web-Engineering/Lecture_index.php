@@ -1,3 +1,4 @@
+<?php include ("Main/Session_Check.php");?>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,7 @@
 
 <body>
 
-<?php require_once("include/NavbarUser.php") ?>
+<?php// require_once("include/NavbarUser.php") ?>
 
     <div class="container">
 

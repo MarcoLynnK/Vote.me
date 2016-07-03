@@ -1,5 +1,5 @@
 <?php
-
+include ("Main/Session_Check.php");
 require_once("Main/ChanceManager.php");
 require_once ("Main/VotingManager.php");
 require_once("Main/Classes.php");

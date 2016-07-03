@@ -152,15 +152,5 @@ class UserManager extends Manager
         }
         return null;
     }
-
-    /**
-     * @return PDO
-     */
-    public function getPdo()
-    {
-        return $this->pdo;
-    }
-
-
 }
 

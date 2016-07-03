@@ -1,6 +1,5 @@
 <?php
-/*include ("include/RightsCheck.php");
-include ("include/Session_Check.php");*/
+include ("Main/Session_Check.php");
 ?>
 <!DOCTYPE html>
 <html>

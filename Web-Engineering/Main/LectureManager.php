@@ -60,31 +60,31 @@ class LectureManager extends Manager
 
     public function create (Lecture $lecture)
     {
-
-        try {
-            $stmt = $this->pdo->prepare('INSERT INTO Lecture (name_Lecture, degreecourse) VALUES (:name_Lecture , :degreecourse)');
-            $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
-            $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->execute();
-            }
+        try
+        {
+            $sql = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
+            $sql->bindParam(":name", $lecture->name_Lecture);
+            $sql->bindParam(":course", $lecture->degreecourse);
+            $sql->bindParam(":userid", $lecture->ID_User);
+            $sql->execute();
+        }
         catch (PDOException $e)
         {
-            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
         return $lecture;
     }
-
     //Vorlesung in der DB aktualisieren
 
     public function update (Lecture $lecture)
     {
         try {
-            $stmt = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse WHERE ID_Lecture = :ID_Lecture');
-            $stmt->bindParam(':ID_Lecture', $lecture->ID_Lecture);
-            $stmt->bindParam(':name_Lecture', $lecture->name_Lecture);
-            $stmt->bindParam(':degreecourse', $lecture->degreecourse);
-            $stmt->execute();
+            $sql = $this->pdo->prepare('UPDATE Lecture SET name_Lecture = :name_Lecture, degreecourse = :degreecourse WHERE ID_Lecture = :ID_Lecture');
+            $sql->bindParam(':ID_Lecture', $lecture->ID_Lecture);
+            $sql->bindParam(':name_Lecture', $lecture->name_Lecture);
+            $sql->bindParam(':degreecourse', $lecture->degreecourse);
+            $sql->execute();
             }
         catch (PDOException $e)
             {
