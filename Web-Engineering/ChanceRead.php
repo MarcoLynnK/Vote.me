@@ -33,7 +33,7 @@ echo "<tr><th>Chance Nr.</th><th>$chance->ID_Chance</th></tr>";
 echo "<tr><th>Votingtopic</th><th>$voting->name_Voting</th></tr>";
 echo "<tr><th>Answer</th><th>$chance->description_Chance</th></tr>";
 
-echo"<h2><a href='VotingRead.php?ID_Voting=$chance->ID_Voting'>SHOW VOTING</a></h2>";
+echo"<tr><td><a href='VotingRead.php?ID_Voting=$chance->ID_Voting'>SHOW VOTING</a></td></tr></br></br>";
 ?>
     </table></br></br>
 </div>
