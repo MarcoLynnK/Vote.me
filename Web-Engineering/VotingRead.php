@@ -34,7 +34,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <table>
 <?php
 
-echo "<tr><td class='text'>Voting No.</td><td></a> $voting->ID_Voting</a></td></tr>";
+echo "<tr><th class='text'>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
 echo "<tr><td class='text'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
 echo "<tr><td class='text'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
