@@ -36,9 +36,9 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <table>
 <?php
 
-    echo "<tr><th class='tableText'>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
-    echo "<tr><td class='tableText'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
-    echo "<tr><td class='tableText'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
+    echo "<tr><th>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
+    echo "<tr><td>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
+    echo "<tr><td>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
     if (count($chance)>0)
     {
@@ -49,8 +49,8 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
             $i=$i+1;
         }
     }
-    echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
-    echo "<button class='submit'><a href='Voting_Index.php'</a>BACK</button>";
+    echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
+    echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>";
 ?>
 </table>
 </div>
