@@ -54,7 +54,7 @@ foreach ($list as $lecture) {
           </td>";
     echo "</tr>";
 }
-echo "<h1><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a><h1>"
+echo "<button class='submit'><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a></button>"
 ?>
 </body>
 </html>
