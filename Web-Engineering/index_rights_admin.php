@@ -15,11 +15,11 @@ include ("Main/Session_Check.php");
 <?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
-<center><a class="topic">Sie sind Admin:</a></center><br><br>
-<button class="submit" href="User_Index.php">User</button><br><br>
-<button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
-<button class="submit" href="Voting_Index.php">Votings</button><br><br>
-<button class="submit" href="Chance_Index.php">Chance</button>
+<center><a class="topic">You are Admin</a></center><br><br>
+<a href="User_Index.php"><div class='submit'>User</div></a><br><br>
+<a href="Lecture_Index.php"><div class='submit'>Vorlesungen</div></a><<br><br>
+<a href="Voting_Index.php"><div class='submit'>Votings</div></a><<br><br>
+<a href="Chance_Index.php"><div class='submit'>Chance</div></a><
 </div>
 
 </body>
