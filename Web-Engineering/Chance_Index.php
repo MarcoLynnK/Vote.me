@@ -22,7 +22,7 @@ require_once("Main/ChanceManager.php");
     <table  class="table table-hover">
         <thead>
             <th>ID</th>
-            <th>Beschreibung</th>
+            <th>Description</th>
             <th></th>
         </thead>
         <tbody>
