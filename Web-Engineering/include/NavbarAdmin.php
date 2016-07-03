@@ -18,14 +18,14 @@
 
 
 <div id="navbar">
-    <img src="img/logo2.svg" id="logo">
+    <img src="../img/logo2.svg" id="logo">
 
     <div class="menu">
-        <input type="image" class="menu-icon" src="img/sw_menu.png">
+        <input type="image" class="menu-icon" src="../img/sw_menu.png">
         <div class="menu-dropdown-content">
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php ">VOTING LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Lecture_index.php">LECTURE LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">USER LIST</a>
+            <a href="../Voting_Index.php">VOTING LIST</a>
+            <a href="../Lecture_index.php">LECTURE LIST</a>
+            <a href="../VotingCreate_form.php">USER LIST</a>
             <a href="#">LOG OUT</a>
         </div>
     </div>
@@ -33,13 +33,13 @@
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting_Index.php ">VOTING LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Lecture_index.php">LECTURE LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form.php">USER LIST</a>
+            <a href="../Voting_Index.php">VOTING LIST</a>
+            <a href="../Lecture_index.php">LECTURE LIST</a>
+            <a href="../VotingCreate_form.php">USER LIST</a>
         </div>
     </div>
 
-    <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/LogOut_do.php" style="text-decoration: none;">
+    <a href="../LogOut_do.php">
         <button class="log-out" name="LogOut">LOG OUT</button>
     </a>
 
