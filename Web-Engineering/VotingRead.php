@@ -45,11 +45,11 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         $i=1;
         foreach ($chance as $möglichkeiten)
         {
-            echo "<tr><td class='tableText'>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
+            echo "<tr><td class='tableText'>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr></br></br>";
             $i=$i+1;
         }
     }
-    echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button>";
+    echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
     echo "<button class='submit'><a href='Voting_Index.php'</a>BACK</button>";
 ?>
 </table>
