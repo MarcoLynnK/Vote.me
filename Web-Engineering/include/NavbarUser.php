@@ -23,8 +23,8 @@
     <div class="menu">
         <input type="image" class="menu-icon" src="img/sw_menu.png">
         <div class="menu-dropdown-content">
-            <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Lecture_index.php">LECTURE LIST</a>
+            <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Chance_Index.php">CHANCE LIST</a>
             <a href="LogOut_do.php">LOG OUT</a>
         </div>
@@ -33,8 +33,8 @@
     <div class="dropdown">
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
-            <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Lecture_index.php">LECTURE LIST</a>
+            <a href="Voting_Index.php">VOTING LIST</a>
             <a href="Chance_Index.php">CHANCE LIST</a>
         </div>
     </div>
