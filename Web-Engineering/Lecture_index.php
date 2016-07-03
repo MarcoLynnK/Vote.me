@@ -31,6 +31,13 @@
 
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
+require_once("Main/UserManager.php");
+session_start();
+//lösung durch Userobjekt in Session
+$user = $_SESSION["user"];
+
+$userManager= new UserManager();
+$user= $userManager->findById($user->ID_User);
 
 $lectureManager = new LectureManager();
 $list = $lectureManager->findAll();
@@ -47,6 +54,7 @@ foreach ($list as $lecture) {
     echo "<td></td>";
     echo "</tr>";
 }
+echo "<h1><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a><h1>"
 ?>
 </body>
 </html>

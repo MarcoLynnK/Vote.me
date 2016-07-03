@@ -1,4 +1,5 @@
 <?php
+include ("Main/Session_Check.php");
 require_once("Main/ChanceManager.php");
 require_once("Main/Classes.php");
 
@@ -10,18 +11,15 @@ if (!empty($description_Chance) && !empty($ID_Voting))
     $chancedata =
         [
             "description_Chance" => $description_Chance,
-            "ID_Voting" => $ID_Voting
+            "ID_Voting" => $ID_Voting,
+            "ID_User"=> $ID_User,
         ];
 
     $chance = new Chance($chancedata);
     $chanceManager = new ChanceManager();
     $chance = $chanceManager->create($chance);
     header('location: Voting_Index.php');
-    if ($chance==null)
-    {
-        header('Location: login.php');
-        die();
-    }
+    
 }   
 else
 {

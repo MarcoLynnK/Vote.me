@@ -1,4 +1,5 @@
 <?php
+include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
 
@@ -12,6 +13,7 @@ if (!empty($name_Voting) && !empty($question_Voting))
         [
             "name_Voting" => $name_Voting,
             "question_Voting" => $question_Voting,
+            "ID_User" =>$ID_User,
         ];
     
     $voting= new Voting();
