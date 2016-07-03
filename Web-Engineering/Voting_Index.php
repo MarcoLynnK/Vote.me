@@ -48,8 +48,6 @@ foreach ($list as $voting) {
     </table>
 </div></br></br>
 
-<button class="submit" name="submit" href="VotingCreate_form.php">CREATE VOTING</button><!--hier noch den Link zu VotingCreate_form einbinden  "<a href="VotingCreate_form.php"></a>-->
-
 
 </body>
 </html>
