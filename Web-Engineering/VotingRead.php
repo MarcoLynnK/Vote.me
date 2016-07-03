@@ -51,7 +51,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
     }
 ?>
 </table></br></br>
-</div></br></br>
+</div></br>
 
 <div class="container">
 <?php
