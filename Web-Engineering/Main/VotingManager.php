@@ -32,7 +32,25 @@ class VotingManager extends Manager
             die();
         }
     }
-
+    //Auslesen aller Datensätze aus Voting mit ID_User
+    public function findAllbyIDUser ($ID_User)
+    {
+        try 
+        {
+            $sql= $this->pdo->prepare ('SELECT * FROM Voting WHERE ID_User=:ID_User');
+            $sql->bindParam(':ID_User', $ID_User);
+            $sql->execute ();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
+            $voting = $sql->fetch();
+        }
+        catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+            }
+        if (!$voting) $voting = null;
+        return $voting;
+    }
+    
     //Auslesen aller Datensätze mit der übergebenen ID
     public function findById($ID_Voting)
     {

@@ -19,7 +19,6 @@ class LectureManager extends Manager
     }
 
     // alle Vorlesungen ausgeben
-
     public function findAll ()
     {
         try
@@ -36,8 +35,26 @@ class LectureManager extends Manager
         }
     }
 
+    //Auslesen aller Datensätze aus Lecture mit ID_User
+    public function findAllbyIDUser ($ID_User)
+    {
+        try
+        {
+            $sql= $this->pdo->prepare ('SELECT * FROM Lecture WHERE ID_User=:ID_User');
+            $sql->bindParam(':ID_User', $ID_User);
+            $sql->execute ();
+            $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
+            $lecture = $sql->fetch();
+        }
+        catch (PDOException $e) {
+            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+            die();
+        }
+        if (!$lecture) $lecture = null;
+        return $lecture;
+    }
+    
     //Alle Vorlesungen mit der bestimmten ID ausgeben
-
     public function findById ($ID_Lecture)
     {
         try {
@@ -111,3 +128,4 @@ class LectureManager extends Manager
         return null;
     }
 }
+    
