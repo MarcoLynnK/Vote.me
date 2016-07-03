@@ -55,7 +55,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 
 <div class="container">
 <?php
-echo "<button class='submit' href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</button></br></br>";
+echo "</br></br><button class='submit' href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</button></br></br>";
 echo "<button class='submit' href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'>CREATE CHANCE</button></br></br>";
 echo "<button class='submit' href='Voting_Index.php'>BACK</button>"
 ?>
