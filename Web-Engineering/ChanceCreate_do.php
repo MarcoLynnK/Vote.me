@@ -17,6 +17,11 @@ if (!empty($description_Chance) && !empty($ID_Voting))
     $chanceManager = new ChanceManager();
     $chance = $chanceManager->create($chance);
     header('location: Voting_Index.php');
+    if ($chance==null)
+    {
+        header('Location: login.php');
+        die();
+    }
 }   
 else
 {

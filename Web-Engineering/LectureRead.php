@@ -1,62 +1,56 @@
 <?php
 
 require_once("Main/LectureManager.php");
+require_once("Main/LectureVotingManager.php");
+require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
 
 $ID_Lecture = htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
 $lectureManager = new LectureManager();
-$lecture = $lectureManager->findById($ID_Lecture);
+$lecture= $lectureManager->findById($ID_Lecture);
+
+$lecturevotingManager= new LectureVotingManager();
+$voting= $lecturevotingManager->findAllVotingBylecture($lecture);
+
+$userManager= new UserManager();
+$user= $userManager->findById($lecture->ID_User);
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
     <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
-
 </head>
 
+<?php include("include/NavbarUser.php"); ?>
 
 <body>
 
-<?php require_once("include/HeadUser.php") ?>
-
 <?php
-    echo "<h2>Vorlesung $ID_Lecture:</h2>";
 
-            $lectureManager = new LectureManager();
-            $lecture = $lectureManager->findById($lecture);
-            if (count($lecture) > 0)
-            {
+echo "<h1 class='topic'><a class='bold'>Vorlesung Nr. $ID_Lecture</h1>";
+echo "<h3 class='text2'><a class='bold'>Lecture:</a> $lecture->name_Lecture</h3>";
+echo "<h3 class='text2'><a class='bold'>Degreecourse:</a> $lecture->degreecourse</h3>";
+echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->lastname</h3>";
+if (count($voting)>0)
+{
+    $i=1;
+    foreach ($voting as $vorlesungen)
+    {
+        echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
+        echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
+        echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
+        $i=$i+1;
+    }
+}
 
-                echo "<table class='table table-hover'>";
-                    echo "<thead>";
-                        echo "<th>Vorlesung</th>";
-                        echo "<th>Name</th>";
-                        echo "<th>Studiengang</th>";
-                        echo "<th>Aktion</th>";
-                        echo "<th></th>";
-                    echo "</thead>";
-
-                foreach ($lecture as $vorlesung)
-                {
-                    echo "<tr>";
-                    echo "<td>$vorlesung->name_Lecture</td>";
-                    echo "<td>$vorlesung->degreecourse</td>";
-                    echo "<td><a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'>bearbeiten</a>";
-                    echo "<td><a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'>löschen</a>";
-                    echo "<td><a href='VotingCreate_form.php?ID_lecture=$lecture->ID_Lecture'>Voting erstellen</a>";
-                    echo "<td></td>";
-                    echo "</tr>";
-                }
-            echo "</table>";
-        }
-            ?>
-
+echo "<h3 class='text2'><a href='VotingCreate_form.php?ID_Lecture=$lecture->ID_Lecture'</a>CREATE VOTING</h3>";
+echo "<h3 class='text2'><a href='Lecture_index.php'</a>BACK</h3>";
+?>
+</body>
 </html>
