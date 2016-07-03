@@ -16,7 +16,7 @@ include ("include/Session_Check.php");*/
 <?php include("include/NavbarUser.php") ?>
 
 <div class="container">
-<h1>Sie sind Admin:</h1>
+<a class="topic">Sie sind Admin:</a><br><br>
 <button class="submit" href="User_Index.php">User</button><br><br>
 <button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
 <button class="submit" href="Voting_Index.php">Votings</button><br><br>
