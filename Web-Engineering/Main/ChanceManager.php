@@ -76,7 +76,10 @@ class ChanceManager extends Manager
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Chance SET description_Chance = :description_Chance WHERE ID_Chance = :ID_Chance');
+          
             $sql->bindParam (':description_Chance',$chance->description_Chance);
+            $sql->bindParam(":ID_Chance", $chance->ID_Chance);
+            
             $sql->execute ();
         }
         catch (PDOException $e)
