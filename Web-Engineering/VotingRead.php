@@ -35,7 +35,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <div class="table-container" style="overflow-x:auto;">
 <table>
 <?php
-
+    echo "<tr><th>Lecture</th><th></a> $lecture->name_Lecture</a></th></tr>";
     echo "<tr><th>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
     echo "<tr><td>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
     echo "<tr><td>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
