@@ -2,7 +2,7 @@
 /*include ("include/RightsCheck.php");
 include ("include/Session_Check.php");*/
 ?>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
