@@ -10,7 +10,7 @@ $lectureManager = new LectureManager();
 $lecture= $lectureManager->findById($ID_Lecture);
 
 $lecturevotingManager= new LectureVotingManager();
-$voting= $lecturevotingManager->findAllVotingBylecture($lecture);
+$voting= $lecturevotingManager->findAllVotingByLecture($lecture);
 
 $userManager= new UserManager();
 $user= $userManager->findById($lecture->ID_User);

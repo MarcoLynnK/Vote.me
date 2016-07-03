@@ -71,16 +71,36 @@ class Voting
     public $ID_Lecture;
     public $ID_User;
 
-    function __construct($daten=null) 
+    /**
+     * Voting constructor.
+     * @param $name
+     * @param $question
+     * @param $status
+     * @param $lectureId
+     * @param $userId
+     */
+    function __construct($daten = null, $name=null, $question=null, $status=null, $lectureId=null, $userId=null) 
     {
+        
+        // Konstruktor mit Array
         if (is_array ($daten)) 
         {
+            
             $this-> ID_Voting= $daten ['ID_Voting'];
             $this-> name_Voting= $daten ['name_Voting'];
             $this-> question_Voting= $daten ['question_Voting'];
             $this-> Status= $daten ['Status'];
             $this-> ID_Lecture= $daten ['ID_Lecture'];
             $this-> ID_User= $daten ['ID_User'];
+            
+        } else { // Konstruktor ohne Array
+            
+            $this->name_Voting = $name;
+            $this->question_Voting = $question;
+            $this->Status = $status;
+            $this->ID_Lecture = $lectureId;
+            $this->ID_User = $userId;
+            
         }
     }
 }

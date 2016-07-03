@@ -7,7 +7,7 @@ require_once ("Classes.php");
 
 class VotingManager extends Manager
 {
-    protected $pdo;
+    
 
     public function __construct($con = null)
     {
@@ -54,13 +54,18 @@ class VotingManager extends Manager
     public function create(Voting $voting)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (name_Voting, question_Voting, Status) VALUES (:name_Voting, :question_Voting. :Status)');
-            $sql->bindParam(':name_Voting', $voting->name_Voting);
-            $sql->bindParam(':question_Voting', $voting->question_Voting);
-            $sql->bindParam(':Status', $voting->Status);
+            $sql = $this->pdo->prepare('INSERT INTO Voting (ID_Lecture, ID_User, name_Voting, question_Voting, Status) VALUES (:lectureId, :userId, :name, :question, :status)');
+            
+            $sql->bindParam("lectureId", $voting->ID_Lecture);
+            $sql->bindParam("userId", $voting->ID_User);
+            $sql->bindParam("name", $voting->name_Voting);
+            $sql->bindParam("question", $voting->question_Voting);
+            $sql->bindParam("status", $voting->Status);
+           
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
+            
         } catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
