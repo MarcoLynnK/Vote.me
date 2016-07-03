@@ -46,6 +46,5 @@ require_once("Main/ChanceManager.php");
         </tbody>
     </table>
 </div>
-<button class="submit" name="submit">CREATE CHANCE</button><!--Link zu ChanceCreateform einbinden-->
 
 </body>
