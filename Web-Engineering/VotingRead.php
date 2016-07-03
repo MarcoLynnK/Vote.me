@@ -49,8 +49,6 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
             $i=$i+1;
         }
     }
-    echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
-    echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>";
 ?>
 </table>
 </div>
