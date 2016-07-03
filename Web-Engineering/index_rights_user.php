@@ -16,8 +16,8 @@
 <?php include("include/NavbarUser.php") ?>
 
 <h1>Sie sind Dozent:</h1>
-<a href="Lecture_Index.php">Vorlesungen</a><br><br>
-<a href="Voting_Index.php">Votings</a><br><br>
-<a href="Chance_Index.php">Antworten</a>
+<button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
+<button class="submit" href="Voting_Index.php">Votings</button><br><br>
+<button class="submit" href="Chance_Index.php">Antworten</button>
 </body>
 </html>
