@@ -19,7 +19,7 @@ include ("Main/Session_Check.php");
 <a href="User_Index.php"><div class='submit'>User</div></a><br><br>
 <a href="Lecture_Index.php"><div class='submit'>Vorlesungen</div></a><<br><br>
 <a href="Voting_Index.php"><div class='submit'>Votings</div></a><<br><br>
-<a href="Chance_Index.php"><div class='submit'>Chance</div></a><
+<a href="Chance_Index.php"><div class='submit'>Chance</div></a>
 </div>
 
 </body>
