@@ -11,15 +11,16 @@ $user = $UserManager->findById($ID_User);
 <!DOCTYPE html>
 <html>
 <head>
-<?php include("include/NavbarUser.php"); ?>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <title>User Update</title>
 <body>
-
+<?php include("include/NavbarUser.php"); ?>
 
 <div id="navbar">
 

@@ -11,9 +11,19 @@ $user = $userManager->findById($ID_User);
 <!DOCTYPE html>
 <html>
 
-<?php include("include/NavbarUser.php"); ?>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
+
+
 
 <body>
+<?php include("include/NavbarUser.php"); ?>
 
 <?php
 echo "<h2>Dozent $ID_User:</h2>";
