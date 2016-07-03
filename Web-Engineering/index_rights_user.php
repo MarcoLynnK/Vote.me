@@ -15,9 +15,11 @@
 <body>
 <?php include("include/NavbarUser.php") ?>
 
+<div class="container">
 <h1>Sie sind Dozent:</h1>
 <button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
 <button class="submit" href="Voting_Index.php">Votings</button><br><br>
 <button class="submit" href="Chance_Index.php">Antworten</button>
+</div>
 </body>
 </html>
