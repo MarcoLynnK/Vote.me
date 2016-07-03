@@ -25,18 +25,12 @@ $voting= $votingManager->findById($chance->ID_Voting);
 
 <body>
 <?php require_once("include/Navbar.php"); ?>
-
-<div class="table-container">
-    <table>
 <?php
-echo "<tr><th>Chance Nr.</th><th>$chance->ID_Chance</th></tr>";
-echo "<tr><th>Votingtopic</th><th>$voting->name_Voting</th></tr>";
-echo "<tr><th>Answer</th><th>$chance->description_Chance</th></tr>";
+echo "<h1 class='topic'><a class='bold'>Chance Nr.</a>$chance->ID_Chance</h1>";
+echo "<h3 class='text'><a class='bold'>Votingthema:</a> $voting->name_Voting</h3>";
+echo "<h3 class='text2'><a class='bold'>Antwort:</a> $chance->description_Chance</h3>";
 
-echo"<tr><td><a href='VotingRead.php?ID_Voting=$chance->ID_Voting'>SHOW VOTING</a></td></tr></br></br>";
+echo"<h2><a href='VotingRead.php?ID_Voting=$chance->ID_Voting'>SHOW VOTING</a></h2>";
 ?>
-    </table></br></br>
-</div>
-
 </body>
 </html>
