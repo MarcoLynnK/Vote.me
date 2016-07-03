@@ -45,9 +45,9 @@ foreach ($list as $user) {
     echo "<td>$user->ID_Rights</td>";
     echo "<td>$user->password</td>";
     echo "<td>
-              <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'>zeige</a>&nbsp;
-              <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'>editiere</a>&nbsp;
-              <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'>l&ouml;sche</a><!--hier noch UserDelete_form einbinden-->
+              <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'><input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
+              <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
+              <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'><input type='image' class='editicons' src='img/trash.svg'></a><!--hier noch UserDelete_form einbinden-->
           </td>";
     echo "</tr>";
 }
