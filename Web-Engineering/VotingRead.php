@@ -33,7 +33,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <body>
 <?php include("include/NavbarUser.php"); ?>
 
-<div class="container">
+<div class="table-container">
 <table>
 <?php
     echo "<tr><th>Lecture</th><th></a> $lecture->name_Lecture</a></th></tr>";
