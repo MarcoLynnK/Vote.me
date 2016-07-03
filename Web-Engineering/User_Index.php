@@ -19,6 +19,7 @@
     <table  class="table table-hover">
         <thead>
         <th>ID</th>
+        <th>Username</th>
         <th>Vorname</th>
         <th>Nachname</th>
         <th>E-Mail</th>
@@ -36,6 +37,7 @@ $list = $userManager->findAll();
 foreach ($list as $user) {
     echo "<tr>";
     echo "<td>$user->ID_User</td>";
+    echo "<td>$user->login</td>";
     echo "<td>$user->firstname</td>";
     echo "<td>$user->lastname</td>";
     echo "<td>$user->email</td>";
