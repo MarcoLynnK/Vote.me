@@ -15,8 +15,8 @@ include ("Main/Session_Check.php");
 <?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
-    <a class="topic">You are Lecturer</a><br><br>
-    <a href="Lecture_Index.php"><div class='submit'>Lecture</div></a><br><br>
+    <center><a class="topic">You are Lecturer</a></center><br><br>
+    <a href="Lecture_index.php"><div class='submit'>Lecture</div></a><br><br>
     <a href="Voting_Index.php"><div class='submit'>Votings</div></a><br><br>
     <a href="Chance_Index.php"><div class='submit'>Chance</div></a>
 </div>
