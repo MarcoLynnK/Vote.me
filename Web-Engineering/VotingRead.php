@@ -50,14 +50,14 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         }
     }
 ?>
-</table>
+</table></br></br>
 </div></br></br>
 
 <div class="container">
 <?php
 echo "<a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'><div class='submit'>SHOW LECTURE</div></a></br></br>";
-echo "<div class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'>CREATE CHANCE</a></div></br></br>";
-echo "<div class='submit'><a href='Voting_Index.php'>BACK</a></div>"
+echo "<a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CREATE CHANCE</div></a></br></br>";
+echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
 ?>
 </div>
 </body>
