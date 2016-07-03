@@ -45,7 +45,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         $i=1;
         foreach ($chance as $möglichkeiten)
         {
-            echo "<tr><td>Antwort</td><td><a> $i: $möglichkeiten->description_Chance</a></td></tr></br></br>";
+            echo "<tr><td>Antwort $i:</td><td><a> $möglichkeiten->description_Chance</a></td></tr></br></br>";
             $i=$i+1;
         }
     }
