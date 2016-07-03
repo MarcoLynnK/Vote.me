@@ -60,16 +60,19 @@ class LectureManager extends Manager
 
     public function create (Lecture $lecture)
     {
-        try {
+        try
+        {
 
-            $stmt = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name_Lecture, :degreecourse, :ID_User)");
+            $stmt = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
 
-            $stmt->bindParam(":name_Lecture", $lecture->name_Lecture);
-            $stmt->bindParam(":degreecourse", $lecture->degreecourse);
-            $stmt->bindParam(":ID_User", $lecture->ID_User);
+            $stmt->bindParam(":name", $lecture->name_Lecture);
+            $stmt->bindParam(":course", $lecture->degreecourse);
+            $stmt->bindParam(":userid", $lecture->ID_User);
 
             $stmt->execute();
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e)
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
