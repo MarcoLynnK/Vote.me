@@ -9,4 +9,4 @@ $lectureManager = new LectureManager();
 $lecture = $lectureManager->findById($ID_Lecture);
 $lectureManager->delete($lecture);
 
-header('Location: Lecture_Index.php');
+header('Location: Lecture_index.php');
