@@ -57,5 +57,6 @@ echo"<h2><a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</
 echo "<button class='submit' name='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'</a>CREATE CHANCE</button></br></br>";
 echo "<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>"
 ?>
+<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>
 </body>
 </html>
