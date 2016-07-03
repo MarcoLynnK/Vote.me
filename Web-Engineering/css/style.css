@@ -188,6 +188,9 @@ body{
     font-size: 16px;
     border-radius: 0px;
 
+    line-height: 42px;
+    vertical-align: middle;
+
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
