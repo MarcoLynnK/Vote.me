@@ -16,9 +16,9 @@ include ("Main/Session_Check.php");
 
 <div class="container">
 <center><a class="topic">You are Lecturer</a></center><br><br>
-<button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
-<button class="submit" href="Voting_Index.php">Votings</button><br><br>
-<button class="submit" href="Chance_Index.php">Antworten</button>
+    <a href="Lecture_Index.php"><div class='submit'>Lecture</div></a><<br><br>
+    <a href="Voting_Index.php"><div class='submit'>Votings</div></a><<br><br>
+    <a href="Chance_Index.php"><div class='submit'>Chance</div></a>
 </div>
 </body>
 </html>
