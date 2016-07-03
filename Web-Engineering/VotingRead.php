@@ -31,20 +31,19 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 
 
 <body>
-
+<table>
 <?php
 
-echo "<h1 class='topic'><a class='bold'>Voting No.</a> $voting->ID_Voting</h1>";
-echo "<h3 class='text2'><a class='bold'>Lecture:</a> $lecture->name_Lecture</h3>";
-echo "<h3 class='text2'><a class='bold'>Voting Topic:</a> $voting->name_Voting</h3>";
-echo "<h3 class='text2'><a class='bold'>Votingquestion:</a> $voting->question_Voting</h3>";
+echo "<tr><td class='text'>Voting No.</td><td></a> $voting->ID_Voting</a></td></tr>";
+echo "<tr><td class='text'>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
+echo "<tr><td class='text'>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
 
 if (count($chance)>0)
 {
     $i=1;
     foreach ($chance as $möglichkeiten)
     {
-        echo "<h3 class='text2'>Antwort $i: $möglichkeiten->description_Chance</h3>";
+        echo "<tr><td class='text'>Antwort</td><tr><a> $i: $möglichkeiten->description_Chance</a></td></tr>";
         $i=$i+1;
     }
 }
@@ -52,5 +51,6 @@ echo "<h3 class='text2'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voti
 echo "<h3 class='text2'><a href='Voting_Index.php'</a>BACK</h3>";
 ?>
 
+</table>
 </body>
 </html>
