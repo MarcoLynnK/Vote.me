@@ -43,6 +43,8 @@ if (count($voting)>0)
     foreach ($voting as $vorlesungen)
     {
         echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
+        echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
+        echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
         $i=$i+1;
     }
 }
