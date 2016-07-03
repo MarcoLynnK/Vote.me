@@ -18,7 +18,7 @@
 
     <div class="container">
 
-        <h1>Vorlesung</h1>
+        <h1 class="tableText">Lecture</h1>
         <table>
             <thead>
             <th>ID</th>
