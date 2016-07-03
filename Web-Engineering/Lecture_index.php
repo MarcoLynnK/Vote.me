@@ -52,7 +52,6 @@ foreach ($list as $lecture) {
               <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
               <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/trash.svg'></a>
           </td>";
-    echo "<td></td>";
     echo "</tr>";
 }
 echo "<h1><a href='LectureCreate_form.php?ID_User=$user->ID_User'>CREATE LECTURE</a><h1>"
