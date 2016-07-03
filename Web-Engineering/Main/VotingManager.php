@@ -151,6 +151,21 @@ class VotingManager extends Manager
                
         
     }
+
+    public function closeVote (Voting $voting) {
+
+        $sql = $this->pdo->prepare("UPDATE Voting SET Status = 0 WHERE ID_Voting = :votingid");
+
+        $sql->bindParam(":votingid", $voting->ID_Voting);
+
+        $sql->execute();
+
+        $voting = $this->findById($this->pdo->lastInsertId());
+
+        return $voting;
+
+
+    }
     
     
     

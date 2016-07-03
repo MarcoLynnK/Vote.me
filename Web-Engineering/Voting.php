@@ -12,7 +12,7 @@ $votingManager= new VotingManager();
 $voting=$votingManager-> findById($ID_Voting);
 
 $votingchanceManager= new VotingChanceManager();
-$chance=$votingchanceManager->findAllChancesByVoting($voting);
+$chance=$votingchanceManager->findAllChancesByVotingId($voting);
 ?>
 
 <!DOCTYPE html>

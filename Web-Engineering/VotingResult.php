@@ -1,4 +1,31 @@
-<?php include ("Main/Session_Check.php");?>
+<?php include ("Main/Session_Check.php");
+
+include "Main/VotingChanceManager.php";
+
+// GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
+$ID_Voting = 1;
+
+$votingChanceManager = new VotingChanceManager();
+
+$chances = $votingChanceManager->findAllChancesByVotingId($ID_Voting);
+
+$daten = [0, 0, 0, 0];
+$i = 0;
+
+foreach ($chances as $oneChance) {
+
+	$chanceid = $oneChance->ID_Chance;
+	$count = $votingChanceManager->countVotingChance($ID_Voting, $chanceid);
+	$daten[$i] = $count;
+	$i++;
+
+}
+
+print_r($daten);
+
+
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -25,19 +52,19 @@
 		// Doughnut Chart Daten
 		var doughnutData = [
 			{
-				value: 20,
+				value: <?php print $daten[0] ?>,
 				color:"#ffaf72"
 			},
 			{
-				value : 40,
+				value : <?php print $daten[1] ?>,
 				color : "#91efbb"
 			},
 			{
-				value : 10,
+				value : <?php print $daten[2] ?>,
 				color : "#e4a3ff"
 			},
 			{
-				value : 30,
+				value : <?php print $daten[3] ?>,
 				color : "#8ea7ff"
 			}
 		];

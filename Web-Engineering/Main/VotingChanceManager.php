@@ -5,7 +5,7 @@ require_once ("Classes.php");
 //Manager zum Auslesen der Antwortmöglichkeiten für das Voting aus der DB
 class VotingChanceManager extends Manager
 {
-    protected $pdo;
+    
 
     public function __construct($con=null)
     {
@@ -17,12 +17,12 @@ class VotingChanceManager extends Manager
         parent::__destruct();
     }
     
-    public function findAllChancesByVoting(Voting $voting)
+    public function findAllChancesByVotingId($ID_Voting)
     {
         try
         {
             $sql = $this->pdo->prepare('SELECT * FROM Chance WHERE ID_Voting = :ID_Voting');
-            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
+            $sql->bindParam(':ID_Voting', $ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
             return $sql->fetchAll();
@@ -50,4 +50,27 @@ class VotingChanceManager extends Manager
             die();
         }
     }
+    
+    public function countVotingChance($ID_Voting, $ID_Chance) {
+        
+        $statement = "SELECT COUNT(*) FROM Result WHERE ID_Voting = :votingid AND ID_Chance = :chanceid";
+        $sql = $this->pdo->prepare($statement);
+        
+        $sql->bindParam("votingid", $ID_Voting);
+        $sql->bindParam("chanceid", $ID_Chance);
+        
+        $sql->execute();
+        
+        $sql->setFetchMode(PDO::FETCH_NUM);
+        
+        $result = $sql->fetchAll();
+        
+        $result = $result[0][0];
+        
+        return $result;
+        
+    }
+    
+    
+    
 }

@@ -10,7 +10,7 @@ $votingManager= new VotingManager();
 $voting= $votingManager->findById($ID_Voting);
 
 $votingchanceManager= new VotingChanceManager();
-$chance= $votingchanceManager->findAllChancesByVoting($voting);
+$chance= $votingchanceManager->findAllChancesByVotingId($voting);
 
 $lectureManager= new LectureManager();
 $lecture= $lectureManager->findById($voting->ID_Lecture);
@@ -59,6 +59,7 @@ echo "<a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'><div class='submi
 echo "<a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CREATE CHANCE</div></a></br></br>";
 echo "<a href='Voting.php?ID_Voting=$voting->ID_Voting'><div class='submit'>START VOTING</div></a></br></br>";
 echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OPEN VOTE</div></a><br><br>";
+echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";
 echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
 ?>
 </div>
