@@ -4,7 +4,7 @@ require_once ("Classes.php");
 //CRUD Applikation Möglichkeiten/Optionen für das Voting (Antworten)
 class ChanceManager extends Manager
 {
-    protected $pdo;
+    
     public function __construct($con=null)
     {
         parent::__construct($con=null);
@@ -52,13 +52,16 @@ class ChanceManager extends Manager
     public function create (Chance $chance)
     {
         try {
-            $sql = $this->pdo->prepare('INSERT INTO Chance (description_Chance, ID_Voting, ID_User) VALUES (:description_Chance, :ID_Voting, :ID_User');
+            $sql = $this->pdo->prepare('INSERT INTO Chance (ID_Voting, ID_User, description_Chance) VALUES (:ID_Voting, :ID_User, :description_Chance)');
+            
             $sql->bindParam(':description_Chance', $chance->description_Chance);
             $sql->bindParam(':ID_Voting', $chance->ID_Voting);
             $sql->bindParam(':ID_User', $chance->ID_User);
+            
             $sql->execute();
+            
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
-            $chance = $sql->fetch();
+            $chance = $this->findById($this->pdo->lastInsertId());
         }
         catch (PDOException $e)
         {
@@ -73,7 +76,10 @@ class ChanceManager extends Manager
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Chance SET description_Chance = :description_Chance WHERE ID_Chance = :ID_Chance');
+          
             $sql->bindParam (':description_Chance',$chance->description_Chance);
+            $sql->bindParam(":ID_Chance", $chance->ID_Chance);
+            
             $sql->execute ();
         }
         catch (PDOException $e)
