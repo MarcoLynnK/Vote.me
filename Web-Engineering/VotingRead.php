@@ -35,10 +35,10 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <div class="table-container">
 <table>
 <?php
-    echo "<tr><th>Lecture</th><th></a> $lecture->name_Lecture</a></th></tr>";
-    echo "<tr><th>Voting No.</th><th></a> $voting->ID_Voting</a></th></tr>";
-    echo "<tr><td>Topic:</td><td></a> $voting->name_Voting</a></td></tr>";
-    echo "<tr><td>Question:</td><td></a> $voting->question_Voting</a></td></tr>";
+    echo "<tr><th>Lecture</th><th> $lecture->name_Lecture</th></tr>";
+    echo "<tr><th>Voting No.</th><th> $voting->ID_Voting</th></tr>";
+    echo "<tr><td>Topic:</td><td> $voting->name_Voting</td></tr>";
+    echo "<tr><td>Question:</td><td> $voting->question_Voting</td></tr>";
 
     if (count($chance)>0)
     {
