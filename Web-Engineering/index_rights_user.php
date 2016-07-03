@@ -16,7 +16,7 @@
 <?php include("include/NavbarUser.php") ?>
 
 <div class="container">
-<a class="topic">Sie sind Dozent:</a><br><br>
+<a class="topic2">Sie sind Dozent:</a><br><br>
 <button class="submit" href="Lecture_Index.php">Vorlesungen</button><br><br>
 <button class="submit" href="Voting_Index.php">Votings</button><br><br>
 <button class="submit" href="Chance_Index.php">Antworten</button>
