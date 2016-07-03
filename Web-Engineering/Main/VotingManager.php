@@ -41,7 +41,7 @@ class VotingManager extends Manager
             $sql->bindParam(':ID_User', $ID_User);
             $sql->execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
-            $voting = $sql->fetch();
+            $voting = $sql->fetchAll();
         }
         catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
@@ -124,4 +124,34 @@ class VotingManager extends Manager
         return null;
     }
 
+    public function checkRights ($ID_Voting, $ID_User)
+    {
+        $voting= $this->findById($ID_Voting);
+        if ($voting->ID_User==$ID_User)
+        {
+            return true;
+        }
+        else
+        {
+            header('location: login.php');
+        }
+    }
+    
+    public function openVote (Voting $voting) {
+        
+        $sql = $this->pdo->prepare("UPDATE Voting SET Status = 1 WHERE ID_Voting = :votingid");
+        
+        $sql->bindParam(":votingid", $voting->ID_Voting);
+        
+        $sql->execute();
+        
+        $voting = $this->findById($this->pdo->lastInsertId());
+        
+        return $voting;
+               
+        
+    }
+    
+    
+    
 }

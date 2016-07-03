@@ -6,7 +6,7 @@ require_once ("Classes.php");
 
 class ResultManager extends Manager
 {
-    protected $pdo;
+
 
     public function __construct($con = null)
     {
@@ -78,16 +78,23 @@ class ResultManager extends Manager
 
     //Ergebnis erstellen in der DB anlegen (abstimmen pro Student)
 
-    public function create(Result $ID_Voting, $ID_Chance, $ID_Session)
+    /**
+     * @param Result $result
+     */
+    public function create(Result $result)
     {
 
         try
         {
-            $sql = $this->pdo->prepare('INSERT INTO Result (ID_Session, ID_Chance, ID_Voting) VALUES (:ID_Session, :ID_Chance, :ID_Voting)');
-            $sql->bindParam(':ID_Session',$ID_Session);
-            $sql->bindParam(':ID_Chance', $ID_Chance);
-            $sql->bindParam(':ID_Voting', $ID_Voting);
+            $sql = $this->pdo->prepare("INSERT INTO `Result`(`date_Result`, `ID_Chance`, `ID_Voting`, `StudentIP`) VALUES (:date, :chanceid, :votingid, :studentip)");
+            
+            $sql->bindParam(":date", $result->date_Result);
+            $sql->bindParam(":chanceid", $result->ID_Chance);
+            $sql->bindParam(":votingid", $result->ID_Voting);
+            $sql->bindParam(":studentip", $result->StudentIP);
+            
             $sql->execute();
+            
         }
         catch (PDOException $e)
         {
@@ -102,13 +109,12 @@ class ResultManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare('SELECT COUNT * FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
+            $sql = $this->pdo->prepare('SELECT COUNT (*) FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
             $sql->bindParam(':ID_Voting', $result->ID_Voting);
             $sql->bindParam(':ID_Chance', $result->ID_Chance);
             $sql->execute();
         }
-        catch (PDOException $e)
-        {
+        catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }

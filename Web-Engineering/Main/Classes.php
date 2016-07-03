@@ -119,17 +119,20 @@ class Result
     public $date_Result;
     public $ID_Chance;
     public $ID_Voting;
-    public $ID_Session;
+    public $StudentIP;
 
     function __construct($daten=null)
     {
         if (is_array($daten))
         {
+            echo "daten ist array";
+            
+            $this->date_Result = $daten ['date_Result'];
+            $this->ID_Chance = $daten ['ID_Chance'];
+            $this->ID_Voting = $daten ['ID_Voting'];
+            $this->StudentIP = $daten ['StudentIP'];
             $this->ID_Result = $daten ['ID_Result'];
-            $this->date_Result ['date_Result'];
-            $this->ID_Chance ['ID_Chance'];
-            $this->ID_Voting ['ID_Voting'];
-            $this->ID_Session ['ID_Session'];
+            
         }
     }
 }

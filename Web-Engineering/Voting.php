@@ -4,11 +4,8 @@ require_once ("Main/VotingManager.php");
 require_once ("Main/VotingChanceManager.php");
 require_once ("Main/Classes.php");
 
-$result= new Result();
+$result = new Result();
 
-session_start();
-session_id($ID_Session);
-//hier noch session fertig schreiben
 
 $ID_Voting= (int)htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 $votingManager= new VotingManager();
@@ -27,35 +24,25 @@ $chance=$votingchanceManager->findAllChancesByVoting($voting);
 
     <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <div id="navbar">
+        <img src="img/logo2.svg" id="logo">
+    </div>
 </head>
 <title>User Update</title>
 <body>
-<?php require_once("include/NavbarUser.php"); ?>
 
-<div id="navbar">
-
-    <img src="img/logo2.svg" id="logo">
-
-    <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-        <div class="dropdown-content">
-            <a href="#">VOTING LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/VotingCreate_form_admin.php">CREATE VOTING</a>
-            <a href="#">USER LIST</a>
-            <a href="https://mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/UserCreate_form.php">CREATE USER</a>
-        </div>
-    </div>
-
-    <a href="logOut.html" style="text-decoration: none;">
-        <button class="log-out" name="LogOut">LOG OUT</button>
-    </a>
-
-</div>
-<h2>Sie sind Votingteilnehmer: <?php echo "($_SESSION ['ID_Session']"?></h2>
+<h2>Sie sind Votingteilnehmer: 7 Platzhalter</h2>
 <h2>Topic: <?php echo ($voting->name_Voting) ?> </h2>
 <p>Question: <?php echo ($voting->question_Voting)?></p>
 
 <?php
+
+
+
+/**
 echo '<form class="input-container" action="VotingResult_do.php" method="post">';
         foreach ($chance as $möglichkeiten)
         {
@@ -64,14 +51,30 @@ echo '<form class="input-container" action="VotingResult_do.php" method="post">'
             {
                 $i = $i + 1;
                 echo "<p>Möglichkeit $i:</p>";
-                echo "<input type='checkbox' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>'$möglichkeiten->description_Chance'</br>";
+                echo "<input type='checkbox' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance</br>";
             }
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
         echo '<input type="hidden" value="' . $chance->ID_Chance . '" name="ID_Chance">';
         echo '<input type="hidden" value="' . $_SESSION ['ID_Session'] . '" name="ID_Session';
 echo '<input type="submit" class="submit" value="VOTE">';
-echo "</form>"?>
+echo "</form>"
+
+ */ ?>
+
+<form action="Voting_do.php" method="post">
+    ID_Voting<br>
+    <input type="text" name="ID_Voting">
+    <br>
+    ID_Chance<br>
+    <input type="text" name="ID_Chance">
+    <br><br>
+    <input type="submit" value="Absenden">
+</form>
+
+
+
+
 
 </body>
 </html>

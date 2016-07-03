@@ -29,19 +29,40 @@
 require_once("Main/Classes.php");
 require_once("Main/VotingManager.php");
 
+// User aus der Session holen
+$user = $_SESSION["user"];
+
+// Manager für Votings erstellen
 $votingManager = new VotingManager();
-$list = $votingManager->findAll();
-foreach ($list as $voting) {
-    echo "<tr>";
-    echo "<td>$voting->ID_Voting</td>";
-    echo "<td>$voting->name_Voting</td>";
-    echo "<td>$voting->question_Voting</td>";
-    echo "<td class='edittable'>
+
+// Entscheiden, was angezeigt wird
+if ($user->ID_Rights == 1) {
+    $list = $votingManager->findAll();
+} else {
+    $list = $votingManager->findAllbyIDUser($user->ID_User);
+}
+
+// Wenn Ergebnisse vorhanden, anzeigen
+if (is_array($list)) {
+
+    foreach ($list as $voting) {
+        echo "<tr>";
+        echo "<td>$voting->ID_Voting</td>";
+        echo "<td>$voting->name_Voting</td>";
+        echo "<td>$voting->question_Voting</td>";
+        echo "<td class='edittable'>
               <a href='VotingRead.php?ID_Voting=$voting->ID_Voting' class='btn btn-success btn-xs'> <input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
               <a href='VotingUpdate_form.php?ID_Voting=$voting->ID_Voting' class='btn btn-info btn-xs'> <input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
               <a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting' class='btn btn-info btn-danger btn-xs'> <input type='image' class='editicons' src='img/trash.svg'></a>
           </td>";
-    echo "</tr>";
+        echo "</tr>";
+    }
+
+} else {
+
+    echo "Ihnen können keine Votings angezeigt werden. Bitte erstellen Sie welche.";
+
+
 }
 ?>
 

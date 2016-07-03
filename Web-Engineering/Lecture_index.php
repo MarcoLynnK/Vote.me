@@ -33,29 +33,43 @@
 require_once("Main/Classes.php");
 require_once("Main/LectureManager.php");
 require_once("Main/UserManager.php");
-session_start();
-
 
 //lösung durch Userobjekt in Session
 $user = $_SESSION["user"];
+$rights = $_SESSION["ID_Rights"];
 
-$userManager= new UserManager();
-$user= $userManager->findById($user->ID_User);
-
+// LectureManager anlegen
 $lectureManager = new LectureManager();
-$list = $lectureManager->findAll();
-foreach ($list as $lecture) {
-    echo "<tr>";
-    echo "<td>$lecture->ID_Lecture</td>";
-    echo "<td>$lecture->name_Lecture</td>";
-    echo "<td>$lecture->degreecourse</td>";
-    echo "<td>
+
+// Entscheiden, welche Vorlesungen geholt werden sollen, je nach Rechten
+if ($rights == 1) {
+    $list = $lectureManager->findAll();
+} else {
+    $list = $lectureManager->findAllbyIDUser($user->ID_User);
+}
+
+if (is_array($list)) {
+
+    foreach ($list as $lecture) {
+        echo "<tr>";
+        echo "<td>$lecture->ID_Lecture</td>";
+        echo "<td>$lecture->name_Lecture</td>";
+        echo "<td>$lecture->degreecourse</td>";
+        echo "<td>
               <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/view.svg'></a>
               <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
               <a href='LectureDelete_do.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/trash.svg'></a>
           </td>";
-    echo "</tr>";
+        echo "</tr>";
+    }
+
+} else {
+    echo "Für Sie sind leider keine Vorlesungen verfügbar. Check your privileges.";
 }
+
+echo "<p> Neue Vorlesung erstellen: <a href='LectureCreate_form.php'> Neue Vortlesung</a> </p>";
+
+
 ?>
 </body>
 </html>

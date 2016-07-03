@@ -40,9 +40,6 @@ echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->
 if (count($voting)>0)
 {
 
-    print_r($voting);
-
-
     $i=1;
     foreach ($voting as $vorlesungen)
     {

@@ -6,7 +6,7 @@ require_once ("Classes.php");
 
 class LectureManager extends Manager
 {
-    protected $pdo;
+    
 
     public function __construct($con=null)
     {
@@ -42,9 +42,11 @@ class LectureManager extends Manager
         {
             $sql= $this->pdo->prepare ('SELECT * FROM Lecture WHERE ID_User=:ID_User');
             $sql->bindParam(':ID_User', $ID_User);
+            
             $sql->execute ();
+            
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Lecture');
-            $lecture = $sql->fetch();
+            $lecture = $sql->fetchAll();
         }
         catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
@@ -126,6 +128,20 @@ class LectureManager extends Manager
             die();
         }
         return null;
+    }
+
+    //Absicherung aller Datensätze über die ID_User
+    public function checkRights ($ID_Lecture,$ID_User)
+    {
+        $lecture= $this->findById($ID_Lecture);
+        if ($lecture->ID_User==$ID_User)
+        {
+            return true;
+        }
+        else
+        {
+            header('location: login.php');
+        }
     }
 }
     

@@ -34,17 +34,20 @@ class ChanceManager extends Manager
     {
         try
         {
-            $sql= $this->pdo->prepare ('SELECT * FROM Chance WHERE ID_User=:ID_User');
+            $sql= $this->pdo->prepare ('SELECT * FROM Chance WHERE ID_User = :ID_User');
+            
             $sql->bindParam(':ID_User', $ID_User);
             $sql->execute ();
+            
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
-            $chance = $sql->fetch();
+            $chance = $sql->fetchAll();
         }
         catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
-        if (!$chance) $chance = null;
+        if (!$chance) {echo "Ergebnis aus der Datenbank war false.";}
+        
         return $chance;
     }
 
@@ -123,4 +126,18 @@ class ChanceManager extends Manager
         }
         return null;
     }
+    
+    public function checkRights ($ID_Chance,$ID_User)
+    {
+        $chance= $this->findById($ID_Chance);
+            if ($chance->ID_User==$ID_User)
+            {
+                return true;
+            }
+            else 
+            {
+               header('location: login.php'); 
+            }
+    }
 }
+    

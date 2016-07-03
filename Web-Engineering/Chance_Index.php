@@ -28,9 +28,26 @@ require_once("Main/ChanceManager.php");
         <tbody>
             <?php
                 $chanceManager = new ChanceManager();
-                $list = $chanceManager->findAll();
-                    foreach ($list as $chance)
-                    {
+
+                // Rechte aus der Session holen
+                $rights = $_SESSION["ID_Rights"];
+
+                // User aus der Session holen
+                $user = $_SESSION["user"];
+
+                if ($rights == 1) {
+
+                    $list = $chanceManager->findAll();
+
+                } else {
+
+                    $list = $chanceManager->findAllbyIDUser($user->ID_User);
+
+                }
+
+                if (is_array($list)) {
+
+                    foreach ($list as $chance) {
                         echo "<tr>";
                         echo "<td>$chance->ID_Chance</td>";
                         echo "<td>$chance->description_Chance</td>";
@@ -41,6 +58,10 @@ require_once("Main/ChanceManager.php");
                             </td>";
                         echo "</tr>";
                     }
+
+                } else {
+                    echo "Sie haben keinen Content. Bitte legen Sie welche an.";
+                }
             ?>
         </tbody>
     </table>
