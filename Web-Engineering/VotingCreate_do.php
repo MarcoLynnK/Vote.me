@@ -14,8 +14,18 @@ $ID_User = $user->ID_User;
 if (!empty($name_Voting) && !empty($question_Voting))
 {
     
-    // Veränderter Konstruktor, der alte war zu unübersichtlich
-    $voting= new Voting(null, $name_Voting, $question_Voting, false, $lectureId, $ID_User);
+    $daten = [
+        
+        "ID_Lecture" => $lectureId,
+        "ID_User" => $ID_User,
+        "name_Voting" => $name_Voting,
+        "question_Voting" => $question_Voting,
+        "Status" => false
+        
+    ];
+    
+    // Votingobjekt machen
+    $voting= new Voting($daten);
     
     $votingManager = new VotingManager();
     $votingManager->create($voting); //holt sich das Voting aus der Datenbank durch Suche nach der ID

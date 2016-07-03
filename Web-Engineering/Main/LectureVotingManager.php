@@ -5,7 +5,7 @@ require_once ("Classes.php");
 
 class LectureVotingManager extends Manager
 {
-    protected $pdo;
+   
 
     public function __construct($con=null)
     {

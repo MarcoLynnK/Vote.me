@@ -73,13 +73,9 @@ class Voting
 
     /**
      * Voting constructor.
-     * @param $name
-     * @param $question
-     * @param $status
-     * @param $lectureId
-     * @param $userId
+     * @param null $daten
      */
-    function __construct($daten = null, $name=null, $question=null, $status=null, $lectureId=null, $userId=null) 
+    function __construct($daten = null) 
     {
         
         // Konstruktor mit Array
@@ -93,15 +89,7 @@ class Voting
             $this-> ID_Lecture= $daten ['ID_Lecture'];
             $this-> ID_User= $daten ['ID_User'];
             
-        } else { // Konstruktor ohne Array
-            
-            $this->name_Voting = $name;
-            $this->question_Voting = $question;
-            $this->Status = $status;
-            $this->ID_Lecture = $lectureId;
-            $this->ID_User = $userId;
-            
-        }
+        } 
     }
 }
 //Klasse Antwortmöglichkeiten

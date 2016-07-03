@@ -10,7 +10,7 @@ $lectureManager = new LectureManager();
 $lecture= $lectureManager->findById($ID_Lecture);
 
 $lecturevotingManager= new LectureVotingManager();
-$voting= $lecturevotingManager->findAllVotingByLecture($lecture);
+$voting = $lecturevotingManager->findAllVotingByLecture($lecture);
 
 $userManager= new UserManager();
 $user= $userManager->findById($lecture->ID_User);
@@ -39,13 +39,17 @@ echo "<h3 class='text2'><a class='bold'>Degreecourse:</a> $lecture->degreecourse
 echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->lastname</h3>";
 if (count($voting)>0)
 {
+
+    print_r($voting);
+
+
     $i=1;
     foreach ($voting as $vorlesungen)
     {
         echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
         echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
         echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
-        $i=$i+1;
+        $i++;
     }
 }
 
