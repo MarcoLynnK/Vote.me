@@ -18,7 +18,7 @@
 
 
 <div id="navbar">
-    <img src="img/logo2.svg" id="logo">
+    <a href="index.php" <img src="img/logo2.svg" id="logo"></a>
 
     <div class="menu">
         <input type="image" class="menu-icon" src="img/sw_menu.png">
