@@ -6,7 +6,7 @@ require_once ("Classes.php");
 
 class UserManager extends Manager
 {
-    protected $pdo;
+   //protected $pdo;
 
     public function __construct($con=null)
     {
@@ -39,13 +39,14 @@ class UserManager extends Manager
     
     //User auslesen aus DB--> für login Admin/user
     public function findByLogin ($login, $password) {
-
-
+        
         try
         {
-            // ID des gesuchten Users durch Login aus der Datenbank holen
-            $sql = $this->pdo->prepare("SELECT ID_User FROM User WHERE login = :login");
-            $sql->setFetchMode(PDO::FETCH_ASSOC);
+
+            // ID des gesuchten Users durch login aus der Datenbank holen
+            $sql = $this->pdo->prepare("SELECT ID_User FROM User WHERE login = :param");
+            $sql->bindParam(':param',$login);
+            $sql->setFetchMode(PDO::FETCH_ASSOC);//gibt Daten als Asoziativen Array zurück
             $sql->execute();
             $daten = $sql->fetch();
 
@@ -55,15 +56,15 @@ class UserManager extends Manager
             
             echo "<br>";
 
-            if (password_verify($password, $user->hash))
+            if (password_verify($password, $user->hash)) 
             {
                 return $user;
-            }
-            else
+            } 
+            else 
             {
                 return null;
             }
-        }
+        } 
         catch (Exception $e)
         {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
@@ -93,7 +94,7 @@ class UserManager extends Manager
     {
         try 
         {
-            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, email, ID_Rights, password) VALUES (:login, :firstname , :lastname, :email, :ID_Rights, :password)');
+            $sql= $this->pdo->prepare ('INSERT INTO User (login, firstname, lastname, email, ID_Rights, hash) VALUES (:login, :firstname , :lastname, :email, :ID_Rights, :password)');
             $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
             $sql->bindParam (':lastname',$user->lastname);
@@ -117,7 +118,7 @@ class UserManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, password = :password, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
+            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, hash = :password, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
             $sql->bindParam (':ID_User', $user->ID_User);
             $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
@@ -151,5 +152,15 @@ class UserManager extends Manager
         }
         return null;
     }
+
+    /**
+     * @return PDO
+     */
+    public function getPdo()
+    {
+        return $this->pdo;
+    }
+
+
 }
 

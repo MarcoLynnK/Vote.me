@@ -1,17 +1,17 @@
 <?php
 
-//require_once("RightsManager.php");
-require_once("Classes.php");
+require_once("Main/RightsManager.php");
+require_once("Main/Classes.php");
 
 $ID_Rights= htmlspecialchars($_GET["ID_Rights"], ENT_QUOTES, "UTF-8");
 
 // $rightsManager = new RightsManager();
 // $ID_Rights = $rightsManager->findById($ID_Rights);
 // Test
-//wäre andere option-->Momentane Lösung aber direkt über das Objekt User
+//Zugriff durch Rightsmanager wäre eine andere Möglichkeit
 
 session_start();
-
+//lösung durch Userobjekt in Session
 $user = $_SESSION["user"];
 $rights = $user->ID_Rights;
 
