@@ -53,7 +53,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 </table>
 </div></br></br>
 
-<div class="container"></div>
+<div class="container">
 <?php
 echo "<button class='submit'><a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'>SHOW LECTURE</a></button></br></br>";
 echo "<button class='submit'><a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'>CREATE CHANCE</a></button></br></br>";
