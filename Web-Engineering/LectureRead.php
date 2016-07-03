@@ -52,7 +52,7 @@ if (count($voting)>0)
     {
         echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
         echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>";
-        echo "<a href='VotingUpdate_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>";
+        echo "<a href='VotingUpdate_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/edit.svg'></a>";
         echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/trash.svg'></a>";
         $i++;
     }
