@@ -14,14 +14,18 @@ if (!empty($name_Lecture) && !empty($degreecourse))
         [
             "name_Lecture" => $name_Lecture,
             "degreecourse" => $degreecourse,
-            "ID_User" => $user->ID_User,
+            "ID_User" => $user->ID_User
         ];
 
     $lecture= new Lecture($lecturedata);
     $lectureManager = new LectureManager();
     $lecture = $lectureManager->create($lecture);
     
-    header('Location: Lecture_Index.php');
+    print_r($user);
+    print_r($lecture);
+    
+    
+    header('Location: Lecture_index.php');
 }
 else 
 {

@@ -62,7 +62,7 @@ class LectureManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare("INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)");
+            $sql = $this->pdo->prepare('INSERT INTO Lecture (`name_Lecture`, `degreecourse`, `ID_User`) VALUES (:name, :course, :userid)');
             $sql->bindParam(":name", $lecture->name_Lecture);
             $sql->bindParam(":course", $lecture->degreecourse);
             $sql->bindParam(":userid", $lecture->ID_User);

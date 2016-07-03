@@ -54,7 +54,7 @@ class Lecture
     {
         if (is_array ($daten)) 
         {
-            $this-> ID_Lecture= $daten ['ID_Lecture'];
+            $this-> ID_User= $daten ['ID_User'];
             $this-> name_Lecture= $daten ['name_Lecture'];
             $this-> degreecourse= $daten ['degreecourse'];
         }
