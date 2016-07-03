@@ -54,5 +54,6 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 ?>
 </table>
 </div>
+<button class='submit' name='submit'><a href='Voting_Index.php'</a>BACK</button>
 </body>
 </html>
