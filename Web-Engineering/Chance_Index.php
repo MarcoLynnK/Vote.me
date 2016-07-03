@@ -39,7 +39,6 @@ require_once("Main/ChanceManager.php");
                                 <a href='ChanceUpdate_form.php?ID_Chance=$chance->ID_Chance' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
                                 <a href='ChanceDelete_do.php?ID_Chance=$chance->ID_Chance' class='btn btn-info btn-danger btn-xs'><input type='image' class='editicons' src='img/trash.svg'></a>
                             </td>";
-                        echo "<td></td>";
                         echo "</tr>";
                     }
             ?>
