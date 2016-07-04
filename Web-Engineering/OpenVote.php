@@ -1,24 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Marco
- * Date: 03.07.16
- * Time: 20:22
- */
 
 // Dieses Skript öffnet das Voting und erzeugt den Teilnahmelink für Studenten.
+
 require "Main/Manager.php";
 require "Main/VotingManager.php";
 
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 
-// VotingManager erstellen
+/*
+ * neuen VotingManager erstellen
+ */
 $votingManager = new VotingManager();
 
-// Voting holen
+/*
+ * Voting aus der DB holen
+ */
 $voting = $votingManager->findById($ID_Voting);
 
-// Status prüfen
+// Votingstatus prüfen (1 für offen, 0 für geschlossen)
 if ($voting->Status == 1) {
 
     echo "Voting bereits offen. Generiere Link";
