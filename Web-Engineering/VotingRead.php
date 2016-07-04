@@ -29,7 +29,7 @@ $votingchanceManager= new VotingChanceManager();
 /*
  * Ausgabe aller Möglichkeiten durch Methode findAllChancesByVotingId
  */
-$chance= $votingchanceManager->findAllChancesByVotingId($voting->ID_Voting); //vllt. findAllChancesByVotingId ($voting->ID_Voting)??
+$chance= $votingchanceManager->findAllChancesByVotingId($voting); //vllt. findAllChancesByVotingId ($voting->ID_Voting)??
 
 
 /*

@@ -25,12 +25,12 @@ class VotingChanceManager extends Manager
     /*
      * Auslesen aller Möglichkeiten anhand des zugehörigen Votings durch ID_Voting
      */
-    public function findAllChancesByVotingId($ID_Voting)
+    public function findAllChancesByVotingId(Voting $voting)
     {
         try
         {
             $sql = $this->pdo->prepare('SELECT * FROM Chance WHERE ID_Voting = :ID_Voting');
-            $sql->bindParam(':ID_Voting', $ID_Voting);
+            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
             return $sql->fetchAll();

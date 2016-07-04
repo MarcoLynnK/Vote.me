@@ -61,7 +61,6 @@ $chance=$votingchanceManager->findAllChancesByVotingId($voting);
  * Voting Form zur Interaktion für Studenten
  */
 
-/*
 echo '<form class="input-container" action="VotingResult_do.php" method="post">';
         foreach ($chance as $möglichkeiten)
         {
@@ -78,9 +77,9 @@ echo '<form class="input-container" action="VotingResult_do.php" method="post">'
 echo '<input type="submit" class="submit" value="VOTE">';
 echo "</form>"
 
- */?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
+?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
 
-<form action="Voting_do.php" method="post">
+<!--<form action="Voting_do.php" method="post">
     ID_Voting<br>
     <input type="text" name="ID_Voting">
     <br>
@@ -89,7 +88,7 @@ echo "</form>"
     <br><br>
     <input type="submit" value="Absenden">
 </form>
-
+-->
 
 </body>
 </html>
