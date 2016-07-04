@@ -60,8 +60,8 @@ if (count($voting)>0)
         echo "<tr>";
         echo "<td>Voting $i:</td> <td>$vorlesungen->name_Voting</td>";
         echo "<td>
-              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/view.svg'></a>
-              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
+              <a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>
+              <a href='VotingUpdate_form.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/edit.svg'></a>
               </td>";
         echo "<tr>";
         $i++;
