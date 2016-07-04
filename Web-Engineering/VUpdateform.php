@@ -6,7 +6,7 @@
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<a>Voting Nr. <?php echo ($voting->ID_Voting) ?></a>
+<a>Voting Nr.</a>
 
 <form action='VotingUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' />
