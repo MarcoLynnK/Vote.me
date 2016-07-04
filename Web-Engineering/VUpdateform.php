@@ -4,7 +4,7 @@
 
 </head>
 <body>
-<?php require_once("include/Navbar.php"); ?>
+<?php require_once("include/NavbarUser.php"); ?>
 
 </body>
 </html>
