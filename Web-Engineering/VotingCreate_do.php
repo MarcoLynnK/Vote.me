@@ -49,6 +49,6 @@ if (!empty($name_Voting) && !empty($question_Voting))
 else{
     echo "<a class='text2'>Error: Bitte füllen sie alle Felder aus!</a><br/>";
 }; ?>
-<a href="LectureCreate_form.php"> <div class="submit">BACK</div></a>
+<a href="VotingCreate_form.php"> <div class="submit">BACK</div></a>
 </body>
 </html>
