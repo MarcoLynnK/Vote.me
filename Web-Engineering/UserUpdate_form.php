@@ -5,7 +5,7 @@ require_once ("Main/Classes.php");
 
 $ID_User = htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
 $UserManager = new UserManager();
-$user = $UserManager->findById($ID_User);
+$userfromtable = $UserManager->findById($ID_User);
 
 ?>
 
@@ -48,19 +48,19 @@ $user = $UserManager->findById($ID_User);
     <form class="input-container" action='UserUpdate_do.php' method='post'>
         Bitte aktualisieren Sie Ihre Angaben!<br>
         User ID: <br>
-        <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
+        <input class="inputForm" type='text' name='ID_User' value='<?php echo ($userfromtable->ID_User) ?>' disabled><br><br>
         Benutzername: <br>
-        <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
+        <input class="inputForm" type='text' name='login' value='<?php echo ($userfromtable->login) ?>'><br><br>
         Vorname: <br>
-        <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'><br><br>
+        <input class="inputForm2" type='text' name='firstname' value='<?php echo ($userfromtable->firstname) ?>'><br><br>
         Nachname: <br>
-        <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
+        <input class="inputForm3" type='text' name='lastname' value='<?php echo ($userfromtable->lastname) ?>'><br><br>
         Email: <br>
-        <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
+        <input class="inputForm" type='email' name='email' value='<?php echo ($userfromtable->email) ?>'><br><br>
         Recht:
-        <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
+        <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($userfromtable->ID_Rights) ?>'><br><br>
         Passwort:
-        <input class="inputForm" type='text' name='password' value='<?php echo ($user->password) ?>'><br><br>
+        <input class="inputForm" type='text' name='password' value='<?php echo ($userfromtable->hash) ?>'><br><br>
         <input class="submit" type='submit' value='aktualisieren'>
 </form>
 

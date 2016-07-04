@@ -43,7 +43,7 @@ foreach ($list as $user) {
     echo "<td>$user->lastname</td>";
     echo "<td>$user->email</td>";
     echo "<td>$user->ID_Rights</td>";
-    echo "<td>$user->password</td>";
+    echo "<td>$user->hash</td>";
     echo "<td>
               <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'><input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
               <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
