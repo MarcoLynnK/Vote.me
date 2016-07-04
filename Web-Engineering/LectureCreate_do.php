@@ -39,7 +39,7 @@ if (!empty($name_Lecture) && !empty($degreecourse))
 }
 else 
 {
-    echo "Error: Bitte füllen sie alle Felder aus!<br/>";
+    echo "<a class='text2'>Error: Bitte füllen sie alle Felder aus!</a><br/>";
 }; ?>
 </body>
 </html>
