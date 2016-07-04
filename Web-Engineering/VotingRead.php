@@ -73,7 +73,6 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         <thead>
         <th>Answer Nr.</th>
         <th>Answer</th>
-        <th>Settings</th>
         </thead>
         <tbody>
 <?php
