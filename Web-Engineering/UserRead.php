@@ -1,4 +1,5 @@
 <?php
+//Dieses Skript 
 include ("Main/Session_Check.php");
 require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
@@ -23,16 +24,16 @@ $user = $userManager->findById($ID_User);
 
 
 <body>
-<?php require_once("include/Navbar.php"); ?>
+    <?php require_once("include/Navbar.php"); ?>
 
-<?php
-echo "<h2>Dozent $ID_User:</h2>";
-echo "<h1 class='topic'><a class='bold'>Username:</a> $user->login</h1>";
-echo "<h3 class='text2'><a class='bold'>Firstname:</a> $user->firstname</h3>";
-echo "<h3 class='text2'><a class='bold'>Lastname:</a> $user->lastname</h3>";
-echo "<h3 class='text2'><a class='bold'>E-mail:</a> $user->email</h3>";
-echo "<h3 class='text2'><a class='bold'>Password:</a> $user->hash</h3>";
-echo "<h3 class='text2'><a class='bold'>Rights:</a> $user->ID_Rights</h3>";
-?>
+    <?php 
+    echo "<h2>Dozent $ID_User:</h2>";
+    echo "<h1 class='topic'><a class='bold'>Username:</a> $user->login</h1>";
+    echo "<h3 class='text2'><a class='bold'>Firstname:</a> $user->firstname</h3>";
+    echo "<h3 class='text2'><a class='bold'>Lastname:</a> $user->lastname</h3>";
+    echo "<h3 class='text2'><a class='bold'>E-mail:</a> $user->email</h3>";
+    echo "<h3 class='text2'><a class='bold'>Password:</a> $user->hash</h3>";
+    echo "<h3 class='text2'><a class='bold'>Rights:</a> $user->ID_Rights</h3>";
+    ?>
 </body>
 </html>

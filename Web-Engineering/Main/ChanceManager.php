@@ -114,6 +114,7 @@ class ChanceManager extends Manager
         }
         return $chance;
     }
+    
     //Möglichkeit aus der DB löschen
     public function delete (Chance $chance)
     {
@@ -130,6 +131,7 @@ class ChanceManager extends Manager
         return null;
     }
     
+    //Check vor auslese der Möglichkeiten ID_User
     public function checkRights ($ID_Chance,$ID_User)
     {
         $chance= $this->findById($ID_Chance);
