@@ -50,24 +50,24 @@ echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->
         <th>Settings</th>
         </thead>
         <tbody>
-<?php
-if (count($voting)>0)
-{
+        <?php
+        if (count($voting)>0)
+        {
 
-    $i=1;
-    foreach ($voting as $vorlesungen)
-    {
-        echo "<tr>";
-        echo "<td>Voting $i:</td> <td>$vorlesungen->name_Voting</td>";
-        echo "<td>
+            $i=1;
+            foreach ($voting as $vorlesungen)
+            {
+                echo "<tr>";
+                echo "<td>Voting $i:</td> <td>$vorlesungen->name_Voting</td>";
+                echo "<td>
               <a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>
-              <a href='VotingUpdate_form.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/edit.svg'></a>
+              <a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/edit.svg'></a>
               </td>";
-        echo "<tr>";
-        $i++;
-    }
-}
-?>
+                echo "<tr>";
+                $i++;
+            }
+        }
+        ?>
 
         </tbody>
     </table>
