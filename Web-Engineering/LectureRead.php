@@ -39,15 +39,31 @@ echo "<h1 class='topic'><a class='bold'>Vorlesung Nr. $ID_Lecture</h1>";
 echo "<h3 class='text2'><a class='bold'>Lecture:</a> $lecture->name_Lecture</h3>";
 echo "<h3 class='text2'><a class='bold'>Degreecourse:</a> $lecture->degreecourse</h3>";
 echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->lastname</h3>";
+
+?>
+
+<div class="container">
+    <table>
+        <thead>
+        <th>Voting Nr.</th>
+        <th>Topic</th>
+        <th>Settings</th>
+        </thead>
+        <tbody>
+<?php
 if (count($voting)>0)
 {
 
     $i=1;
     foreach ($voting as $vorlesungen)
     {
-        echo "<a class='text2'>Voting $i: $vorlesungen->name_Voting</a>";
-        echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
-        echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
+        echo "<tr>";
+        echo "<td>Voting $i: $vorlesungen->name_Voting</td>";
+        echo "<td>
+              <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/view.svg'></a>
+              <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
+              </td>";
+        echo "<tr>";
         $i++;
     }
 }
