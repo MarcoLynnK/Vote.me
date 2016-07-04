@@ -23,7 +23,7 @@ require_once("Main/ChanceManager.php");
         <thead>
             <th>ID</th>
             <th>Description</th>
-            <th></th>
+            <th>Settings</th>
         </thead>
         <tbody>
             <?php
