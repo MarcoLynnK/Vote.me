@@ -62,10 +62,10 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <!--Ausgabe der Datensätze erhalten durch die Manager (Lecture/Voting/VotingChance)-->
 
 <?php
-    echo "<a class='topic'>Lecture $lecture->name_Lecture</a>";
-    echo "<a class='topic'>Voting No. $voting->ID_Voting</a>";
-    echo "<a class='topic'>Topic: $voting->name_Voting</a>";
-    echo "<a class='topic'>Question: $voting->question_Voting</a>";
+    echo "<a class='topic'>Lecture $lecture->name_Lecture</a></br>";
+    echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br>";
+    echo "<a class='topic'>Topic: $voting->name_Voting</a></br>";
+    echo "<a class='text2'>Question: $voting->question_Voting</a>";
 ?>
 
 <div class="container">
