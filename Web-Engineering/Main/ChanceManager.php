@@ -1,6 +1,7 @@
 <?php
 require_once ("Manager.php");
 require_once ("Classes.php");
+
 //CRUD Applikation Möglichkeiten/Optionen für das Voting (Antworten)
 class ChanceManager extends Manager
 {
@@ -13,6 +14,8 @@ class ChanceManager extends Manager
     {
         parent::__destruct();
     }
+    
+    //Alle Datensätze(Möglichkeiten auslesen
     public function findAll ()
     {
         try
