@@ -58,7 +58,7 @@ class ChanceManager extends Manager
     public function findById ($ID_Chance)
     {
         try {
-            $sql= $this->pdo-> prepare ('SELECT * from Chance WHERE ID_Chance = :ID_Chance');
+            $sql= $this->pdo-> prepare ('SELECT * FROM Chance WHERE ID_Chance = :ID_Chance');
             $sql-> bindParam (':ID_Chance', $ID_Chance);
             $sql-> execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
@@ -76,15 +76,14 @@ class ChanceManager extends Manager
     //Neue Möglichkeit in der DB anlegen
     public function create (Chance $chance)
     {
-        try {
+        try 
+        {
             $sql = $this->pdo->prepare('INSERT INTO Chance (ID_Voting, ID_User, description_Chance) VALUES (:ID_Voting, :ID_User, :description_Chance)');
             
             $sql->bindParam(':description_Chance', $chance->description_Chance);
             $sql->bindParam(':ID_Voting', $chance->ID_Voting);
             $sql->bindParam(':ID_User', $chance->ID_User);
-            
             $sql->execute();
-            
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
             $chance = $this->findById($this->pdo->lastInsertId());
         }
@@ -101,10 +100,8 @@ class ChanceManager extends Manager
         try
         {
             $sql= $this->pdo->prepare ('UPDATE Chance SET description_Chance = :description_Chance WHERE ID_Chance = :ID_Chance');
-          
             $sql->bindParam (':description_Chance',$chance->description_Chance);
             $sql->bindParam(":ID_Chance", $chance->ID_Chance);
-            
             $sql->execute ();
         }
         catch (PDOException $e)
@@ -118,8 +115,9 @@ class ChanceManager extends Manager
     //Möglichkeit aus der DB löschen
     public function delete (Chance $chance)
     {
-        try {
-            $sql = $this->pdo->prepare('DELETE FROM Chance WHERE ID_Chance= :ID_Chance');
+        try 
+        {
+            $sql = $this->pdo->prepare('DELETE * FROM Chance WHERE ID_Chance= :ID_Chance');
             $sql->bindParam(':ID_Chance', $chance->ID_Chance);
             $sql->execute();
         }
@@ -132,7 +130,7 @@ class ChanceManager extends Manager
     }
     
     //Check vor auslese der Möglichkeiten ID_User
-    public function checkRights ($ID_Chance,$ID_User)
+    public function checkRights ($ID_Chance, $ID_User)
     {
         $chance= $this->findById($ID_Chance);
             if ($chance->ID_User==$ID_User)

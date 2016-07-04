@@ -1,5 +1,4 @@
 <?php
-include ("Main/Session_Check.php");
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
@@ -27,15 +26,10 @@ if (!empty ($ID_User) && !empty($login) && !empty($firstname) && !empty($lastnam
     $user->hash= $password;
     $userManager-> update ($user);
     header ('Location: User_Index.php');
-
-    if ($user==null)
-    {
-        header('Location: login.php');
-        die();
-    }
 }
 
 else 
 {
+    
     echo "Error: Bitte füllen sie alle Felder aus!<br/>";
 }

@@ -12,7 +12,7 @@ $ID_User = htmlspecialchars($_GET["ID_User"], ENT_QUOTES, "UTF-8");
 $UserManager = new UserManager();
 
 /*
- * Ausgabe des Users in $user anhand der User-ID durch methode findById
+ * Ausgabe des Users in $user anhand der User-ID durch Methode findById
  */
 $user = $UserManager->findById($ID_User);
 
@@ -31,6 +31,7 @@ $user = $UserManager->findById($ID_User);
 <title>User Update</title>
 
 <body>
+<?php print_r($user);?>
 <!--Navigation einbinden-->
 <?php require_once("include/Navbar.php"); ?>
 
@@ -53,7 +54,7 @@ $user = $UserManager->findById($ID_User);
         Recht:
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
         Passwort:
-        <input class="inputForm" type='text' name='password' value='<?php echo ($user->hash) ?>'><br><br>
+        <input class="inputForm" type='text' name='hash' value='<?php echo ($user->hash) ?>'><br><br>
         <input class="submit" type='submit' value='aktualisieren'>
 </form>
 

@@ -44,13 +44,17 @@ $lectureManager = new LectureManager();
 // Entscheiden, welche Vorlesungen geholt werden sollen, je nach Rechten
 if ($rights == 1) {
     $list = $lectureManager->findAll();
-} else {
+} 
+else 
+{
     $list = $lectureManager->findAllbyIDUser($user->ID_User);
 }
 
-if (is_array($list)) {
+if (is_array($list)) 
+{
 
-    foreach ($list as $lecture) {
+    foreach ($list as $lecture) 
+    {
         echo "<tr>";
         echo "<td>$lecture->ID_Lecture</td>";
         echo "<td>$lecture->name_Lecture</td>";
@@ -63,7 +67,9 @@ if (is_array($list)) {
         echo "</tr>";
     }
 
-} else {
+}
+else 
+{
     echo "Für Sie sind leider keine Vorlesungen verfügbar. Check your privileges.";
 }
 ?>
