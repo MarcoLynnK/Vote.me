@@ -66,10 +66,11 @@ if (is_array($list)) {
 } else {
     echo "Für Sie sind leider keine Vorlesungen verfügbar. Check your privileges.";
 }
-
-echo "<p> Neue Vorlesung erstellen: <a href='LectureCreate_form.php'> Neue Vortlesung</a> </p>";
-
-
 ?>
+            </tbody>
+            </table>
+        </br></br>
+        </div>
+<a href='LectureCreate_form.php'><div class='submit'>CREATE LECTURE</div></a></br></br>
 </body>
 </html>
