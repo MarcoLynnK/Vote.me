@@ -18,7 +18,7 @@ require_once("Main/ChanceManager.php");
 <?php require_once("include/Navbar.php");?>
 
 <div class="container">
-    <h1 class="tableText">Chances</h1>
+    <center><div class="tableText">Chances</div></center>
     <table  class="table table-hover">
         <thead>
             <th>ID</th>
