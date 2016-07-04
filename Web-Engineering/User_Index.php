@@ -1,4 +1,10 @@
-<?php include ("Main/Session_Check.php");?>
+<?php
+//Skript zum Auslesen aller registrierten User (nur Admin)
+
+include ("Main/Session_Check.php");
+require_once("Main/Classes.php");
+require_once("Main/UserManager.php"); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +17,7 @@
 </head>
 
 <body>
-
+<!
 <?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
@@ -31,8 +37,7 @@
         <tbody>
 
 <?php
-require_once("Main/Classes.php");
-require_once("Main/UserManager.php");
+
 $userManager = new UserManager();
 $list = $userManager->findAll();
 foreach ($list as $user) {

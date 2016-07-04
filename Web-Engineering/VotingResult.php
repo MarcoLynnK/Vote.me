@@ -91,19 +91,19 @@ print_r($daten);
 		// Doughnut Chart Daten
 		var doughnutData = [
 			{
-				value: 20,
+				value: <?php print $daten[0]->description_Chance?>,
 				color:"#ffaf72"
 			},
 			{
-				value : 40,
+				value : <?php print $daten[1]->description_Chance?>,
 				color : "#91efbb"
 			},
 			{
-				value : 10,
+				value : <?php print $daten[2]->description_Chance?>,
 				color : "#e4a3ff"
 			},
 			{
-				value : 30,
+				value : <?php print $daten[3]->description_Chance?>,
 				color : "#8ea7ff"
 			}
 		];
