@@ -67,7 +67,14 @@ if (count($voting)>0)
         $i++;
     }
 }
+?>
+        
+        </tbody>
+    </table>
+    </br></br>
+</div>
 
+<?php
 echo "</br></br><a href='VotingCreate_form.php?ID_Lecture=$lecture->ID_Lecture'</a><div class='submit'>CREATE VOTING</div></a></br></br>";
 echo "<a href='Lecture_index.php'</a><div class='submit'>BACK</div></a>";
 ?>
