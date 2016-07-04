@@ -28,10 +28,10 @@ $voting= $votingManager->findById($chance->ID_Voting);
 
 <?php
 echo "<h1 class='topic'><a class='bold'>Chance Nr.</a>$chance->ID_Chance</h1>";
-echo "<h3 class='text'><a class='bold'>Votingthema:</a> $voting->name_Voting</h3>";
+echo "<h3 class='text2'><a class='bold'>Votingthema:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Antwort:</a> $chance->description_Chance</h3>";
 
-echo"<h2><a href='VotingRead.php?ID_Voting=$chance->ID_Voting'>SHOW VOTING</a></h2>";
+echo"<a href='VotingRead.php?ID_Voting=$chance->ID_Voting'><div class='submit'>SHOW VOTING</div></a>";
 ?>
 </body>
 </html>
