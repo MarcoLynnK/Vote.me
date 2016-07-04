@@ -58,7 +58,7 @@ if (count($voting)>0)
     foreach ($voting as $vorlesungen)
     {
         echo "<tr>";
-        echo "<td>Voting $i: $vorlesungen->name_Voting</td>";
+        echo "<td>Voting $i:</td> <td>$vorlesungen->name_Voting</td>";
         echo "<td>
               <a href='LectureRead.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/view.svg'></a>
               <a href='LectureUpdate_form.php?ID_Lecture=$lecture->ID_Lecture'><input type='image' class='editicons' src='img/edit.svg'></a>
