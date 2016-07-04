@@ -7,7 +7,7 @@ $ID_Voting = 1;
 
 $votingChanceManager = new VotingChanceManager();
 
-$chances = $votingChanceManager->findAllChancesByVotingId($ID_Voting);
+$chances = $votingChanceManager->findAllChancesByVotingId($ID_Voting); // im Votingmanager ein objekt $voting, hier ein int...wie umwandeln?
 
 $daten = [0, 0, 0, 0];
 $i = 0;
