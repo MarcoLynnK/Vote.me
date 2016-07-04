@@ -22,7 +22,7 @@ $voting = $VotingManager->findById($ID_Voting);
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<center><a class="tableText">Voting Nr. <?php echo ($voting->ID_Voting) ?></a></center>
+<center><a class="text">Voting Nr. <?php echo ($voting->ID_Voting) ?></a></center>
 
 <form action='VotingUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' /></br></br>
