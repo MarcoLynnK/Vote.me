@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <body>
+<?php require_once("include/Navbar.php"); ?>
 
 <?php
 include ("Main/Session_Check.php");
@@ -39,7 +40,8 @@ if (!empty($name_Lecture) && !empty($degreecourse))
 }
 else 
 {
-    echo "<a class='text2'>Error: Bitte füllen sie alle Felder aus!</a><br/>";
+    echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 }; ?>
+<a href="LectureCreate_form.php"> <div class="submit">BACK</div></a>
 </body>
 </html>
