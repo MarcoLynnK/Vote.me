@@ -15,7 +15,7 @@
 <form action="LectureCreate_do.php" method="post">
     <input class="inputForm" type="text" name="name_Lecture" placeholder="Lecture"><br><br>
     <input class="inputForm" type="text" name="degreecourse" placeholder="Degreecourse"><br><br>
-    <a href="LectureCreate_form.php"> <div class="submit">CREATE LECTURE</div></a>
+    <a href="LectureCreate_do.php"> <div class="submit">CREATE LECTURE</div></a>
 </form>
 
 </body>
