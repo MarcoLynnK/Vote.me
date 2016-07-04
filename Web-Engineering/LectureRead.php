@@ -68,10 +68,9 @@ if (count($voting)>0)
     }
 }
 ?>
-        
+
         </tbody>
     </table>
-    </br></br>
 </div>
 
 <?php
