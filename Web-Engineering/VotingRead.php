@@ -60,14 +60,23 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 <?php require_once("include/Navbar.php"); ?>
 
 <!--Ausgabe der Datensätze erhalten durch die Manager (Lecture/Voting/VotingChance)-->
-<div class="table-container">
-<table>
+
 <?php
     echo "<tr><th>Lecture</th><td> $lecture->name_Lecture</td></tr>";
     echo "<tr><td>Voting No.</td><td> $voting->ID_Voting</td></tr>";
     echo "<tr><td>Topic:</td><td> $voting->name_Voting</td></tr>";
     echo "<tr><td>Question:</td><td> $voting->question_Voting</td></tr>";
+?>
 
+<div class="container">
+    <table>
+        <thead>
+        <th>Answer Nr.</th>
+        <th>Answer</th>
+        <th>Settings</th>
+        </thead>
+        <tbody>
+<?php
     //Ausgabe der zugehörigen Möglichkeiten zum Voting mit Nummer, je nach Anzahl.
     if (count($chance)>0)
     {
@@ -79,6 +88,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         }
     }
 ?>
+        </tbody>
 </table></br></br>
 </div>
 <!--Buttons für weitere Navigation-->
