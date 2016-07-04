@@ -5,6 +5,7 @@ require_once ("Main/VotingChanceManager.php");
 // GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
 $ID_Voting = 1;
 
+
 $votingChanceManager = new VotingChanceManager();
 
 $chances = $votingChanceManager->findAllChancesByVotingId($ID_Voting); // im Votingmanager ein objekt $voting, hier ein int...wie umwandeln?

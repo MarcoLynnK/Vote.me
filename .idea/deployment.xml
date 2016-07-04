@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="mars.marco" uploadOnCheckin="4987426d-bf50-4a30-88e3-9686557d8a67" showNewOnTargetInSync="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="mars.marco" uploadOnCheckin="4987426d-bf50-4a30-88e3-9686557d8a67" showNewOnTargetInSync="false">
     <serverData>
       <paths name="mars.marco">
         <serverdata>
@@ -11,5 +11,6 @@
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="mars.marco" />
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

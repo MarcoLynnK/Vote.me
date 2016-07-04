@@ -23,7 +23,7 @@ class VotingManager extends Manager
     public function findAll()
     {
         try {
-            $sql = $this->pdo->prepare('SELECT * FROM Voting');
+            $sql = $this->pdo->prepare("SELECT * FROM Voting");
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             return $sql->FetchAll();
@@ -37,7 +37,7 @@ class VotingManager extends Manager
     {
         try 
         {
-            $sql= $this->pdo->prepare ('SELECT * FROM Voting WHERE ID_User=:ID_User');
+            $sql= $this->pdo->prepare ("SELECT * FROM Voting WHERE ID_User=:ID_User");
             $sql->bindParam(':ID_User', $ID_User);
             $sql->execute ();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
@@ -55,12 +55,14 @@ class VotingManager extends Manager
     public function findById($ID_Voting)
     {
         try {
-            $sql = $this->pdo->prepare('SELECT * FROM Voting WHERE ID_Voting = :ID_Voting');
+            $sql = $this->pdo->prepare("SELECT * FROM Voting WHERE ID_Voting = :ID_Voting");
             $sql->bindParam(':ID_Voting', $ID_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -71,8 +73,9 @@ class VotingManager extends Manager
     // Erstellen eines neuen Votings (Datensatz) in der DB
     public function create(Voting $voting)
     {
-        try {
-            $sql = $this->pdo->prepare('INSERT INTO Voting (ID_Lecture, ID_User, name_Voting, question_Voting, Status) VALUES (:lectureId, :userId, :name, :question, :status)');
+        try 
+        {
+            $sql = $this->pdo->prepare("INSERT INTO Voting (ID_Lecture, ID_User, name_Voting, question_Voting, Status) VALUES (:lectureId, :userId, :name, :question, :status)");
             
             $sql->bindParam("lectureId", $voting->ID_Lecture);
             $sql->bindParam("userId", $voting->ID_User);
@@ -94,15 +97,18 @@ class VotingManager extends Manager
     //update Voting
     public function update(Voting $voting)
     {
-        try {
-            $sql = $this->pdo->prepare('UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting WHERE :ID_Voting= ID_Voting');
+        try 
+        {
+            $sql = $this->pdo->prepare("UPDATE Voting SET name_Voting = :name_Voting, question_Voting= :question_Voting WHERE :ID_Voting= ID_Voting");
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->bindParam(':name_Voting', $voting->name_Voting);
             $sql->bindParam(':question_Voting', $voting->question_Voting);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) 
+        {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
             die();
         }
@@ -111,14 +117,17 @@ class VotingManager extends Manager
     }
 
     //Löschen des Votings mit der übergebenen ID aus der DB
-    public function delete(Voting $voting)
+    public function delete (Voting $voting)
     {
-        try {
+        try 
+        {
             $sql = $this->pdo->prepare('DELETE * FROM Voting WHERE ID_Voting= :ID_Voting');
             $sql->bindParam(':ID_Voting', $voting->ID_Voting);
             $sql->execute();
-        } catch (PDOException $e) {
-            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+        } 
+        catch (PDOException $e) 
+        {
+            echo ("Es ist ein Fehler aufgetreten.<br>"). $e->getMessage(). "<br>";
             die();
         }
         return null;
@@ -137,7 +146,8 @@ class VotingManager extends Manager
         }
     }
     
-    public function openVote (Voting $voting) {
+    public function openVote (Voting $voting) 
+    {
         
         $sql = $this->pdo->prepare("UPDATE Voting SET Status = 1 WHERE ID_Voting = :votingid");
         
@@ -152,7 +162,8 @@ class VotingManager extends Manager
         
     }
 
-    public function closeVote (Voting $voting) {
+    public function closeVote (Voting $voting) 
+    {
 
         $sql = $this->pdo->prepare("UPDATE Voting SET Status = 0 WHERE ID_Voting = :votingid");
 
