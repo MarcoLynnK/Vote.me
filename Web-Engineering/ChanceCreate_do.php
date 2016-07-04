@@ -1,3 +1,14 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
+<body>
+<?php require_once("include/Navbar.php"); ?>
+
 <?php
 include ("Main/Session_Check.php");
 require_once("Main/ChanceManager.php");
@@ -31,5 +42,9 @@ if (!empty($description_Chance) && !empty($ID_Voting))
 }   
 else
 {
-    echo "Error: Bitte füllen sie alle Felder aus!<br/>";
-}
+    echo "Error: Please fill out all fields!<br/>";
+};?>
+
+<a href="ChanceCreateform.php"> <div class="submit">BACK</div></a>
+</body>
+</html>
