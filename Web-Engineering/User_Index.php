@@ -52,3 +52,6 @@ foreach ($list as $user) {
     echo "</tr>";
 }
 ?>
+        </tbody>
+    </table>
+</div>
