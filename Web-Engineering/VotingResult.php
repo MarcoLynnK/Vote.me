@@ -1,6 +1,6 @@
-<?php include ("Main/Session_Check.php");
-
-include "Main/VotingChanceManager.php";
+<?php 
+include ("Main/Session_Check.php");
+require_once ("Main/VotingChanceManager.php");
 
 // GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
 $ID_Voting = 1;

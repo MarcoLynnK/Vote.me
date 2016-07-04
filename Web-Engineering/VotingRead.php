@@ -1,18 +1,44 @@
 <?php
+/*
+ * Dieses Skript liest dein Voting mit allen dazugehörien Antwortmöglichkeiten und der dazugehörigen Vorlesung aus.
+ * Sicht auf ein einzelnes Voting, ausgewählt aus Voting_index
+ */
 include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/VotingChanceManager.php");
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
 
+//Übergabe der VotingID aus Voting Index
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
+
+/*
+ * Neuer Votingmanager
+ */
 $votingManager= new VotingManager();
+/*
+ * Ausgabe des Votings anhand der übergebenen VotingID durch methode findById
+ */
 $voting= $votingManager->findById($ID_Voting);
 
-$votingchanceManager= new VotingChanceManager();
-$chance= $votingchanceManager->findAllChancesByVotingId($voting);
 
+/*
+ * neuer VotingChanceManager
+ */
+$votingchanceManager= new VotingChanceManager();
+/*
+ * Ausgabe aller Möglichkeiten durch Methode findAllChancesByVotingId
+ */
+$chance= $votingchanceManager->findAllChancesByVotingId($voting->ID_Voting); //vllt. findAllChancesByVotingId ($voting->ID_Voting)??
+
+
+/*
+ * Neuer LectureManager
+ */
 $lectureManager= new LectureManager();
+/*
+ * Ausgabe aller Möglichkeiten durch Methode findAllChancesByVotingId
+ */
 $lecture= $lectureManager->findById($voting->ID_Lecture);
 ?>
 
@@ -30,8 +56,10 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 
 
 <body>
+<!--Navigation-->
 <?php require_once("include/Navbar.php"); ?>
 
+<!--Ausgabe der Datensätze erhalten durch die Manager (Lecture/Voting/VotingChance)-->
 <div class="table-container">
 <table>
 <?php
@@ -40,6 +68,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
     echo "<tr><td>Topic:</td><td> $voting->name_Voting</td></tr>";
     echo "<tr><td>Question:</td><td> $voting->question_Voting</td></tr>";
 
+    //Ausgabe der zugehörigen Möglichkeiten zum Voting mit Nummer, je nach Anzahl.
     if (count($chance)>0)
     {
         $i=1;
@@ -52,7 +81,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 ?>
 </table></br></br>
 </div>
-
+<!--Buttons für weitere Navigation-->
 <div class="container">
 <?php
 echo "<a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'><div class='submit'>SHOW LECTURE</div></a></br></br>";

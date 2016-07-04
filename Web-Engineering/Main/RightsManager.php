@@ -2,26 +2,28 @@
 require_once ("Manager.php");
 require_once ("Classes.php");
 
-// Read-Out von Rechten für den User nach der ID
 
+// Read-Out von Usern durch ID_Rights durch den Rightsmanager. 
 class RightsManager extends Manager
 {
-    protected $pdo;
 
+    //Konstruktor und Destruktor von Mutterklasse Manager einbinden
     public function __construct($con=null)
     {
         parent::__construct($con);
     }
 
-    public function __destruct()//Destruktor der pdo (auflösen/lösen der Connection zwischen der DB)
+    public function __destruct()
     {
         parent::__destruct();
     }
 
+    
     // Rechte ausgeben
     public function findById ($ID_Rights)
     {
-        try {
+        try 
+        {
             $sql= $this->pdo-> prepare ('SELECT * from Rights WHERE ID_Rights = :ID_Rights');
             $sql-> bindParam (':ID_Rights', $ID_Rights);
             $sql-> execute ();
@@ -38,7 +40,7 @@ class RightsManager extends Manager
     }
 
 
-   /* //rechte löschen
+   /* //rechte löschen (nur Admin, deaktiviert, um mögliche schäden zu vermeiden)
     public function delete (Rights $rights)
     {
         try {

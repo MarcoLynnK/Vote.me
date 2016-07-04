@@ -34,17 +34,20 @@ require_once("Main/ChanceManager.php");
 
                 // User aus der Session holen
                 $user = $_SESSION["user"];
-
-                if ($rights == 1) {
-
+            
+                // If-Statement prüft, ob der User Admin (1) ist.
+                if ($rights == 1) 
+                {
                     $list = $chanceManager->findAll();
-
-                } else {
-
+                } 
+                
+                //andernfalls ist der User Dozent und sieht nur seine Eigenen erstellten Möglichkeiten
+                else 
+                {
                     $list = $chanceManager->findAllbyIDUser($user->ID_User);
-
                 }
 
+                //Auslesen aller Chances je nach Recht (Admin oder User)
                 if (is_array($list)) {
 
                     foreach ($list as $chance) {
