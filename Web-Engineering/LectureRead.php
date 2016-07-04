@@ -51,7 +51,7 @@ if (count($voting)>0)
 }
 
 echo "</br></br><a href='VotingCreate_form.php?ID_Lecture=$lecture->ID_Lecture'</a><div class='submit'>CREATE VOTING</div></a></br></br>";
-echo "<h3 class='text2'><a href='Lecture_index.php'</a>BACK</h3>";
+echo "<a href='Lecture_index.php'</a><div class='submit'>BACK</div></a>";
 ?>
 </body>
 </html>
