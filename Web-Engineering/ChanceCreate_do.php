@@ -42,7 +42,7 @@ if (!empty($description_Chance) && !empty($ID_Voting))
 }   
 else
 {
-    echo "Error: Please fill out all fields!<br/>";
+    echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 };?>
 
 <a href="ChanceCreateform.php"> <div class="submit">BACK</div></a>
