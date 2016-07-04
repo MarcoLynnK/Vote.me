@@ -71,6 +71,6 @@ if (is_array($list)) {
             </table>
         </br></br>
         </div>
-<a href='LectureCreate_form.php'><div class='submit'>CREATE LECTURE</div></a></br></br>
+<a href='LectureCreate_form.php'><div class='submit'>CREATE LECTURE</div></a>
 </body>
 </html>
