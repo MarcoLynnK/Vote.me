@@ -27,9 +27,21 @@ $user= $userManager->findById($lecture->ID_User);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-<?php require_once("include/Navbar.php"); ?>
+
 
 <body>
+<?php require_once("include/Navbar.php"); ?>
+
+<div class="container">
+
+    <table>
+        <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Studiengang</th>
+        <th></th>
+        </thead>
+        <tbody>
 
 <?php
 
@@ -43,6 +55,17 @@ if (count($voting)>0)
     $i=1;
     foreach ($voting as $vorlesungen)
     {
+        "<div class='container'>
+
+        <h1 class='tableText'>Lecture</h1>
+        <table>
+            <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Studiengang</th>
+            <th></th>
+            </thead>
+            <tbody>";
         echo "<h3 class='text2'>Voting $i: $vorlesungen->name_Voting</h3>";
         echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
         echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
