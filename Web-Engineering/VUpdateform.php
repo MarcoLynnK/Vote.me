@@ -1,14 +1,3 @@
-<?php
-include ("Main/Session_Check.php");
-require_once ("Main/VotingManager.php");
-require_once ("Main/Classes.php");
-
-$ID_Voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
-$VotingManager = new VotingManager();
-$voting = $VotingManager->findById($ID_Voting);
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
