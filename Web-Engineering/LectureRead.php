@@ -32,16 +32,6 @@ $user= $userManager->findById($lecture->ID_User);
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<div class="container">
-
-    <table>
-        <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Studiengang</th>
-        <th></th>
-        </thead>
-        <tbody>
 
 <?php
 
@@ -55,7 +45,7 @@ if (count($voting)>0)
     $i=1;
     foreach ($voting as $vorlesungen)
     {
-        echo "<tr class='text2'>Voting $i: $vorlesungen->name_Voting</tr>";
+        echo "<a class='text2'>Voting $i: $vorlesungen->name_Voting</a>";
         echo "<a href='VotingRead.php?ID_Voting=$voting->ID_Voting'>zeige</a>";
         echo "<a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'>l&ouml;sche</a>";
         $i++;
