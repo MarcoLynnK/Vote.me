@@ -31,7 +31,7 @@ echo "<h1 class='topic'><a class='bold'>Username:</a> $user->login</h1>";
 echo "<h3 class='text2'><a class='bold'>Firstname:</a> $user->firstname</h3>";
 echo "<h3 class='text2'><a class='bold'>Lastname:</a> $user->lastname</h3>";
 echo "<h3 class='text2'><a class='bold'>E-mail:</a> $user->email</h3>";
-echo "<h3 class='text2'><a class='bold'>Password:</a> $user->password</h3>";
+echo "<h3 class='text2'><a class='bold'>Password:</a> $user->hash</h3>";
 echo "<h3 class='text2'><a class='bold'>Rights:</a> $user->ID_Rights</h3>";
 ?>
 </body>

@@ -17,11 +17,10 @@ require_once("Main/UserManager.php");
 </head>
 
 <body>
-<!
+<!--Navigation einbinden-->
 <?php require_once("include/Navbar.php"); ?>
 
 <div class="container">
-
     <h1 class="tableText">User</h1>
     <table  class="table table-hover">
         <thead>
@@ -36,27 +35,35 @@ require_once("Main/UserManager.php");
         </thead>
         <tbody>
 
-<?php
-
-$userManager = new UserManager();
-$list = $userManager->findAll();
-foreach ($list as $user) {
-    echo "<tr>";
-    echo "<td>$user->ID_User</td>";
-    echo "<td>$user->login</td>";
-    echo "<td>$user->firstname</td>";
-    echo "<td>$user->lastname</td>";
-    echo "<td>$user->email</td>";
-    echo "<td>$user->ID_Rights</td>";
-    echo "<td>$user->hash</td>";
-    echo "<td>
-              <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'><input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
-              <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
-              <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'><input type='image' class='editicons' src='img/trash.svg'></a><!--hier noch UserDelete_form einbinden-->
-          </td>";
-    echo "</tr>";
-}
-?>
+        <?php
+        /*
+         * Neuer Usermanager
+         */
+        $userManager = new UserManager();
+        
+        /*
+         * Auslesen aller User in der DB
+         */
+        $list = $userManager->findAll();
+        foreach ($list as $user) 
+        {
+            echo "<tr>";
+            echo "<td>$user->ID_User</td>";
+            echo "<td>$user->login</td>";
+            echo "<td>$user->firstname</td>";
+            echo "<td>$user->lastname</td>";
+            echo "<td>$user->email</td>";
+            echo "<td>$user->ID_Rights</td>";
+            echo "<td>$user->hash</td>";
+            echo "<td>
+                    <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'><input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
+                    <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
+                    <a href='UserDelete_do.php?ID_User=$user->ID_User' class='btn btn-info btn-danger btn-xs'><input type='image' class='editicons' src='img/trash.svg'></a><!--hier noch UserDelete_form einbinden-->
+                 </td>";
+            echo "</tr>";
+        }
+        ?>
+        
         </tbody>
     </table>
 </div>
