@@ -63,7 +63,7 @@ class ResultManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare ('SELECT COUNT (*) as Participants FROM Result WHERE ID_Votig= :ID_Voting');
+            $sql = $this->pdo->prepare ('SELECT COUNT (*) as Participants FROM Result WHERE ID_Voting = :ID_Voting');
             $sql->bindParam(':ID_Voting', $ID_Voting);
             $sql->execute();
             $participants= $sql->fetchAll();
@@ -109,7 +109,7 @@ class ResultManager extends Manager
     {
         try
         {
-            $sql = $this->pdo->prepare('SELECT COUNT (*) FROM Result WHERE ID_Voting= :ID_Voting AND ID_Chance= :ID_Chance');
+            $sql = $this->pdo->prepare('SELECT COUNT (*) FROM Result WHERE ID_Voting = :ID_Voting AND ID_Chance = :ID_Chance');
             $sql->bindParam(':ID_Voting', $result->ID_Voting);
             $sql->bindParam(':ID_Chance', $result->ID_Chance);
             $sql->execute();
@@ -123,11 +123,11 @@ class ResultManager extends Manager
 
     //Ergebnis aus DB löschen
 
-    public function delete(Result $result)
+    public function delete (Result $result)
     {
         try
         {
-            $sql = $this->pdo->prepare('DELETE FROM User WHERE ID_Result= :ID_Result');
+            $sql = $this->pdo->prepare('DELETE FROM User WHERE ID_Result = :ID_Result');
             $sql->bindParam(':ID_Result', $result->ID_Result);
             $sql->execute();
         }

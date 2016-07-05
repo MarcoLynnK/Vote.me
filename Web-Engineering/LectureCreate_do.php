@@ -32,10 +32,6 @@ if (!empty($name_Lecture) && !empty($degreecourse))
     $lectureManager = new LectureManager();
     $lecture = $lectureManager->create($lecture);
     
-    print_r($user);
-    print_r($lecture);
-    
-    
     header('Location: Lecture_index.php');
 }
 else 

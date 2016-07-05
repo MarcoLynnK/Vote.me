@@ -7,6 +7,7 @@ include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/VotingChanceManager.php");
 require_once("Main/LectureManager.php");
+require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
 
 //Übergabe der VotingID aus Voting Index
@@ -40,6 +41,15 @@ $lectureManager= new LectureManager();
  * Ausgabe aller Möglichkeiten durch Methode findAllChancesByVotingId
  */
 $lecture= $lectureManager->findById($voting->ID_Lecture);
+
+/*
+ * neuer Usermanager
+ */
+$userManager= new UserManager();
+/*
+ * Ausgabe des Users durch UserID im Objekt Voting
+ */
+$user= $userManager->findById($voting->ID_User);
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +75,7 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
     echo "<a class='topic'>Lecture $lecture->name_Lecture</a></br>";
     echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br>";
     echo "<a class='text2'>Topic: $voting->name_Voting</a></br>";
-    echo "<a class='text2'>Question: $voting->question_Voting</a>";
+    echo "<a class='text2'>Question: $voting->question_Voting</a><br>";
 ?>
 
 <div class="container">
@@ -75,21 +85,26 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
         <th>Answer</th>
         </thead>
         <tbody>
-<?php
-    //Ausgabe der zugehörigen Möglichkeiten zum Voting mit Nummer, je nach Anzahl.
-    if (count($chance)>0)
-    {
-        $i=1;
-        foreach ($chance as $möglichkeiten)
+    <?php
+        //Ausgabe der zugehörigen Möglichkeiten zum Voting mit Nummer, je nach Anzahl.
+        if (count($chance)>0)
         {
-            echo "<tr><td>Antwort $i:</td><td><a> $möglichkeiten->description_Chance</a></td></tr></br>";
-            $i=$i+1;
+            $i=1;
+            foreach ($chance as $möglichkeiten)
+            {
+                echo "<tr><td>Antwort $i:</td><td><a> $möglichkeiten->description_Chance</a></td></tr></br>";
+                $i=$i+1;
+            }
         }
-    }
-?>
+    ?>
         </tbody>
-</table></br></br>
+    </table></br></br>
 </div>
+<?php
+    //Ausgabe User mit vor und Nachnahme
+    echo "<a class='text2'>Created by: $user->firstname $user->lastname</a>";
+
+?>
 <!--Buttons für weitere Navigation-->
 <div class="container">
 <?php

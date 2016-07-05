@@ -26,7 +26,7 @@ if (!empty ($ID_Voting) && !empty($name_Voting) && !empty($question_Voting))
     $voting->name_Voting= $name_Voting;
     $voting->question_Voting= $question_Voting;
     $votingManager-> update ($voting);//Update der Datensätze in der DB anhand der Voting ID
-    header ('Location: Voting_Index.php');
+    //header ('Location: Voting_Index.php');
 
     if ($voting==null)
     {

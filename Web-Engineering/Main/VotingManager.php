@@ -117,12 +117,12 @@ class VotingManager extends Manager
     }
 
     //Löschen des Votings mit der übergebenen ID aus der DB
-    public function delete (Voting $voting)
+    public function delete ($voting)
     {
         try 
         {
-            $sql = $this->pdo->prepare('DELETE * FROM Voting WHERE ID_Voting= :ID_Voting');
-            $sql->bindParam(':ID_Voting', $voting->ID_Voting);
+            $sql = $this->pdo->prepare('DELETE FROM Voting WHERE ID_Voting = :ID_Voting');
+            $sql->bindParam(':ID_Voting', $voting);
             $sql->execute();
         } 
         catch (PDOException $e) 

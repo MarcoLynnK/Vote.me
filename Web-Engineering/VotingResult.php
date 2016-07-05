@@ -3,7 +3,7 @@ include ("Main/Session_Check.php");
 require_once ("Main/VotingChanceManager.php");
 
 // GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
-$ID_Voting = 1;
+$ID_Voting = htmlspecialchars($_GET["ID_Voting"],ENT_QUOTES,"UTF-8");
 
 
 $votingChanceManager = new VotingChanceManager();
