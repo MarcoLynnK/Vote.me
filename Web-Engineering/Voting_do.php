@@ -8,6 +8,9 @@
 </head>
 <title>User Create</title>
 <body>
+<div id="navbar">
+    <img src="img/logo2.svg" id="logo">
+</div>
 <?php
 
 //Dieses Skript erzeugt das Auswahl-Ergebnis jedes einzelnen Studenten und Speichert dieses in der DB Result ab.
