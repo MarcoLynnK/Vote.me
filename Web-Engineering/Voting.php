@@ -55,7 +55,7 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 
 <!--<a class="topic"><?php /* echo ($voting->name_Voting) */?> </a>-->
 
-<a class="topic"><?php echo ($voting->question_Voting)?></a><br><br>
+<a class="topic"><?php echo ($voting->question_Voting)?></a><br><br><br>
 
 <?php
 /*
@@ -72,7 +72,7 @@ echo '<form class="container" action="Voting_do.php" method="post">';
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
         echo '<input type="hidden" value="' . $voting->ID_Chance . '" name="ID_Chance">';
-echo '<input type="submit" class="submit" value="VOTE">';
+echo '<br><input type="submit" class="submit" value="VOTE">';
 echo "</form>"
 
 ?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
