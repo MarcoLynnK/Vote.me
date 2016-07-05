@@ -17,7 +17,7 @@ require_once("Main/ChanceManager.php");
 <body>
 
 <?php require_once("include/Navbar.php");?>
-
+<div class="Content">
 <div class="container">
     <center><div class="tableText">Chances</div></br></center>
     <table  class="table table-hover">
@@ -70,5 +70,5 @@ require_once("Main/ChanceManager.php");
         </tbody>
     </table>
 </div>
-
+</div>
 </body>
