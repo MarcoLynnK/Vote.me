@@ -22,4 +22,4 @@ $votingManager->delete ($voting);
 /*
  * Direkte Weiterleitung auf Voting_Index
  */
-header('Location: Lecture_Read.php');
+header('Location: LectureRead.php');
