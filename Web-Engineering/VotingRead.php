@@ -129,9 +129,9 @@ echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
 </div>
 </div>
 <a class="Platzhalter"> </a>
-
+<div class="footer">© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>
 </body>
 <footer>
-    <div class="footer">© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>
+    <div>© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>
 </footer>
 </html>
