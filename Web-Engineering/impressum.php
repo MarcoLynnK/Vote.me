@@ -9,7 +9,7 @@
 <title>Impressum</title>
 <body>
 
-<h1 class="topic">Impressum</h1>
+<h1 class="topic">Impressum</h1><br><br>
 
 <a class="text2">
     Marco Kagel<br>
