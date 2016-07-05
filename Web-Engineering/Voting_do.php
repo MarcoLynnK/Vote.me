@@ -67,9 +67,14 @@ $daten =
     $resultManager->create($result);
 
 
-    echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>Vote successfull.</a><br>";
+    echo "<a class='topic'>Thank you for voting.</a><br>";
 
 ?>
 
 </body>
+
+<footer>
+    <p>Copyright by Vote.me GmbH - Contact information: <a href="mailto:someone@vote.me"> someone@vote.me</a>.</p>
+</footer>
+
 </html>
