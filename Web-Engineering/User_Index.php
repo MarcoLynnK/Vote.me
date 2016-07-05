@@ -19,7 +19,7 @@ require_once("Main/UserManager.php");
 <body>
 <!--Navigation einbinden-->
 <?php require_once("include/Navbar.php"); ?>
-<div class="Content">
+
 <div class="container">
     <h1 class="tableText">User</h1>
     <table  class="table table-hover">
@@ -67,7 +67,7 @@ require_once("Main/UserManager.php");
         </tbody>
     </table><br><br>
 </div>
-    </div>
+    
 <a href='UserCreate_form.php'><div class='submit'>CREATE USER</div></a>
 </body>
 </html>
