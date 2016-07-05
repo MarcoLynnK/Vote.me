@@ -25,7 +25,7 @@ $chance = $ChanceManager->findById($ID_Chance);
 
 <form action='ChanceUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />
-    Beschreibung der Auswahlmöglichkeit:<br>
+    <a class="text2"> <Beschreibung der Auswahlmöglichkeit:</a><br>
     <input class="inputForm" type='text' name='description_Chance' value='<?php echo ($chance->description_Chance) ?>' /> <br>
     <input class="submit" type='submit' value='aktualisieren' />
 </form>
