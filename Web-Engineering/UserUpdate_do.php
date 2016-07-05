@@ -30,6 +30,6 @@ if (!empty ($ID_User) && !empty($login) && !empty($firstname) && !empty($lastnam
 
 else 
 {
-    
+    print_r($user);
     echo "Error: Bitte füllen sie alle Felder aus!<br/>";
 }
