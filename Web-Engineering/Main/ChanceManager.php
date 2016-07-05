@@ -118,7 +118,7 @@ class ChanceManager extends Manager
     {
         try 
         {
-            $sql = $this->pdo->prepare('DELETE * FROM Chance WHERE ID_Chance= :ID_Chance');
+            $sql = $this->pdo->prepare('DELETE FROM Chance WHERE ID_Chance= :ID_Chance');
             $sql->bindParam(':ID_Chance', $chance->ID_Chance);
             $sql->execute();
         }
