@@ -41,16 +41,16 @@ $ip = $_SERVER['REMOTE_ADDR'];
 /*
  * ID von Voting und Chance sowie das Datum und die Ip-Adersse in $daten ablegen
  */
-if (!is_null($ID_Voting) && !is_null($ID_Chance) && !is_null($datum) && !is_null($ip))
-{
-    $daten = [
+
+$daten = 
+        [
 
         "ID_Voting" => $ID_Voting,
         "ID_Chance" => $ID_Chance,
         "date_Result" => $datum,
         "StudentIP" => $ip
 
-    ];
+        ];
 
 //print_r($daten);
 
@@ -65,18 +65,11 @@ if (!is_null($ID_Voting) && !is_null($ID_Chance) && !is_null($datum) && !is_null
      * Erstellen des Results durch die Methode create aus dem Resultmanager
      */
     $resultManager->create($result);
-    echo "<a class='topic'>Thank you for Voting.</a><br>";
-}
-else
-{
-    echo "<a class='text2'>Error: You have to choose a Chance!</a><br/>";
-}
+
+
+    echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>Vote successfull.</a><br>";
+
 ?>
 
 </body>
-<footer>
-    <p>Copyright by Vote.me GmbH</p>
-    <p>Contact information: <a href="mailto:someone@example.com">
-            someone@example.com</a>.</p>
-</footer>
 </html>
