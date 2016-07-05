@@ -1,3 +1,13 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
+<title>Close Voting</title>
+<body>
 <?php
 /**
  * Created by PhpStorm.
@@ -34,4 +44,7 @@ if ($voting->Status == 0) {
 // Link abrufen
 echo "Sie haben das Voting geschlossen";
 
-echo "<a href='VotingResult.php?ID_Voting=$voting->ID_Voting'><div class='submit'>SHOW RESULT</div></a><br><br>";
+echo "<a href='VotingResult.php?ID_Voting=$voting->ID_Voting'><div class='submit'>SHOW RESULT</div></a><br><br>";?>
+
+</body>
+</html>

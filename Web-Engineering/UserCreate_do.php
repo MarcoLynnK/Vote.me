@@ -1,3 +1,13 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+</head>
+<title>User Create</title>
+<body>
 <?php
 include ("Main/Session_Check.php");
 require_once("./Main/UserManager.php");
@@ -29,5 +39,8 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) 
 }
 else 
 {
-    echo "Bitte alle Felder ausfüllen!<br/>";
-}
+    echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
+}?>
+<a href="UserCreate_form.php"> <div class="submit">BACK</div></a>
+</body>
+</html>
