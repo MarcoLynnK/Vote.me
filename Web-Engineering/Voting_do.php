@@ -63,7 +63,5 @@ $resultManager->create($result);
 
 echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>You have voted successfully.</a><br>";
 ?>
-
-<a href="Voting.php"> <div class="submit">BACK</div></a>
 </body>
 </html>
