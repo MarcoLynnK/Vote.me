@@ -16,6 +16,7 @@
 
 <?php require_once("include/Navbar.php"); ?>
 
+<div class="Content">
     <div class="container">
 
         <h1 class="tableText">Lecture</h1>
@@ -77,6 +78,7 @@ else
             </table>
         </br></br>
         </div>
+    </div>
 <a href='LectureCreate_form.php'><div class='submit'>CREATE LECTURE</div></a>
 </body>
 </html>

@@ -15,6 +15,7 @@ require_once("Main/VotingManager.php");
 <title>Voting Index</title>
 <body>
 <?php require_once("include/Navbar.php"); ?>
+<div class="Content">
 <div class="table-container">
 
     <h1 class="tableText">Voting</h1>
@@ -76,6 +77,8 @@ require_once("Main/VotingManager.php");
        </tbody>
     </table>
 </div>
+    </div>
+
 </body>
 </html>
         
