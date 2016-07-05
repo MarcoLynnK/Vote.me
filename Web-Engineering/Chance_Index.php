@@ -70,5 +70,5 @@ require_once("Main/ChanceManager.php");
         </tbody>
     </table>
 </div>
-</div><br><br>
+</div>
 </body>
