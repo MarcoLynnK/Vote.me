@@ -40,18 +40,18 @@ $user = $UserManager->findById($ID_User);
 <h1 class="topic">User No. <?php echo ($user->ID_User)?></h1>
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
-        <a class="text2">User ID:</a></br>
+        <a class="text2">User ID:</a><br>
         <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
-        <a class="text2">Username:</a></br>
+        <a class="text2">Username:</a><br>
         <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
-        <a class="text2">First Name & Last Name:</a>
+        <a class="text2">First Name & Last Name:</a><br>
         <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'>
         <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
-        <a class="text2">Email:</a></br>
+        <a class="text2">Email:</a><br>
         <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
-        <a class="text2">Right:</a></br>
+        <a class="text2">Right:</a><br>
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
-        <a class="text2">Password:</a></br>
+        <a class="text2">Password:</a><br>
         <input class="inputForm" type='text' name='password' value='<?php echo ($user->hash) ?>'><br><br>
         <input class="submit" type='submit' value='UPDATE'>
 </form>
