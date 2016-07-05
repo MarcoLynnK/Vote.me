@@ -73,7 +73,7 @@ $user= $userManager->findById($voting->ID_User);
 <div class="Content">
 <?php
     echo "<a class='topic'>Lecture $lecture->name_Lecture</a></br>";
-    echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br>";
+    echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br></br>";
     echo "<a class='text2'>Topic: $voting->name_Voting</a></br>";
     echo "<a class='text2'>Question: $voting->question_Voting</a><br>";
     //Ausgabe User mit vor und Nachnahme
