@@ -57,10 +57,16 @@ if (!$chanceManager->doesUserOwnThis($user, $chance))
 <?php require_once("include/Navbar.php"); ?>
 
 <?php
+/*
+ * Darstellung der Chance mit dazugehörigem Voting
+ */
 echo "<h1 class='topic'><a class='bold'>Chance Nr.</a>$chance->ID_Chance</h1>";
 echo "<h3 class='text2'><a class='bold'>Votingthema:</a> $voting->name_Voting</h3>";
 echo "<h3 class='text2'><a class='bold'>Antwort:</a> $chance->description_Chance</h3>";
 
+/*
+ * Verlinkung zum zugehörigen Voting
+ */
 echo"<a href='VotingRead.php?ID_Voting=$chance->ID_Voting'><div class='submit'>SHOW VOTING</div></a>";
 ?>
 </body>
