@@ -63,7 +63,6 @@ require_once("Main/UserManager.php");
             echo "</tr>";
         }
         ?>
-        
         </tbody>
     </table><br><br>
 </div>

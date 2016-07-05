@@ -22,6 +22,7 @@ body{
     padding-top: 20px;
 }
 
+/*bottom footer*/
 footer {
     display: block;
     font-family: Helvetica, sans-serif;
@@ -39,6 +40,7 @@ footer {
 
 }
 
+/*extra footer*/
 
 .footer{
     display: block;
