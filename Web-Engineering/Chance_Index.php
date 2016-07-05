@@ -63,7 +63,7 @@ require_once("Main/ChanceManager.php");
                     }
 
                 } else {
-                    echo "Sie haben keinen Content. Bitte legen Sie welche an.";
+                    echo "You have no content. Please create new content.";
                 }
             ?>
         </tbody>

@@ -42,7 +42,7 @@ if (!empty($description_Chance) && !empty($ID_Voting))
 }
 else
 {
-    echo "Error: Bitte füllen sie alle Felder aus!<br/>";
+    echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 }
 ?>
 
