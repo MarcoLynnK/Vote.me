@@ -76,12 +76,10 @@ $user= $userManager->findById($voting->ID_User);
     echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br>";
     echo "<a class='text2'>Topic: $voting->name_Voting</a></br>";
     echo "<a class='text2'>Question: $voting->question_Voting</a><br>";
+    //Ausgabe User mit vor und Nachnahme
+    echo "<a class='text2'>Created by: $user->firstname $user->lastname</a>";
 ?>
-<?php
-//Ausgabe User mit vor und Nachnahme
-echo "<a class='text2'>Created by: $user->firstname $user->lastname</a>";
 
-?>
 <div class="container">
     <table>
         <thead>
