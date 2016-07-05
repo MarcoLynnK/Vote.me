@@ -167,7 +167,9 @@ footer {
     transform: translate(-7%, 10%);
 }
 
-
+.Content{
+    top: 50px;
+}
 
 /*Standard Inputform*/
 .inputForm{

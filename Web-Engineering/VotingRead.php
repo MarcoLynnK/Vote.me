@@ -70,7 +70,7 @@ $user= $userManager->findById($voting->ID_User);
 <?php require_once("include/Navbar.php"); ?>
 
 <!--Ausgabe der Datensätze erhalten durch die Manager (Lecture/Voting/VotingChance)-->
-
+<div class="Content">
 <?php
     echo "<a class='topic'>Lecture $lecture->name_Lecture</a></br>";
     echo "<a class='topic'>Voting No. $voting->ID_Voting</a></br>";
@@ -113,6 +113,7 @@ echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OP
 echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";
 echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
 ?>
+</div>
 </div>
 </body>
 </html>
