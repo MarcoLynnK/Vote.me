@@ -175,6 +175,7 @@ footer {
     margin-top: 50px;
     text-align: center;
     align-items: center;
+    width: 100%;
 }
 
 /*Standard Inputform*/
@@ -388,6 +389,7 @@ th, td {
 .container{
     font-family: Helvetica, sans-serif;
     font-size: 12px;
+    margin: 0px;
 }
 
 
