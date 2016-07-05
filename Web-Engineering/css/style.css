@@ -399,8 +399,7 @@ th, td {
 .tableText{
     font-family: Helvetica, sans-serif;
     font-size: 28px;
-    margin-left: 40%;
-    margin-right: 60%;
+    magic: margin 0 auto;
 
 }
 
