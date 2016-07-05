@@ -13,11 +13,16 @@
 require_once("include/Navbar.php");
 require_once("Main/LectureManager.php");
 require_once("Main/Classes.php");
-
+/*
+ * wert aus Post holen
+ */
 $ID_Lecture= htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
 
 if (!empty($ID_Lecture) && !empty($name_Lecture) && !empty($degreecourse))
 {
+    /*
+     * Lecture finden die zu Voting gehört
+     */
     $lectureManager = new LectureManager();
     $lecture = $LectureManager->findById($ID_Lecture);//holt sich das Voting aus der Datenbank durch Suche nach der ID
     if ($lecture==null)

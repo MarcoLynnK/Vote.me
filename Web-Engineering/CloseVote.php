@@ -9,12 +9,7 @@
 <title>Close Voting</title>
 <body>
 <?php
-/**
- * Created by PhpStorm.
- * User: Marco
- * Date: 03.07.16
- * Time: 20:22
- */
+
 
 // Dieses Skript öffnet das Voting und erzeugt den Teilnahmelink für Studenten.
 require "Main/Manager.php";

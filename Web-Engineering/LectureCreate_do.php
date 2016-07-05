@@ -1,3 +1,9 @@
+<?php
+include ("Main/Session_Check.php");
+require_once("Main/LectureManager.php");
+require_once("Main/Classes.php");
+?>
+
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
@@ -10,11 +16,8 @@
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<?php
-include ("Main/Session_Check.php");
-require_once("Main/LectureManager.php");
-require_once("Main/Classes.php");
 
+<?php
 $name_Lecture= htmlspecialchars($_POST["name_Lecture"], ENT_QUOTES, "UTF-8");
 $degreecourse = htmlspecialchars($_POST["degreecourse"], ENT_QUOTES, "UTF-8");
 
@@ -37,12 +40,6 @@ if (!empty($name_Lecture) && !empty($degreecourse))
 }
 else 
 {
-    /*echo "Lecture Name:";
-    print ($name_Lecture);
-    echo "Studiengang:";
-    print ($degreecourse);
-    print_r ($user);*/
-    
     echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 }; ?>
 <a href="LectureCreate_form.php"> <div class="submit">BACK</div></a>

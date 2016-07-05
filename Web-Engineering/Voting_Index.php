@@ -34,7 +34,7 @@ require_once("Main/VotingManager.php");
          * User aus der Session holen
          */ 
         $user = $_SESSION["user"];
-//bla
+
         /*
          * Manager für Votings erstellen
          */

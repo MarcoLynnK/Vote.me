@@ -2,7 +2,9 @@
 include ("Main/Session_Check.php");
 require_once ("Main/LectureManager.php");
 require_once ("Main/Classes.php");
-
+/*
+ * Holen der Werte aus Post
+ */
 $ID_Lecture = (int)htmlspecialchars($_GET["ID_Lecture"], ENT_QUOTES, "UTF-8");
 $LectureManager = new LectureManager();
 $lecture = $LectureManager->findById($ID_Lecture);
@@ -24,6 +26,8 @@ $lecture = $LectureManager->findById($ID_Lecture);
 <?php require_once("include/Navbar.php"); ?>
 
 <a class="topic">Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
+
+<!--Updateformular für Lecture-->
 
 <form action='LectureUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Lecture' value='<?php echo ($lecture->ID_Lecture) ?>' />

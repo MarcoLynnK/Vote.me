@@ -15,7 +15,9 @@
 
 <?php
 
-
+/*
+ * einbinden des generierten QR-Codes
+ */
 echo '<img src="qrCode.php?Voting_ID=' . $ID_Voting . '">';?>
 
 

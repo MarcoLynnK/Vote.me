@@ -15,6 +15,7 @@ include ("Main/Session_Check.php");
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
+<!--Buttons auf der Userseite-->
 <div class="container">
     <center><a class="topic">You are Lecturer</a></center><br><br>
     <a href="Lecture_index.php"><div class='submit'>Lecture</div></a><br><br>

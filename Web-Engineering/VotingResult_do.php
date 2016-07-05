@@ -13,7 +13,9 @@
 include ("Main/Session_Check.php");
 require_once("Main/VotingManager.php");
 require_once("Main/Classes.php");
-
+/*
+ * übergabe der Werte durch Post (aus Post holen)
+ */
 $Chance1= (int)htmlspecialchars ($_POST ["Chance1"], ENT_QUOTES, "UTF-8");
 $Chance2= (int)htmlspecialchars ($_POST ["Chance2"], ENT_QUOTES, "UTF-8");
 $Chance3= (int)htmlspecialchars ($_POST ["Chance3"], ENT_QUOTES, "UTF-8");

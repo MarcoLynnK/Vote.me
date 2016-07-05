@@ -8,10 +8,10 @@
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <body>
+<!--Navigation-->
+<?php require_once("include/Navbar.php");?>
 
-<?php require_once("include/Navbar.php");
-
- ?>
+<!--Createformular für Vorlesung-->
 <form action="LectureCreate_do.php" method="post">
     <input class="inputForm" type="text" name="name_Lecture" placeholder="Lecture"><br><br>
     <input class="inputForm" type="text" name="degreecourse" placeholder="Degreecourse"><br><br>

@@ -25,6 +25,7 @@ $voting = $VotingManager->findById($ID_Voting);
 
 <center><a class="topic">Voting No. <?php echo ($voting->ID_Voting) ?></a></center>
 
+<!--Updateformular für Voting-->
 <form action='VotingUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' /></br></br>
     <input class="inputForm" type='text' name='name_Voting' value='<?php echo ($voting->name_Voting) ?>' placeholder="Topic" /></br></br>

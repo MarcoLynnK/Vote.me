@@ -13,16 +13,27 @@ include ("Main/Session_Check.php");
 require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
 include_once("Main/UserData.php");
-
+/*
+ * Holen der Werte aus POST
+ */
 $login = htmlspecialchars($_POST["login"], ENT_QUOTES, "UTF-8");
 $password = htmlspecialchars($_POST["password"], ENT_QUOTES, "UTF-8");
 
+/*
+ * überprüfen, ob befüllt
+ */
 if (!empty($login) && !empty($password)) 
 {
 
+    /*
+     * neuer usermanager
+     */
     $userManager = new UserManager();
     $user = $userManager->findByLogin($login, $password);//holt sich den User aus der Datenbank durch Suche nach dem Login und Passwort (verifizierung im Usermanager)
 
+    /*
+     * wenn leer, Login fehlgeschlagen
+     */
     if ($user==null)
     {
 
@@ -31,6 +42,9 @@ if (!empty($login) && !empty($password))
         die();
 
     }
+    /*
+     * Elseblock mit Sessionstart
+     */
     else
     {
 

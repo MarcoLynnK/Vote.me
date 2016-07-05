@@ -17,9 +17,17 @@ if (!empty ($ID_Chance) && !empty($description_Chance))
      * neuer Chancemanager
      */
     $chanceManager = new ChanceManager();
-    $chance = $chanceManager->findById($ID_Chance);//holt sich die Möglichkeit aus der Datenbank durch Suche nach der ID
     
+    
+    /*
+     * holt sich die Möglichkeit aus der Datenbank durch Suche nach der ID
+     */
+    $chance = $chanceManager->findById($ID_Chance);
     $chance->description_Chance = $description_Chance;
+    
+    /*
+     * Update des Objektes Chance mit beinhalteten Werten
+     */
     $chanceManager-> update ($chance);
    
     

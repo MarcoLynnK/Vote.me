@@ -12,7 +12,9 @@
 include ("Main/Session_Check.php");
 require_once("./Main/UserManager.php");
 require_once("./Main/Classes.php");
-
+/*
+ * Werte aus Post holen
+ */
 $login = htmlspecialchars($_POST["login"], ENT_QUOTES, "UTF-8");//htmlspecialchars filtert aus der eingabe die Sonderzeichen bzw. spezielle begriffe raus (Name= DROP ’user’)
 $firstname = htmlspecialchars($_POST["firstname"], ENT_QUOTES, "UTF-8");
 $lastname = htmlspecialchars($_POST["lastname"], ENT_QUOTES, "UTF-8");
@@ -22,6 +24,9 @@ $password = htmlspecialchars($_POST["password"], ENT_QUOTES, "UTF-8");
 
 if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) && !empty($ID_Rights) && !empty($password))
 {
+    /*
+     * befüllen von userdata als assoziatives array
+     */
     $userdata =
         [
             "login" => $login, 
@@ -32,6 +37,9 @@ if (!empty($login) && !empty($firstname) && !empty($lastname) && !empty($email) 
             "hash" => password_hash($password, PASSWORD_DEFAULT)
         ];
 
+    /*
+     * User erstellen
+     */
     $user = new User($userdata);
     $userManager = new UserManager();
     $userManager->create($user);

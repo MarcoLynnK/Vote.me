@@ -50,7 +50,9 @@ else
 {
     $list = $lectureManager->findAllbyIDUser($user->ID_User);
 }
-
+/*
+ * Auslesen aller Vorlesungen in Tabelle
+ */
 if (is_array($list)) 
 {
 
@@ -71,7 +73,7 @@ if (is_array($list))
 }
 else 
 {
-    echo "Für Sie sind leider keine Vorlesungen verfügbar. Check your privileges.";
+    echo "Für Sie sind leider keine Vorlesungen verfügbar.";
 }
 ?>
             </tbody>
