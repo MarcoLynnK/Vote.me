@@ -14,9 +14,7 @@
 
 
 <?php
-require "qrCode.php";
-require "Main/Manager.php";
-require "Main/VotingManager.php";
+
 
 echo '<img src="qrCode.php?Voting_ID=' . $ID_Voting . '">';?>
 
