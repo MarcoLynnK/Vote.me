@@ -54,7 +54,7 @@ $user = $UserManager->findById($ID_User);
         Recht:
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
         Passwort:
-        <input class="inputForm" type='text' name='hash' value='<?php echo ($user->hash) ?>'><br><br>
+        <input class="inputForm" type='text' name='password' value='<?php echo ($user->hash) ?>'><br><br>
         <input class="submit" type='submit' value='aktualisieren'>
 </form>
 
