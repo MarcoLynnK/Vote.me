@@ -7,7 +7,7 @@
     <title>Sign up</title>
 
 </head>
-
+<title>Vote.me</title>
 <body>
 
 

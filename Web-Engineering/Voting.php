@@ -41,7 +41,7 @@ $chance=$votingchanceManager->findAllChancesByVotingId($voting);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
 </head>
-<title>User Update</title>
+<title>Voting</title>
 <body>
 
 <!--Navigation Logged-Out-->

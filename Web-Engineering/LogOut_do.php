@@ -10,7 +10,7 @@ session_destroy();
         <img src="img/logo2.svg" id="logo">
     </div>
 </head>
-
+<title>Log Out</title>
 <body>
 
     <div class="container">

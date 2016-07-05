@@ -15,7 +15,7 @@ require_once("Main/UserManager.php");
     <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
-
+<title>User Index</title>
 <body>
 <!--Navigation einbinden-->
 <?php require_once("include/Navbar.php"); ?>

@@ -21,7 +21,7 @@ $user = $userManager->findById($ID_User);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-
+<title>User Read</title>
 
 <body>
     <?php require_once("include/Navbar.php"); ?>

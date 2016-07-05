@@ -19,6 +19,7 @@ $voting = $VotingManager->findById($ID_Voting);
     <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
+<title>Voting Update</title>
 <body>
 <?php require_once("include/Navbar.php"); ?>
 

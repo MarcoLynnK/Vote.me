@@ -14,7 +14,7 @@
     
 
 </head>
-
+<title>User Create</title>
 <body>
 
 <?php require_once("include/Navbar.php"); ?>
