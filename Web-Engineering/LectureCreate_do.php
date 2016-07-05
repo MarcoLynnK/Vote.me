@@ -32,10 +32,15 @@ if (!empty($name_Lecture) && !empty($degreecourse))
     $lectureManager = new LectureManager();
     $lecture = $lectureManager->create($lecture);
     
-    header('Location: Lecture_index.php');
+    //header('Location: Lecture_index.php');
 }
 else 
 {
+    echo "Lecture Name:";
+    print ($name_Lecture);
+    echo "Studiengang;"
+    print ($degreecourse);
+    print_r ($user);
     echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 }; ?>
 <a href="LectureCreate_form.php"> <div class="submit">BACK</div></a>
