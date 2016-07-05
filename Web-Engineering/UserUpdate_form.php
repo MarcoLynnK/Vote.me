@@ -41,7 +41,7 @@ $user = $UserManager->findById($ID_User);
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
         <a class="text2">User ID:</a><br>
-        <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
+        <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User)?>'><br><br>
         <a class="text2">Username:</a><br>
         <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
         <a class="text2">First Name & Last Name:</a><br>
@@ -52,7 +52,7 @@ $user = $UserManager->findById($ID_User);
         <a class="text2">Right:</a><br>
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
         <input class="submit" type='submit' value='UPDATE'>
-</form>
+    </form>
 
 </body>
 </html>
