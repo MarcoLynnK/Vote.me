@@ -31,24 +31,32 @@ $user = $UserManager->findById($ID_User);
 <title>User Update</title>
 
 <body>
-<?php print_r($user);?>
+
 <!--Navigation einbinden-->
 <?php require_once("include/Navbar.php"); ?>
 
 
 <!--Form Block für Userupdate-->
-<h1 class="topic">User No. <?php echo ($user->ID_User)?></h1>
+<h2>User No.<?php echo ($user->ID_User) ?> </h2>
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
+        Bitte aktualisieren Sie Ihre Angaben!<br>
+        User ID: <br>
         <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
+        Benutzername: <br>
         <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
-        <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'>
+        Vorname: <br>
+        <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'><br><br>
+        Nachname: <br>
         <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
+        Email: <br>
         <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
+        Recht:
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
+        Passwort:
         <input class="inputForm" type='text' name='password' value='<?php echo ($user->hash) ?>'><br><br>
-        <input class="submit" type='submit' value='UPDATE'>
-</form>
+        <input class="submit" type='submit' value='aktualisieren'>
+    </form>
 
 </body>
 </html>

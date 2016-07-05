@@ -1,5 +1,5 @@
 <?php
-require_once("Main/LectureManager.php");
+require_once("Main/UserManager.php");
 require_once("Main/Classes.php");
 
 //Werte aus dem Formular übergeben
