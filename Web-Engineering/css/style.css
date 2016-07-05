@@ -19,7 +19,7 @@ body{
     -o-background-size: cover;
     background-size: cover;
     margin-bottom: 20px;
-    padding-top: 5px
+    padding-top: 20px
 }
 
 footer {
@@ -37,6 +37,10 @@ footer {
     min-width: 100%;
     min-height: 20px;
 
+}
+
+table{
+    margin: 0 auto;
 }
 
 
