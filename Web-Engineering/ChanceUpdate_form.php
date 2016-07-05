@@ -7,14 +7,6 @@ $ID_Chance = (int)htmlspecialchars($_GET["ID_Chance"], ENT_QUOTES, "UTF-8");
 $ChanceManager = new ChanceManager();
 $chance = $ChanceManager->findById($ID_Chance);
 
-$user= $_SESSION["user"];
-
-if (!$chanceManager->doesUserOwnThis($user, $chance))
-{
-    echo "Sie haben keine Befugnis!";
-    die();
-}
-
 ?>
 
 <!DOCTYPE html>

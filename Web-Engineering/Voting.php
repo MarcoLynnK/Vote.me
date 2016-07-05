@@ -18,16 +18,12 @@ if (isset($_COOKIE["voteme"])) {
     if ($val) {
 
         echo "Sie haben leider schon abgestimmt.";
-        echo "<br> oooooohhhhhhh...";
 
         die();
-
 
     }
 
 }
-
-
 
 
 /*

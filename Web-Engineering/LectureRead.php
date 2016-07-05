@@ -24,7 +24,6 @@ if (!$lectureManager->doesUserOwnThis($user, $lecture))
     die();
 }
 
-
 ?>
 
 <!DOCTYPE html>

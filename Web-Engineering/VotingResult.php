@@ -1,30 +1,38 @@
 <?php 
 include ("Main/Session_Check.php");
+include ("Main/VotingManager.php");
 require_once ("Main/VotingChanceManager.php");
 
 // GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
 $ID_Voting = htmlspecialchars($_GET["ID_Voting"],ENT_QUOTES,"UTF-8");
 
+/*
+ * Neuer VotingManager
+ */
 $votingManager= new VotingManager();
 $voting= $votingManager->findById($ID_Voting);
 
+/*
+ * 
+ */
 $votingChanceManager = new VotingChanceManager();
 
 $chances = $votingChanceManager->findAllChancesByVotingId($voting); // im Votingmanager ein objekt $voting, hier ein int...wie umwandeln?
 
 $daten = [0, 0, 0, 0];
+$descriptions= ["","","",""];
 $i = 0;
 
+//einzelne Counts ausgeben, um sie in das chart einzufügen. Zugriff durch Daten auf den index
 foreach ($chances as $oneChance) {
 
 	$chanceid = $oneChance->ID_Chance;
 	$count = $votingChanceManager->countVotingChance($ID_Voting, $chanceid);
 	$daten[$i] = $count;
+	$descriptions[$i]=$oneChance->description_Chance;
 	$i++;
 
 }
-
-print_r($daten);
 
 
 
@@ -91,25 +99,26 @@ print_r($daten);
 
 	<script>
 
-		// Doughnut Chart Daten
+		// Doughnut Chart Daten: Beschreibung der Antwortmöglichkeiten
 		var doughnutData = [
 			{
-				value: <?php print $chances->description_Chance?>,
+				value: <?php print $descriptions[0]?>,
 				color:"#ffaf72"
 			},
 			{
-				value : <?php print $chances->description_Chance?>,
+				value : <?php print $descriptions[1]?>,
 				color : "#91efbb"
 			},
 			{
-				value : <?php print $chances->description_Chances?>,
+				value : <?php print $descriptions[2]?>,
 				color : "#e4a3ff"
 			},
 			{
-				value : <?php print $chances->description_Chances?>,
+				value : <?php print $descriptions[3]?>,
 				color : "#8ea7ff"
 			}
 		];
+		
 		// Doughnut Chart Optionen
 		var doughnutOptions = {
 			segmentShowStroke : false,

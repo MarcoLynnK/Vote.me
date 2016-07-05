@@ -19,12 +19,6 @@ $voting= $votingManager->findById($ID_Voting);
  */
 $user= $_SESSION["user"];
 
-if (!$votingManager->doesUserOwnThis($user, $voting))
-{
-
-    echo "Sie haben keine Befugnis!";
-    die();
-}
 /*
  * Voting anhand des übergebenen Objekts aus Index Löschen
  */

@@ -57,7 +57,7 @@ if (!empty($chances) && !empty($ID_Voting))
 
 
 
-    header('location: LectureRead.php');
+    header('location: Voting_Index.php');
 
     // ehem. Debugging echo "<br> chancedata, chance:"; print_r($chancedata); print ","; print_r($chance);
 

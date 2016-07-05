@@ -145,7 +145,7 @@ class ChanceManager extends Manager
     }
 
     //Absicherung aller Chances gegen Hack
-    public function doesUserOwnThis (User $user, Voting $chance)
+    public function doesUserOwnThis (User $user, Chance $chance)
     {
 
         // Wenn es sein Objekt ist,oder der User admin ist,dann freigeben

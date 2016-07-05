@@ -145,7 +145,7 @@ class LectureManager extends Manager
     }
 
     //Absicherung aller Lectures gegen Hack
-    public function doesUserOwnThis (User $user, Voting $lecture)
+    public function doesUserOwnThis (User $user, Lecture $lecture)
     {
 
         // Wenn es sein Objekt ist,oder der User admin ist,dann freigeben

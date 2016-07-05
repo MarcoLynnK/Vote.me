@@ -7,14 +7,6 @@ $ID_Voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 $VotingManager = new VotingManager();
 $voting = $VotingManager->findById($ID_Voting);
 
-$user= $_SESSION["user"];
-
-if (!$votingManager->doesUserOwnThis($user, $voting)) {
-
-    echo "Sie haben keine Befugnis!";
-    die();
-
-}
 ?>
 
 <!DOCTYPE html>
