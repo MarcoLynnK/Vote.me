@@ -28,7 +28,7 @@ $voting = $VotingManager->findById($ID_Voting);
     <input class="inputForm" type='hidden' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' /></br></br>
     <input class="inputForm" type='text' name='name_Voting' value='<?php echo ($voting->name_Voting) ?>' placeholder="Topic" /></br></br>
     <input class="inputForm" type='text' name='question_Voting' value='<?php echo ($voting->question_Voting) ?>' placeholder="Question" /></br></br>
-    <a href='Voting_Index.php'><div class='submit'>UPDATE</div></a>
+    <input type="submit" class="submit" value="submit">CREATE</div></input>
 </form>
 
 </body>

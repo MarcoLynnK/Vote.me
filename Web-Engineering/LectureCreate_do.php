@@ -38,7 +38,7 @@ else
 {
     echo "Lecture Name:";
     print ($name_Lecture);
-    echo "Studiengang;"
+    echo "Studiengang:";
     print ($degreecourse);
     print_r ($user);
     echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
