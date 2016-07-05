@@ -65,7 +65,7 @@ if (!is_null($ID_Voting) && !is_null($ID_Chance) && !is_null($datum) && !is_null
      * Erstellen des Results durch die Methode create aus dem Resultmanager
      */
     $resultManager->create($result);
-    echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>Vote successfull.</a><br>";
+    echo "<a class='topic'>Thank you for Voting.</a><br>";
 }
 else
 {
