@@ -21,12 +21,11 @@ $chance = $ChanceManager->findById($ID_Chance);
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<a>Chance # <?php echo ($chance->ID_Chance) ?></a>
+<a>Chance No. <?php echo ($chance->ID_Chance) ?></a>
 
 <form action='ChanceUpdate_do.php' method='post'>
-    <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' />
-    <a class="text2"> Beschreibung der Auswahlmöglichkeit:</a><br>
-    <input class="inputForm" type='text' name='description_Chance' value='<?php echo ($chance->description_Chance) ?>' /> <br>
+    <input class="inputForm" type='hidden' name='ID_Chance' value='<?php echo ($chance->ID_Chance) ?>' /></br>
+    <input class="inputForm" type='text' name='description_Chance' value='<?php echo ($chance->description_Chance) ?>' /> </br></br>
     <input class="submit" type='submit' value='aktualisieren' />
 </form>
 
