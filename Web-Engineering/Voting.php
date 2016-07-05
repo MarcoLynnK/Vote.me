@@ -50,26 +50,24 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 </div>
 
 <!--Beginn Voting-Bereich-->
-<h2>Sie sind Votingteilnehmer: 7 Platzhalter</h2>
 
 <!--Thematik und Frage aus dem Objekt Voting auslesen-->
-<h2>Topic: <?php echo ($voting->name_Voting) ?> </h2>
-<p>Question: <?php echo ($voting->question_Voting)?></p>
+
+<!--<a class="topic"><?php /* echo ($voting->name_Voting) */?> </a>-->
+
+<a class="text2"><?php echo ($voting->question_Voting)?></a><br><br>
 
 <?php
 /*
  * Voting Form zur Interaktion für Studenten
  */
 
-echo '<form class="input-container" action="Voting_do.php" method="post">';
+echo '<form class="container" action="Voting_do.php" method="post">';
         foreach ($chances as $möglichkeiten)
         {
-            $i=0;
             if (!empty ($möglichkeiten))
             {
-                $i = $i + 1;
-                echo "<p>Möglichkeit $i:</p>";
-                echo "<input type='checkbox' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance</br>";
+                echo "<input type='radio' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance<br><br><br>";
             }
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
