@@ -69,7 +69,7 @@ echo '<form class="input-container" action="Voting_do.php" method="post">';
             {
                 $i = $i + 1;
                 echo "<p>Möglichkeit $i:</p>";
-                echo "<input type='checkbox' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance</br>";
+                echo "<input type='radio' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance</br>";
             }
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
