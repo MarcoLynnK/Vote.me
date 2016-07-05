@@ -8,6 +8,9 @@
 </head>
 <title>Impressum</title>
 <body>
+<div id="navbar">
+    <img src="img/logo2.svg" id="logo">
+</div>
 
 <h1 class="topic">Impressum</h1><br><br>
 
