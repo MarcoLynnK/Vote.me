@@ -125,7 +125,7 @@ echo "<a href='Voting.php?ID_Voting=$voting->ID_Voting'><div class='submit'>STAR
 echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OPEN VOTE</div></a><br><br>";
 echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";
 echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>";
-echo "<button class='blatzhalter'></button>";
+echo "<button class='blatzhalter'> </button>";
 ?>
 </div>
 </div>
