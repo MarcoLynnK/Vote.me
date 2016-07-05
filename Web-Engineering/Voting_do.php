@@ -41,7 +41,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 /*
  * ID von Voting und Chance sowie das Datum und die Ip-Adersse in $daten ablegen
  */
-if (!empty($ID_Voting) && !empty($ID_Chance) && !empty($datum) && !empty($ip))
+if (!is_null($ID_Voting) && !is_null($ID_Chance) && !is_null($datum) && !is_null($ip))
 {
     $daten = [
 
