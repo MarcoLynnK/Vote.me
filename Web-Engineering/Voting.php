@@ -62,18 +62,18 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
  * Voting Form zur Interaktion für Studenten
  */
 
-echo '<form class="input-container" action="Voting_do.php" method="post">';
+echo '<form class="container" action="Voting_do.php" method="post">';
         foreach ($chances as $möglichkeiten)
         {
             if (!empty ($möglichkeiten))
             {
-                echo "<input type='radio' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance</br>";
+                echo "<input type='radio' name='ID_Chance' value='$möglichkeiten->ID_Chance'/>$möglichkeiten->description_Chance<br><br><br>";
             }
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
         echo '<input type="hidden" value="' . $voting->ID_Chance . '" name="ID_Chance">';
 echo '<input type="submit" class="submit" value="VOTE">';
-echo "</form><br><br>"
+echo "</form>"
 
 ?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
 
