@@ -60,8 +60,8 @@ echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->
                 echo "<tr>";
                 echo "<td>Voting $i:</td> <td>$vorlesungen->name_Voting</td>";
                 echo "<td>
-              <a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>
-              <a href='VotingDelete_do.php?ID_Voting=$voting->ID_Voting'><input type='image' class='editicons' src='img/edit.svg'></a>
+              <a href='VotingRead.php?ID_Voting=$vorlesungen->ID_Voting'><input type='image' class='editicons' src='img/view.svg'></a>
+              <a href='VotingDelete_do.php?ID_Voting=$vorlesungen->ID_Voting'><input type='image' class='editicons' src='img/trash.svg'></a>
               </td>";
                 echo "<tr>";
                 $i++;
