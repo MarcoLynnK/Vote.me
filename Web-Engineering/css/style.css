@@ -55,14 +55,18 @@ footer {
     max-width: 150px;
 }
 
+/* Hamburgermenü wird im nicht responsive ausgeblendet*/
 .menu{
     display: none;
 }
 
+/* Canvas groß wird im nicht responsive ausgeblendet */
 #canvas2{
     display: none;
 }
 
+
+/*dropdown button*/
 .dropbtn{
     background-color: #2d2d2d;
     border: solid 0px #36a1e8;
@@ -83,17 +87,19 @@ footer {
     transition-duration: 0.3s;
 }
 
+/*farbwechsel beim mit der Maus drauf gehen/klicken */
 .dropdbtn:hover{
     color: #c7c7c7;
     display: block;
 }
 
+/*dropdown sclaing/positionierung*/
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdownmenü */
+/* Dropdownmenü  */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -132,7 +138,7 @@ footer {
 
 
 
-
+/*Logout button*/
 .log-out{
     background-color: #2d2d2d;
     border: solid 0px #36a1e8;
@@ -161,16 +167,19 @@ footer {
     transform: translate(-7%, 10%);
 }
 
+
+
+/*Standard Inputform*/
 .inputForm{
     font-family: Helvetica, sans-serif;
     width: 234px;
     height: 36px;
     vertical-align: middle;
     font-size: 16px;
-
-
 }
 
+
+/*kleinere Input formen für name und nachname*/
 .inputForm2{
     font-family: Helvetica, sans-serif;
     width: 109px;
@@ -190,6 +199,8 @@ footer {
 
 }
 
+
+/* Standart Buttondesign für Vote.me */
 .submit {
     background-color: #2d2d2d;
     border: solid 0px #36a1e8;
@@ -210,28 +221,10 @@ footer {
     transition-duration: 0.3s;
 }
 
+/* farbwechsel bei klick/mauszeiger */
 .submit:hover {
     background-color: #36a1e8;
     color: white;
-}
-
-
-.forgot{
-    position: relative;
-    left: 25%;
-
-    font-family: Arial, sans-serif;
-    color: #7f7f7f;
-    font-size: 13px;
-    text-decoration: none;
-
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-
-.forgot:hover{
-    text-decoration-line: underline;
-    color: #444444;
 }
 
 
@@ -285,13 +278,6 @@ footer {
     margin-bottom: -10px;
     text-decoration: none;
 }
-
-
-.admincheck{
-    margin-left: 55px;
-    margin-bottom: -20px;
-}
-
 
 /* Chart Legende */
 
@@ -351,31 +337,6 @@ footer {
 }
 
 
-/* Voting-Buttons */
-
-.votebtn{
-    background-color: #2d2d2d;
-    border: solid 0px #36a1e8;
-    color: white;
-    width: 240px;
-    height: 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-    border-radius: 0px;
-
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.votebtn:hover {
-    background-color: #36a1e8;
-    color: white;
-}
-
-
 /* Edit Icons */
 
 .editicons{
@@ -428,6 +389,7 @@ th, td {
     padding: 10px;
     color: #2d2d2d;
 }
+
 
 
 .chart-responsive{
@@ -537,7 +499,7 @@ th, td {
         margin-top: 50px;
     }
 
-
+/*input formen responsive*/
     .inputForm{
         font-family: Helvetica, sans-serif;
         width: 234px;

@@ -21,7 +21,6 @@
         <input class="inputForm" name="password" type="password"  placeholder="Password"></br></br>
 
         <button class="submit" name="Submit">LOG-IN</button></br></br>
-        <a class="forgot" href="">Passwort vergessen?</a>
     </form>
 </div>
 
