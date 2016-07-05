@@ -20,7 +20,7 @@ body{
 }
 
 footer {
-
+    display: block;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     color: #2d2d2d;
@@ -29,7 +29,6 @@ footer {
 
     position: absolute;
     bottom: 0;
-    height: 2em;
 }
 
 
