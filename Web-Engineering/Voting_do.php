@@ -74,7 +74,9 @@ $daten =
 </body>
 
 <footer>
-    <p>Copyright by Vote.me GmbH - Contact information: <a href="mailto:someone@vote.me"> someone@vote.me</a>.</p>
+    <div>
+        <p>Copyright by Vote.me GmbH - Contact information: <a href="mailto:someone@vote.me"> someone@vote.me</a>.</p>
+    </div>
 </footer>
 
 </html>
