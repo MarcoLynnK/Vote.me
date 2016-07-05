@@ -75,7 +75,7 @@ $daten =
 
 <footer>
     <div>
-        <p>© 2016 by Vote.me GmbH - Contact: <a href="mailto:support@vote.me"> support@vote.me</a>.</p>
+        <p>© 2016 by Vote.me GmbH - Contact: <a href="mailto:support@vote.me"> support@vote.me</a> <a href="impressum.php">Impressum</a></p>
     </div>
 </footer>
 
