@@ -128,7 +128,7 @@ echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
 ?>
 </div>
 </div>
-<a class="Platzhalter"></a>
+<a class="Platzhalter"> </a>
 
 </body>
 <footer>
