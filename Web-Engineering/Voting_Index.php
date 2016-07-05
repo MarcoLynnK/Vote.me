@@ -77,7 +77,7 @@ require_once("Main/VotingManager.php");
        </tbody>
     </table>
 </div>
-    </div>
+    </div><br><br>
 
 </body>
 </html>
