@@ -44,7 +44,7 @@ $user = $UserManager->findById($ID_User);
         <input class="inputForm" type='text' name='ID_User' value='<?php echo ($user->ID_User) ?>' disabled><br><br>
         <a class="text2">Username:</a></br>
         <input class="inputForm" type='text' name='login' value='<?php echo ($user->login) ?>'><br><br>
-        <a class="text2">First Name:</a></br>
+        <a class="text2">First Name:</a>
         <input class="inputForm2" type='text' name='firstname' value='<?php echo ($user->firstname) ?>'>
         <a class="text2">Last Name:</a></br>
         <input class="inputForm3" type='text' name='lastname' value='<?php echo ($user->lastname) ?>'><br><br>
