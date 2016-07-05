@@ -102,7 +102,7 @@ echo '<form class="container" action="Voting_do.php" method="post">';
 echo '<br><input type="submit" class="submit" value="VOTE">';
 echo "</form>"
 
-?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
+?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is--><!-- Erledigt ;) -->
 
 </body>
 </html>
