@@ -73,7 +73,7 @@ echo '<form class="input-container" action="Voting_do.php" method="post">';
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
         echo '<input type="hidden" value="' . $voting->ID_Chance . '" name="ID_Chance">';
 echo '<input type="submit" class="submit" value="VOTE">';
-echo "</form>"
+echo "</form><br><br>"
 
 ?> <!--Emre, hier die Form für die antworten verändern, damit nur eine Antwortauswahl möglich is-->
 
