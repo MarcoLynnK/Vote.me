@@ -61,7 +61,7 @@ $result = new Result($daten);
  */
 $resultManager->create($result);
 
-echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>You have voted successfully.</a><br>";
+echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>Vote successfull.</a><br>";
 ?>
 </body>
 </html>
