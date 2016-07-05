@@ -119,7 +119,6 @@ class Result
     public $date_Result;
     public $ID_Chance;
     public $ID_Voting;
-    public $StudentIP;
 
     function __construct($daten=null)
     {
@@ -130,7 +129,6 @@ class Result
             $this->date_Result = $daten ['date_Result'];
             $this->ID_Chance = $daten ['ID_Chance'];
             $this->ID_Voting = $daten ['ID_Voting'];
-            $this->StudentIP = $daten ['StudentIP'];
             $this->ID_Result = $daten ['ID_Result'];
             
         }

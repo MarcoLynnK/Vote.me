@@ -6,18 +6,30 @@ include ("Main/Session_Check.php");
 require_once("Main/Classes.php");
 require_once("Main/VotingManager.php");
 
-$voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
+$ID_Voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 
 /*
  * Neuer Votingmanager
  */
 $votingManager = new VotingManager();
+$voting= $votingManager->findById($ID_Voting);
 
+/*
+ * Methode gegen hack schützen
+ */
+$user= $_SESSION["user"];
+
+if (!$votingManager->doesUserOwnThis($user, $voting))
+{
+
+    echo "Sie haben keine Befugnis!";
+    die();
+}
 /*
  * Voting anhand des übergebenen Objekts aus Index Löschen
  */
-$votingManager->delete ($voting);
 
+$votingManager->delete ($ID_Voting);
 
 /*
  * Direkte Weiterleitung auf Voting_Index

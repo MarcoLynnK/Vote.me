@@ -143,5 +143,25 @@ class LectureManager extends Manager
             header('location: login.php');
         }
     }
+
+    //Absicherung aller Lectures gegen Hack
+    public function doesUserOwnThis (User $user, Voting $lecture)
+    {
+
+        // Wenn es sein Objekt ist,oder der User admin ist,dann freigeben
+        if ($user->ID_User == $lecture->ID_User || $user->ID_Rights == 1)
+        {
+
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+
+        }
+
+    }
 }
     

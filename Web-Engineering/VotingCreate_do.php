@@ -40,10 +40,10 @@ if (!empty($name_Voting) && !empty($question_Voting))
     $voting= new Voting($daten);
 
     $votingManager = new VotingManager();
-    $votingManager->create($voting); //holt sich das Voting aus der Datenbank durch Suche nach der ID
+    $voting = $votingManager->create($voting); //holt sich das Voting aus der Datenbank durch Suche nach der ID
 
     // und zurück zur Ursprungsvorlesung
-    header("Location: LectureRead.php?ID_Lecture=".$lectureId);
+    header("Location: ChanceCreateform.php?ID_Voting=".$voting->ID_Voting);
 
 }
 else{

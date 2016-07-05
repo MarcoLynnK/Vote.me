@@ -13,7 +13,18 @@ $lecturevotingManager= new LectureVotingManager();
 $voting = $lecturevotingManager->findAllVotingByLecture($lecture);
 
 $userManager= new UserManager();
-$user= $userManager->findById($lecture->ID_User);
+$author= $userManager->findById($lecture->ID_User);
+
+$user= $_SESSION["user"];
+
+if (!$lectureManager->doesUserOwnThis($user, $lecture))
+{
+
+    echo "Sie haben keine Befugnis!";
+    die();
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +49,7 @@ $user= $userManager->findById($lecture->ID_User);
 echo "<h1 class='topic'><a class='bold'>Vorlesung Nr. $ID_Lecture</h1>";
 echo "<h3 class='text2'><a class='bold'>Lecture:</a> $lecture->name_Lecture</h3>";
 echo "<h3 class='text2'><a class='bold'>Degreecourse:</a> $lecture->degreecourse</h3>";
-echo "<h3 class='text2'><a class='bold'>Created by:</a> $user->firstname $user->lastname</h3>";
+echo "<h3 class='text2'><a class='bold'>Created by:</a> $author->firstname $author->lastname</h3>";
 
 ?>
 

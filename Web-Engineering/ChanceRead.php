@@ -10,6 +10,17 @@ $chance= $chanceManager->findById($ID_Chance);
 
 $votingManager= new VotingManager();
 $voting= $votingManager->findById($chance->ID_Voting);
+
+//Absicherung gegen Hack durch Methode im Chancemanager
+$user= $_SESSION["user"];
+
+if (!$chanceManager->doesUserOwnThis($user, $chance))
+{
+
+    echo "Sie haben keine Befugnis!";
+    die();
+}
+
 ?>
 
 <!DOCTYPE html>

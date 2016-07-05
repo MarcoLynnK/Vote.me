@@ -86,12 +86,11 @@ class ResultManager extends Manager
 
         try
         {
-            $sql = $this->pdo->prepare("INSERT INTO `Result`(`date_Result`, `ID_Chance`, `ID_Voting`, `StudentIP`) VALUES (:date, :chanceid, :votingid, :studentip)");
+            $sql = $this->pdo->prepare("INSERT INTO `Result`(`date_Result`, `ID_Chance`, `ID_Voting`) VALUES (:date, :chanceid, :votingid)");
             
             $sql->bindParam(":date", $result->date_Result);
             $sql->bindParam(":chanceid", $result->ID_Chance);
             $sql->bindParam(":votingid", $result->ID_Voting);
-            $sql->bindParam(":studentip", $result->StudentIP);
             
             $sql->execute();
             

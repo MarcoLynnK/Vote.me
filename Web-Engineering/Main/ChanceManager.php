@@ -143,5 +143,21 @@ class ChanceManager extends Manager
                header('location: login.php'); 
             }
     }
+
+    //Absicherung aller Chances gegen Hack
+    public function doesUserOwnThis (User $user, Voting $chance)
+    {
+
+        // Wenn es sein Objekt ist,oder der User admin ist,dann freigeben
+        if ($user->ID_User == $chance->ID_User || $user->ID_Rights == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
 }
     

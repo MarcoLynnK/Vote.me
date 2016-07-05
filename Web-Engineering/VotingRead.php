@@ -49,7 +49,21 @@ $userManager= new UserManager();
 /*
  * Ausgabe des Users durch UserID im Objekt Voting
  */
-$user= $userManager->findById($voting->ID_User);
+
+// authenizieren block
+$user= $_SESSION["user"];
+
+// User rauswerfen wenn unauthorisiert
+if (!$votingManager->doesUserOwnThis($user, $voting)) {
+
+    echo "Sie haben keine Befugnis!";
+    die();
+
+}
+
+$author = $userManager->findById($voting->ID_User);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +91,7 @@ $user= $userManager->findById($voting->ID_User);
     echo "<a class='text2'>Topic: $voting->name_Voting</a></br>";
     echo "<a class='text2'>Question: $voting->question_Voting</a><br>";
     //Ausgabe User mit vor und Nachnahme
-    echo "<a class='text2'>Created by: $user->firstname $user->lastname</a>";
+    echo "<a class='text2'>Created by: $author->firstname $author->lastname</a>";
 ?>
 
 <div class="container">
@@ -107,7 +121,6 @@ $user= $userManager->findById($voting->ID_User);
 <div class="container">
 <?php
 echo "<a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'><div class='submit'>SHOW LECTURE</div></a></br></br>";
-echo "<a href='ChanceCreateform.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CREATE CHANCE</div></a></br></br>";
 echo "<a href='Voting.php?ID_Voting=$voting->ID_Voting'><div class='submit'>START VOTING</div></a></br></br>";
 echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OPEN VOTE</div></a><br><br>";
 echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";

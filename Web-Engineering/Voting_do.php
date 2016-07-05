@@ -1,3 +1,32 @@
+<?php
+//Dieses Skript erzeugt das Auswahl-Ergebnis jedes einzelnen Studenten und Speichert dieses in der DB Result ab.
+
+include "Main/ResultManager.php";
+/*
+ * Übergabe der Voting ID und der ID der ausgwählten Antwort durch das Form in Voting.php
+ */
+$ID_Voting= htmlspecialchars($_POST ['ID_Voting'], ENT_QUOTES, "UTF-8");
+$ID_Chance= htmlspecialchars($_POST ['ID_Chance'], ENT_QUOTES, "UTF-8");
+
+// Cookie setzen, dass schon abgestimmt wurde.
+// Array initialisieren
+$daten = array();
+
+// Evtl. existiert Cookie schon
+if (isset($_COOKIE["voteme"])) {
+
+    $daten = unserialize($_COOKIE["voteme"]);
+
+}
+
+// Datensatz anhängen
+$daten[$ID_Voting] = true;
+
+// zurück in den Cookie mit dem Zeug
+setcookie("voteme", serialize($daten));
+
+?>
+
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
@@ -11,17 +40,13 @@
 <div id="navbar">
     <img src="img/logo2.svg" id="logo">
 </div>
+
 <?php
 
-//Dieses Skript erzeugt das Auswahl-Ergebnis jedes einzelnen Studenten und Speichert dieses in der DB Result ab.
 
-include ("Main/Session_Check.php");
-include "Main/ResultManager.php";
-/*
- * Übergabe der Voting ID und der ID der ausgwählten Antwort durch das Form in Voting.php
- */
-$ID_Voting= htmlspecialchars($_POST ['ID_Voting'], ENT_QUOTES, "UTF-8");
-$ID_Chance= htmlspecialchars($_POST ['ID_Chance'], ENT_QUOTES, "UTF-8");
+
+// DEBUG
+// echo "<BR> POST: "; print_r($_POST);
 
 /*
  * neuer Resultmanager Instanziieren
@@ -31,12 +56,12 @@ $resultManager= new ResultManager();
 /*
  * Datum in variable schreiben und festlegen
  */
-$datum = date("yyyy-MM-dd");
+$datum = date("Y-m-d");
 
 /*
  * Ip-Adresse von Student in Variable schreiben
  */
-$ip = $_SERVER['REMOTE_ADDR'];
+
 
 /*
  * ID von Voting und Chance sowie das Datum und die Ip-Adersse in $daten ablegen
@@ -47,24 +72,30 @@ $daten =
 
         "ID_Voting" => $ID_Voting,
         "ID_Chance" => $ID_Chance,
-        "date_Result" => $datum,
-        "StudentIP" => $ip
+        "date_Result" => $datum
 
         ];
 
-//print_r($daten);
+// echo "<br> daten:"; print_r($daten);
 
     /*
      * Neues Result mit den Daten aus dem Array $daten instanziieren
      */
     $result = new Result($daten);
 
+
+    print_r($result);
 //print_r($result);
 
     /*
      * Erstellen des Results durch die Methode create aus dem Resultmanager
      */
     $resultManager->create($result);
+
+
+
+
+
 
 
     echo "<a class='topic'>Thank you for voting.</a><br>";

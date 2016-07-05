@@ -19,6 +19,7 @@ require_once("include/Navbar.php");
 
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 
+
 $votingManager = new VotingManager();
 $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
 
@@ -26,7 +27,10 @@ $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Da
 
 
 <form class="input-container" action="ChanceCreate_do.php?ID_Voting=<?php print $ID_Voting; ?>" method="post">
-    <input class="inputForm" name="description_Chance" type="text" placeholder="Answer"><br><br>
+    <input class="inputForm" name="chance1" type="text" placeholder="Answer"><br><br>
+    <input class="inputForm" name="chance2" type="text" placeholder="Answer"><br><br>
+    <input class="inputForm" name="chance3" type="text" placeholder="Answer"><br><br>
+    <input class="inputForm" name="chance4" type="text" placeholder="Answer"><br><br>
     <button class="submit" name="submit">CREATE VOTING</button><br><br>
 </form>
 </body>

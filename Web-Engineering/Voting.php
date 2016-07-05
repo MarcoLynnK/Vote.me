@@ -8,10 +8,44 @@ require_once ("Main/Classes.php");
  */
 $ID_Voting= (int)htmlspecialchars($_GET ["ID_Voting"], ENT_QUOTES, "UTF-8");
 
+// Nachsehen, ob schon abgestimmt wurde
+if (isset($_COOKIE["voteme"])) {
+
+    $daten = unserialize($_COOKIE["voteme"]);
+    $val = $daten[$ID_Voting];
+
+    // Wenn schon gevotet wurde, ist $val boolean und true
+    if ($val) {
+
+        echo "Sie haben leider schon abgestimmt.";
+        echo "<br> oooooohhhhhhh...";
+
+        die();
+
+
+    }
+
+}
+
+
+
+
 /*
  * Neuer VotingManager zur verwaltung der Voting-ID instanziieren
  */
 $votingManager= new VotingManager();
+
+// Prüfen, ob das Voting geschlossen ist, wenn ja, raus hier!
+$voting = $votingManager->findById($ID_Voting);
+if ($voting->Status == 0) {
+
+    echo "Dieses Voting ist leider geschlossen. Gehen Sie nach Hause!!";
+    die();
+
+}
+
+
+
 
 /*
  * Auslesen des zugehörigen Votings durch die Methode findById mit dem Parameter ID_Voting
@@ -61,16 +95,18 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
  * Voting Form zur Interaktion für Studenten
  */
 
+
+
 echo '<form class="container" action="Voting_do.php" method="post">';
-        foreach ($chances as $möglichkeiten)
+        foreach ($chances as $moeglichkeiten)
         {
-            if (!empty ($möglichkeiten))
+            if (!empty ($moeglichkeiten))
             {
-                echo "<input type='radio' name='ID_Chance' value='$möglichkeiten->ID_Chance'/><a class='VoteText'>$möglichkeiten->description_Chance</a><br><br><br>";
+                echo "<input type='radio' name='ID_Chance' value='$moeglichkeiten->ID_Chance'/><a class='VoteText'>$moeglichkeiten->description_Chance</a><br><br><br>";
             }
         }
         echo '<input type="hidden" value="' . $voting->ID_Voting . '" name="ID_Voting">';
-        echo '<input type="hidden" value="' . $voting->ID_Chance . '" name="ID_Chance">';
+
 echo '<br><input type="submit" class="submit" value="VOTE">';
 echo "</form>"
 

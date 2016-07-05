@@ -86,6 +86,8 @@ class VotingManager extends Manager
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_CLASS, 'Voting');
             $voting = $sql->fetch();
+
+            return $this->findById($this->pdo->lastInsertId());
             
         } catch (PDOException $e) {
             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
@@ -177,7 +179,26 @@ class VotingManager extends Manager
 
 
     }
+
     
-    
-    
+    //Absicherung aller Votings gegen Hack
+    public function doesUserOwnThis (User $user, Voting $voting)
+    {
+
+        // Wenn es sein Objekt ist,oder der User admin ist,dann freigeben
+        if ($user->ID_User == $voting->ID_User || $user->ID_Rights == 1)
+        {
+
+            return true;
+
+        }
+        else
+        {
+
+            return false;
+
+        }
+
+    }
+
 }
