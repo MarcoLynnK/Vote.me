@@ -118,12 +118,11 @@ class UserManager extends Manager
     {
         try
         {
-            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, hash = :password, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
+            $sql= $this->pdo-> prepare ('UPDATE User SET login= :login, firstname = :firstname, lastname = :lastname, ID_Rights= :ID_Rights, email= :email WHERE ID_User = :ID_User');
             $sql->bindParam (':login', $user->login);
             $sql->bindParam (':firstname',$user->firstname);
             $sql->bindParam (':lastname',$user->lastname);
             $sql->bindParam (':email',$user->email);
-            $sql->bindParam (':password', $user->hash);
             $sql->bindParam (':ID_Rights', $user->ID_Rights);
             $sql->bindParam (':ID_User', $user->ID_User);
             $sql->execute ();

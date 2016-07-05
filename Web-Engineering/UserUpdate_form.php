@@ -51,8 +51,6 @@ $user = $UserManager->findById($ID_User);
         <input class="inputForm" type='email' name='email' value='<?php echo ($user->email) ?>'><br><br>
         <a class="text2">Right:</a><br>
         <input class="inputForm" type='text' name='ID_Rights' value='<?php echo ($user->ID_Rights) ?>'><br><br>
-        <a class="text2">Password:</a><br>
-        <input class="inputForm" type='text' name='password' value='<?php echo ($user->hash) ?>'><br><br>
         <input class="submit" type='submit' value='UPDATE'>
 </form>
 
