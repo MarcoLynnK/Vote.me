@@ -62,7 +62,7 @@ $user= $userManager->findById($voting->ID_User);
     <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
-
+<title>Voting read</title>
 
 
 <body>
