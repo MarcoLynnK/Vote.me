@@ -19,6 +19,14 @@ body{
     background-size: cover;
 }
 
+footer {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 10px;
+    color: #2d2d2d;
+}
+
 
 /* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
 #navbar{
