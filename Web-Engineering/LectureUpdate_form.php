@@ -23,7 +23,7 @@ $lecture = $LectureManager->findById($ID_Lecture);
 <body>
 <?php require_once("include/Navbar.php"); ?>
 
-<a>Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
+<a class="topic">Vorlesung Nr.<?php echo ($lecture->ID_Lecture) ?></a>
 
 <form action='LectureUpdate_do.php' method='post'>
     <input class="inputForm" type='hidden' name='ID_Lecture' value='<?php echo ($lecture->ID_Lecture) ?>' />
