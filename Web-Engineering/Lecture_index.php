@@ -78,7 +78,7 @@ else
             </table>
         </br></br>
         </div>
-    </div><br><br>
+    </div>
 <a href='LectureCreate_form.php'><div class='submit'>CREATE LECTURE</div></a>
 </body>
 </html>
