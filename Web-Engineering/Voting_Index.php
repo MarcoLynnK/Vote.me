@@ -16,7 +16,7 @@ require_once("Main/VotingManager.php");
 <body>
 <?php require_once("include/Navbar.php"); ?>
 <div class="Content">
-<div class="table-container">
+<div class="container">
 
     <h1 class="tableText">Voting</h1>
     <table>
