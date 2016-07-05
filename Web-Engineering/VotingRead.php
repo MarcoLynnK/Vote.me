@@ -124,7 +124,8 @@ echo "<a href='LectureRead.php?ID_Lecture=$voting->ID_Lecture'><div class='submi
 echo "<a href='Voting.php?ID_Voting=$voting->ID_Voting'><div class='submit'>START VOTING</div></a></br></br>";
 echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OPEN VOTE</div></a><br><br>";
 echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";
-echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>"
+echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>";
+echo "<button class='blatzhalter'></button>";
 ?>
 </div>
 </div>

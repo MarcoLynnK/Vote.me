@@ -57,7 +57,6 @@ table{
     text-align: center;
     vertical-align: middle;
 
-    bottom: 0px;
     height: 20px;
 }
 
@@ -414,6 +413,7 @@ th, td {
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     margin: 0px;
+    padding-bottom: 20px
 }
 
 
