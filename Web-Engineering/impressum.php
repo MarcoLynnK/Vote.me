@@ -20,7 +20,7 @@
     D-71336 Waiblingen<br><br><br>
     Sebastian Kopp<br>
     Am Pfaffenain 21<br>
-    D-69239 Neckarsteiner
+    D-70239 Stuttgart
 </a>
 
 </body>
