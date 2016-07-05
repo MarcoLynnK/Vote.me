@@ -11,7 +11,7 @@
 <div id="navbar">
     <img src="img/logo2.svg" id="logo">
 </div>
-<div>
+
 <?php
 
 // Dieses Skript öffnet das Voting und erzeugt den Teilnahmelink für Studenten.
@@ -44,8 +44,8 @@ if ($voting->Status == 1) {
 
 }
 //QR-Code
-echo '<img src="qrCode.php?Voting_ID=' . $ID_Voting . '">';?>'
-</div>
+
+
 
 // Link abrufen
 echo "Link für Voting: mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;
