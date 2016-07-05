@@ -41,30 +41,37 @@ $ip = $_SERVER['REMOTE_ADDR'];
 /*
  * ID von Voting und Chance sowie das Datum und die Ip-Adersse in $daten ablegen
  */
-$daten = [
+if (!empty($ID_Voting) && !empty($ID_Chance) && !empty($datum) && !empty($ip))
+{
+    $daten = [
 
-    "ID_Voting" => $ID_Voting,
-    "ID_Chance" => $ID_Chance,
-    "date_Result" => $datum,
-    "StudentIP" => $ip
+        "ID_Voting" => $ID_Voting,
+        "ID_Chance" => $ID_Chance,
+        "date_Result" => $datum,
+        "StudentIP" => $ip
 
-];
+    ];
 
 //print_r($daten);
 
-/*
- * Neues Result mit den Daten aus dem Array $daten instanziieren
- */
-$result = new Result($daten);
+    /*
+     * Neues Result mit den Daten aus dem Array $daten instanziieren
+     */
+    $result = new Result($daten);
 
 //print_r($result);
 
-/*
- * Erstellen des Results durch die Methode create aus dem Resultmanager
- */
-$resultManager->create($result);
-
-echo "<a class='topic'>Thank you for voting.</a>";
+    /*
+     * Erstellen des Results durch die Methode create aus dem Resultmanager
+     */
+    $resultManager->create($result);
+    echo "<a class='topic'>Thank you.</a><br><br><a class='text2'>Vote successfull.</a><br>";
+}
+else
+{
+    echo "<a class='text2'>Error: You have to choose a Chance!</a><br/>";
+}
 ?>
+
 </body>
 </html>

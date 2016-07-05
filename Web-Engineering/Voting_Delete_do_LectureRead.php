@@ -43,4 +43,4 @@ $lecture= $lectureManager->findById($voting->ID_Lecture);
 /*
  * Direkte Weiterleitung auf Voting_Index
  */
-header('Location: LectureRead.php?ID_Lecture=$lecture');
+header('Location: LectureRead.php?ID_Lecture= echo" ($_GET ["ID_Lecture"])');
