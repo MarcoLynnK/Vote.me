@@ -25,9 +25,8 @@ $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Da
 ?>
 
 
-<form action="ChanceCreate_do.php" method="post"><a class="topic"> Create new Chance: </a><br>
-    <input class="inputForm" type='text' name='ID_Voting' value='<?php echo ($voting->ID_Voting) ?>' hidden><br><br>
-    <input class="inputForm" type="text" name="description_Chance" placeholder="Beschreibung"><br><br>
-    <a href="ChanceCreate_do.php"> <div class="submit">CREATE</div></a>
-    </form>
+<form class="input-container" action="ChanceCreate_do.php?ID_Voting=<?php print $ID_Voting; ?>" method="post">
+    <input class="inputForm" name="description_Chance" type="text" placeholder="Chance" rows="2"></br></br>
+    <button class="submit" name="submit">CREATE VOTING</button></br></br>
+</form>
 </body>

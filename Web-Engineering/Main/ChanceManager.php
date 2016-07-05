@@ -74,26 +74,27 @@ class ChanceManager extends Manager
     }
 
     //Neue Möglichkeit in der DB anlegen
-    public function create (Chance $chance)
-    {
-        try 
-        {
-            $sql = $this->pdo->prepare('INSERT INTO Chance (ID_Voting, ID_User, description_Chance) VALUES (:ID_Voting, :ID_User, :description_Chance)');
-            
-            $sql->bindParam(':description_Chance', $chance->description_Chance);
-            $sql->bindParam(':ID_Voting', $chance->ID_Voting);
-            $sql->bindParam(':ID_User', $chance->ID_User);
-            $sql->execute();
-            $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
-            $chance = $this->findById($this->pdo->lastInsertId());
-        }
-        catch (PDOException $e)
-        {
-            echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
-            die();
-        }
-        return $chance;
-    }
+     public function create (Chance $chance)
+     {
+         try {
+             $sql = $this->pdo->prepare('INSERT INTO Chance (ID_Voting, ID_User, description_Chance) VALUES (:ID_Voting, :ID_User, :description_Chance)');
+
+             $sql->bindParam(':description_Chance', $chance->description_Chance);
+             $sql->bindParam(':ID_Voting', $chance->ID_Voting);
+             $sql->bindParam(':ID_User', $chance->ID_User);
+
+             $sql->execute();
+
+             $sql->setFetchMode(PDO::FETCH_CLASS, 'Chance');
+             $chance = $this->findById($this->pdo->lastInsertId());
+         }
+         catch (PDOException $e)
+         {
+             echo ("Es ist ein Fehler aufgetreten.<br>") . $e->getMessage() . "<br>";
+             die();
+         }
+         return $chance;
+     }
     //Möglichkeit aktualisieren/ändern
     public function update (Chance $chance)
     {

@@ -5,10 +5,12 @@ require_once ("Main/VotingChanceManager.php");
 // GET ID_Voting erstmal test nur, nachher durch ordentliche Anbindung ersetzen
 $ID_Voting = htmlspecialchars($_GET["ID_Voting"],ENT_QUOTES,"UTF-8");
 
+$votingManager= new VotingManager();
+$voting= $votingManager->findById($ID_Voting);
 
 $votingChanceManager = new VotingChanceManager();
 
-$chances = $votingChanceManager->findAllChancesByVotingId($ID_Voting); // im Votingmanager ein objekt $voting, hier ein int...wie umwandeln?
+$chances = $votingChanceManager->findAllChancesByVotingId($voting); // im Votingmanager ein objekt $voting, hier ein int...wie umwandeln?
 
 $daten = [0, 0, 0, 0];
 $i = 0;
@@ -92,19 +94,19 @@ print_r($daten);
 		// Doughnut Chart Daten
 		var doughnutData = [
 			{
-				value: <?php print $daten[0]->description_Chance?>,
+				value: <?php print $chances->description_Chance?>,
 				color:"#ffaf72"
 			},
 			{
-				value : <?php print $daten[1]->description_Chance?>,
+				value : <?php print $chances->description_Chance?>,
 				color : "#91efbb"
 			},
 			{
-				value : <?php print $daten[2]->description_Chance?>,
+				value : <?php print $chances->description_Chances?>,
 				color : "#e4a3ff"
 			},
 			{
-				value : <?php print $daten[3]->description_Chance?>,
+				value : <?php print $chances->description_Chances?>,
 				color : "#8ea7ff"
 			}
 		];
