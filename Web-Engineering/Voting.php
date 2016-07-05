@@ -52,8 +52,10 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 <!--Beginn Voting-Bereich-->
 
 <!--Thematik und Frage aus dem Objekt Voting auslesen-->
-<h2>Topic: <?php echo ($voting->name_Voting) ?> </h2>
-<p>Question: <?php echo ($voting->question_Voting)?></p>
+
+<!--<a class="topic"><?php /* echo ($voting->name_Voting) */?> </a>-->
+
+<a class="text2"><?php echo ($voting->question_Voting)?></a>
 
 <?php
 /*
