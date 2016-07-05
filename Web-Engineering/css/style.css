@@ -418,6 +418,9 @@ th, td {
     color: #2d2d2d;
 }
 
+.disable{
+display: none;
+}
 
 
 .chart-responsive{

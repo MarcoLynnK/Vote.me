@@ -30,7 +30,7 @@ require_once("Main/UserManager.php");
         <th>Last Name</th>
         <th>E-Mail</th>
         <th>User Right</th>
-        <th>Password</th>
+        <th class="disable">Password</th>
         <th>Tools</th>
         </thead>
         <tbody>
@@ -54,7 +54,7 @@ require_once("Main/UserManager.php");
             echo "<td>$user->lastname</td>";
             echo "<td>$user->email</td>";
             echo "<td>$user->ID_Rights</td>";
-            echo "<td>$user->hash</td>";
+            echo "<td class='disable'>$user->hash</td>";
             echo "<td>
                     <a href='UserRead.php?ID_User=$user->ID_User' class='btn btn-success btn-xs'><input type='image' class='editicons' src='img/view.svg'></a>&nbsp;
                     <a href='UserUpdate_form.php?ID_User=$user->ID_User' class='btn btn-info btn-xs'><input type='image' class='editicons' src='img/edit.svg'></a>&nbsp;
