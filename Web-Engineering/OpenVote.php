@@ -30,9 +30,10 @@ if ($voting->Status == 1) {
 
 }
 //QR-Code
-echo '<img src="qrCode.php"><br><br>';
+echo '<img src="qrCode.php?Voting_ID=' . $ID_Voting . '">';?>'
 
 
 // Link abrufen
-echo "Link für Voting: mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;?>
+echo "Link für Voting: mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;
+?>
 
