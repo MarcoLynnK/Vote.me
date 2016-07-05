@@ -40,7 +40,11 @@ footer {
 }
 
 .platzhalter{
-    height: 20px;;
+    position: fixed;
+    left: 0;
+    background-color: white;
+    min-width: 100%;
+    min-height: 50px;
 }
 
 table{
