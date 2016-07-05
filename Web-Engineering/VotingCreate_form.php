@@ -31,13 +31,11 @@ if (!empty($ID_Lecture) && !empty($name_Lecture) && !empty($degreecourse))
 <div id="Container">
 
     <form class="input-container" action="VotingCreate_do.php?ID_Lecture=<?php print $ID_Lecture; ?>" method="post">
-        <input class="inputForm" name="name_Voting" type="text" placeholder="Votingname" rows="2"><br><br>
-        <input class="inputForm" name="question_Voting" type="text" placeholder="Frage?" rows="2"><br><br>
+        <input class="inputForm" name="name_Voting" type="text" placeholder="Topic"><br><br>
+        <input class="inputForm" name="question_Voting" type="text" placeholder="Question"><br><br>
         <button class="submit" name="submit">CREATE VOTING</button><br><br>
     </form>
-    
 </div>
-
 </body>
 
 </html>
