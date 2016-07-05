@@ -10,16 +10,6 @@ require_once("Main/LectureManager.php");
 $voting = (int)htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 
 /*
- * Neuer Votingmanager für methode Delete
- */
-$votingManager = new VotingManager();
-/*
- * Voting anhand des übergebenen Objekts aus Index Löschen
- */
-$votingManager->delete ($voting);
-
-
-/*
  * Neuer Votingmanager zum auslesen des Objekts Voting, um die LectureID zu finden
  */
 $votingmanager= new VotingManager();
@@ -38,6 +28,16 @@ $lectureManager= new LectureManager();
  * Auslesen des Objekts Lecture durch die ID, die in dem Objekt Voting gespeichert ist
  */
 $lecture= $lectureManager->findById($voting->ID_Lecture);
+
+
+/*
+ * Neuer Votingmanager für methode Delete
+ */
+$votingManager = new VotingManager();
+/*
+ * Voting anhand des übergebenen Objekts aus Index Löschen
+ */
+$votingManager->delete ($voting);
 
 
 /*
