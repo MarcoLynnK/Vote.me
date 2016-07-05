@@ -65,9 +65,9 @@ require_once("Main/UserManager.php");
         ?>
         
         </tbody>
-    </table>
+    </table><br><br>
 </div>
-    </div><br><br>
+    </div>
 <a href='UserCreate_form.php'><div class='submit'>CREATE USER</div></a>
 </body>
 </html>
