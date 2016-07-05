@@ -55,7 +55,7 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 
 <!--<a class="topic"><?php /* echo ($voting->name_Voting) */?> </a>-->
 
-<a class="text2"><?php echo ($voting->question_Voting)?></a>
+<a class="text2"><?php echo ($voting->question_Voting)?></a><br><br>
 
 <?php
 /*
