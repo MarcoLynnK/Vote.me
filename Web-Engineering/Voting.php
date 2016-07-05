@@ -39,10 +39,6 @@ if ($voting->Status == 0) {
     die();
 
 }
-
-
-
-
 /*
  * Auslesen des zugehörigen Votings durch die Methode findById mit dem Parameter ID_Voting
  * Ablage des entstehenden Votingobjekts in $voting

@@ -23,12 +23,13 @@ $daten = [0, 0, 0, 0];
 $descriptions= ["","","",""];
 $i = 0;
 
-//einzelne Counts ausgeben, um sie in das chart einzufügen. Zugriff durch Daten auf den index
+//einzelne Counts ausgeben, um sie in das chart einzufügen. Zugriff auf Daten durch Index
 foreach ($chances as $oneChance) {
-
+	//anhand der Chance_ID
 	$chanceid = $oneChance->ID_Chance;
 	$count = $votingChanceManager->countVotingChance($ID_Voting, $chanceid);
 	$daten[$i] = $count;
+	//einlesen der Beschreibung
 	$descriptions[$i]=$oneChance->description_Chance;
 	$i++;
 

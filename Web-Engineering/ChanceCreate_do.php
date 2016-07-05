@@ -43,19 +43,25 @@ if (!empty($chances) && !empty($ID_Voting))
 
     // alle vorhanden chances anlegen
     foreach ($chances as $row) {
-
+        /*
+         * ablegen der Werte aus Chancedate in $row
+         */
         $chancedata["description_Chance"] = $row;
 
+        /*
+         * neue Chance mit parameter Chancedata
+         */
         $chance = new Chance($chancedata);
-
+        
+        /*
+         * Chances in DB anlegen
+         */
         $chanceManager->create($chance);
 
 
     }
 
     // Operationen abgeschlossen
-
-
 
     header('location: Voting_Index.php');
 

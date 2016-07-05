@@ -28,6 +28,9 @@ require_once("Main/ChanceManager.php");
         </thead>
         <tbody>
             <?php
+                /*
+                 * Neuer ChanceManager
+                 */
                 $chanceManager = new ChanceManager();
 
                 // Rechte aus der Session holen

@@ -16,11 +16,19 @@ require_once("Main/Classes.php");
 <body>
 <?php
 require_once("include/Navbar.php");
-
+/*
+ * Übergabe der Voting_ID
+ */
 $ID_Voting= htmlspecialchars($_GET["ID_Voting"], ENT_QUOTES, "UTF-8");
 
-
+/*
+ * neuer Votingmanager
+ */
 $votingManager = new VotingManager();
+
+/*
+ * Auslesen des Objekts Voting durch die ID mit Methode findById
+ */
 $voting = $votingManager->findById($ID_Voting);//holt sich das Voting aus der Datenbank durch Suche nach der ID
 
 ?>
