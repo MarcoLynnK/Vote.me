@@ -37,7 +37,7 @@ $user = $UserManager->findById($ID_User);
 
 
 <!--Form Block für Userupdate-->
-<h2>User No.<?php echo ($user->ID_User) ?> </h2>
+<a class="topic">User No.<?php echo ($user->ID_User) ?> </a>
 
     <form class="input-container" action='UserUpdate_do.php' method='post'>
         Bitte aktualisieren Sie Ihre Angaben!<br>
