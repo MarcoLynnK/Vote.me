@@ -61,7 +61,7 @@ $result = new Result($daten);
  */
 $resultManager->create($result);
 
-echo "<a class='text2'>Thank you.<br>You have voted successfull</a><br>";
+echo "<a class='text2'>Thank you.<br>You have voted successfully.</a><br>";
 ?>
 
 <a href="Voting.php"> <div class="submit">BACK</div></a>
