@@ -172,7 +172,18 @@ body{
     font-size: 16px;
     margin-left: 6px;
 
+}
 
+.inputForm4{
+    font-family: Helvetica, sans-serif;
+    width: 109px;
+    height: 36px;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 6px;
+}
+.inputForm4:disabled {
+    background: whitesmoke;
 }
 
 .submit {
