@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <?php
+//Einbinden der benötigten Skripte
 require_once("Main/Classes.php");
 require_once("Main/ChanceManager.php");
 ?>
