@@ -56,6 +56,7 @@ if (!empty ($ID_User) && !empty($login) && !empty($firstname) && !empty($lastnam
 
 else 
 {
+    
     echo "<a class='text2'>Error: Please fill out all fields!</a><br/>";
 }?>
 <a href="UserUpdate_form.php"> <div class="submit">BACK</div></a>
