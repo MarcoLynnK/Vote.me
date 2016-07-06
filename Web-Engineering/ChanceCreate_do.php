@@ -18,7 +18,7 @@ require_once("Main/Classes.php");
 // Array initialisieren
 $chances = array();
 
-// Chances aus der POST holen
+// Chances aus der POST holen und in initialisierten array pushen
 array_push($chances, htmlspecialchars($_POST["chance1"], ENT_QUOTES, "UTF-8"));
 array_push($chances, htmlspecialchars($_POST["chance2"], ENT_QUOTES, "UTF-8"));
 array_push($chances, htmlspecialchars($_POST["chance3"], ENT_QUOTES, "UTF-8"));
