@@ -47,7 +47,7 @@ if ($voting->Status == 1) {
 
 // Link abrufen
 echo "mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;
-echo "<br><br><a href='qrCode.php?ID_Voting=$voting->ID_Voting'><div class='submit'>SHOW QR-CODE</div></a>";
+echo "<br><br><a href='qrCode.php?ID_Voting=$ID_Voting'><div class='submit'>SHOW QR-CODE</div></a>";
 ?>
 
 </body>

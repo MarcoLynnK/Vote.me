@@ -1,5 +1,6 @@
 <?php
 include ("include/Navbar.php");
+include ("Main/VotingManager.php");
 include ("include/qrlib.php");
 /*
   * Skript für QR-Code Generierung (Blackbox)
