@@ -38,7 +38,7 @@ if ($voting->Status == 1) {
 } else {
 
     // Voting öffnen wenn aktuell geschlossen
-    echo "Öffne Voting.";
+    echo "<p class='topic'>Open voting.</p>";
     $voting = $votingManager->openVote($voting);
 
 }
