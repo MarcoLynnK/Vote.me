@@ -15,7 +15,6 @@
 <?php
 
 // Dieses Skript öffnet das Voting und erzeugt den Teilnahmelink für Studenten.
-require "qrCode.php";
 require "Main/Manager.php";
 require "Main/VotingManager.php";
 
@@ -34,7 +33,7 @@ $voting = $votingManager->findById($ID_Voting);
 // Votingstatus prüfen (1 für offen, 0 für geschlossen)
 if ($voting->Status == 1) {
 
-    echo "Voting bereits offen. Generiere Link";
+    echo "<a class='topic'>Voting bereits offen. Generiere Link</a><br><br>";
 
 } else {
 
@@ -43,7 +42,6 @@ if ($voting->Status == 1) {
     $voting = $votingManager->openVote($voting);
 
 }
-//QR-Code
 
 
 
@@ -52,6 +50,7 @@ echo "Link für Voting: mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.
 ?>
 
 </body>
+
 
 <footer>
     <div>
