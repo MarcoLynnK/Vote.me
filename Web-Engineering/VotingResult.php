@@ -137,8 +137,8 @@ foreach ($chances as $oneChance) {
 
 <div class="werte">
 
-	<div class="wert1"><?php echo $descriptions[0]?></div>
-	<div class=""></div>
+	<div class="wert1"></div>
+	<div class="text"><?php echo $descriptions[0]?></div>
 
 	<div class="wert2"><?php echo $descriptions[1]?></div>
 	<div class=""></div>

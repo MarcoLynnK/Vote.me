@@ -84,7 +84,7 @@ $daten =
     $result = new Result($daten);
 
 
-    print_r($result);
+    //print_r($result); für debugging
 //print_r($result);
 
     /*
