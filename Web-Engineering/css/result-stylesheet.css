@@ -390,6 +390,9 @@ table{
     display: none;
 }
 
+.chart{
+    top: 50px;
+}
 
 .chart-responsive{
     display: none;
@@ -492,6 +495,7 @@ table{
     .chart-responsive{
         display: block;
         margin-top: 50px;
+        top: 50px;
     }
 
     .table-container{
