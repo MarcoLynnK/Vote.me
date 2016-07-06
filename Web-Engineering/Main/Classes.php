@@ -124,7 +124,6 @@ class Result
     {
         if (is_array($daten))
         {
-            echo "daten ist array";
             
             $this->date_Result = $daten ['date_Result'];
             $this->ID_Chance = $daten ['ID_Chance'];

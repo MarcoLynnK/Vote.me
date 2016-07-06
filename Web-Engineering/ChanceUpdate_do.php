@@ -9,6 +9,20 @@ $ID_Chance= htmlspecialchars($_POST["ID_Chance"], ENT_QUOTES, "UTF-8");
 $description_Chance= htmlspecialchars($_POST["description_Chance"], ENT_QUOTES, "UTF-8");
 
 /*
+ * Absicherung gegen Hack
+ */
+$chanceManager = new LectureManager();
+$chance = $chanceManager->findById($ID_Chance);
+
+$user= $_SESSION["user"];
+
+if (!$chanceManager->doesUserOwnThis($user, $chance))
+{
+
+    echo "Sie haben keine Befugnis!";
+    die();
+}
+/*
  * überprüfen der Variablen, ob diese befüllt sind 
  */
 if (!empty ($ID_Chance) && !empty($description_Chance))
