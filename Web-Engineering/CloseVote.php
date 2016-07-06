@@ -8,6 +8,7 @@
 </head>
 <title>Close Voting</title>
 <body>
+<?php require_once("include/Navbar.php"); ?>
 <?php
 
 
@@ -26,7 +27,7 @@ $voting = $votingManager->findById($ID_Voting);
 // Status prüfen
 if ($voting->Status == 0) {
 
-    echo "Voting ist Geschlossen!";
+    echo "<a class='topic'>Voting ist Geschlossen!</a>";
 
 } else {
 
@@ -37,9 +38,9 @@ if ($voting->Status == 0) {
 }
 
 // Link abrufen
-echo "Sie haben das Voting geschlossen";
+echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>";
+?>
 
-echo "<a href='VotingResult.php?ID_Voting=$voting->ID_Voting'><div class='submit'>SHOW RESULT</div></a><br><br>";?>
 
 </body>
 </html>
