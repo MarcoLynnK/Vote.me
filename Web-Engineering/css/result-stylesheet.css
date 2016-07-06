@@ -322,7 +322,7 @@ table{
 .wert1{
     color: #ffaf72;
     background-color: #ffaf72;
-    min-height: 25px;
+    height: 25px;
     width: 10px;
 }
 
@@ -344,7 +344,7 @@ table{
 .wert4{
     color: #8ea7ff;
     background-color: #8ea7ff;
-    min-height: 25px;
+    height: 25px;
     width: 10px;
 }
 
