@@ -139,19 +139,19 @@ foreach ($chances as $oneChance) {
 <table>
 	<tr>
 	<td class="wert1"></td>
-	<td class="tableText"><?php echo $descriptions[0]?></td>
+	<td class="text"><?php echo $descriptions[0]?></td>
 </tr>
 	<tr>
 	<td class="wert2"></td>
-	<td class="tableText"><?php echo $descriptions[1]?></td>
+	<td class="text"><?php echo $descriptions[1]?></td>
 	</tr>
 	<tr>
 	<td class="wert3"></td>
-	<td class="tableText"><?php echo $descriptions[2]?></td>
+	<td class="text"><?php echo $descriptions[2]?></td>
 	</tr>
 	<tr>
 	<td class="wert4"></td>
-	<td class="tableText"><?php echo $descriptions[3]?></td>
+	<td class="text"><?php echo $descriptions[3]?></td>
 	</tr>
 </table>
 </div>
