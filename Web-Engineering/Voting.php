@@ -1,4 +1,8 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+
+    <?php
 require_once ("Main/VotingManager.php");
 require_once ("Main/VotingChanceManager.php");
 require_once ("Main/Classes.php");
@@ -17,7 +21,7 @@ if (isset($_COOKIE["voteme"])) {
     // Wenn schon gevotet wurde, ist $val boolean und true
     if ($val) {
 
-        echo "Sie haben leider schon abgestimmt.";
+        echo "<a class='topic'>You have already voted.</a>";
 
         die();
 
@@ -35,7 +39,7 @@ $votingManager= new VotingManager();
 $voting = $votingManager->findById($ID_Voting);
 if ($voting->Status == 0) {
 
-    echo "Dieses Voting ist leider geschlossen. Gehen Sie nach Hause!!";
+    echo "<a class='topic'>This Voting is closed!</a>";
     die();
 
 }
@@ -52,9 +56,7 @@ $votingchanceManager= new VotingChanceManager();
 $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
+
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
