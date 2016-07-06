@@ -11,7 +11,7 @@ $description_Chance= htmlspecialchars($_POST["description_Chance"], ENT_QUOTES, 
 /*
  * Absicherung gegen Hack
  */
-$chanceManager = new LectureManager();
+$chanceManager = new ChanceManager();
 $chance = $chanceManager->findById($ID_Chance);
 
 $user= $_SESSION["user"];
