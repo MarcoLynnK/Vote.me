@@ -33,7 +33,7 @@ $voting = $votingManager->findById($ID_Voting);
 // Votingstatus prüfen (1 für offen, 0 für geschlossen)
 if ($voting->Status == 1) {
 
-    echo "<a class='topic'>Voting bereits offen. Generiere Link</a><br><br>";
+    echo "<a class='topic'>Voting is already open.<br><br>Generated link:</a><br><br>";
 
 } else {
 
