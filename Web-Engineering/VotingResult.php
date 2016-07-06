@@ -136,19 +136,24 @@ foreach ($chances as $oneChance) {
 
 
 <div class="werte">
-
-	<div class="wert1"></div>
-	<div class="wertetext"><?php echo $descriptions[0]?></div>
-
-	<div class="wert2"></div>
-	<div class="wertetext"><?php echo $descriptions[1]?></div>
-
-	<div class="wert3"></div>
-	<div class="wertetext"><?php echo $descriptions[2]?></div>
-
-	<div class="wert4"></div>
-	<div class="wertetext"><?php echo $descriptions[3]?></div>
-
+<table>
+	<tr>
+	<td class="wert1"></td>
+	<td class="wertetext"><?php echo $descriptions[0]?></td>
+</tr>
+	<tr>
+	<td class="wert2"></td>
+	<td class="wertetext"><?php echo $descriptions[1]?></td>
+	</tr>
+	<tr>
+	<td class="wert3"></td>
+	<td class="wertetext"><?php echo $descriptions[2]?></td>
+	</tr>
+	<tr>
+	<td class="wert4"></td>
+	<td class="wertetext"><?php echo $descriptions[3]?></td>
+	</tr>
+</table>
 </div>
 
 </body>
