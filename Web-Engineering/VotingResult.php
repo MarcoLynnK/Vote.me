@@ -51,7 +51,14 @@ foreach ($chances as $oneChance) {
 </head>
 <title>Voting Result</title>
 <body>
-<?php require_once("include/Navbar.php"); ?>
+<?php require_once("include/Navbar.php");
+
+echo "<a class='topic'>$voting->question_Voting</a></br>";
+
+
+
+
+?>
 
 
 <!-- Doughnut chart canvas element -->
@@ -137,22 +144,38 @@ foreach ($chances as $oneChance) {
 
 <div class="werte">
 <table>
+
+	<?php if ($descriptions[0] != "") { echo "
+	
 	<tr>
-	<td class="wert1"></td>
-	<td class="text"><?php echo $descriptions[0]?></td>
-</tr>
-	<tr>
-	<td class="wert2"></td>
-	<td class="text"><?php echo $descriptions[1]?></td>
+	<td class='wert1'></td>
+	<td class='text'> $descriptions[0] </td>
 	</tr>
+	"; } ?>
+
+	<?php if ($descriptions[1] != "") { echo "
+	
 	<tr>
-	<td class="wert3"></td>
-	<td class="text"><?php echo $descriptions[2]?></td>
+	<td class='wert2'></td>
+	<td class='text'> $descriptions[1] </td>
 	</tr>
+	"; } ?>
+
+	<?php if ($descriptions[2] != "") { echo "
+	
 	<tr>
-	<td class="wert4"></td>
-	<td class="text"><?php echo $descriptions[3]?></td>
+	<td class='wert3'></td>
+	<td class='text'> $descriptions[2] </td>
 	</tr>
+	"; } ?>
+	
+	<?php if ($descriptions[3] != "") { echo "
+	
+	<tr>
+	<td class='wert4'></td>
+	<td class='text'> $descriptions[3] </td>
+	</tr>
+	"; } ?>
 </table>
 </div>
 
