@@ -125,12 +125,12 @@ echo "<a href='Voting.php?ID_Voting=$voting->ID_Voting'><div class='submit'>STAR
 echo "<a href='OpenVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>OPEN VOTE</div></a><br><br>";
 echo "<a href='CloseVote.php?ID_Voting=$voting->ID_Voting'><div class='submit'>CLOSE VOTE</div></a><br><br>";
 echo "<a href='Voting_Index.php'><div class='submit'>BACK</div></a>";
-echo "<button class='blatzhalter'> </button>";
+//echo "<button class='platzhalter'> </button>";-->
 ?>
 </div>
 </div>
-<a class="Platzhalter"> </a>
-<div class="footer">© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>
+<!--Platzhalter--><a class="Platzhalter"> </a>
+<!--zweiter footer<div class="footer">© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>-->
 </body>
 <footer>
     <div>© 2016 by Vote.me GmbH - <a href="mailto:support@vote.me">Contact</a> - <a href="impressum.php">Impressum</a></div>

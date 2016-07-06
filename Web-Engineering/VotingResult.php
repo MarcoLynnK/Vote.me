@@ -103,19 +103,19 @@ foreach ($chances as $oneChance) {
 		// Doughnut Chart Daten: Beschreibung der Antwortmöglichkeiten
 		var doughnutData = [
 			{
-				value: <?php print $descriptions[0]?>,
+				value: <?php print $daten[0]?>,
 				color:"#ffaf72"
 			},
 			{
-				value : <?php print $descriptions[1]?>,
+				value : <?php print $daten[1]?>,
 				color : "#91efbb"
 			},
 			{
-				value : <?php print $descriptions[2]?>,
+				value : <?php print $daten[2]?>,
 				color : "#e4a3ff"
 			},
 			{
-				value : <?php print $descriptions[3]?>,
+				value : <?php print $daten[3]?>,
 				color : "#8ea7ff"
 			}
 		];
@@ -137,16 +137,16 @@ foreach ($chances as $oneChance) {
 
 <div class="werte">
 
-	<div class="wert1"></div>
+	<div class="wert1"><?php echo $descriptions[0]?></div>
 	<div class=""></div>
 
-	<div class="wert2"></div>
+	<div class="wert2"><?php echo $descriptions[1]?></div>
 	<div class=""></div>
 
-	<div class="wert3"></div>
+	<div class="wert3"><?php echo $descriptions[2]?></div>
 	<div class=""></div>
 
-	<div class="wert4"></div>
+	<div class="wert4"><?php echo $descriptions[3]?></div>
 	<div class=""></div>
 
 </div>
