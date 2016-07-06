@@ -322,14 +322,14 @@ table{
 .wert1{
     color: #ffaf72;
     background-color: #ffaf72;
-    min-height: 10px;
+    min-height: 25px;
     width: 10px;
 }
 
 .wert2{
     color: #91efbb;
     background-color: #91efbb;
-    min-height: 10px;
+    min-height: 25px;
     width: 10px;
 }
 
@@ -337,14 +337,14 @@ table{
 
     color: #e4a3ff;
     background-color: #e4a3ff;
-    min-height: 10px;
+    min-height: 25px;
     width: 10px;
 }
 
 .wert4{
     color: #8ea7ff;
     background-color: #8ea7ff;
-    min-height: 10px;
+    min-height: 25px;
     width: 10px;
 }
 
