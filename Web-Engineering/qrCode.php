@@ -1,4 +1,6 @@
-<?php include ("include/qrlib.php"); 
+<?php
+include ("include/Navbar.php");
+include ("include/qrlib.php");
 /*
   * Skript für QR-Code Generierung (Blackbox)
   */
