@@ -390,11 +390,7 @@ table{
     display: none;
 }
 
-.chart{
-    top: 100px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
+
 
 .chart-responsive{
     display: none;
