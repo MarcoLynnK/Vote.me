@@ -15,6 +15,19 @@ $chanceManager = new ChanceManager();
  */
 $chance = $chanceManager->findById($ID_Chance);
 
+//Absicherung gegen Hack
+$user= $_SESSION["user"];
+
+/*
+ * Prüfen des Zugriffs über Methode doesUserOwnthis mit den Parametern User aus der Session und dem objekt Chance
+ */
+if (!$chanceManager->doesUserOwnThis($user, $chance))
+{
+
+    echo "Sie haben keine Befugnis!";
+    die();
+}
+
 /*
  * Löschen des Objekts Chance aus der DB
  */

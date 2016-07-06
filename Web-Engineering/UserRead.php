@@ -32,7 +32,7 @@ $user = $userManager->findById($ID_User);
     /*
      * Ausgabe des Users anhand der Werte aus Objekt user
      */
-    echo "<h2>Dozent $ID_User:</h2>";
+    echo "<h2 class='topic'>Lecturer: $ID_User</h2>";
     echo "<h1 class='topic'><a class='bold'>Username:</a> $user->login</h1>";
     echo "<h3 class='text2'><a class='bold'>Firstname:</a> $user->firstname</h3>";
     echo "<h3 class='text2'><a class='bold'>Lastname:</a> $user->lastname</h3>";

@@ -19,10 +19,17 @@ $voting= $votingManager->findById($ID_Voting);
  */
 $user= $_SESSION["user"];
 
+// User rauswerfen wenn unauthorisiert
+if (!$votingManager->doesUserOwnThis($user, $voting)) {
+
+    echo "Sie haben keine Befugnis!";
+    die();
+
+}
+
 /*
  * Voting anhand des übergebenen Objekts aus Index Löschen
  */
-
 $votingManager->delete ($ID_Voting);
 
 /*
