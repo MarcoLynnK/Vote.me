@@ -391,7 +391,7 @@ table{
 }
 
 .chart{
-    top: 50px;
+    top: 100px;
 }
 
 .chart-responsive{
@@ -495,7 +495,7 @@ table{
     .chart-responsive{
         display: block;
         margin-top: 50px;
-        top: 50px;
+        top: 100px;
     }
 
     .table-container{
