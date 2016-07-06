@@ -26,7 +26,7 @@ $votingManager = new VotingManager();
 $voting = $votingManager->findById($ID_Voting);
 
 // Status prüfen
-if ($voting->Status == 1) {
+if ($voting->Status == 0) {
 
     echo "<p class='topic'>Voting is open!</p><br><br>";
 
