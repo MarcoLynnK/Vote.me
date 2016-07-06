@@ -136,7 +136,7 @@ foreach ($chances as $oneChance) {
 
 
 <div class="werte">
-<table>
+
 	<tr>
 	<td class="wert1"></td>
 	<td class="wertetext"><?php echo $descriptions[0]?></td>
@@ -153,7 +153,7 @@ foreach ($chances as $oneChance) {
 	<td class="wert4"></td>
 	<td class="wertetext"><?php echo $descriptions[3]?></td>
 	</tr>
-</table>
+
 </div>
 
 </body>
