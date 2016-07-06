@@ -140,14 +140,14 @@ foreach ($chances as $oneChance) {
 	<div class="wert1"></div>
 	<div class="wertetext"><?php echo $descriptions[0]?></div>
 
-	<div class="wert2"><?php echo $descriptions[1]?></div>
-	<div class=""></div>
+	<div class="wert2"></div>
+	<div class="wertetext"><?php echo $descriptions[1]?></div>
 
-	<div class="wert3"><?php echo $descriptions[2]?></div>
-	<div class=""></div>
+	<div class="wert3"></div>
+	<div class="wertetext"><?php echo $descriptions[2]?></div>
 
-	<div class="wert4"><?php echo $descriptions[3]?></div>
-	<div class=""></div>
+	<div class="wert4"></div>
+	<div class="wertetext"><?php echo $descriptions[3]?></div>
 
 </div>
 
