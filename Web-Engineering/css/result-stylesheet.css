@@ -322,23 +322,23 @@ table{
 .wert1{
     color: #ffaf72;
     background-color: #ffaf72;
-    height: 25px;
-    width: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 .wert2{
     color: #91efbb;
     background-color: #91efbb;
-    min-height: 25px;
-    width: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 .wert3{
 
     color: #e4a3ff;
     background-color: #e4a3ff;
-    min-height: 25px;
-    width: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 .wert4{
