@@ -33,7 +33,7 @@ $voting = $votingManager->findById($ID_Voting);
 // Votingstatus prüfen (1 für offen, 0 für geschlossen)
 if ($voting->Status == 1) {
 
-    echo "<a class='topic'>Voting is already open.</a><br><br><a class='text2'>Generated link:</a><br><br>";
+    echo "<a class='topic'>Voting is already open.</a><br><br><a class='text2'>Link for voting:</a><br><br>";
 
 } else {
 
@@ -46,7 +46,8 @@ if ($voting->Status == 1) {
 
 
 // Link abrufen
-echo "Link für Voting: mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;
+echo "mars.iuk.hdm-stuttgart.de/~mk235/Web-Engineering/Voting.php?ID_Voting=".$ID_Voting;
+echo "<br><br><a href='VotingRead.php?ID_Voting=$voting->ID_Voting'><div class='submit'>SHOW QR-CODE</div></a>";
 ?>
 
 </body>
