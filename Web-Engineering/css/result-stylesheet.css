@@ -1,0 +1,562 @@
+/* Der body inhalt wird sowohl vertikal als auch horizontal zentriert */
+html, body { height: 100%; }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+/* Hintergrund ist fest und an die Größe des Browsers maximiert */
+body{
+    /* background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+/*bottom footer*/
+footer {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    color: #2d2d2d;
+    text-align: center;
+    vertical-align: middle;
+
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 20px;
+
+}
+
+/*extra footer*/
+
+.footer{
+    display: block;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    color: #2d2d2d;
+    text-align: center;
+    vertical-align: middle;
+
+    height: 20px;
+}
+
+.platzhalter{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+}
+
+table{
+    margin: 0 auto;
+}
+
+
+/* Die Navigationsleiste ist fest am oberen Rand fixiert und wird an die Breite des Browsers angepasst */
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2d2d2d;
+    min-width: 100%;
+    min-height: 50px;
+}
+
+/*Positionierung des Logos (weiss)  in der Navigationsleiste */
+#logo{
+    position: fixed;
+    left: 15px;
+    top: 4px;
+
+    max-width: 150px;
+}
+
+/* Hamburgermenü wird im nicht responsive ausgeblendet*/
+.menu{
+    display: none;
+}
+
+/* Canvas groß wird im nicht responsive ausgeblendet */
+#canvas2{
+    display: none;
+}
+
+
+/*dropdown button*/
+.dropbtn{
+    background-color: #2d2d2d;
+    border: solid 0px #36a1e8;
+    color: white;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+
+    position: fixed;
+    right: 100px;
+    top: 0px;
+
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*farbwechsel beim mit der Maus drauf gehen/klicken */
+.dropdbtn:hover{
+    color: #c7c7c7;
+    display: block;
+}
+
+/*dropdown sclaing/positionierung*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdownmenü  */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    position: fixed;
+    right: 0px;
+    top: 50px;
+
+}
+
+/* Links im Dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 18px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Wechselt die Farben des Drobdowncontents*/
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Zeigt den Dropdownmenu in Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Wechselt die Hintergrundfarbe des Dropdown-Buttons wenns geklickt ist */
+.dropdown:hover .dropbtn {
+    background-color: #36a1e8;
+}
+
+
+
+/*Logout button*/
+.log-out{
+    background-color: #2d2d2d;
+    border: solid 0px #36a1e8;
+    color: white;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+
+    position: fixed;
+    right: 0px;
+    top: 0px;
+
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.log-out:hover{
+    background-color: #36a1e8;
+}
+
+.logo{
+    transform: translate(-7%, 10%);
+}
+
+.Content{
+    top: 50px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*Standard Inputform*/
+.inputForm{
+    font-family: Helvetica, sans-serif;
+    width: 234px;
+    height: 36px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+
+/*kleinere Input formen für name und nachname*/
+.inputForm2{
+    font-family: Helvetica, sans-serif;
+    width: 109px;
+    height: 36px;
+    vertical-align: middle;
+    font-size: 16px;
+
+}
+
+.inputForm3{
+    font-family: Helvetica, sans-serif;
+    width: 109px;
+    height: 36px;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 6px;
+
+}
+
+
+/* Standart Buttondesign für Vote.me */
+.submit {
+    background-color: #2d2d2d;
+    border: solid 0px #36a1e8;
+    color: white;
+    width: 240px;
+    height: 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 0px;
+
+    line-height: 42px;
+    vertical-align: middle;
+
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/* farbwechsel bei klick/mauszeiger */
+.submit:hover {
+    background-color: #36a1e8;
+    color: white;
+}
+
+
+/* Font-Design */
+
+.topic2{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: 18%;
+}
+
+.CrtVtg{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: 1%;
+}
+
+.NewUser.CrtVgt:hover{
+    text-decoration: none;
+}
+
+.NewPos{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    color: #505050;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    left: -14%;
+}
+
+.Admin{
+    font-family: Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #505050;
+    position: relative;
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    text-decoration: none;
+}
+
+/* Chart Legende */
+
+.werte{
+    margin-top: 50px;
+}
+
+.wert1{
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #ffaf72;
+    background-color: #ffaf72;
+}
+
+.wert2{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #91efbb;
+    background-color: #91efbb;
+}
+
+.wert3{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #e4a3ff;
+    background-color: #e4a3ff;
+}
+
+.wert4{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    color: #8ea7ff;
+    background-color: #8ea7ff;
+}
+
+.wertetext{
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+
+    color: #2d2d2d;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+
+/* Edit Icons */
+
+.editicons{
+    height: 25px;
+}
+
+/* Tabellen */
+
+
+
+.edittable{
+    width: 95px;
+}
+
+.tableText{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    magic: margin 0 auto;
+    text-align: center;
+
+}
+
+.container{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding-bottom: 20px
+}
+
+
+.text{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    color: #2d2d2d;
+}
+
+.disable{
+    display: none;
+}
+
+
+.chart-responsive{
+    display: none;
+}
+
+.text2{
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.VoteText{
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.topic{
+    font-family: Helvetica, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+    .menu-icon{
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+
+        position: fixed;
+        right: 7px;
+        top: 5px;
+    }
+
+    /* Dropdownmenü */
+    .menu-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        position: fixed;
+        right: 0px;
+        top: 50px;
+
+    }
+
+    /* Links im Dropdown */
+    .menu-dropdown-content a {
+        color: black;
+        padding: 18px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+
+    /* Wechselt die Farben des Drobdowncontents */
+    .menu-dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* Zeigt den Dropdownmenu in Hover */
+    .menu:hover .menu-dropdown-content {
+        display: block;
+    }
+
+    .showDropdown {
+        display: block !important;
+    }
+
+    /* "Hamburgermenü" wird wieder eingeblendet */
+    .menu{
+        display: block;
+    }
+
+    /* Dropdownmenü und Logout-button werden ausgeblendet */
+    .dropbtn{
+        display: none;
+    }
+    .log-out{
+        display: none;
+    }
+
+
+    /* Chart(groß) wird ausgeblendet */
+    .chart{
+        display: none;
+    }
+
+    /* Chart(klein) wird eingeblendet */
+    .chart-responsive{
+        display: block;
+        margin-top: 50px;
+    }
+
+    .table-container{
+        margin-top: 50px;
+    }
+
+    /*input formen responsive*/
+    .inputForm{
+        font-family: Helvetica, sans-serif;
+        width: 234px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        border-radius: 0px;
+
+    }
+
+    .inputForm2{
+        font-family: Helvetica, sans-serif;
+        width: 109px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        border-radius: 0px;
+    }
+
+    .inputForm3{
+        font-family: Helvetica, sans-serif;
+        width: 109px;
+        height: 36px;
+        vertical-align: middle;
+        font-size: 16px;
+        margin-left: 6px;
+        border-radius: 0px;
+    }
+}
+
