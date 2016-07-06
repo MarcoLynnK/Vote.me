@@ -28,12 +28,12 @@ $voting = $votingManager->findById($ID_Voting);
 // Status prüfen
 if ($voting->Status == 0) {
 
-    echo "<a class='topic'>Voting is closed!</a><br><br>";
+    echo "<p class='topic'>Voting is closed!</p><br><br>";
 
 } else {
 
     // Voting öffnen wenn aktuell geschlossen
-    echo "Öffne Voting.";
+    echo "<p class='topic'>Open voting.</p>";
     $voting = $votingManager->closeVote($voting);
 
 }
