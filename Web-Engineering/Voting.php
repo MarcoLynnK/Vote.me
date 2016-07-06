@@ -14,6 +14,11 @@
 </head>
 <title>Voting</title>
 <body>
+<!--Navigation Logged-Out-->
+<div id="navbar">
+    <img src="img/logo2.svg" id="logo">
+</div>
+
 
     <?php
 require_once ("Main/VotingManager.php");
@@ -69,13 +74,6 @@ $votingchanceManager= new VotingChanceManager();
 $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 ?>
 
-
-
-
-<!--Navigation Logged-Out-->
-<div id="navbar">
-    <img src="img/logo2.svg" id="logo">
-</div>
 
 <!--Beginn Voting-Bereich-->
 
