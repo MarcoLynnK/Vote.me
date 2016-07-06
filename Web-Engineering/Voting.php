@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<title>Voting</title>
+<body>
 
     <?php
 require_once ("Main/VotingManager.php");
@@ -57,19 +70,7 @@ $chances=$votingchanceManager->findAllChancesByVotingId($voting);
 ?>
 
 
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-
-    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
-    <script type="text/javascript" src="js/Chart.min.js"></script>
-    
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-</head>
-<title>Voting</title>
-<body>
 
 <!--Navigation Logged-Out-->
 <div id="navbar">
